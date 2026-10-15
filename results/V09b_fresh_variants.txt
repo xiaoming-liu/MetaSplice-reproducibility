@@ -1,0 +1,14 @@
+V09b -- fresh temporal cohort, ClinVar 2026-09-28 (counts only; labels used only to count)
+2026-09-28 P/LP or B/LB SNVs: 1,527,793; in scope 457,664
+  fresh candidates: 0 duplicate records of one variant; 0 variants dropped for conflicting labels
+  candidates after merging duplicates: 457,664 (P/LP 46,495)
+  excluded, in the v2.0 training data: 411,552 (P/LP 40,439)
+  excluded, P/LP or B/LB in the 2026-04-15 release (includes the strict set and the reclassified subgroup): 29,185 (P/LP 3,622)
+  excluded, P/LP or B/LB in the 2025-08-31 release: 0 (P/LP 0)
+  check: fresh variants overlapping the strict 2026-04-15 set by key or ID: 0
+  check: fresh variants overlapping the reclassified 2026-04-15 set by key or ID: 0
+
+fresh cohort: 16,927 variants, P/LP 2,434, B/LB 14,493; GRCh37 record found 99.98%
+by region: Acceptor Region 2,019 (P/LP 65), PPT Region 3,899 (P/LP 26), Canonical Donor Site 1,170 (P/LP 1159), Donor Region 1,408 (P/LP 135), Branch Point Region 204 (P/LP 3), Canonical Acceptor Site 1,008 (P/LP 1000), Deep Intronic 7,219 (P/LP 46)
+non-canonical: 14,749 (P/LP 275)
+Deep Intronic: 7,219 (P/LP 46); sensitivity set 6,039 (P/LP 38); distance bands need the scorer's features (V09c)

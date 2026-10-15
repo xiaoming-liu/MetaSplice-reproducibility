@@ -1,0 +1,57 @@
+cohort	rule	code	P	B	NP	NB	LR	lo95_exact	hi95_exact	supporting_prior_0.0441	supporting_prior_0.01	supporting_prior_0.1	scope	n	diff	lo	hi	gene_lo	gene_hi
+development, >= 1 star	MetaSplice	PP3	200.0	13.0	231.0	23818.0	1586.2803862803864	812.0498037311191	3456.5027138709634	clears	clears	clears							
+development, >= 1 star	MetaSplice	BP4	7.0	21183.0	231.0	23818.0	0.03407249094828758	0.01189247528490145	0.07503393349804374	clears	clears	clears							
+development, >= 1 star	MetaSplice	none	24.0	2622.0	231.0	23818.0													
+development, >= 1 star	SpliceAI	PP3	206.0	947.0	231.0	23818.0	22.42903312808276	19.61328708145559	25.237322872198007	clears	clears	clears							
+development, >= 1 star	SpliceAI	BP4	18.0	21185.0	231.0	23818.0	0.08760670530790898	0.04847610866787921	0.14330383530390517	clears	clears	clears							
+development, >= 1 star	SpliceAI	none	7.0	1686.0	231.0	23818.0													
+development, >= 1 star	MetaSplice minus SpliceAI	P/LP given PP3											all cohort variants	24049.0	-0.025974025974025983	-0.06926406926406926	0.017316017316017316	-0.08458322228144989	0.04878048780487805
+development, >= 1 star	MetaSplice minus SpliceAI	B/LB given PP3											all cohort variants	24049.0	-0.039214039801830546	-0.04169115794777059	-0.0367369216558905	-0.04178267345770829	-0.036489933215280546
+development, >= 1 star	MetaSplice minus SpliceAI	B/LB given BP4											all cohort variants	24049.0	-8.397010664207283e-05	-0.00508124107817617	0.004073599798471743	-0.009459717416943455	0.00865732964602064
+development, >= 1 star	MetaSplice minus SpliceAI	P/LP given BP4											all cohort variants	24049.0	-0.047619047619047616	-0.07803030303030302	-0.017316017316017316	-0.11628118393234672	0.0
+development, >= 1 star	MetaSplice minus SpliceAI	P/LP given PP3											variants SpliceAI scores	23928.0	-0.026086956521739202	-0.06956521739130435	0.017391304347826087	-0.08297852983988355	0.044180508991161174
+development, >= 1 star	MetaSplice minus SpliceAI	B/LB given PP3											variants SpliceAI scores	23928.0	-0.039412608658958556	-0.041860072579964554	-0.036796354122710775	-0.042208668732709086	-0.036963833641108806
+development, >= 1 star	MetaSplice minus SpliceAI	B/LB given BP4											variants SpliceAI scores	23928.0	-0.004768334880580594	-0.009411131741075196	8.545024896615652e-05	-0.013271805019867803	0.0027486152701730725
+development, >= 1 star	MetaSplice minus SpliceAI	P/LP given BP4											variants SpliceAI scores	23928.0	-0.04782608695652174	-0.08271739130434781	-0.017391304347826087	-0.12109810784206497	0.0
+validation, >= 1 star	MetaSplice	PP3	228.0	55.0	265.0	12921.0	202.1261063464837	140.60034985528495	294.01309602521684	clears	clears	clears							
+validation, >= 1 star	MetaSplice	BP4	5.0	10999.0	265.0	12921.0	0.022164965254131162	0.005981865945872181	0.05623622052085292	clears	clears	clears							
+validation, >= 1 star	MetaSplice	none	32.0	1867.0	265.0	12921.0													
+validation, >= 1 star	SpliceAI	PP3	240.0	499.0	265.0	12921.0	23.450977426551216	20.135796534223335	26.975937096891347	clears	clears	clears							
+validation, >= 1 star	SpliceAI	BP4	16.0	11491.0	265.0	12921.0	0.06789103202998902	0.03584270537028515	0.11516087240560943	clears	clears	clears							
+validation, >= 1 star	SpliceAI	none	9.0	931.0	265.0	12921.0													
+validation, >= 1 star	MetaSplice minus SpliceAI	P/LP given PP3											all cohort variants	13186.0	-0.04528301886792452	-0.07547169811320754	-0.01509433962264151	-0.07693798449612403	-0.015556776665577575
+validation, >= 1 star	MetaSplice minus SpliceAI	B/LB given PP3											all cohort variants	13186.0	-0.03436266542837242	-0.03769251605912855	-0.031110208188220728	-0.03822212204400686	-0.030152066584218703
+validation, >= 1 star	MetaSplice minus SpliceAI	B/LB given BP4											all cohort variants	13186.0	-0.03807754817738562	-0.04519967494775946	-0.03133851869050384	-0.06027421468589516	-0.019624331923265934
+validation, >= 1 star	MetaSplice minus SpliceAI	P/LP given BP4											all cohort variants	13186.0	-0.041509433962264156	-0.07169811320754717	-0.018867924528301886	-0.0685623196957776	-0.0159968253968254
+validation, >= 1 star	MetaSplice minus SpliceAI	P/LP given PP3											variants SpliceAI scores	13003.0	-0.049429657794676785	-0.08365019011406843	-0.022813688212927757	-0.08157045692361353	-0.02061538786547237
+validation, >= 1 star	MetaSplice minus SpliceAI	B/LB given PP3											variants SpliceAI scores	13003.0	-0.035007849293563584	-0.03830651491365777	-0.032025117739403454	-0.038696668229860544	-0.0313223277857375
+validation, >= 1 star	MetaSplice minus SpliceAI	B/LB given BP4											variants SpliceAI scores	13003.0	-0.0508634222919937	-0.05730180533751962	-0.04427001569858713	-0.06772066962130938	-0.03627401103369357
+validation, >= 1 star	MetaSplice minus SpliceAI	P/LP given BP4											variants SpliceAI scores	13003.0	-0.04182509505703422	-0.06844106463878327	-0.019011406844106463	-0.07031939338235293	-0.015265724320088237
+development, all statuses	MetaSplice	PP3	208.0	13.0	239.0	23818.0	1594.5104602510462	818.3174276709024	3467.9288848282445	clears	clears	clears							
+development, all statuses	MetaSplice	BP4	7.0	21183.0	239.0	23818.0	0.03293198915922356	0.011491380035037822	0.0725680261845279	clears	clears	clears							
+development, all statuses	MetaSplice	none	24.0	2622.0	239.0	23818.0													
+development, all statuses	SpliceAI	PP3	214.0	947.0	239.0	23818.0	22.520145095942706	19.737017467774322	25.29909487763436	clears	clears	clears							
+development, all statuses	SpliceAI	BP4	18.0	21185.0	239.0	23818.0	0.08467426328923422	0.04682807695203323	0.13863187500441704	clears	clears	clears							
+development, all statuses	SpliceAI	none	7.0	1686.0	239.0	23818.0													
+development, all statuses	MetaSplice minus SpliceAI	P/LP given PP3											all cohort variants	24057.0	-0.025104602510460206	-0.06694560669456066	0.02092050209205021	-0.08191335811452072	0.04616822429906541
+development, all statuses	MetaSplice minus SpliceAI	B/LB given PP3											all cohort variants	24057.0	-0.039214039801830546	-0.04173314300109161	-0.03673587202955748	-0.04178267345770829	-0.036489933215280546
+development, all statuses	MetaSplice minus SpliceAI	B/LB given BP4											all cohort variants	24057.0	-8.397010664207283e-05	-0.004997270971534134	0.004156520278780754	-0.009459717416943455	0.00865732964602064
+development, all statuses	MetaSplice minus SpliceAI	P/LP given BP4											all cohort variants	24057.0	-0.04602510460251046	-0.0794979079497908	-0.016736401673640166	-0.11112258953168043	0.0
+development, all statuses	MetaSplice minus SpliceAI	P/LP given PP3											variants SpliceAI scores	23936.0	-0.025210084033613467	-0.06722689075630252	0.016911764705882258	-0.07985035246326018	0.04269061890158904
+development, all statuses	MetaSplice minus SpliceAI	B/LB given PP3											variants SpliceAI scores	23936.0	-0.039412608658958556	-0.0418178749261541	-0.03704848510422821	-0.042208668732709086	-0.036963833641108806
+development, all statuses	MetaSplice minus SpliceAI	B/LB given BP4											variants SpliceAI scores	23936.0	-0.004768334880580594	-0.009705460376403073	-0.00012342813739556367	-0.013271805019867803	0.0027486152701730725
+development, all statuses	MetaSplice minus SpliceAI	P/LP given BP4											variants SpliceAI scores	23936.0	-0.04621848739495798	-0.07983193277310924	-0.01680672268907563	-0.11651431093178666	0.0
+validation, all statuses	MetaSplice	PP3	235.0	55.0	273.0	12921.0	202.22677322677322	140.84302747157332	293.9368238579549	clears	clears	clears							
+validation, all statuses	MetaSplice	BP4	6.0	10999.0	273.0	12921.0	0.025818530955361577	0.008054454056036223	0.0607466390733272	clears	clears	clears							
+validation, all statuses	MetaSplice	none	32.0	1867.0	273.0	12921.0													
+validation, all statuses	SpliceAI	PP3	247.0	499.0	273.0	12921.0	23.42771256799313	20.130513095116488	26.941884742347714	clears	clears	clears							
+validation, all statuses	SpliceAI	BP4	17.0	11491.0	273.0	12921.0	0.07002039819027027	0.03779625278122155	0.11695210610647594	clears	clears	clears							
+validation, all statuses	SpliceAI	none	9.0	931.0	273.0	12921.0													
+validation, all statuses	MetaSplice minus SpliceAI	P/LP given PP3											all cohort variants	13194.0	-0.04395604395604391	-0.07335164835164835	-0.014652014652014652	-0.07608789679554687	-0.0155626941754894
+validation, all statuses	MetaSplice minus SpliceAI	B/LB given PP3											all cohort variants	13194.0	-0.03436266542837242	-0.037613187833759	-0.03095735624177695	-0.03824879955978543	-0.03029439337930197
+validation, all statuses	MetaSplice minus SpliceAI	B/LB given BP4											all cohort variants	13194.0	-0.03807754817738562	-0.04488816655057658	-0.03134238836003406	-0.05863067516772841	-0.018424410795368027
+validation, all statuses	MetaSplice minus SpliceAI	P/LP given BP4											all cohort variants	13194.0	-0.04029304029304029	-0.06593406593406594	-0.018315018315018316	-0.06545611285266459	-0.015377358490566045
+validation, all statuses	MetaSplice minus SpliceAI	P/LP given PP3											variants SpliceAI scores	13011.0	-0.047970479704797064	-0.07749077490774908	-0.02204797047970488	-0.07749228104525943	-0.019083969465648856
+validation, all statuses	MetaSplice minus SpliceAI	B/LB given PP3											variants SpliceAI scores	13011.0	-0.035007849293563584	-0.038383045525902666	-0.031866169544740974	-0.03905479704431219	-0.03134114889658786
+validation, all statuses	MetaSplice minus SpliceAI	B/LB given BP4											variants SpliceAI scores	13011.0	-0.0508634222919937	-0.05730180533751962	-0.04403257456828886	-0.06723520942408377	-0.03566447412626576
+validation, all statuses	MetaSplice minus SpliceAI	P/LP given BP4											variants SpliceAI scores	13011.0	-0.04059040590405904	-0.06642066420664207	-0.014760147601476014	-0.06692939940081251	-0.01407961658841941

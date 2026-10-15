@@ -1,0 +1,20 @@
+S11_prior diagnostic -- reference against the ClinVar components (descriptive; does not change the frozen prior)
+
+Score quantiles [0.1, 0.25, 0.5, 0.75, 0.9] (MetaSplice v2.0; reference: gene-matched fold score; components: out-of-fold)
+  gnomAD reference (uniform)   9.18e-05  3.11e-04  1.18e-03  4.30e-03  1.35e-02
+  B/LB component               1.67e-05  4.37e-05  1.34e-04  4.56e-04  1.60e-03
+  P/LP component               2.31e-01  9.04e-01  9.88e-01  9.98e-01  9.99e-01
+
+Deep Intronic: |distance to the nearest exon boundary of the assigned gene| (bp)
+  gnomAD reference   Deep Intronic    n= 97,644  median    4,381  share > 500 bp  81.2%  share <= 50 bp   2.4%
+  gnomAD reference   sensitivity set  n= 93,688  median    4,872  share > 500 bp  83.3%  share <= 50 bp   2.1%
+  B/LB component     Deep Intronic    n=127,453  median       16  share > 500 bp   1.4%  share <= 50 bp  82.4%
+  B/LB component     sensitivity set  n=103,570  median       16  share > 500 bp   1.4%  share <= 50 bp  82.2%
+  P/LP component     Deep Intronic    n=    448  median      514  share > 500 bp  50.7%  share <= 50 bp  12.3%
+  P/LP component     sensitivity set  n=    283  median      600  share > 500 bp  55.5%  share <= 50 bp  10.2%
+
+Reading (descriptive): ClinVar's B/LB deep-intronic variants lie near exons, while its P/LP deep-intronic variants and
+the population reference lie far into introns, and the reference scores above the B/LB component. The distance
+imbalance is a plausible contributor to that score shift; this comparison does not establish its cause. Whatever the
+cause, a mixture of the two ClinVar components does not reproduce the reference's score distribution, which is what
+the fit criterion tests. The fallback prior 0.0441 is the procedure's default, not a validated population prior.

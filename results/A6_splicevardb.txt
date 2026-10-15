@@ -1,0 +1,167 @@
+========================================================================================
+A6 -- SpliceVarDB EXTERNAL VALIDATION, VARIANT LEVEL (MetaSplice v2.0; Amendment 3)
+========================================================================================
+Target: experimentally measured splice disruption, not ClinVar pathogenicity. MetaSplice was trained on
+pathogenicity; SpliceAI on splicing. Read the per-region numbers: classes are distributed very unevenly
+across regions.
+
+Assay records: 22,908; unique SNVs: 22,314 (594 built from more than one record); assay-discordant (excluded): 40; primary set: 22,274
+
+Class composition (primary, variant level):
+svdb_classes
+Low-frequency splice-altering    9543
+Splice-altering                  8015
+Normal                           4716
+
+Region x class:
+svdb_classes             Low-frequency splice-altering  Normal  Splice-altering
+region                                                                         
+Acceptor Region                                   1030     410              711
+Branch Point Region                               1719    1112               63
+Canonical Acceptor Site                            751       6             3126
+Canonical Donor Site                               542       1             2199
+Deep Intronic                                     2881    1884              273
+Donor Region                                       975     301             1399
+PPT Region                                        1645    1002              244
+
+========================================================================================
+STRICT (splice-altering against normal; low-frequency excluded)
+========================================================================================
+N=12,731  positive=8,015  negative=4,716  prevalence=63.0% (equals Amendment 3)
+
+  POOLED (region-confounded; interpret with care)
+  Tool                   N    cov    auPRC               95% CI    AUROC
+  MetaSplice v2.0   12,731   100%   0.9928   [0.9919, 0.9937]   0.9855
+  SpliceAI          12,646    99%   0.9853   [0.9833, 0.9871]   0.9779
+  CADD v1.7         12,731   100%   0.9809   [0.9788, 0.9830]   0.9646
+
+  Paired, MetaSplice v2.0 minus comparator (variants both score):
+    vs SpliceAI     N= 12,646  diff +0.0075  [+0.0060, +0.0091]
+    vs CADD v1.7    N= 12,731  diff +0.0119  [+0.0102, +0.0136]
+
+  WITHIN REGION (the interpretable comparison)
+  Region                                N   pos  MetaSplice      SpliceAI    CADD v1.7
+  ------------------------------------------------------------------------------------
+  Canonical Donor Site              2,200 2,199   (SUPPRESSED: only 1 in the minority class)
+  Canonical Acceptor Site           3,132 3,126       0.9996       0.9977       0.9971
+  Donor Region                      1,700 1,399       0.9904       0.9777       0.9571
+  Acceptor Region                   1,121   711       0.9667       0.9423       0.9109
+  PPT Region                        1,246   244       0.8128       0.8220       0.5484
+  Branch Point Region               1,175    63       0.4492       0.3747       0.1588
+  Deep Intronic                     2,157   273       0.8700       0.8524       0.6204
+  Deep Intronic, sensitivity set    1,846   163       0.8384       0.8173       0.5763
+
+  Within-region AUROC (prevalence-independent):
+  Region                                N        MetaSplice      SpliceAI    CADD v1.7
+  Canonical Acceptor Site           3,132             0.8203       0.4522       0.3675
+  Donor Region                      1,700             0.9650       0.9344       0.8690
+  Acceptor Region                   1,121             0.9368       0.9175       0.8546
+  PPT Region                        1,246             0.9029       0.9276       0.7483
+  Branch Point Region               1,175             0.7903       0.7852       0.6513
+  Deep Intronic                     2,157             0.9262       0.9269       0.8125
+  Deep Intronic, sensitivity set    1,846             0.9093       0.9151       0.8071
+
+  Paired per region, MetaSplice v2.0 minus comparator (auPRC):
+    Canonical Acceptor Site          vs SpliceAI   N= 3,116  diff +0.0019  [+0.0005, +0.0030]
+    Canonical Acceptor Site          vs CADD v1.7  N= 3,132  diff +0.0025  [+0.0008, +0.0041]
+    Donor Region                     vs SpliceAI   N= 1,688  diff +0.0128  [+0.0080, +0.0186]
+    Donor Region                     vs CADD v1.7  N= 1,700  diff +0.0332  [+0.0239, +0.0433]
+    Acceptor Region                  vs SpliceAI   N= 1,112  diff +0.0248  [+0.0146, +0.0360]
+    Acceptor Region                  vs CADD v1.7  N= 1,121  diff +0.0559  [+0.0417, +0.0701]
+    PPT Region                       vs SpliceAI   N= 1,237  diff -0.0092  [-0.0359, +0.0173]
+    PPT Region                       vs CADD v1.7  N= 1,246  diff +0.2644  [+0.2083, +0.3139]
+    Branch Point Region              vs SpliceAI   N= 1,169  diff +0.0747  [-0.0062, +0.1613]
+    Branch Point Region              vs CADD v1.7  N= 1,175  diff +0.2904  [+0.1756, +0.3987]
+    Deep Intronic                    vs SpliceAI   N= 2,142  diff +0.0172  [-0.0065, +0.0406]
+    Deep Intronic                    vs CADD v1.7  N= 2,157  diff +0.2497  [+0.1965, +0.3028]
+    Deep Intronic, sensitivity set   vs SpliceAI   N= 1,834  diff +0.0201  [-0.0112, +0.0506]
+    Deep Intronic, sensitivity set   vs CADD v1.7  N= 1,846  diff +0.2622  [+0.1886, +0.3309]
+
+========================================================================================
+BROAD (splice-altering or low-frequency against normal)
+========================================================================================
+N=22,274  positive=17,558  negative=4,716  prevalence=78.8% (equals Amendment 3)
+
+  POOLED (region-confounded; interpret with care)
+  Tool                   N    cov    auPRC               95% CI    AUROC
+  MetaSplice v2.0   22,274   100%   0.9415   [0.9398, 0.9432]   0.7831
+  SpliceAI          22,135    99%   0.9241   [0.9224, 0.9258]   0.7831
+  CADD v1.7         22,274   100%   0.9380   [0.9362, 0.9401]   0.7779
+
+  Paired, MetaSplice v2.0 minus comparator (variants both score):
+    vs SpliceAI     N= 22,135  diff +0.0175  [+0.0162, +0.0189]
+    vs CADD v1.7    N= 22,274  diff +0.0034  [+0.0018, +0.0051]
+
+  WITHIN REGION (the interpretable comparison)
+  Region                                N   pos  MetaSplice      SpliceAI    CADD v1.7
+  ------------------------------------------------------------------------------------
+  Canonical Donor Site              2,742 2,741   (SUPPRESSED: only 1 in the minority class)
+  Canonical Acceptor Site           3,883 3,877       0.9997       0.9982       0.9976
+  Donor Region                      2,675 2,374       0.9820       0.9707       0.9613
+  Acceptor Region                   2,151 1,741       0.9347       0.9183       0.9122
+  PPT Region                        2,891 1,889       0.7430       0.7287       0.7072
+  Branch Point Region               2,894 1,782       0.6215       0.6384       0.6422
+  Deep Intronic                     5,038 3,154       0.7071       0.6904       0.7091
+  Deep Intronic, sensitivity set    4,375 2,692       0.6769       0.6653       0.6906
+
+  Within-region AUROC (prevalence-independent):
+  Region                                N        MetaSplice      SpliceAI    CADD v1.7
+  Canonical Acceptor Site           3,883             0.8192       0.4466       0.3607
+  Donor Region                      2,675             0.8742       0.8503       0.7871
+  Acceptor Region                   2,151             0.7453       0.7428       0.6970
+  PPT Region                        2,891             0.5687       0.5732       0.5348
+  Branch Point Region               2,894             0.4838       0.5234       0.5230
+  Deep Intronic                     5,038             0.5546       0.5578       0.5731
+  Deep Intronic, sensitivity set    4,375             0.5357       0.5411       0.5640
+
+  Paired per region, MetaSplice v2.0 minus comparator (auPRC):
+    Canonical Acceptor Site          vs SpliceAI   N= 3,865  diff +0.0015  [+0.0005, +0.0025]
+    Canonical Acceptor Site          vs CADD v1.7  N= 3,883  diff +0.0020  [+0.0007, +0.0033]
+    Donor Region                     vs SpliceAI   N= 2,660  diff +0.0114  [+0.0081, +0.0150]
+    Donor Region                     vs CADD v1.7  N= 2,675  diff +0.0206  [+0.0153, +0.0269]
+    Acceptor Region                  vs SpliceAI   N= 2,138  diff +0.0170  [+0.0115, +0.0224]
+    Acceptor Region                  vs CADD v1.7  N= 2,151  diff +0.0225  [+0.0146, +0.0305]
+    PPT Region                       vs SpliceAI   N= 2,871  diff +0.0147  [+0.0034, +0.0258]
+    PPT Region                       vs CADD v1.7  N= 2,891  diff +0.0358  [+0.0191, +0.0518]
+    Branch Point Region              vs SpliceAI   N= 2,875  diff -0.0167  [-0.0322, -0.0018]
+    Branch Point Region              vs CADD v1.7  N= 2,894  diff -0.0207  [-0.0391, -0.0016]
+    Deep Intronic                    vs SpliceAI   N= 5,006  diff +0.0164  [+0.0064, +0.0264]
+    Deep Intronic                    vs CADD v1.7  N= 5,038  diff -0.0020  [-0.0149, +0.0116]
+    Deep Intronic, sensitivity set   vs SpliceAI   N= 4,348  diff +0.0107  [-0.0009, +0.0211]
+    Deep Intronic, sensitivity set   vs CADD v1.7  N= 4,375  diff -0.0136  [-0.0284, +0.0022]
+
+========================================================================================
+OPERATING POINTS (MetaSplice v2.0 score)
+========================================================================================
+   threshold    sens (SA)   sens (low-freq)   FPR (normal)
+         0.1       92.8%            21.9%          1.2%
+         0.2       91.5%            21.3%          1.0%
+         0.5       89.0%            20.0%          0.7%
+
+  Deep Intronic only (n=273 splice-altering, 1884 normal):
+         0.1       66.7%                           0.3%
+         0.2       62.3%                           0.2%
+         0.5       48.0%                           0.2%
+
+  Deep Intronic, sensitivity set only (n=163 splice-altering, 1683 normal):
+         0.1       66.9%                           0.2%
+         0.2       62.0%                           0.2%
+         0.5       50.9%                           0.1%
+
+========================================================================================
+SECONDARY: BY ASSAY SOURCE (assay records, variant-clustered bootstrap)
+========================================================================================
+  assay source    records  variants   sens@0.1              95% CI
+  MFASS               611       611     59.7%   [55.5%, 63.5%]
+  MiSplice            898       898     99.6%   [99.0%, 99.9%]
+  SAVNet            7,091     7,091     95.3%   [94.9%, 95.9%]
+
+  Record-level strict auPRC, variant-clustered CI: 0.9937 [0.9928, 0.9945] (N=13,325 records, 12,771 variants); reported for completeness, the primary analysis is variant level.
+
+========================================================================================
+ASSAY-DISCORDANT VARIANTS (excluded from the primary analysis)
+========================================================================================
+40 SNVs were called splice-altering by one assay and low-frequency splice-altering by another.
+  MetaSplice v2.0 >= 0.1: 100.0% (40/40)
+  dataset pairs: {'MiSplice|SAVNet': 39, 'MFASS|SAVNet': 1}
+  by region: {'Canonical Acceptor Site': 29, 'Canonical Donor Site': 10, 'Acceptor Region': 1}

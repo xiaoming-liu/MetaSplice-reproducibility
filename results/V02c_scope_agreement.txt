@@ -1,0 +1,34 @@
+V02c -- the command-line scorer and V02 agree on scope
+
+1. ClinVar 2025-08-31, every P/LP or B/LB SNV
+  scorer: 1,370,180 rows; in scope 413,199; out of scope {'exonic': 921807, 'inside a GENCODE basic exon': 22569, 'outside MANE transcripts': 10851, 'chrMT not in the GRCh38 FASTA': 1745, 'chrNT_187693.1 not in the GRCh38 FASTA': 5, 'chrNT_187661.1 not in the GRCh38 FASTA': 3, 'chrNT_187633.1 not in the GRCh38 FASTA': 1}
+  PASS  2025 release vs training: the same in-scope variants  [scorer 413,199, V02 413,199; only scorer 0, only V02 0]
+  PASS  2025 release vs training: the same region  [0 differ]
+  PASS  2025 release vs training: the same gene  [0 differ]
+  PASS  2025 release vs training: the same gene_id  [0 differ]
+
+2. ClinVar 2026-04-15, every P/LP or B/LB SNV, less training variants
+  scorer: in scope 441,876; in the training data 412,588
+  PASS  2026 release vs test candidates: the same in-scope variants  [scorer 29,288, V02 29,288; only scorer 0, only V02 0]
+  PASS  2026 release vs test candidates: the same region  [0 differ]
+  PASS  2026 release vs test candidates: the same gene  [0 differ]
+  PASS  2026 release vs test candidates: the same gene_id  [0 differ]
+
+3. Literature, GRCh37 input
+  scorer: in scope 727; in the training data 30
+  PASS  literature (hg19 input) vs V02 literature: the same in-scope variants  [scorer 697, V02 697; only scorer 0, only V02 0]
+  PASS  literature (hg19 input) vs V02 literature: the same region  [0 differ]
+  PASS  literature (hg19 input) vs V02 literature: the same gene  [0 differ]
+  PASS  literature (hg19 input) vs V02 literature: the same gene_id  [0 differ]
+
+4. Deep-intronic counts: primary scope and the wider sensitivity set (O5)
+  training                         n=  413,199 (P/LP 41,032); Deep Intronic, primary scope  191,795 (P/LP 552); wider sensitivity set  159,226 (P/LP 364)
+  test set, strict                 n=   28,465 (P/LP 3,451); Deep Intronic, primary scope   10,119 (P/LP 80); wider sensitivity set    8,312 (P/LP 62)
+  test set, reclassified           n=      823 (P/LP 228); Deep Intronic, primary scope      160 (P/LP 11); wider sensitivity set      123 (P/LP 8)
+  VUS                              n=   71,267; Deep Intronic, primary scope    7,371; wider sensitivity set    5,780
+  literature                       n=      697 (P/LP 697); Deep Intronic, primary scope      130 (P/LP 130); wider sensitivity set      114 (P/LP 114)
+  SpliceVarDB records              n=   22,908; Deep Intronic, primary scope    5,039; wider sensitivity set    4,375
+  gnomAD reference, uniform        n=  100,000; Deep Intronic, primary scope   97,644; wider sensitivity set   93,688
+  gnomAD reference, stratified     n=   50,000; Deep Intronic, primary scope   10,000; wider sensitivity set    9,612
+
+V02c: ALL CHECKS PASSED

@@ -1,0 +1,66 @@
+================================================================================================
+X1 -- EXPLORATORY: DISTANCE CONTROL OF THE DEEP-INTRONIC RESULTS (strict test set; descriptive only)
+Not pre-specified in Amendment 3. No change to Gate G2, the prior or any threshold.
+================================================================================================
+
+Deep Intronic: n=10,119  P/LP=80  B/LB=10,039
+  |distance| median: P/LP 678 bp, B/LB 15 bp
+  tool                     n    P    auPRC              95% CI    AUROC
+  MetaSplice v2.0     10,119   80   0.9236   [0.8706, 0.9682]   0.9874
+  SpliceAI            10,063   80   0.6836   [0.5912, 0.7698]   0.9397
+  CADD                10,119   80   0.4273   [0.3175, 0.5373]   0.8543
+  distance only       10,119   80   0.3444   [0.2754, 0.4338]   0.9816
+  paired, MetaSplice v2.0 minus distance only: +0.5793 [+0.4761, +0.6599]  n=10,119
+
+  Within distance bands (|distance to the exon boundary|):
+
+  <= 50 bp: n=9,766  P/LP=4  B/LB=9,762  share P/LP 0.04%
+    counts only: too few P/LP for performance values
+
+  51-500 bp: n=203  P/LP=29  B/LB=174  share P/LP 14.29%
+    MetaSplice v2.0    n=   203 P= 29  auPRC 0.9056 [0.8032, 0.9883]
+    SpliceAI           n=   203 P= 29  auPRC 0.9012 [0.7997, 0.9855]
+    CADD               n=   203 P= 29  auPRC 0.8112 [0.6719, 0.9264]
+    distance only      n=   203 P= 29  auPRC 0.2585 [0.1774, 0.4183]
+    paired, MetaSplice v2.0 minus SpliceAI  n=   203 P= 29  +0.0044 [-0.0507, +0.0622]
+    paired, MetaSplice v2.0 minus CADD      n=   203 P= 29  +0.0943 [-0.0044, +0.2155]
+
+  > 500 bp: n=150  P/LP=47  B/LB=103  share P/LP 31.33%
+    MetaSplice v2.0    n=   150 P= 47  auPRC 0.9567 [0.9124, 0.9905]
+    SpliceAI           n=   150 P= 47  auPRC 0.9220 [0.8539, 0.9786]
+    CADD               n=   150 P= 47  auPRC 0.7340 [0.6255, 0.8275]
+    distance only      n=   150 P= 47  auPRC 0.4015 [0.3114, 0.5182]
+    paired, MetaSplice v2.0 minus SpliceAI  n=   150 P= 47  +0.0346 [+0.0061, +0.0734]
+    paired, MetaSplice v2.0 minus CADD      n=   150 P= 47  +0.2226 [+0.1383, +0.3206]
+
+Deep Intronic, sensitivity set: n=8,312  P/LP=62  B/LB=8,250
+  |distance| median: P/LP 852 bp, B/LB 15 bp
+  tool                     n    P    auPRC              95% CI    AUROC
+  MetaSplice v2.0      8,312   62   0.9494   [0.9041, 0.9859]   0.9989
+  SpliceAI             8,260   62   0.7249   [0.6281, 0.8141]   0.9657
+  CADD                 8,312   62   0.4539   [0.3320, 0.5755]   0.8658
+  distance only        8,312   62   0.3633   [0.2796, 0.4686]   0.9803
+  paired, MetaSplice v2.0 minus distance only: +0.5861 [+0.4654, +0.6811]  n=8,312
+
+  Within distance bands (|distance to the exon boundary|):
+
+  <= 50 bp: n=8,022  P/LP=3  B/LB=8,019  share P/LP 0.04%
+    counts only: too few P/LP for performance values
+
+  51-500 bp: n=163  P/LP=17  B/LB=146  share P/LP 10.43%
+    MetaSplice v2.0    n=   163 P= 17  auPRC 0.9485 [0.8591, 1.0000]
+    SpliceAI           n=   163 P= 17  auPRC 0.9423 [0.8520, 1.0000]
+    CADD               n=   163 P= 17  auPRC 0.8464 [0.6842, 0.9864]
+    distance only      n=   163 P= 17  auPRC 0.2576 [0.1383, 0.4446]
+    paired, MetaSplice v2.0 minus SpliceAI  n=   163 P= 17  +0.0062 [-0.1012, +0.1031]
+    paired, MetaSplice v2.0 minus CADD      n=   163 P= 17  +0.1021 [-0.0644, +0.2741]
+
+  > 500 bp: n=127  P/LP=42  B/LB=85  share P/LP 33.07%
+    MetaSplice v2.0    n=   127 P= 42  auPRC 0.9649 [0.9252, 0.9978]
+    SpliceAI           n=   127 P= 42  auPRC 0.9522 [0.9040, 1.0000]
+    CADD               n=   127 P= 42  auPRC 0.7452 [0.6408, 0.8416]
+    distance only      n=   127 P= 42  auPRC 0.4111 [0.3093, 0.5264]
+    paired, MetaSplice v2.0 minus SpliceAI  n=   127 P= 42  +0.0127 [-0.0020, +0.0334]
+    paired, MetaSplice v2.0 minus CADD      n=   127 P= 42  +0.2197 [+0.1271, +0.3172]
+
+wrote results/X1_distance_control.tsv (40 rows)

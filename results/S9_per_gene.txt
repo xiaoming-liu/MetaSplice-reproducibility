@@ -1,0 +1,13 @@
+========================================================================================
+S9 -- CANDIDATE EVIDENCE BY GENE (>= 10 P/LP in the >= 1-star validation cohort; S6 thresholds; Amendment 3)
+========================================================================================
+1 gene with >= 10 P/LP, covering 11 of 231 P/LP. Reported as a descriptive single-gene result, not as evidence of performance across genes.
+                    gene       tool evidence   P     B  P_in  B_in     LR  lo95_exact  hi95_exact point_verdict
+DMD (ENSG00000198947.19) MetaSplice  any PP3  11    69    10     2   31.4        4.83         410         meets
+DMD (ENSG00000198947.19) MetaSplice  any BP4  11    69     0    58      0           0       0.458         meets
+       (all other genes) MetaSplice  any PP3 220 23749   206   108    206         158         267         meets
+       (all other genes) MetaSplice  any BP4 220 23749     7 22401 0.0337      0.0118      0.0741         meets
+DMD (ENSG00000198947.19)   SpliceAI  any PP3  11    69    10     1   62.7        6.11    5.48e+03         meets
+DMD (ENSG00000198947.19)   SpliceAI  any BP4  11    69     1    68 0.0922     0.00114       0.501         meets
+       (all other genes)   SpliceAI  any PP3 219 23629   193   462   45.1          38        52.6         meets
+       (all other genes)   SpliceAI  any BP4 219 23629    17 22047 0.0832      0.0452       0.138         meets

@@ -1,0 +1,27 @@
+V01 -- GENCODE v50 MANE annotation for MetaSplice v2.0
+source: /mnt/Work0/Splice_altering_variant/docker_data/gencode.v50.annotation.gtf.gz (md5 2d273848c6068682fabea72fae4896a9)
+MANE GTF: 19,299 genes, 19,373 transcripts, 204,067 exons -> /mnt/Work0/Splice_altering_variant/annotation_v2/gencode.v50.mane.gtf.gz
+  gene lines whose span was reset to the extent of their MANE transcripts: 17,072
+  md5 0fed8b55b40af40e25c8fdf184b6931d
+Pangolin database: /mnt/Work0/Splice_altering_variant/annotation_v2/gencode.v50.mane.db (239.7 MB)
+SpliceTransformer run directory: /mnt/Work0/Splice_altering_variant/annotation_v2/spt_run
+
+V01b -- SpliceTransformer annotation checks (Task 1, Step 5)
+1. Database
+  PASS  database built inside the run directory  [/mnt/Work0/Splice_altering_variant/annotation_v2/spt_run/data/data_package/hg38.annotation.gtf.db]
+  PASS  every MANE gene, and nothing else  [19,299 in the database, 19,299 MANE genes]
+  PASS  gene spans equal the extent of their MANE transcripts  [0 differ]
+2. genes_at_locus against the MANE GTF
+  opposite-strand overlapping MANE gene pairs: 920
+  PASS  A. 1-50 bp beyond a MANE transcript, outside every MANE transcript span: n=200  [0 differ]
+  PASS  B. 1-50 bp inside the end of a MANE transcript: n=200  [0 differ]
+  PASS  C. overlap of two MANE genes on opposite strands: n=200  [0 differ; two strands at 200]
+3. SpliceTransformer on group A
+  PASS  SpliceTransformer ran
+  PASS  group A scored 0 with all tissues 0: n=200  [0 nonzero]
+4. Positive control on group B
+  PASS  SpliceTransformer ran from the MANE run directory
+  PASS  SpliceTransformer ran from the SpliceTransformer package (v38)
+  PASS  group B has nonzero scores in the run directory  [113 of 200 nonzero]
+  PASS  equal to the package wherever both annotations give the same strands  [same strands at 153: identical 153; different strands at 47: identical 31]
+V01b: ALL CHECKS PASSED

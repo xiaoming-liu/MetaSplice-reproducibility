@@ -1,0 +1,59 @@
+section	set	scope	n	group	mean_abs_shap	P	genes	pairs	estimate	lo	hi
+importance	training, out of fold	all	413199	Pangolin	3.9939422607421875						
+importance	training, out of fold	all	413199	SpliceTransformer	2.188995361328125						
+importance	training, out of fold	all	413199	exon context	1.647043228149414						
+importance	training, out of fold	all	413199	gene-level	0.9068316221237183						
+importance	training, out of fold	all	413199	conservation	0.7048701643943787						
+importance	training, out of fold	all	413199	GPN-MSA	0.529807984828949						
+importance	training, out of fold	all	413199	DANN	0.3487817645072937						
+importance	training, out of fold	all	413199	region	0.2555444836616516						
+importance	training, out of fold	non-canonical	375497	Pangolin	4.110526084899902						
+importance	training, out of fold	non-canonical	375497	SpliceTransformer	2.2015817165374756						
+importance	training, out of fold	non-canonical	375497	exon context	1.530145287513733						
+importance	training, out of fold	non-canonical	375497	gene-level	0.8879485130310059						
+importance	training, out of fold	non-canonical	375497	conservation	0.7069828510284424						
+importance	training, out of fold	non-canonical	375497	GPN-MSA	0.5274694561958313						
+importance	training, out of fold	non-canonical	375497	DANN	0.3255712389945984						
+importance	training, out of fold	non-canonical	375497	region	0.24881546199321747						
+importance	development, full model	all	28465	Pangolin	3.8859314918518066						
+importance	development, full model	all	28465	SpliceTransformer	1.8708491325378418						
+importance	development, full model	all	28465	exon context	1.9216848611831665						
+importance	development, full model	all	28465	gene-level	0.7839075922966003						
+importance	development, full model	all	28465	conservation	0.6539071798324585						
+importance	development, full model	all	28465	GPN-MSA	0.42973843216896057						
+importance	development, full model	all	28465	DANN	0.32150715589523315						
+importance	development, full model	all	28465	region	0.2482459396123886						
+importance	development, full model	non-canonical	25240	Pangolin	4.046586990356445						
+importance	development, full model	non-canonical	25240	SpliceTransformer	1.8396036624908447						
+importance	development, full model	non-canonical	25240	exon context	1.7999236583709717						
+importance	development, full model	non-canonical	25240	gene-level	0.7622175812721252						
+importance	development, full model	non-canonical	25240	conservation	0.6658070683479309						
+importance	development, full model	non-canonical	25240	GPN-MSA	0.41499388217926025						
+importance	development, full model	non-canonical	25240	DANN	0.2937074303627014						
+importance	development, full model	non-canonical	25240	region	0.24455629289150238						
+importance	september, full model	all	16927	Pangolin	3.8922805786132812						
+importance	september, full model	all	16927	SpliceTransformer	1.9179980754852295						
+importance	september, full model	all	16927	exon context	1.8847194910049438						
+importance	september, full model	all	16927	gene-level	0.8283749222755432						
+importance	september, full model	all	16927	conservation	0.6813092827796936						
+importance	september, full model	all	16927	GPN-MSA	0.49390098452568054						
+importance	september, full model	all	16927	DANN	0.3345189690589905						
+importance	september, full model	all	16927	region	0.2542564272880554						
+importance	september, full model	non-canonical	14749	Pangolin	4.076817512512207						
+importance	september, full model	non-canonical	14749	SpliceTransformer	1.8806936740875244						
+importance	september, full model	non-canonical	14749	exon context	1.7413705587387085						
+importance	september, full model	non-canonical	14749	gene-level	0.8036309480667114						
+importance	september, full model	non-canonical	14749	conservation	0.6979702711105347						
+importance	september, full model	non-canonical	14749	GPN-MSA	0.4845866858959198						
+importance	september, full model	non-canonical	14749	DANN	0.30300089716911316						
+importance	september, full model	non-canonical	14749	region	0.2507765293121338						
+within-gene concordance	development	MetaSplice	25114			243.0	153.0	5087.0	0.9905641832121093	0.9793808770399147	0.996842049011215
+within-gene concordance	development	SpliceAI	25114			243.0	153.0	5087.0	0.9746412423825438	0.9573283611037673	0.9891111518157534
+within-gene concordance	development	CADD	25114			243.0	153.0	5087.0	0.8840180853155101	0.8428400859286864	0.9253618000054706
+within-gene concordance	development	MetaSplice minus SpliceAI	25114			243.0	153.0		0.01592294082956547	0.003910356958632996	0.029056752960980002
+within-gene concordance	development	MetaSplice minus CADD	25114			243.0	153.0		0.10654609789659919	0.06461637782487276	0.14627148036199286
+within-gene concordance	september	MetaSplice	14552			273.0	176.0	3158.0	0.9730842305256492	0.9499172259643955	0.9942592589237584
+within-gene concordance	september	SpliceAI	14552			273.0	176.0	3158.0	0.9729259024699176	0.959913689378263	0.9846463393284
+within-gene concordance	september	CADD	14552			273.0	176.0	3158.0	0.8822039265357822	0.8329467662973059	0.9356474391370712
+within-gene concordance	september	MetaSplice minus SpliceAI	14552			273.0	176.0		0.00015832805573157138	-0.021177667994437967	0.024871261282984038
+within-gene concordance	september	MetaSplice minus CADD	14552			273.0	176.0		0.09088030398986702	0.05548274878813803	0.11888333207290327

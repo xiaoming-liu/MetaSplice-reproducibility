@@ -1,0 +1,32 @@
+V02 -- MetaSplice v2.0 variant sets on GRCh38 (GENCODE v50 MANE Select + Plus Clinical)
+
+Training: ClinVar 2025-08-31 GRCh38, SNVs, P/LP or B/LB
+  SNVs 1,370,180; in scope 413,199; out of scope {'exonic': 921807, 'inside a GENCODE basic exon': 22569, 'outside MANE transcripts': 10851, 'no MANE transcript on this chromosome': 1754}
+  pathogenic genes (>= 1 P/LP SNV of any region, inside the gene's MANE transcripts): 5,133
+  training: 0 duplicate records of one variant; 0 variants dropped for conflicting labels
+  training: 413,199 variants, P/LP 41,032; GRCh37 record found 99.99%
+  by region: Deep Intronic 191,795 (P/LP 552), PPT Region 86,776 (P/LP 348), Acceptor Region 64,628 (P/LP 784), Donor Region 26,476 (P/LP 1,862), Canonical Donor Site 20,576 (P/LP 20,443), Canonical Acceptor Site 17,126 (P/LP 16,990), Branch Point Region 5,822 (P/LP 53)
+  v1 training (non-exonic, GRCh37, GENCODE v19): 381,226; ClinVar IDs in both 364,315
+  Deep Intronic 191,795; canonical in some GENCODE v50 transcript 474; exonic in some v50 transcript 32,238; neither (sensitivity set) 159,226
+
+Test candidates: ClinVar 2026-04-15 GRCh38, SNVs, P/LP or B/LB, in scope, less training variants
+  test candidates: 0 duplicate records of one variant; 0 variants dropped for conflicting labels
+  in scope 441,876; in the training data 412,588 (dropped)
+  strict: 28,465 variants, P/LP 3,451
+  reclassified: 823 variants, P/LP 228
+  strict by region: Deep Intronic 10,119 (P/LP 80), PPT Region 8,359 (P/LP 21), Acceptor Region 4,810 (P/LP 36), Donor Region 1,766 (P/LP 102), Canonical Donor Site 1,730 (P/LP 1,723), Canonical Acceptor Site 1,495 (P/LP 1,484), Branch Point Region 186 (P/LP 5)
+  strict Deep Intronic 10,119 (P/LP 80); sensitivity set (neither canonical nor exonic in any GENCODE v50 transcript) 8,312 (P/LP 62)
+
+VUS: ClinVar 2026-04-15 GRCh38, uncertain or conflicting, in scope, less training variants
+  in scope 71,863; in the training data 596 (dropped)
+  VUS: 71,267 ({'Uncertain_significance': 56282, 'Conflicting_classifications_of_pathogenicity': 14985})
+
+Literature and SpliceVarDB: lifted from GRCh37 with the Ensembl chain, in scope, less training variants
+  literature: 746 records; lifted 745; not lifted 1 {'REF differs between builds': 1}
+  literature: in scope 727; out of scope {'inside a GENCODE basic exon': 11, 'outside MANE transcripts': 7}
+  literature: in the training data 30 (dropped); 697 variants
+  SpliceVarDB records: 44,510 records; lifted 44,324; not lifted 186 {'no one-to-one position in the other build': 138, 'REF differs between builds': 48}
+  SpliceVarDB: in scope 24,372 records; out of scope {'exonic': 19375, 'inside a GENCODE basic exon': 431, 'outside MANE transcripts': 146}
+  SpliceVarDB: in the training data 1464 (dropped); 22,908 records, 22,314 variants; classes {'Low-frequency splice-altering': 9583, 'Splice-altering': 8609, 'Normal': 4716}
+
+Every REF allele equals the GRCh38 base; no test, VUS, literature or SpliceVarDB variant is in the training data.

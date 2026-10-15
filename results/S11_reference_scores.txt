@@ -1,0 +1,6 @@
+S11 Step 1 -- MetaSplice v2.0 scores of the gnomAD population reference (full and gene-matched fold models)
+  uniform: 100,000 variants; genes 4,648; outside the fold map 6,694 variants in 497 genes (seeded fold, flagged)
+    by region: {'Deep Intronic': 97644, 'Branch Point Region': 1032, 'PPT Region': 741, 'Acceptor Region': 328, 'Donor Region': 255}
+  stratified: 50,000 variants; genes 4,779; outside the fold map 3,549 variants in 525 genes (seeded fold, flagged)
+    by region: {'Acceptor Region': 10000, 'Donor Region': 10000, 'PPT Region': 10000, 'Branch Point Region': 10000, 'Deep Intronic': 10000}
+wrote data/v2_gnomad_reference_scores.csv (150,000 rows)

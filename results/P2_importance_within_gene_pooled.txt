@@ -1,0 +1,46 @@
+====================================================================================================
+P2 -- FEATURE-GROUP IMPORTANCE AND WITHIN-GENE CONCORDANCE (Amendment 8; descriptive, no verdict)
+====================================================================================================
+
+Input lock (md5), before anything is computed
+  51c6e5d0db100b33b91907fa857cd9a7  models/metasplice_v2_full.joblib  ok
+  8be31360848f2cb43c2b02850bd03815  models/metasplice_v2_features.joblib  ok
+  dca7cf706ac3e6832495d5e8cf8e6e82  models/metasplice_v2_folds.json  ok
+  c3258d9cbf71d2b55ab7d5829e46a1c0  models/metasplice_v2_fold0.joblib  ok
+  3dd2a124484a40887c1158b8fe44d471  models/metasplice_v2_fold1.joblib  ok
+  bd3205ccafc370771802472dbee39e8c  models/metasplice_v2_fold2.joblib  ok
+  4d1703f1716021f0e43f192be79040f6  models/metasplice_v2_fold3.joblib  ok
+  79b7f6dafae1d9959d7989f7977a59b7  models/metasplice_v2_fold4.joblib  ok
+  4de7d586fd8e4e81ceb7cc84d669f2d2  data/v2_features_training.csv  ok
+  cb80fac8f03f0e4cfdcd2e11e7424884  data/v2_oof.csv  ok
+  27fad032309f58f4b058b4c6e1ddc4a9  data/v2_features_test_candidates.csv  ok
+  d9e70ef71b2c1ca149e4cf4ed56d59e0  data/v2_variants_test_candidates.csv  ok
+  5f2a4b045d7e6113d44896babc0d0c47  data/v2_variants_training.csv  ok
+  fc9013f3b52502ca25dc1d0ff774b7b8  data/v2_comparators.csv  ok
+  f9cd3f227b0357a4c022f5d6814e4ab4  data/v2_features_fresh_20260928.csv  ok
+  111c595ba957c7fc93b8833188d4b029  /mnt/Work0/Splice_altering_variant/clinvar/hg38/clinvar_20250831.vcf.gz.summary.gz  ok
+  3c0116eaa075ee7c658ca5c70ec44763  /mnt/Work0/Splice_altering_variant/reproducibility/raw_inputs/clinvar_20250831.vcf.gz.summary.gz  ok
+  a1847d63dd5ab2e4021b1f20a01b22c8  data/v2_features_pooled_test.csv  ok
+  every input equals its locked md5
+
+Denominator check against Amendment 9 (n, P/LP), before anything is computed
+  pooled       non-canonical                    n= 40,619 P/LP= 602   recorded (40619, 602)   ok
+  pooled       non-canonical, SpliceAI-scored   n= 40,296 P/LP= 600   recorded (40296, 600)   ok
+  every denominator equals Amendment 9
+
+1. FEATURE-GROUP IMPORTANCE: mean |SHAP| per feature, summed within group (log-odds scale)
+  training, out of fold        all            n=413,199  Pangolin 3.994  SpliceTransformer 2.189  exon context 1.647  gene-level 0.907  conservation 0.705  GPN-MSA 0.530  DANN 0.349  region 0.256
+  training, out of fold        non-canonical  n=375,497  Pangolin 4.111  SpliceTransformer 2.202  exon context 1.530  gene-level 0.888  conservation 0.707  GPN-MSA 0.527  DANN 0.326  region 0.249
+  pooled, full model           all            n= 46,112  Pangolin 3.883  SpliceTransformer 1.886  exon context 1.906  gene-level 0.801  conservation 0.664  GPN-MSA 0.453  DANN 0.326  region 0.251
+  pooled, full model           non-canonical  n= 40,619  Pangolin 4.052  SpliceTransformer 1.852  exon context 1.776  gene-level 0.778  conservation 0.677  GPN-MSA 0.441  DANN 0.296  region 0.247
+
+2. WITHIN-GENE CONCORDANCE, non-canonical variants all three tools score (gene-clustered bootstrap, 1,000 iterations, seed 42)
+
+  pooled: n=40,296 (P/LP 600); 353 genes with both classes; 19,975 P/LP-B/LB pairs
+    MetaSplice  concordance 0.9897 [0.9843, 0.9955]
+    SpliceAI    concordance 0.9815 [0.9725, 0.9885]
+    CADD        concordance 0.8783 [0.8461, 0.9189]
+    MetaSplice minus SpliceAI  +0.0082 [-0.0004, +0.0183]
+    MetaSplice minus CADD      +0.1114 [+0.0752, +0.1410]
+
+wrote results/P2_importance_within_gene_pooled.tsv (37 rows)

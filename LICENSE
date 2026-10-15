@@ -1,0 +1,27 @@
+MetaSplice License
+
+Copyright (c) 2026 Xiaoming Liu, University of South Florida
+
+Permission is hereby granted, free of charge, to use, copy, modify, and
+distribute MetaSplice and its associated model files for non-commercial
+research, educational, and clinical (non-revenue-generating) purposes,
+subject to the following conditions:
+
+1. The above copyright notice and this permission notice shall be included
+   in all copies or substantial portions of the software.
+
+2. Publications and presentations using MetaSplice shall cite the
+   associated manuscript.
+
+3. For commercial use — including use within commercial products,
+   fee-for-service offerings, and internal use by for-profit entities —
+   please contact xiaomingliu@usf.edu.
+
+4. Redistributions of the pre-trained model file (metasplice.joblib) must
+   retain this license file.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM
+THE USE OF THIS SOFTWARE.

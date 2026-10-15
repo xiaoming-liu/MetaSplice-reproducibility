@@ -1,0 +1,25 @@
+V12 -- pooled temporal test set, labelled by ClinVar 2026-09-28 (counts only; labels used only to count)
+  2026-09-28 in scope: 0 duplicate records of one variant; 0 variants dropped for conflicting labels
+  2026-09-28 P/LP or B/LB in scope: 457,664; in training 411,552; P/LP or B/LB in 2025-08-31 (not in training) 0
+  pooled test set: 46,112 variants (P/LP 6,056)
+  every pooled variant has exactly one feature row, with V02's region, gene and gene ID
+
+By source
+  2026-04-15: 29,185 (P/LP 3,622); non-canonical 25,870 (P/LP 327)
+  2026-09-28: 16,927 (P/LP 2,434); non-canonical 14,749 (P/LP 275)
+
+By region (n, P/LP), and with a SpliceAI score / a CADD score
+  Acceptor Region                    n=  7,021 P/LP=  123   SpliceAI n=  6,983 P/LP=  123   CADD n=  7,021 P/LP=  123
+  Branch Point Region                n=    395 P/LP=    9   SpliceAI n=    394 P/LP=    9   CADD n=    395 P/LP=    9
+  Canonical Acceptor Site            n=  2,542 P/LP=2,522   SpliceAI n=  2,516 P/LP=2,497   CADD n=  2,542 P/LP=2,522
+  Canonical Donor Site               n=  2,951 P/LP=2,932   SpliceAI n=  2,937 P/LP=2,918   CADD n=  2,951 P/LP=2,932
+  Deep Intronic                      n= 17,479 P/LP=  126   SpliceAI n= 17,331 P/LP=  126   CADD n= 17,479 P/LP=  126
+  Donor Region                       n=  3,314 P/LP=  283   SpliceAI n=  3,278 P/LP=  281   CADD n=  3,314 P/LP=  283
+  PPT Region                         n= 12,410 P/LP=   61   SpliceAI n= 12,310 P/LP=   61   CADD n= 12,410 P/LP=   61
+  non-canonical                      n= 40,619 P/LP=  602   SpliceAI n= 40,296 P/LP=  600   CADD n= 40,619 P/LP=  602
+  Deep Intronic, sensitivity set     n= 14,459 P/LP=   99   SpliceAI n= 14,325 P/LP=   99   CADD n= 14,459 P/LP=   99
+  calibration cohort, all statuses   n= 37,860 P/LP=  595   SpliceAI n= 37,556 P/LP=  593   CADD n= 37,860 P/LP=  595
+  calibration cohort, >= 1 star      n= 37,841 P/LP=  578   SpliceAI n= 37,537 P/LP=  576   CADD n= 37,841 P/LP=  578
+  all                                n= 46,112 P/LP=6,056   SpliceAI n= 45,749 P/LP=6,015   CADD n= 46,112 P/LP=6,056
+
+wrote data/v2_features_pooled_test.csv (46,112 rows); no model score computed

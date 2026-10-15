@@ -1,0 +1,37 @@
+========================================================================================
+A3b -- GENE-DISJOINT EVALUATION BY RETRAINING, 5 GENE FOLDS (MetaSplice v2.0; Amendment 3)
+========================================================================================
+parameters: {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'tree_method': 'hist', 'random_state': 42, 'n_jobs': -1}, scale_pos_weight per fit
+non-canonical test variants in genes represented in training: 25,199 of 25,240
+7,017 genes assigned to 5 folds; training N=413,199; test N=28,465, P=3,451
+  fold 0: trained on 324,177 variants (5,519 genes) -> scored 6,401 test variants
+  fold 1: trained on 328,579 variants (5,586 genes) -> scored 5,363 test variants
+  fold 2: trained on 334,215 variants (5,535 genes) -> scored 5,715 test variants
+  fold 3: trained on 329,798 variants (5,605 genes) -> scored 5,819 test variants
+  fold 4: trained on 336,027 variants (5,599 genes) -> scored 5,167 test variants
+
+========================================================================================
+FULL MODEL (genes seen in training) vs GENE-DISJOINT MODELS
+========================================================================================
+subset                                 N     P     full            95% CI  gene-disj            95% CI   paired drop [95% CI]
+all non-exonic                    28,465  3451   0.9954 [0.993, 0.997]     0.9952 [0.993, 0.997]   +0.0003 [-0.0001, +0.0007]
+non-canonical                     25,240   244   0.9358 [0.909, 0.960]     0.9347 [0.908, 0.959]   +0.0011 [-0.0045, +0.0067]
+canonical                          3,225  3207   0.9975 [0.996, 0.999]     0.9971 [0.996, 0.998]   +0.0004 [+0.0000, +0.0007]
+Canonical Donor Site               1,730  1723   0.9987 [0.998, 0.999]     0.9985 [0.997, 0.999]   +0.0002 [-0.0002, +0.0007]
+Canonical Acceptor Site            1,495  1484   0.9957 [0.993, 0.998]     0.9952 [0.993, 0.997]   +0.0004 [-0.0003, +0.0010]
+Donor Region                       1,766   102   0.9768 [0.948, 0.997]     0.9781 [0.952, 0.996]   -0.0013 [-0.0069, +0.0036]
+Acceptor Region                    4,810    36   0.8976 [0.799, 0.973]     0.9031 [0.806, 0.975]   -0.0054 [-0.0222, +0.0098]
+PPT Region                         8,359    21   0.8822 [0.753, 0.975]     0.8927 [0.771, 0.991]   -0.0106 [-0.0886, +0.0600]
+Branch Point Region                  186     5   0.6551 [0.308, 1.000]     0.6452 [0.275, 1.000]   +0.0099 [+0.0000, +0.0411]
+Deep Intronic                     10,119    80   0.9236 [0.871, 0.968]     0.9228 [0.869, 0.967]   +0.0008 [-0.0060, +0.0079]
+Deep Intronic, sensitivity set     8,312    62   0.9494 [0.904, 0.986]     0.9481 [0.901, 0.986]   +0.0013 [-0.0071, +0.0090]
+
+========================================================================================
+GENE-DISJOINT MetaSplice v2.0 vs COMPARATORS, NON-CANONICAL
+(comparator scores are precomputed and unaffected by this split)
+========================================================================================
+  MetaSplice v2.0 (gene-disjoint) auPRC 0.9347 [0.9079, 0.9590], N=25,240
+  vs SpliceAI  gene-disjoint 0.9347 vs 0.7430  diff +0.1917 [+0.1547, +0.2346]  N=25,114
+  vs CADD      gene-disjoint 0.9347 vs 0.3371  diff +0.5976 [+0.5379, +0.6493]  N=25,240
+
+wrote data/A3b_gene_disjoint_scores.csv

@@ -1,0 +1,92 @@
+section	subset	comparator	n	P	auprc_metasplice	auprc_comparator	diff	lo	hi	gene_lo	gene_hi	verdict	note	FP_MetaSplice	B_scored_MetaSplice	FP_MetaSplice_shared	FP_SpliceAI	B_scored_SpliceAI	FP_SpliceAI_shared	B_shared	scheme	interval	B	LR	point_verdict	ci_verdict
+1	all non-canonical	SpliceAI	14552.0	273	0.887207404513426	0.7353512801888896	0.15185612432453632	0.10702977007971363	0.19719219258271603	0.1044287303083826	0.19834325452902873	MetaSplice v2.0 better														
+1	all non-canonical	CADD	14749.0	275	0.8811678916826697	0.38915139140596544	0.4920165002767043	0.43413971675458995	0.5472799541106554	0.43538455636416007	0.5453059826270809	MetaSplice v2.0 better														
+1	all non-canonical	distance only	14749.0	275	0.8811678916826697	0.014447908750094315	0.8667199829325755	0.8354000311461989	0.8986015455186342	0.8286534819503314	0.8999847622762447															
+2	Donor Region	SpliceAI	1382.0	133	0.9522439587615447	0.850147484213801	0.10209647454774362	0.05304976010801229	0.1544332227010678	0.04807234275979161	0.16173414553941926															
+2	Donor Region	CADD	1408.0	135	0.9413193587928556	0.6490706878686525	0.29224867092420304	0.21509594688642106	0.35900771366369155	0.21378603730012663	0.37216073093211005															
+2	Donor Region	distance only	1408.0	135	0.9413193587928556	0.07577435805207171	0.8655450007407839	0.8319443463567762	0.8937578644373245	0.8325700804986117	0.8927414971732892															
+2	Acceptor Region	SpliceAI	2001.0	65	0.9533721787923074	0.909754550224855	0.04361762856745244	-0.013537371441984395	0.1129746013276253	-0.014234397680632291	0.10926437762608804															
+2	Acceptor Region	CADD	2019.0	65	0.9533333589165309	0.5871036007285823	0.3662297581879487	0.23815486633543353	0.4775340385259991	0.24581643658053465	0.48425750279462054															
+2	Acceptor Region	distance only	2019.0	65	0.9533333589165309	0.02499673553760348	0.9283366233789274	0.8922265689925768	0.9598021186534852	0.8898841332253228	0.9574504211904415															
+2	PPT Region	SpliceAI	3840.0	26	0.7421472999526281	0.7383152097913882	0.003832090161239865	-0.1385714352294338	0.1273406675945465	-0.129221218204491	0.1274486091006505															
+2	PPT Region	CADD	3899.0	26	0.7421027617412406	0.14232927412955682	0.5997734876116838	0.38670018690546687	0.7705281398294	0.3747790301159912	0.7732829603278889															
+2	PPT Region	distance only	3899.0	26	0.7421027617412406	0.006964762668047845	0.7351379990731928	0.5628628611069164	0.8780714761164096	0.5367201657945472	0.8743710474449311															
+2	Branch Point Region		204.0	3									inconclusive (< 20 P/LP)	15.0	201.0	15.0	6.0	200.0	6.0	200.0						
+2	Deep Intronic	SpliceAI	7126.0	46	0.6464574406966914	0.3095775497341863	0.33687989096250515	0.2150831543321589	0.4236935359084818	0.2188975996325158	0.432063678693652															
+2	Deep Intronic	CADD	7219.0	46	0.646442285613422	0.17265612617436635	0.47378615943905567	0.34926651208713244	0.5861578470311093	0.35028634139759957	0.5815755796839073															
+2	Deep Intronic	distance only	7219.0	46	0.646442285613422	0.01759157223739851	0.6288507133760235	0.4902224528104646	0.7575801455922342	0.4668278586464662	0.7585640494626401															
+2	Deep Intronic <= 50 bp		5544.0	4									inconclusive (< 20 P/LP)	10.0	5540.0	10.0	78.0	5458.0	78.0	5458.0						
+2	Deep Intronic 51-500 bp		432.0	14									inconclusive (< 20 P/LP)	22.0	418.0	22.0	9.0	416.0	9.0	416.0						
+2	Deep Intronic > 500 bp	SpliceAI	1234.0	28	0.6608637993686606	0.5493171887655952	0.11154661060306537	-0.030156086403146303	0.2064765435970718	-0.029834009373022982	0.20974368555906853															
+2	Deep Intronic > 500 bp	CADD	1243.0	28	0.6608637993686605	0.2206838116562756	0.44017998771238487	0.28164164179412754	0.5724801161423085	0.26814590750896805	0.5729711498155288															
+2	Deep Intronic > 500 bp	distance only	1243.0	28	0.6608637993686605	0.013647065356452411	0.647216734012208	0.4810444138949692	0.8061456384452518	0.4605613479889747	0.8067711978597557															
+2	DI sensitivity set	SpliceAI	5957.0	38	0.6672655755684201	0.3758284692294084	0.29143710633901176	0.15725029278435443	0.3985957727192472	0.16852269563333122	0.41012402729286973															
+2	DI sensitivity set	CADD	6039.0	38	0.6672481514226873	0.1882026878447099	0.47904546357797745	0.34453531103987894	0.6017261345436837	0.3551163879574157	0.6041220021356019															
+2	DI sensitivity set	distance only	6039.0	38	0.6672481514226873	0.01600738744620001	0.6512407639764873	0.5005714401438576	0.7829377831747748	0.4969354270458545	0.7994341766806548															
+2	DI sensitivity set <= 50 bp		4626.0	4									inconclusive (< 20 P/LP)	6.0	4622.0	6.0	53.0	4548.0	53.0	4548.0						
+2	DI sensitivity set 51-500 bp		287.0	11									inconclusive (< 20 P/LP)	14.0	276.0	14.0	3.0	274.0	3.0	274.0						
+2	DI sensitivity set > 500 bp	SpliceAI	1120.0	23	0.707011605820939	0.6572250135824067	0.04978659223853232	-0.05907355008957312	0.16390154309953492	-0.05357375863860032	0.15561363674815915															
+2	DI sensitivity set > 500 bp	CADD	1126.0	23	0.7070116058209389	0.21547105952436207	0.49154054629657684	0.3115161729147059	0.626497538605094	0.30475959425559057	0.6230642329244812															
+2	DI sensitivity set > 500 bp	distance only	1126.0	23	0.7070116058209389	0.012175715007925638	0.6948358908130132	0.5292171947993668	0.8614336255840489	0.46497777581179006	0.8681382478299356															
+3	calibration, all stars			97				462.9250334129785	32761.644232708124												MetaSplice v2.0, S6 thresholds	PP3_VeryStrong	2.0	2295.489010989011	meets	INCONCLUSIVE
+3	calibration, all stars			138				78.5549424248967	195.10356916754816												MetaSplice v2.0, S6 thresholds	PP3_Strong	53.0	123.23574538668876	meets	clears
+3	calibration, all stars			15				3.5157599328917923	19.297623373142393												MetaSplice v2.0, S6 thresholds	PP3_Moderate	82.0	8.657866523720182	meets	INCONCLUSIVE
+3	calibration, all stars			7				0.8547805556181468	8.27949235587052												MetaSplice v2.0, S6 thresholds	PP3_Supporting	110.0	3.0118881118881116	meets	INCONCLUSIVE
+3	calibration, all stars			9				0.16705690849178487	0.9448926336795022												MetaSplice v2.0, S6 thresholds	Indeterminate	971.0	0.438689014384174		
+3	calibration, all stars			1				0.0007792410902469386	0.46197503857980293												MetaSplice v2.0, S6 thresholds	BP4_Supporting	704.0	0.06722964535464536	meets	INCONCLUSIVE
+3	calibration, all stars			5				0.01909749143831969	0.18916084153437673												MetaSplice v2.0, S6 thresholds	BP4_Moderate	3259.0	0.07261379308019382	meets	INCONCLUSIVE
+3	calibration, all stars			1				7.569445992662265e-05	0.03927460741356264												MetaSplice v2.0, S6 thresholds	BP4_Strong	7740.0	0.006114944487037511	meets	INCONCLUSIVE
+3	calibration, all stars			235				127.09453086490205	255.5130474695527												MetaSplice v2.0, S11 reference-window thresholds	PP3_Strong	62.0	179.39471818504077	meets	clears
+3	calibration, all stars			13				3.714781231376119	24.494952049948985												MetaSplice v2.0, S11 reference-window thresholds	PP3_Moderate	61.0	10.086651053864168	meets	INCONCLUSIVE
+3	calibration, all stars			10				0.9674346109179598	6.093256863656701												MetaSplice v2.0, S11 reference-window thresholds	PP3_Supporting	179.0	2.6441156608754373	meets	INCONCLUSIVE
+3	calibration, all stars			8				0.10571104326653766	0.6536339599012613												MetaSplice v2.0, S11 reference-window thresholds	Indeterminate	1287.0	0.29420152497075575		
+3	calibration, all stars			5				0.025587971438063357	0.25714029792906595												MetaSplice v2.0, S11 reference-window thresholds	BP4_Supporting	2415.0	0.09799103587923465	meets	clears
+3	calibration, all stars			1				0.00020518611101934608	0.11114297744270318												MetaSplice v2.0, S11 reference-window thresholds	BP4_Moderate	2795.0	0.016933692425642338	meets	clears
+3	calibration, all stars			1				9.525682537562951e-05	0.0498879062340954												MetaSplice v2.0, S11 reference-window thresholds	BP4_Strong	6122.0	0.007731079766362353	meets	INCONCLUSIVE
+3	calibration, all stars			199				119.57675027465359	267.3803822193018												SpliceAI, S6 thresholds	PP3_Strong	53.0	177.7095168981961	meets	clears
+3	calibration, all stars			29				7.467719115446439	27.248690623182952												SpliceAI, S6 thresholds	PP3_Moderate	94.0	14.601706803834462	meets	clears
+3	calibration, all stars			15				2.2995651809595556	11.306614337463303												SpliceAI, S6 thresholds	PP3_Supporting	132.0	5.378371628371628	meets	INCONCLUSIVE
+3	calibration, all stars			9				0.3322210250354789	2.0053907287399206												SpliceAI, S6 thresholds	Indeterminate	473.0	0.9005645517273424		
+3	calibration, all stars			5				0.07638469218117788	0.8267397352793866												SpliceAI, S6 thresholds	BP4_Supporting	780.0	0.30339532262609187	meets	INCONCLUSIVE
+3	calibration, all stars			14				0.029572563205902472	0.10420260584189914												SpliceAI, S6 thresholds	BP4_Moderate	11208.0	0.05911985944105858	meets	clears
+3	calibration, all stars			2				0.037136248787975105	2.495014061820604												SpliceAI, S6 thresholds	NoScore	181.0	0.5229797826482909		
+3	calibration, all stars			217				74.0969065186902	134.02303284412537												SpliceAI, S11 reference-window thresholds	PP3_Supporting	103.0	99.71396564600447	meets	clears
+3	calibration, all stars			35				1.7841885555878005	4.48704404959429												SpliceAI, S11 reference-window thresholds	Indeterminate	571.0	2.901118146302034		
+3	calibration, all stars			5				0.06970752485830681	0.7485817220732188												SpliceAI, S11 reference-window thresholds	BP4_Supporting	858.0	0.2758139296600835	meets	INCONCLUSIVE
+3	calibration, all stars			14				0.029572563205902472	0.10420260584189914												SpliceAI, S11 reference-window thresholds	BP4_Moderate	11208.0	0.05911985944105858	meets	clears
+3	calibration, all stars			2				0.037136248787975105	2.495014061820604												SpliceAI, S11 reference-window thresholds	NoScore	181.0	0.5229797826482909		
+3	calibration, all stars			243				34.11014545199762	49.336626453321955												SpliceAI fixed score bands (descriptive)	score >= 0.2	279.0	41.22261609358383		
+3	calibration, all stars			8				0.399979658297278	2.821249317535023												SpliceAI fixed score bands (descriptive)	0.1 < score < 0.2	319.0	1.1869509800544285		
+3	calibration, all stars			20				0.044616552145462056	0.12471236978313786												SpliceAI fixed score bands (descriptive)	score <= 0.1	12142.0	0.07796025420798934		
+3	calibration, all stars			2				0.037136248787975105	2.495014061820604												SpliceAI fixed score bands (descriptive)	no score	181.0	0.5229797826482909		
+3	calibration, >= 1 star			93				454.8542448261673	32497.570365118092												MetaSplice v2.0, S6 thresholds	PP3_VeryStrong	2.0	2267.2698113207543	meets	INCONCLUSIVE
+3	calibration, >= 1 star			135				79.06568439897622	196.77586959996586												MetaSplice v2.0, S6 thresholds	PP3_Strong	53.0	124.19615521537912	meets	clears
+3	calibration, >= 1 star			15				3.623204431697895	19.86756002296355												MetaSplice v2.0, S6 thresholds	PP3_Moderate	82.0	8.919236079153245	meets	INCONCLUSIVE
+3	calibration, >= 1 star			7				0.8807614939749346	8.525344978302972												MetaSplice v2.0, S6 thresholds	PP3_Supporting	110.0	3.1028130360205832	meets	INCONCLUSIVE
+3	calibration, >= 1 star			9				0.17214245058661057	0.9729079191618857												MetaSplice v2.0, S6 thresholds	Indeterminate	971.0	0.4519324563278472		
+3	calibration, >= 1 star			1				0.000802764791265478	0.47578012390749475												MetaSplice v2.0, S6 thresholds	BP4_Supporting	704.0	0.06925921955403087	meets	INCONCLUSIVE
+3	calibration, >= 1 star			4				0.012781379945108785	0.1722708375298838												MetaSplice v2.0, S6 thresholds	BP4_Moderate	3259.0	0.059844726070620115	meets	clears
+3	calibration, >= 1 star			1				7.797952146452155e-05	0.04044824075146466												MetaSplice v2.0, S6 thresholds	BP4_Strong	7740.0	0.006299546584759398	meets	INCONCLUSIVE
+3	calibration, >= 1 star			228				126.87554240415054	255.57934924705174												MetaSplice v2.0, S11 reference-window thresholds	PP3_Strong	62.0	179.3054169202678	meets	clears
+3	calibration, >= 1 star			13				3.8281710482257587	25.219266304813793												MetaSplice v2.0, S11 reference-window thresholds	PP3_Moderate	61.0	10.39115372718837	meets	INCONCLUSIVE
+3	calibration, >= 1 star			10				0.9969063027525981	6.273789229879732												MetaSplice v2.0, S11 reference-window thresholds	PP3_Supporting	179.0	2.7239380204490353	meets	INCONCLUSIVE
+3	calibration, >= 1 star			8				0.10892667635909425	0.6730279951944221												MetaSplice v2.0, S11 reference-window thresholds	Indeterminate	1287.0	0.303083080441571		
+3	calibration, >= 1 star			5				0.02636433863441248	0.26478888709004916												MetaSplice v2.0, S11 reference-window thresholds	BP4_Supporting	2415.0	0.10094925583030587	meets	clears
+3	calibration, >= 1 star			0				0.0	0.07875548091822931												MetaSplice v2.0, S11 reference-window thresholds	BP4_Moderate	2795.0	0.0	meets	clears
+3	calibration, >= 1 star			1				9.813243487332865e-05	0.05137869414440931												MetaSplice v2.0, S11 reference-window thresholds	BP4_Strong	6122.0	0.007964470853648764	meets	INCONCLUSIVE
+3	calibration, >= 1 star			195				120.70469182864356	269.8126563912284												SpliceAI, S6 thresholds	PP3_Strong	53.0	179.3944464222143	meets	clears
+3	calibration, >= 1 star			28				7.361976665068065	27.282696873994663												SpliceAI, S6 thresholds	PP3_Moderate	94.0	14.523805700521878	meets	clears
+3	calibration, >= 1 star			14				2.151067846154253	11.076882118223939												SpliceAI, S6 thresholds	PP3_Supporting	132.0	5.171355060034306	meets	INCONCLUSIVE
+3	calibration, >= 1 star			9				0.3423344889015192	2.064848906068066												SpliceAI, S6 thresholds	Indeterminate	473.0	0.9277514061191112		
+3	calibration, >= 1 star			4				0.051121990336324266	0.7529208765437397												SpliceAI, S6 thresholds	BP4_Supporting	780.0	0.2500435413642961	meets	INCONCLUSIVE
+3	calibration, >= 1 star			13				0.027426113237870753	0.10177619571839139												SpliceAI, S6 thresholds	BP4_Moderate	11208.0	0.05655428063512586	meets	clears
+3	calibration, >= 1 star			2				0.03825911176173325	2.5694657350449264												SpliceAI, S6 thresholds	NoScore	181.0	0.538767851558428		
+3	calibration, >= 1 star			212				74.55876130603605	134.85761361876592												SpliceAI, S11 reference-window thresholds	PP3_Supporting	103.0	100.35728155339807	meets	clears
+3	calibration, >= 1 star			34				1.7741230833893142	4.511903033004151												SpliceAI, S11 reference-window thresholds	Indeterminate	571.0	2.9033076694313187		
+3	calibration, >= 1 star			4				0.04665316191525552	0.6817415231137046												SpliceAI, S11 reference-window thresholds	BP4_Supporting	858.0	0.22731231033117824	meets	INCONCLUSIVE
+3	calibration, >= 1 star			13				0.027426113237870753	0.10177619571839139												SpliceAI, S11 reference-window thresholds	BP4_Moderate	11208.0	0.05655428063512586	meets	clears
+3	calibration, >= 1 star			2				0.03825911176173325	2.5694657350449264												SpliceAI, S11 reference-window thresholds	NoScore	181.0	0.538767851558428		
+3	calibration, >= 1 star			237				34.273740224438306	49.54675005138005												SpliceAI fixed score bands (descriptive)	score >= 0.2	279.0	41.41850273889227		
+3	calibration, >= 1 star			8				0.41214667307479025	2.904958873940791												SpliceAI fixed score bands (descriptive)	0.1 < score < 0.2	319.0	1.2227834624711658		
+3	calibration, >= 1 star			18				0.0399206480043588	0.11864037305340695												SpliceAI fixed score bands (descriptive)	score <= 0.1	12142.0	0.07228239418453955		
+3	calibration, >= 1 star			2				0.03825911176173325	2.5694657350449264												SpliceAI fixed score bands (descriptive)	no score	181.0	0.538767851558428		

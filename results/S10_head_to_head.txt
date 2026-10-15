@@ -1,0 +1,66 @@
+================================================================================================
+S10 -- METASPLICE v2.0 AGAINST SPLICEAI AND CADD: PROTOCOL AMENDMENT 3
+================================================================================================
+protocol SHA-256: 1fee10db9cf1208bd3eef3a49761b36b73c841287cd4bc5c518219c69b1d3419
+
+Pairing check against Amendment 3 (n, P/LP), before any auPRC is computed
+  all non-canonical                all       n= 25,240 P= 244   recorded n= 25,240 P= 244   ok
+  all non-canonical                SpliceAI  n= 25,114 P= 243   recorded n= 25,114 P= 243   ok
+  all non-canonical                CADD      n= 25,240 P= 244   recorded n= 25,240 P= 244   ok
+  Donor Region                     all       n=  1,766 P= 102   recorded n=  1,766 P= 102   ok
+  Donor Region                     SpliceAI  n=  1,756 P= 101   recorded n=  1,756 P= 101   ok
+  Donor Region                     CADD      n=  1,766 P= 102   recorded n=  1,766 P= 102   ok
+  Acceptor Region                  all       n=  4,810 P=  36   recorded n=  4,810 P=  36   ok
+  Acceptor Region                  SpliceAI  n=  4,790 P=  36   recorded n=  4,790 P=  36   ok
+  Acceptor Region                  CADD      n=  4,810 P=  36   recorded n=  4,810 P=  36   ok
+  PPT Region                       all       n=  8,359 P=  21   recorded n=  8,359 P=  21   ok
+  PPT Region                       SpliceAI  n=  8,319 P=  21   recorded n=  8,319 P=  21   ok
+  PPT Region                       CADD      n=  8,359 P=  21   recorded n=  8,359 P=  21   ok
+  Branch Point Region              all       n=    186 P=   5   recorded n=    186 P=   5   ok
+  Branch Point Region              SpliceAI  n=    186 P=   5   recorded n=    186 P=   5   ok
+  Branch Point Region              CADD      n=    186 P=   5   recorded n=    186 P=   5   ok
+  Deep Intronic                    all       n= 10,119 P=  80   recorded n= 10,119 P=  80   ok
+  Deep Intronic                    SpliceAI  n= 10,063 P=  80   recorded n= 10,063 P=  80   ok
+  Deep Intronic                    CADD      n= 10,119 P=  80   recorded n= 10,119 P=  80   ok
+  Deep Intronic, sensitivity set   all       n=  8,312 P=  62   recorded n=  8,312 P=  62   ok
+  Deep Intronic, sensitivity set   SpliceAI  n=  8,260 P=  62   recorded n=  8,260 P=  62   ok
+  Deep Intronic, sensitivity set   CADD      n=  8,312 P=  62   recorded n=  8,312 P=  62   ok
+  >=1-star calibration cohort      all       n= 24,049 P= 231   recorded n= 24,049 P= 231   ok
+  >=1-star calibration cohort      SpliceAI  n= 23,928 P= 230   recorded n= 23,928 P= 230   ok
+  >=1-star calibration cohort      CADD      n= 24,049 P= 231   recorded n= 24,049 P= 231   ok
+  all three scored                 all       n= 25,114 P= 243   recorded n= 25,114 P= 243   ok
+  all three scored                 SpliceAI  n= 25,114 P= 243   recorded n= 25,114 P= 243   ok
+  all three scored                 CADD      n= 25,114 P= 243   recorded n= 25,114 P= 243   ok
+  every pairing equals Amendment 3
+
+paired stratified bootstrap, 1,000 iterations, seed 42; diff = MetaSplice v2.0 minus comparator
+
+PRIMARY: non-canonical strict test set, each comparator on the variants both score
+  all non-canonical                vs SpliceAI  n= 25,114 P= 243  0.9362 vs 0.7430  diff +0.1931 [+0.1562, +0.2373]  -> MetaSplice v2.0 better
+  all non-canonical                vs CADD      n= 25,240 P= 244  0.9358 vs 0.3371  diff +0.5987 [+0.5395, +0.6504]  -> MetaSplice v2.0 better
+
+SECONDARY 1: each non-canonical region (no verdict)
+  Donor Region                     vs SpliceAI  n=  1,756 P= 101  0.9776 vs 0.8788  diff +0.0988 [+0.0552, +0.1422]
+  Donor Region                     vs CADD      n=  1,766 P= 102  0.9768 vs 0.7588  diff +0.2180 [+0.1428, +0.2897]
+  Acceptor Region                  vs SpliceAI  n=  4,790 P=  36  0.8976 vs 0.7298  diff +0.1679 [+0.0765, +0.2636]
+  Acceptor Region                  vs CADD      n=  4,810 P=  36  0.8976 vs 0.1208  diff +0.7768 [+0.6330, +0.8560]
+  PPT Region                       vs SpliceAI  n=  8,319 P=  21  0.8822 vs 0.7053  diff +0.1769 [+0.0487, +0.3263]
+  PPT Region                       vs CADD      n=  8,359 P=  21  0.8822 vs 0.0639  diff +0.8183 [+0.6425, +0.9257]
+  Branch Point Region              vs SpliceAI  n=    186 P=   5  0.6551 vs 0.7667  diff -0.1115 [-0.3024, +0.0925]  (5 P/LP: reported with its denominator, not interpreted)
+  Branch Point Region              vs CADD      n=    186 P=   5  0.6551 vs 0.1133  diff +0.5418 [+0.0736, +0.8716]  (5 P/LP: reported with its denominator, not interpreted)
+  Deep Intronic                    vs SpliceAI  n= 10,063 P=  80  0.9236 vs 0.6836  diff +0.2400 [+0.1651, +0.3211]
+  Deep Intronic                    vs CADD      n= 10,119 P=  80  0.9236 vs 0.4273  diff +0.4964 [+0.3908, +0.6008]
+
+SECONDARY 2: deep-intronic sensitivity, neither canonical nor exonic in any GENCODE v50 transcript (no verdict)
+  Deep Intronic, sensitivity set   vs SpliceAI  n=  8,260 P=  62  0.9494 vs 0.7249  diff +0.2245 [+0.1426, +0.3048]
+  Deep Intronic, sensitivity set   vs CADD      n=  8,312 P=  62  0.9494 vs 0.4539  diff +0.4955 [+0.3770, +0.6170]
+
+SECONDARY 3: >= 1-star calibration validation cohort (S6; no verdict)
+  >=1-star calibration cohort      vs SpliceAI  n= 23,928 P= 230  0.9342 vs 0.7355  diff +0.1988 [+0.1567, +0.2445]
+  >=1-star calibration cohort      vs CADD      n= 24,049 P= 231  0.9339 vs 0.3326  diff +0.6013 [+0.5403, +0.6614]
+
+SECONDARY 4: the variants all three tools score, one denominator (no verdict)
+  all three scored                 vs SpliceAI  n= 25,114 P= 243  0.9362 vs 0.7430  diff +0.1931 [+0.1562, +0.2373]
+  all three scored                 vs CADD      n= 25,114 P= 243  0.9362 vs 0.3389  diff +0.5972 [+0.5346, +0.6534]
+
+wrote results/S10_head_to_head.tsv (18 rows)

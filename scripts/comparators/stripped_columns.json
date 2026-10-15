@@ -1,0 +1,52 @@
+{
+ "data/v2_variants_splicevardb.csv": [
+  [
+   4,
+   "svdb_class"
+  ]
+ ],
+ "data/v2_features_splicevardb.csv": [
+  [
+   4,
+   "svdb_class"
+  ]
+ ],
+ "data/v2_features_pooled_test.csv": [
+  [
+   57,
+   "spliceai_max"
+  ],
+  [
+   58,
+   "cadd_phred"
+  ]
+ ],
+ "data/v2_features_fresh_20260928.csv": [
+  [
+   57,
+   "spliceai_max"
+  ],
+  [
+   58,
+   "cadd_phred"
+  ]
+ ],
+ "results/S12_mechanism.tsv": [
+  [
+   21,
+   "spliceai_max"
+  ],
+  [
+   22,
+   "cadd_phred"
+  ],
+  [
+   24,
+   "SpliceAI"
+  ],
+  [
+   25,
+   "CADD"
+  ]
+ ]
+}

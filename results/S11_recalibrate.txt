@@ -1,0 +1,175 @@
+================================================================================================
+S11_recalibrate -- RECALIBRATION WITH THE FROZEN PRIOR AND THE POPULATION REFERENCE (MetaSplice v2.0, SpliceAI)
+================================================================================================
+frozen prior 0.0441 (promoted: False; not promoted; failed: fit <= 0.02; 25- and 100-bin estimates within a factor of 1.5); c = 1124. The fallback 0.0441 is not a validated population prior; yield flags below are relative to it.
+EXPLORATORY: every threshold below is a candidate threshold under the fallback prior, not clinically validated.
+prior not promoted: configurations 1 = 4 (main) and 3 = 2 (reference), each reported once
+derivation >= 1 star: n=294,612 P=3,018; validation >= 1 star: n=24,049 P=231
+reference (uniform gnomAD): 100,000; SpliceAI-scored 96,024 ({'scored': 96024, 'not scored by SpliceAI': 3810, 'no unique GRCh38->GRCh37 position': 163, 'REF differs from hg19': 3})
+
+MetaSplice, main window rule: median window half-width 0.000338; equals S6's thresholds: yes
+  PP3 VeryStrong >= 0.994  Strong >= 0.544  Moderate >= 0.14  Supporting >= 0.052
+  BP4 Supporting <= 0.00386  Moderate <= 0.0017  Strong <= 2.75e-04  VeryStrong <= not reached
+  validation (>= 1 star): interval            P      B         LR   exact 95% CI         needed    point  CI
+                          PP3_VeryStrong     89      0        inf   [1.71e+03, inf]>=1.12e+03meets  clears
+                          PP3_Strong        111     13        880   [408, 2.11e+03]>=33.5    meets  clears
+                          PP3_Moderate       14     34       42.5   [14.7, 113] >=5.79    meets  clears
+                          PP3_Supporting      2     63       3.27   [0.207, 17.7]>=2.41    meets  INCONCLUSIVE
+                          Indeterminate       8   1249       0.66   [0.237, 1.47]                 
+                          BP4_Supporting      0   1276          0   [0, 0.373]  <=0.416   meets  clears
+                          BP4_Moderate        2   6554     0.0315   [0.00257, 0.129]<=0.173   meets  clears
+                          BP4_Strong          5  14629     0.0352   [0.00949, 0.0895]<=0.0298  ABOVE  INCONCLUSIVE
+
+MetaSplice, reference window rule: median window half-width 2.78e-05
+  PP3 VeryStrong >= not reached  Strong >= 0.504  Moderate >= 0.162  Supporting >= 0.038
+  BP4 Supporting <= 0.00235  Moderate <= 4.56e-04  Strong <= 1.53e-04  VeryStrong <= not reached
+  validation (>= 1 star): interval            P      B         LR   exact 95% CI         needed    point  CI
+                          PP3_Strong        200     16   1.29e+03   [698, 2.59e+03]>=33.5    meets  clears
+                          PP3_Moderate       14     27       53.5   [17.7, 150] >=5.79    meets  clears
+                          PP3_Supporting      3    106       2.92   [0.373, 11.7]>=2.41    meets  INCONCLUSIVE
+                          Indeterminate       7   1892      0.381   [0.127, 0.879]                 
+                          BP4_Supporting      1   4787     0.0215   [0.000263, 0.14]<=0.416   meets  clears
+                          BP4_Moderate        4   5552     0.0743   [0.016, 0.212]<=0.173   meets  INCONCLUSIVE
+                          BP4_Strong          2  11438      0.018   [0.00149, 0.0734]<=0.0298  meets  INCONCLUSIVE
+
+SpliceAI, main window rule: median window half-width 0.01; equals S6's thresholds: yes
+  PP3 VeryStrong >= not reached  Strong >= 0.49  Moderate >= 0.3  Supporting >= 0.2
+  BP4 Supporting <= 0.08  Moderate <= 0.03  Strong <= not reached  VeryStrong <= not reached
+  validation (>= 1 star): interval            P      B         LR   exact 95% CI         needed    point  CI
+                          PP3_Strong        157     59        274   [184, 412]  >=33.5    meets  clears
+                          PP3_Moderate       29    141       21.2   [11.3, 37.6]>=5.79    meets  clears
+                          PP3_Supporting     17    263       6.66   [3.17, 12.7]>=2.41    meets  clears
+                          Indeterminate       9   1120      0.829   [0.317, 1.77]                 
+                          BP4_Supporting      1   1804     0.0572   [0.000683, 0.38]<=0.416   meets  clears
+                          BP4_Moderate       17  20311     0.0863   [0.0467, 0.143]<=0.173   meets  clears
+                          NoScore             1    120      0.859   [0.00883, 6.72]                 
+
+SpliceAI, reference window rule: median window half-width 0.48
+  PP3 VeryStrong >= not reached  Strong >= not reached  Moderate >= not reached  Supporting >= 0.37
+  BP4 Supporting <= 0.09  Moderate <= 0.03  Strong <= not reached  VeryStrong <= not reached
+  validation (>= 1 star): interval            P      B         LR   exact 95% CI         needed    point  CI
+                          PP3_Supporting    177    116        157   [117, 211]  >=2.41    meets  clears
+                          Indeterminate      35   1284       2.81   [1.79, 4.19]                 
+                          BP4_Supporting      1   1987     0.0519   [0.000622, 0.344]<=0.416   meets  clears
+                          BP4_Moderate       17  20311     0.0863   [0.0467, 0.143]<=0.173   meets  clears
+                          NoScore             1    120      0.859   [0.00883, 6.72]                 
+
+------------------------------------------------------------------------------------------------
+POPULATION YIELD on the uniform gnomAD reference (deployed scores: MetaSplice full model; SpliceAI)
+flags (investigation only): share at or above a PP3 level > prior 0.0441; > prior / that level's posterior threshold
+------------------------------------------------------------------------------------------------
+
+  MetaSplice, main, reference variants all the tool scores (n=100,000):
+    interval shares: PP3_VeryStrong 0.02%  PP3_Strong 0.34%  PP3_Moderate 0.78%  PP3_Supporting 1.81%  Indeterminate 29.01%  BP4_Supporting 17.19%  BP4_Moderate 33.66%  BP4_Strong 17.20%
+    PP3 >= Supporting  share  2.944%   prior 4.41%   prior/posterior  44.14%
+    PP3 >= Moderate    share  1.134%   prior 4.41%   prior/posterior  20.92%
+    PP3 >= Strong      share  0.357%   prior 4.41%   prior/posterior   7.26%
+    PP3 >= VeryStrong  share  0.020%   prior 4.41%   prior/posterior   4.50%
+    by Deep Intronic distance band, share at or above each PP3 level reached:
+      Deep Intronic <= 50 bp         n=  2,302  Supporting 0.738%  Moderate 0.434%  Strong 0.217%  VeryStrong 0.000%
+      Deep Intronic 51-500 bp        n= 16,021  Supporting 1.124%  Moderate 0.574%  Strong 0.250%  VeryStrong 0.019%
+      Deep Intronic > 500 bp         n= 79,321  Supporting 3.211%  Moderate 1.103%  Strong 0.266%  VeryStrong 0.001%
+      DI sensitivity set <= 50 bp    n=  1,944  Supporting 0.463%  Moderate 0.309%  Strong 0.257%  VeryStrong 0.000%
+      DI sensitivity set 51-500 bp   n= 13,699  Supporting 1.022%  Moderate 0.526%  Strong 0.226%  VeryStrong 0.015%
+      DI sensitivity set > 500 bp    n= 78,045  Supporting 3.144%  Moderate 1.069%  Strong 0.251%  VeryStrong 0.001%
+
+  MetaSplice, main, reference variants both tools score (n=96,024):
+    interval shares: PP3_VeryStrong 0.02%  PP3_Strong 0.34%  PP3_Moderate 0.77%  PP3_Supporting 1.79%  Indeterminate 29.16%  BP4_Supporting 17.26%  BP4_Moderate 33.49%  BP4_Strong 17.16%
+    PP3 >= Supporting  share  2.924%   prior 4.41%   prior/posterior  44.14%
+    PP3 >= Moderate    share  1.132%   prior 4.41%   prior/posterior  20.92%
+    PP3 >= Strong      share  0.358%   prior 4.41%   prior/posterior   7.26%
+    PP3 >= VeryStrong  share  0.021%   prior 4.41%   prior/posterior   4.50%
+    by Deep Intronic distance band, share at or above each PP3 level reached:
+      Deep Intronic <= 50 bp         n=  2,269  Supporting 0.705%  Moderate 0.397%  Strong 0.176%  VeryStrong 0.000%
+      Deep Intronic 51-500 bp        n= 15,771  Supporting 1.129%  Moderate 0.583%  Strong 0.254%  VeryStrong 0.019%
+      Deep Intronic > 500 bp         n= 75,651  Supporting 3.199%  Moderate 1.102%  Strong 0.267%  VeryStrong 0.001%
+      DI sensitivity set <= 50 bp    n=  1,915  Supporting 0.418%  Moderate 0.261%  Strong 0.209%  VeryStrong 0.000%
+      DI sensitivity set 51-500 bp   n= 13,460  Supporting 1.025%  Moderate 0.535%  Strong 0.230%  VeryStrong 0.015%
+      DI sensitivity set > 500 bp    n= 74,409  Supporting 3.131%  Moderate 1.070%  Strong 0.254%  VeryStrong 0.001%
+
+  MetaSplice, reference, reference variants all the tool scores (n=100,000):
+    interval shares: PP3_Strong 0.39%  PP3_Moderate 0.61%  PP3_Supporting 3.12%  Indeterminate 38.00%  BP4_Supporting 32.96%  BP4_Moderate 14.44%  BP4_Strong 10.48%
+    PP3 >= Supporting  share  4.116%   prior 4.41%   prior/posterior  44.14%
+    PP3 >= Moderate    share  0.995%   prior 4.41%   prior/posterior  20.92%
+    PP3 >= Strong      share  0.386%   prior 4.41%   prior/posterior   7.26%
+    by Deep Intronic distance band, share at or above each PP3 level reached:
+      Deep Intronic <= 50 bp         n=  2,302  Supporting 0.912%  Moderate 0.348%  Strong 0.217%
+      Deep Intronic 51-500 bp        n= 16,021  Supporting 1.467%  Moderate 0.524%  Strong 0.256%
+      Deep Intronic > 500 bp         n= 79,321  Supporting 4.586%  Moderate 0.946%  Strong 0.296%
+      DI sensitivity set <= 50 bp    n=  1,944  Supporting 0.617%  Moderate 0.257%  Strong 0.257%
+      DI sensitivity set 51-500 bp   n= 13,699  Supporting 1.299%  Moderate 0.474%  Strong 0.234%
+      DI sensitivity set > 500 bp    n= 78,045  Supporting 4.511%  Moderate 0.914%  Strong 0.281%
+
+  MetaSplice, reference, reference variants both tools score (n=96,024):
+    interval shares: PP3_Strong 0.39%  PP3_Moderate 0.61%  PP3_Supporting 3.09%  Indeterminate 38.21%  BP4_Supporting 32.88%  BP4_Moderate 14.35%  BP4_Strong 10.47%
+    PP3 >= Supporting  share  4.089%   prior 4.41%   prior/posterior  44.14%
+    PP3 >= Moderate    share  0.995%   prior 4.41%   prior/posterior  20.92%
+    PP3 >= Strong      share  0.387%   prior 4.41%   prior/posterior   7.26%
+    by Deep Intronic distance band, share at or above each PP3 level reached:
+      Deep Intronic <= 50 bp         n=  2,269  Supporting 0.881%  Moderate 0.309%  Strong 0.176%
+      Deep Intronic 51-500 bp        n= 15,771  Supporting 1.477%  Moderate 0.533%  Strong 0.260%
+      Deep Intronic > 500 bp         n= 75,651  Supporting 4.570%  Moderate 0.945%  Strong 0.297%
+      DI sensitivity set <= 50 bp    n=  1,915  Supporting 0.574%  Moderate 0.209%  Strong 0.209%
+      DI sensitivity set 51-500 bp   n= 13,460  Supporting 1.308%  Moderate 0.483%  Strong 0.238%
+      DI sensitivity set > 500 bp    n= 74,409  Supporting 4.493%  Moderate 0.915%  Strong 0.284%
+
+  SpliceAI, main, reference variants all the tool scores (n=96,024):
+    interval shares: PP3_Strong 0.14%  PP3_Moderate 0.14%  PP3_Supporting 0.17%  Indeterminate 0.62%  BP4_Supporting 1.26%  BP4_Moderate 97.67%
+    PP3 >= Supporting  share  0.446%   prior 4.41%   prior/posterior  44.14%
+    PP3 >= Moderate    share  0.272%   prior 4.41%   prior/posterior  20.92%
+    PP3 >= Strong      share  0.136%   prior 4.41%   prior/posterior   7.26%
+    by Deep Intronic distance band, share at or above each PP3 level reached:
+      Deep Intronic <= 50 bp         n=  2,269  Supporting 1.190%  Moderate 0.705%  Strong 0.441%
+      Deep Intronic 51-500 bp        n= 15,771  Supporting 0.748%  Moderate 0.406%  Strong 0.133%
+      Deep Intronic > 500 bp         n= 75,651  Supporting 0.128%  Moderate 0.062%  Strong 0.021%
+      DI sensitivity set <= 50 bp    n=  1,915  Supporting 1.149%  Moderate 0.731%  Strong 0.470%
+      DI sensitivity set 51-500 bp   n= 13,460  Supporting 0.639%  Moderate 0.364%  Strong 0.119%
+      DI sensitivity set > 500 bp    n= 74,409  Supporting 0.120%  Moderate 0.058%  Strong 0.020%
+
+  SpliceAI, main, reference variants both tools score (n=96,024):
+    interval shares: PP3_Strong 0.14%  PP3_Moderate 0.14%  PP3_Supporting 0.17%  Indeterminate 0.62%  BP4_Supporting 1.26%  BP4_Moderate 97.67%
+    PP3 >= Supporting  share  0.446%   prior 4.41%   prior/posterior  44.14%
+    PP3 >= Moderate    share  0.272%   prior 4.41%   prior/posterior  20.92%
+    PP3 >= Strong      share  0.136%   prior 4.41%   prior/posterior   7.26%
+    by Deep Intronic distance band, share at or above each PP3 level reached:
+      Deep Intronic <= 50 bp         n=  2,269  Supporting 1.190%  Moderate 0.705%  Strong 0.441%
+      Deep Intronic 51-500 bp        n= 15,771  Supporting 0.748%  Moderate 0.406%  Strong 0.133%
+      Deep Intronic > 500 bp         n= 75,651  Supporting 0.128%  Moderate 0.062%  Strong 0.021%
+      DI sensitivity set <= 50 bp    n=  1,915  Supporting 1.149%  Moderate 0.731%  Strong 0.470%
+      DI sensitivity set 51-500 bp   n= 13,460  Supporting 0.639%  Moderate 0.364%  Strong 0.119%
+      DI sensitivity set > 500 bp    n= 74,409  Supporting 0.120%  Moderate 0.058%  Strong 0.020%
+
+  SpliceAI, reference, reference variants all the tool scores (n=96,024):
+    interval shares: PP3_Supporting 0.20%  Indeterminate 0.75%  BP4_Supporting 1.38%  BP4_Moderate 97.67%
+    PP3 >= Supporting  share  0.202%   prior 4.41%   prior/posterior  44.14%
+    by Deep Intronic distance band, share at or above each PP3 level reached:
+      Deep Intronic <= 50 bp         n=  2,269  Supporting 0.441%
+      Deep Intronic 51-500 bp        n= 15,771  Supporting 0.285%
+      Deep Intronic > 500 bp         n= 75,651  Supporting 0.040%
+      DI sensitivity set <= 50 bp    n=  1,915  Supporting 0.470%
+      DI sensitivity set 51-500 bp   n= 13,460  Supporting 0.267%
+      DI sensitivity set > 500 bp    n= 74,409  Supporting 0.038%
+
+  SpliceAI, reference, reference variants both tools score (n=96,024):
+    interval shares: PP3_Supporting 0.20%  Indeterminate 0.75%  BP4_Supporting 1.38%  BP4_Moderate 97.67%
+    PP3 >= Supporting  share  0.202%   prior 4.41%   prior/posterior  44.14%
+    by Deep Intronic distance band, share at or above each PP3 level reached:
+      Deep Intronic <= 50 bp         n=  2,269  Supporting 0.441%
+      Deep Intronic 51-500 bp        n= 15,771  Supporting 0.285%
+      Deep Intronic > 500 bp         n= 75,651  Supporting 0.040%
+      DI sensitivity set <= 50 bp    n=  1,915  Supporting 0.470%
+      DI sensitivity set 51-500 bp   n= 13,460  Supporting 0.267%
+      DI sensitivity set > 500 bp    n= 74,409  Supporting 0.038%
+
+------------------------------------------------------------------------------------------------
+FLAGGED LEVELS, by region, allele-frequency stratum and gene (investigation; no automatic removal)
+------------------------------------------------------------------------------------------------
+  none
+
+------------------------------------------------------------------------------------------------
+POST-FREEZE SENSITIVITY OF THE PRIOR (reported only; the frozen prior and every threshold are unchanged)
+------------------------------------------------------------------------------------------------
+  components: >= 1-star temporal cohort, full model (P/LP 231, B/LB 23,818); reference: uniform gnomAD, full model
+  estimate 0.0365 [0.0285, 0.0491], fit 0.4399; frozen prior 0.0441 (primary estimate 0.0311, fit 0.41, not promoted)
+
+wrote results/S11_thresholds.tsv, S11_validation_intervals.tsv, S11_population_yield.tsv

@@ -1,0 +1,68 @@
+====================================================================================================
+P3 -- VUS UNDER THE AMENDMENT 6 RULE (Amendment 8; descriptive, no verdict)
+MetaSplice: PP3 at Supporting for score >= 0.544; BP4 at Supporting for score <= 0.0017. SpliceAI: PP3 at >= 0.2; BP4 at <= 0.1
+====================================================================================================
+
+Input lock (md5), before anything is computed
+  51c6e5d0db100b33b91907fa857cd9a7  models/metasplice_v2_full.joblib  ok
+  8be31360848f2cb43c2b02850bd03815  models/metasplice_v2_features.joblib  ok
+  eae8dc55b16ef10581b3285ea47beab7  data/v2_features_vus.csv  ok
+  27fad032309f58f4b058b4c6e1ddc4a9  data/v2_features_test_candidates.csv  ok
+  d9e70ef71b2c1ca149e4cf4ed56d59e0  data/v2_variants_test_candidates.csv  ok
+  5f2a4b045d7e6113d44896babc0d0c47  data/v2_variants_training.csv  ok
+  fc9013f3b52502ca25dc1d0ff774b7b8  data/v2_comparators.csv  ok
+  c6738b75048c943e9a95f1545c34b752  data/v2_pathogenic_genes.csv  ok
+  6a009ca0e0d5c837d7b1633c739ceb41  results/S6_thresholds.tsv  ok
+  111c595ba957c7fc93b8833188d4b029  /mnt/Work0/Splice_altering_variant/clinvar/hg38/clinvar_20250831.vcf.gz.summary.gz  ok
+  3c0116eaa075ee7c658ca5c70ec44763  /mnt/Work0/Splice_altering_variant/reproducibility/raw_inputs/clinvar_20250831.vcf.gz.summary.gz  ok
+  5578901fa0ac8a8034fd11cf3986755d  data/v2_spliceai_raw_d4999_vus.csv  ok
+  every input equals its locked md5
+
+Denominators: VUS cohort 61,016; all VUS in scope 71,267; resolved-VUS cohort 659 (107 later P/LP)
+  every denominator equals Amendment 8
+
+1. VUS COHORT (n=61,016; no labels)
+  VUS cohort         MetaSplice >= 0.1  33.1%   >= 0.2  30.0%   >= 0.5  25.1%
+  all VUS in scope   MetaSplice >= 0.1  40.3%   >= 0.2  37.5%   >= 0.5  33.2%
+  MetaSplice                     PP3  14,991 (24.6%)   BP4  21,623 (35.4%)   neither  24,402 (40.0%)
+  SpliceAI, masked               PP3  19,846 (32.5%)   BP4  36,879 (60.4%)   neither   4,291 ( 7.0%)
+  SpliceAI, raw (first record)   PP3  23,575 (38.6%)   BP4  31,348 (51.4%)   neither   6,093 (10.0%)
+  SpliceAI, raw (all genes)      PP3  23,734 (38.9%)   BP4  31,178 (51.1%)   neither   6,104 (10.0%)
+
+  MetaSplice's codes (rows) against SpliceAI's raw-score codes, first record (columns):
+SpliceAI raw    BP4    PP3  neither
+MetaSplice                         
+BP4           18442   1628     1553
+PP3             545  13664      782
+neither       12361   8283     3758
+
+2. RESOLVED VUS (n=659; later P/LP 107, later B/LB 552)
+  MetaSplice                     P/LP PP3  97 (90.7%)  B/LB PP3   6 ( 1.1%)  B/LB BP4 388 (70.3%)  P/LP BP4  0 (0.0%)  neither P/LP 10 B/LB 158
+      PP3 variants: LR 83.4 [32.2, 281]
+      BP4 variants: LR 0 [0, 0.0611]
+  SpliceAI, masked               P/LP PP3 100 (93.5%)  B/LB PP3 110 (19.9%)  B/LB BP4 412 (74.6%)  P/LP BP4  5 (4.7%)  neither P/LP  2 B/LB  30
+      PP3 variants: LR 4.69 [3.58, 6.01]
+      BP4 variants: LR 0.0626 [0.0163, 0.164]
+  SpliceAI, raw (first record)   P/LP PP3 100 (93.5%)  B/LB PP3 212 (38.4%)  B/LB BP4 313 (56.7%)  P/LP BP4  6 (5.6%)  neither P/LP  1 B/LB  27
+      PP3 variants: LR 2.43 [1.99, 2.89]
+      BP4 variants: LR 0.0989 [0.029, 0.246]
+  SpliceAI, raw (all genes)      P/LP PP3 105 (98.1%)  B/LB PP3 212 (38.4%)  B/LB BP4 311 (56.3%)  P/LP BP4  1 (0.9%)  neither P/LP  1 B/LB  29
+      PP3 variants: LR 2.56 [2.14, 2.96]
+      BP4 variants: LR 0.0166 [0.000192, 0.113]
+  MetaSplice minus SpliceAI, masked: share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -2.80%  [-10.28%, +4.67%]  [-11.11%, +6.01%]
+      B/LB given PP3   -18.84%  [-22.28%, -15.76%]  [-22.60%, -15.20%]
+      B/LB given BP4    -4.35%  [-8.51%, -0.36%]  [-8.90%, +0.21%]
+      P/LP given BP4    -4.67%  [-9.35%, -0.93%]  [-11.81%, +0.00%]
+  MetaSplice minus SpliceAI, raw (first record): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -2.80%  [-9.35%, +4.67%]  [-11.24%, +6.09%]
+      B/LB given PP3   -37.32%  [-41.31%, -33.15%]  [-42.72%, -32.12%]
+      B/LB given BP4   +13.59%  [+9.06%, +17.57%]  [+8.74%, +18.67%]
+      P/LP given BP4    -5.61%  [-11.21%, -1.87%]  [-13.04%, +0.00%]
+  MetaSplice minus SpliceAI, raw (all genes): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -7.48%  [-13.08%, -1.87%]  [-13.76%, -2.08%]
+      B/LB given PP3   -37.32%  [-41.31%, -33.15%]  [-42.72%, -32.12%]
+      B/LB given BP4   +13.95%  [+9.42%, +17.93%]  [+9.15%, +18.93%]
+      P/LP given BP4    -0.93%  [-2.83%, +0.00%]  [-3.28%, +0.00%]
+
+wrote results/P3_vus_rule.tsv (38 rows)
