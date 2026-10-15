@@ -1,0 +1,112 @@
+========================================================================================================
+X3 -- EXPLORATORY: A CONSERVATIVE PP3/BP4 RULE FOR METASPLICE AGAINST CLINGEN'S SPLICEAI RULE (Amendment 6)
+MetaSplice: PP3 at Supporting for score >= 0.544; BP4 at Supporting for score <= 0.0017 (S6 thresholds; rule chosen after the interval counts were seen)
+SpliceAI (Walker et al. 2023): PP3 at >= 0.2; BP4 at <= 0.1; unscored variants receive no code; scores: SpliceAI 1.3.1 raw, +-4,999 nt (V11; the calibrated configuration, Amendment 7); value spliceai_raw_max_allgenes
+========================================================================================================
+protocol SHA-256 (live file): d4930e46ee8130acbc313947f193e8c236b3f64494628a65f2abd3935cd995f8
+
+Input lock (md5), before anything is computed
+  51c6e5d0db100b33b91907fa857cd9a7  models/metasplice_v2_full.joblib  ok
+  8be31360848f2cb43c2b02850bd03815  models/metasplice_v2_features.joblib  ok
+  6a009ca0e0d5c837d7b1633c739ceb41  results/S6_thresholds.tsv  ok
+  f9cd3f227b0357a4c022f5d6814e4ab4  data/v2_features_fresh_20260928.csv  ok
+  27fad032309f58f4b058b4c6e1ddc4a9  data/v2_features_test_candidates.csv  ok
+  d9e70ef71b2c1ca149e4cf4ed56d59e0  data/v2_variants_test_candidates.csv  ok
+  5f2a4b045d7e6113d44896babc0d0c47  data/v2_variants_training.csv  ok
+  fc9013f3b52502ca25dc1d0ff774b7b8  data/v2_comparators.csv  ok
+  c6738b75048c943e9a95f1545c34b752  data/v2_pathogenic_genes.csv  ok
+  111c595ba957c7fc93b8833188d4b029  /mnt/Work0/Splice_altering_variant/clinvar/hg38/clinvar_20250831.vcf.gz.summary.gz  ok
+  3c0116eaa075ee7c658ca5c70ec44763  /mnt/Work0/Splice_altering_variant/reproducibility/raw_inputs/clinvar_20250831.vcf.gz.summary.gz  ok
+  31b81cc8553720bc33ed7a39e8636206  data/v2_spliceai_raw_d4999.csv  ok
+  every input equals its locked md5; the rule's thresholds equal S6's PP3 Strong and BP4 Moderate
+
+Checks against Amendment 6, before anything new is computed
+  development, >= 1 star       n= 24,049 P/LP= 231   recorded (24049, 231)   ok
+  validation, >= 1 star        n= 13,186 P/LP= 265   recorded (13186, 265)   ok
+  development, all statuses    n= 24,057 P/LP= 239   recorded (24057, 239)   ok
+  validation, all statuses     n= 13,194 P/LP= 273   recorded (13194, 273)   ok
+  development, >= 1 star       MetaSplice PP3  P/LP  200  B/LB     13   recorded (200, 13)   ok
+  development, >= 1 star       MetaSplice BP4  P/LP    7  B/LB 21,183   recorded (7, 21183)   ok
+  validation, >= 1 star        MetaSplice PP3  P/LP  228  B/LB     55   recorded (228, 55)   ok
+  validation, >= 1 star        MetaSplice BP4  P/LP    5  B/LB 10,999   recorded (5, 10999)   ok
+  validation, all statuses     MetaSplice PP3  P/LP  235  B/LB     55   recorded (235, 55)   ok
+  validation, all statuses     MetaSplice BP4  P/LP    6  B/LB 10,999   recorded (6, 10999)   ok
+  every denominator and every logged interval count is reproduced
+
+development, >= 1 star: n=24,049 (P/LP 231, B/LB 23,818); SpliceAI scores 23,928
+  rule               P/LP PP3        B/LB PP3          B/LB BP4      P/LP BP4     P/LP none       B/LB none
+  MetaSplice    200 ( 86.6%)     13 (0.05%)  21,183 ( 88.9%)   7 ( 3.0%)  24 (10.4%)  2,622 (11.0%)
+      PP3 variants: LR 1.59e+03 [812, 3.46e+03]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+      BP4 variants: LR 0.0341 [0.0119, 0.075]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+  SpliceAI      212 ( 91.8%)    961 (4.03%)  21,150 ( 88.8%)  11 ( 4.8%)   8 ( 3.5%)  1,707 ( 7.2%)
+      PP3 variants: LR 22.7 [20, 25.4]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+      BP4 variants: LR 0.0536 [0.0242, 0.101]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+  MetaSplice minus SpliceAI, all cohort variants (n=24,049; P/LP 231): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -5.19%  [-9.09%, -0.87%]  [-9.41%, -1.10%]
+      B/LB given PP3    -3.98%  [-4.23%, -3.73%]  [-4.24%, -3.72%]
+      B/LB given BP4    +0.14%  [-0.36%, +0.56%]  [-0.72%, +0.96%]
+      P/LP given BP4    -1.73%  [-4.33%, +0.43%]  [-4.19%, +0.47%]
+  MetaSplice minus SpliceAI, variants SpliceAI scores (n=23,928; P/LP 230): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -5.22%  [-9.13%, -1.30%]  [-9.23%, -1.31%]
+      B/LB given PP3    -4.00%  [-4.24%, -3.73%]  [-4.27%, -3.75%]
+      B/LB given BP4    -0.33%  [-0.79%, +0.15%]  [-1.05%, +0.37%]
+      P/LP given BP4    -1.74%  [-4.35%, +0.43%]  [-4.04%, +0.76%]
+
+validation, >= 1 star: n=13,186 (P/LP 265, B/LB 12,921); SpliceAI scores 13,003
+  rule               P/LP PP3        B/LB PP3          B/LB BP4      P/LP BP4     P/LP none       B/LB none
+  MetaSplice    228 ( 86.0%)     55 (0.43%)  10,999 ( 85.1%)   5 ( 1.9%)  32 (12.1%)  1,867 (14.4%)
+      PP3 variants: LR 202 [141, 294]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+      BP4 variants: LR 0.0222 [0.00598, 0.0562]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+  SpliceAI      242 ( 91.3%)    502 (3.89%)  11,485 ( 88.9%)  14 ( 5.3%)   9 ( 3.4%)    934 ( 7.2%)
+      PP3 variants: LR 23.5 [20.2, 27]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+      BP4 variants: LR 0.0594 [0.0298, 0.105]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+  MetaSplice minus SpliceAI, all cohort variants (n=13,186; P/LP 265): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -5.28%  [-8.30%, -3.01%]  [-8.40%, -2.55%]
+      B/LB given PP3    -3.46%  [-3.80%, -3.12%]  [-3.84%, -3.04%]
+      B/LB given BP4    -3.76%  [-4.47%, -3.09%]  [-5.96%, -1.90%]
+      P/LP given BP4    -3.40%  [-6.04%, -1.51%]  [-5.95%, -1.02%]
+  MetaSplice minus SpliceAI, variants SpliceAI scores (n=13,003; P/LP 263): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -5.70%  [-8.75%, -3.04%]  [-8.56%, -3.15%]
+      B/LB given PP3    -3.52%  [-3.86%, -3.22%]  [-3.90%, -3.16%]
+      B/LB given BP4    -5.04%  [-5.68%, -4.40%]  [-6.72%, -3.57%]
+      P/LP given BP4    -3.42%  [-6.08%, -1.14%]  [-6.14%, -1.06%]
+
+development, all statuses: n=24,057 (P/LP 239, B/LB 23,818); SpliceAI scores 23,936
+  rule               P/LP PP3        B/LB PP3          B/LB BP4      P/LP BP4     P/LP none       B/LB none
+  MetaSplice    208 ( 87.0%)     13 (0.05%)  21,183 ( 88.9%)   7 ( 2.9%)  24 (10.0%)  2,622 (11.0%)
+      PP3 variants: LR 1.59e+03 [818, 3.47e+03]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+      BP4 variants: LR 0.0329 [0.0115, 0.0726]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+  SpliceAI      220 ( 92.1%)    961 (4.03%)  21,150 ( 88.8%)  11 ( 4.6%)   8 ( 3.3%)  1,707 ( 7.2%)
+      PP3 variants: LR 22.8 [20.1, 25.4]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+      BP4 variants: LR 0.0518 [0.0234, 0.0977]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+  MetaSplice minus SpliceAI, all cohort variants (n=24,057; P/LP 239): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -5.02%  [-8.80%, -1.26%]  [-9.09%, -1.07%]
+      B/LB given PP3    -3.98%  [-4.22%, -3.73%]  [-4.24%, -3.72%]
+      B/LB given BP4    +0.14%  [-0.35%, +0.56%]  [-0.72%, +0.96%]
+      P/LP given BP4    -1.67%  [-3.78%, +0.84%]  [-4.07%, +0.46%]
+  MetaSplice minus SpliceAI, variants SpliceAI scores (n=23,936; P/LP 238): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -5.04%  [-8.82%, -1.26%]  [-8.94%, -1.27%]
+      B/LB given PP3    -4.00%  [-4.24%, -3.76%]  [-4.27%, -3.75%]
+      B/LB given BP4    -0.33%  [-0.83%, +0.14%]  [-1.05%, +0.37%]
+      P/LP given BP4    -1.68%  [-4.20%, +0.42%]  [-3.96%, +0.73%]
+
+validation, all statuses: n=13,194 (P/LP 273, B/LB 12,921); SpliceAI scores 13,011
+  rule               P/LP PP3        B/LB PP3          B/LB BP4      P/LP BP4     P/LP none       B/LB none
+  MetaSplice    235 ( 86.1%)     55 (0.43%)  10,999 ( 85.1%)   6 ( 2.2%)  32 (11.7%)  1,867 (14.4%)
+      PP3 variants: LR 202 [141, 294]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+      BP4 variants: LR 0.0258 [0.00805, 0.0607]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+  SpliceAI      249 ( 91.2%)    502 (3.89%)  11,485 ( 88.9%)  15 ( 5.5%)   9 ( 3.3%)    934 ( 7.2%)
+      PP3 variants: LR 23.5 [20.2, 26.9]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+      BP4 variants: LR 0.0618 [0.0318, 0.107]   Supporting CI: prior 0.0441: clears; prior 0.01: clears; prior 0.1: clears
+  MetaSplice minus SpliceAI, all cohort variants (n=13,194; P/LP 273): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -5.13%  [-8.06%, -2.56%]  [-8.10%, -2.49%]
+      B/LB given PP3    -3.46%  [-3.78%, -3.13%]  [-3.85%, -3.05%]
+      B/LB given BP4    -3.76%  [-4.44%, -3.10%]  [-5.82%, -1.80%]
+      P/LP given BP4    -3.30%  [-5.86%, -1.10%]  [-5.68%, -0.82%]
+  MetaSplice minus SpliceAI, variants SpliceAI scores (n=13,011; P/LP 271): share difference [stratified 95% CI] [gene-clustered 95% CI]
+      P/LP given PP3    -5.54%  [-8.12%, -2.95%]  [-8.24%, -3.07%]
+      B/LB given PP3    -3.52%  [-3.86%, -3.21%]  [-3.92%, -3.15%]
+      B/LB given BP4    -5.04%  [-5.68%, -4.36%]  [-6.67%, -3.53%]
+      P/LP given BP4    -3.32%  [-5.90%, -1.11%]  [-5.90%, -1.02%]
+
+wrote results/X3_supporting_rule_raw_allgenes.tsv (56 rows)

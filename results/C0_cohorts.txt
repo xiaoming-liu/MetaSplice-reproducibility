@@ -1,0 +1,265 @@
+C0 -- cohorts and comparator coverage of MetaSplice v2.0: counts only
+No model is loaded and no score is computed. Labels are counted and not otherwise used (Task 8 rule).
+Inputs (md5):
+  d9e70ef71b2c1ca149e4cf4ed56d59e0  data/v2_variants_test_candidates.csv
+  27fad032309f58f4b058b4c6e1ddc4a9  data/v2_features_test_candidates.csv
+  4de7d586fd8e4e81ceb7cc84d669f2d2  data/v2_features_training.csv
+  cb80fac8f03f0e4cfdcd2e11e7424884  data/v2_oof.csv
+  eae8dc55b16ef10581b3285ea47beab7  data/v2_features_vus.csv
+  3c9dac3141cf970bc0c0403b2cc04fde  data/v2_features_literature.csv
+  f0801f012809969eac365510e8950c2d  data/v2_features_splicevardb.csv
+  c6738b75048c943e9a95f1545c34b752  data/v2_pathogenic_genes.csv
+  fc9013f3b52502ca25dc1d0ff774b7b8  data/v2_comparators.csv
+pathogenic genes (>= 1 P/LP SNV in the 2025-08-31 release, by Ensembl ID): 5,133
+
+1. Strict test set (the test set), by region
+  all regions                        MetaSplice             n=  28,465  P/LP= 3,451  B/LB= 25,014
+  Canonical Donor Site               MetaSplice             n=   1,730  P/LP= 1,723  B/LB=      7
+  Canonical Acceptor Site            MetaSplice             n=   1,495  P/LP= 1,484  B/LB=     11
+  Donor Region                       MetaSplice             n=   1,766  P/LP=   102  B/LB=  1,664
+  Acceptor Region                    MetaSplice             n=   4,810  P/LP=    36  B/LB=  4,774
+  PPT Region                         MetaSplice             n=   8,359  P/LP=    21  B/LB=  8,338
+  Branch Point Region                MetaSplice             n=     186  P/LP=     5  B/LB=    181
+  Deep Intronic                      MetaSplice             n=  10,119  P/LP=    80  B/LB= 10,039
+  Deep Intronic, sensitivity set     MetaSplice             n=   8,312  P/LP=    62  B/LB=  8,250
+
+2. Non-canonical test set: primary pairings, each region, the deep-intronic sensitivity set
+  all non-canonical                  MetaSplice             n=  25,240  P/LP=   244  B/LB= 24,996
+  all non-canonical                  MetaSplice & SpliceAI  n=  25,114  P/LP=   243  B/LB= 24,871
+  all non-canonical                  MetaSplice & CADD      n=  25,240  P/LP=   244  B/LB= 24,996
+  all non-canonical                  all three              n=  25,114  P/LP=   243  B/LB= 24,871
+  Donor Region                       MetaSplice             n=   1,766  P/LP=   102  B/LB=  1,664
+  Donor Region                       MetaSplice & SpliceAI  n=   1,756  P/LP=   101  B/LB=  1,655
+  Donor Region                       MetaSplice & CADD      n=   1,766  P/LP=   102  B/LB=  1,664
+  Donor Region                       all three              n=   1,756  P/LP=   101  B/LB=  1,655
+  Acceptor Region                    MetaSplice             n=   4,810  P/LP=    36  B/LB=  4,774
+  Acceptor Region                    MetaSplice & SpliceAI  n=   4,790  P/LP=    36  B/LB=  4,754
+  Acceptor Region                    MetaSplice & CADD      n=   4,810  P/LP=    36  B/LB=  4,774
+  Acceptor Region                    all three              n=   4,790  P/LP=    36  B/LB=  4,754
+  PPT Region                         MetaSplice             n=   8,359  P/LP=    21  B/LB=  8,338
+  PPT Region                         MetaSplice & SpliceAI  n=   8,319  P/LP=    21  B/LB=  8,298
+  PPT Region                         MetaSplice & CADD      n=   8,359  P/LP=    21  B/LB=  8,338
+  PPT Region                         all three              n=   8,319  P/LP=    21  B/LB=  8,298
+  Branch Point Region                MetaSplice             n=     186  P/LP=     5  B/LB=    181
+  Branch Point Region                MetaSplice & SpliceAI  n=     186  P/LP=     5  B/LB=    181
+  Branch Point Region                MetaSplice & CADD      n=     186  P/LP=     5  B/LB=    181
+  Branch Point Region                all three              n=     186  P/LP=     5  B/LB=    181
+  Deep Intronic                      MetaSplice             n=  10,119  P/LP=    80  B/LB= 10,039
+  Deep Intronic                      MetaSplice & SpliceAI  n=  10,063  P/LP=    80  B/LB=  9,983
+  Deep Intronic                      MetaSplice & CADD      n=  10,119  P/LP=    80  B/LB= 10,039
+  Deep Intronic                      all three              n=  10,063  P/LP=    80  B/LB=  9,983
+  Deep Intronic, sensitivity set     MetaSplice             n=   8,312  P/LP=    62  B/LB=  8,250
+  Deep Intronic, sensitivity set     MetaSplice & SpliceAI  n=   8,260  P/LP=    62  B/LB=  8,198
+  Deep Intronic, sensitivity set     MetaSplice & CADD      n=   8,312  P/LP=    62  B/LB=  8,250
+  Deep Intronic, sensitivity set     all three              n=   8,260  P/LP=    62  B/LB=  8,198
+  genes of the training data: non-canonical test variants in them 25,199; in other genes 41 (A3)
+
+3. Calibration cohorts: non-canonical, gnomAD AF < 0.01, gene with >= 1 P/LP in the training release
+  derivation, all stars              MetaSplice             n= 299,331  P/LP= 3,598  B/LB=295,733
+  derivation, all stars              MetaSplice & SpliceAI  n= 297,322  P/LP= 3,582  B/LB=293,740
+  derivation, all stars              MetaSplice & CADD      n= 299,331  P/LP= 3,598  B/LB=295,733
+  derivation, all stars              all three              n= 297,322  P/LP= 3,582  B/LB=293,740
+  derivation, >= 1 star              MetaSplice             n= 294,612  P/LP= 3,018  B/LB=291,594
+  derivation, >= 1 star              MetaSplice & SpliceAI  n= 292,638  P/LP= 3,004  B/LB=289,634
+  derivation, >= 1 star              MetaSplice & CADD      n= 294,612  P/LP= 3,018  B/LB=291,594
+  derivation, >= 1 star              all three              n= 292,638  P/LP= 3,004  B/LB=289,634
+  validation, all stars (S5)         MetaSplice             n=  24,057  P/LP=   239  B/LB= 23,818
+  validation, all stars (S5)         MetaSplice & SpliceAI  n=  23,936  P/LP=   238  B/LB= 23,698
+  validation, all stars (S5)         MetaSplice & CADD      n=  24,057  P/LP=   239  B/LB= 23,818
+  validation, all stars (S5)         all three              n=  23,936  P/LP=   238  B/LB= 23,698
+  validation, >= 1 star (S6-S10)     MetaSplice             n=  24,049  P/LP=   231  B/LB= 23,818
+  validation, >= 1 star (S6-S10)     MetaSplice & SpliceAI  n=  23,928  P/LP=   230  B/LB= 23,698
+  validation, >= 1 star (S6-S10)     MetaSplice & CADD      n=  24,049  P/LP=   231  B/LB= 23,818
+  validation, >= 1 star (S6-S10)     all three              n=  23,928  P/LP=   230  B/LB= 23,698
+  S9: genes with >= 10 P/LP in the >= 1-star validation cohort: 1 (holding 80 of its 24,049 variants)
+
+4. Reclassified subgroup (in the 2025-08-31 release with a classification training does not use)
+  all regions                        MetaSplice             n=     823  P/LP=   228  B/LB=    595
+  Canonical Donor Site               MetaSplice             n=      63  P/LP=    62  B/LB=      1
+  Canonical Acceptor Site            MetaSplice             n=      58  P/LP=    56  B/LB=      2
+  Donor Region                       MetaSplice             n=     157  P/LP=    57  B/LB=    100
+  Acceptor Region                    MetaSplice             n=     215  P/LP=    24  B/LB=    191
+  PPT Region                         MetaSplice             n=     164  P/LP=    16  B/LB=    148
+  Branch Point Region                MetaSplice             n=       6  P/LP=     2  B/LB=      4
+  Deep Intronic                      MetaSplice             n=     160  P/LP=    11  B/LB=    149
+  Deep Intronic, sensitivity set     MetaSplice             n=     123  P/LP=     8  B/LB=    115
+  S7, resolved VUS: uncertain or conflicting in the 2025-08-31 release, >= 1 star, in the calibration cohort
+  resolved VUS (S7)                  MetaSplice             n=     659  P/LP=   107  B/LB=    552
+  resolved VUS (S7)                  MetaSplice & SpliceAI  n=     656  P/LP=   106  B/LB=    550
+  resolved VUS (S7)                  MetaSplice & CADD      n=     659  P/LP=   107  B/LB=    552
+  resolved VUS (S7)                  all three              n=     656  P/LP=   106  B/LB=    550
+
+5. Literature set (all P/LP)
+  all regions                        MetaSplice             n=     697  P/LP=   697  B/LB=      0
+  all regions                        MetaSplice & SpliceAI  n=     694  P/LP=   694  B/LB=      0
+  all regions                        MetaSplice & CADD      n=     697  P/LP=   697  B/LB=      0
+  all regions                        all three              n=     694  P/LP=   694  B/LB=      0
+  Canonical Donor Site               MetaSplice             n=     145  P/LP=   145  B/LB=      0
+  Canonical Donor Site               MetaSplice & SpliceAI  n=     144  P/LP=   144  B/LB=      0
+  Canonical Donor Site               MetaSplice & CADD      n=     145  P/LP=   145  B/LB=      0
+  Canonical Donor Site               all three              n=     144  P/LP=   144  B/LB=      0
+  Canonical Acceptor Site            MetaSplice             n=     127  P/LP=   127  B/LB=      0
+  Canonical Acceptor Site            MetaSplice & SpliceAI  n=     127  P/LP=   127  B/LB=      0
+  Canonical Acceptor Site            MetaSplice & CADD      n=     127  P/LP=   127  B/LB=      0
+  Canonical Acceptor Site            all three              n=     127  P/LP=   127  B/LB=      0
+  Donor Region                       MetaSplice             n=     144  P/LP=   144  B/LB=      0
+  Donor Region                       MetaSplice & SpliceAI  n=     144  P/LP=   144  B/LB=      0
+  Donor Region                       MetaSplice & CADD      n=     144  P/LP=   144  B/LB=      0
+  Donor Region                       all three              n=     144  P/LP=   144  B/LB=      0
+  Acceptor Region                    MetaSplice             n=      95  P/LP=    95  B/LB=      0
+  Acceptor Region                    MetaSplice & SpliceAI  n=      94  P/LP=    94  B/LB=      0
+  Acceptor Region                    MetaSplice & CADD      n=      95  P/LP=    95  B/LB=      0
+  Acceptor Region                    all three              n=      94  P/LP=    94  B/LB=      0
+  PPT Region                         MetaSplice             n=      39  P/LP=    39  B/LB=      0
+  PPT Region                         MetaSplice & SpliceAI  n=      39  P/LP=    39  B/LB=      0
+  PPT Region                         MetaSplice & CADD      n=      39  P/LP=    39  B/LB=      0
+  PPT Region                         all three              n=      39  P/LP=    39  B/LB=      0
+  Branch Point Region                MetaSplice             n=      17  P/LP=    17  B/LB=      0
+  Branch Point Region                MetaSplice & SpliceAI  n=      17  P/LP=    17  B/LB=      0
+  Branch Point Region                MetaSplice & CADD      n=      17  P/LP=    17  B/LB=      0
+  Branch Point Region                all three              n=      17  P/LP=    17  B/LB=      0
+  Deep Intronic                      MetaSplice             n=     130  P/LP=   130  B/LB=      0
+  Deep Intronic                      MetaSplice & SpliceAI  n=     129  P/LP=   129  B/LB=      0
+  Deep Intronic                      MetaSplice & CADD      n=     130  P/LP=   130  B/LB=      0
+  Deep Intronic                      all three              n=     129  P/LP=   129  B/LB=      0
+  Deep Intronic, sensitivity set     MetaSplice             n=     114  P/LP=   114  B/LB=      0
+  Deep Intronic, sensitivity set     MetaSplice & SpliceAI  n=     113  P/LP=   113  B/LB=      0
+  Deep Intronic, sensitivity set     MetaSplice & CADD      n=     114  P/LP=   114  B/LB=      0
+  Deep Intronic, sensitivity set     all three              n=     113  P/LP=   113  B/LB=      0
+
+6. SpliceVarDB, variant level (v1's A6 rule)
+  variants 22,314 from 22,908 assay records; assay-discordant (excluded) 40: {'Low-frequency splice-altering|Splice-altering': 40}
+  primary set (assay-concordant), region by class:
+    svdb_classes             Low-frequency splice-altering  Normal  Splice-altering    All
+    region                                                                                
+    Acceptor Region                                   1030     410              711   2151
+    Branch Point Region                               1719    1112               63   2894
+    Canonical Acceptor Site                            751       6             3126   3883
+    Canonical Donor Site                               542       1             2199   2742
+    Deep Intronic                                     2881    1884              273   5038
+    Donor Region                                       975     301             1399   2675
+    PPT Region                                        1645    1002              244   2891
+    All                                               9543    4716             8015  22274
+  A6 strict endpoint: splice-altering against normal, low-frequency excluded
+  all regions                        MetaSplice             n=  12,731  splice-altering= 8,015  normal=  4,716
+  all regions                        MetaSplice & SpliceAI  n=  12,646  splice-altering= 7,966  normal=  4,680
+  all regions                        MetaSplice & CADD      n=  12,731  splice-altering= 8,015  normal=  4,716
+  all regions                        all three              n=  12,646  splice-altering= 7,966  normal=  4,680
+  Canonical Donor Site               MetaSplice             n=   2,200  splice-altering= 2,199  normal=      1
+  Canonical Donor Site               MetaSplice & SpliceAI  n=   2,182  splice-altering= 2,181  normal=      1
+  Canonical Donor Site               MetaSplice & CADD      n=   2,200  splice-altering= 2,199  normal=      1
+  Canonical Donor Site               all three              n=   2,182  splice-altering= 2,181  normal=      1
+  Canonical Acceptor Site            MetaSplice             n=   3,132  splice-altering= 3,126  normal=      6
+  Canonical Acceptor Site            MetaSplice & SpliceAI  n=   3,116  splice-altering= 3,110  normal=      6
+  Canonical Acceptor Site            MetaSplice & CADD      n=   3,132  splice-altering= 3,126  normal=      6
+  Canonical Acceptor Site            all three              n=   3,116  splice-altering= 3,110  normal=      6
+  Donor Region                       MetaSplice             n=   1,700  splice-altering= 1,399  normal=    301
+  Donor Region                       MetaSplice & SpliceAI  n=   1,688  splice-altering= 1,391  normal=    297
+  Donor Region                       MetaSplice & CADD      n=   1,700  splice-altering= 1,399  normal=    301
+  Donor Region                       all three              n=   1,688  splice-altering= 1,391  normal=    297
+  Acceptor Region                    MetaSplice             n=   1,121  splice-altering=   711  normal=    410
+  Acceptor Region                    MetaSplice & SpliceAI  n=   1,112  splice-altering=   706  normal=    406
+  Acceptor Region                    MetaSplice & CADD      n=   1,121  splice-altering=   711  normal=    410
+  Acceptor Region                    all three              n=   1,112  splice-altering=   706  normal=    406
+  PPT Region                         MetaSplice             n=   1,246  splice-altering=   244  normal=  1,002
+  PPT Region                         MetaSplice & SpliceAI  n=   1,237  splice-altering=   243  normal=    994
+  PPT Region                         MetaSplice & CADD      n=   1,246  splice-altering=   244  normal=  1,002
+  PPT Region                         all three              n=   1,237  splice-altering=   243  normal=    994
+  Branch Point Region                MetaSplice             n=   1,175  splice-altering=    63  normal=  1,112
+  Branch Point Region                MetaSplice & SpliceAI  n=   1,169  splice-altering=    63  normal=  1,106
+  Branch Point Region                MetaSplice & CADD      n=   1,175  splice-altering=    63  normal=  1,112
+  Branch Point Region                all three              n=   1,169  splice-altering=    63  normal=  1,106
+  Deep Intronic                      MetaSplice             n=   2,157  splice-altering=   273  normal=  1,884
+  Deep Intronic                      MetaSplice & SpliceAI  n=   2,142  splice-altering=   272  normal=  1,870
+  Deep Intronic                      MetaSplice & CADD      n=   2,157  splice-altering=   273  normal=  1,884
+  Deep Intronic                      all three              n=   2,142  splice-altering=   272  normal=  1,870
+  Deep Intronic, sensitivity set     MetaSplice             n=   1,846  splice-altering=   163  normal=  1,683
+  Deep Intronic, sensitivity set     MetaSplice & SpliceAI  n=   1,834  splice-altering=   162  normal=  1,672
+  Deep Intronic, sensitivity set     MetaSplice & CADD      n=   1,846  splice-altering=   163  normal=  1,683
+  Deep Intronic, sensitivity set     all three              n=   1,834  splice-altering=   162  normal=  1,672
+  A6 broad endpoint: splice-altering or low-frequency against normal
+  all regions                        MetaSplice             n=  22,274  splice-altering or low-frequency=17,558  normal=  4,716
+  all regions                        MetaSplice & SpliceAI  n=  22,135  splice-altering or low-frequency=17,455  normal=  4,680
+  all regions                        MetaSplice & CADD      n=  22,274  splice-altering or low-frequency=17,558  normal=  4,716
+  all regions                        all three              n=  22,135  splice-altering or low-frequency=17,455  normal=  4,680
+  S8: strict endpoint, non-canonical, gnomAD AF < 0.01
+  all non-canonical                  MetaSplice             n=   7,318  splice-altering= 2,688  normal=  4,630
+  all non-canonical                  MetaSplice & SpliceAI  n=   7,268  splice-altering= 2,673  normal=  4,595
+  all non-canonical                  MetaSplice & CADD      n=   7,318  splice-altering= 2,688  normal=  4,630
+  all non-canonical                  all three              n=   7,268  splice-altering= 2,673  normal=  4,595
+  Donor Region                       MetaSplice             n=   1,693  splice-altering= 1,398  normal=    295
+  Donor Region                       MetaSplice & SpliceAI  n=   1,681  splice-altering= 1,390  normal=    291
+  Donor Region                       MetaSplice & CADD      n=   1,693  splice-altering= 1,398  normal=    295
+  Donor Region                       all three              n=   1,681  splice-altering= 1,390  normal=    291
+  Acceptor Region                    MetaSplice             n=   1,117  splice-altering=   711  normal=    406
+  Acceptor Region                    MetaSplice & SpliceAI  n=   1,108  splice-altering=   706  normal=    402
+  Acceptor Region                    MetaSplice & CADD      n=   1,117  splice-altering=   711  normal=    406
+  Acceptor Region                    all three              n=   1,108  splice-altering=   706  normal=    402
+  PPT Region                         MetaSplice             n=   1,224  splice-altering=   244  normal=    980
+  PPT Region                         MetaSplice & SpliceAI  n=   1,216  splice-altering=   243  normal=    973
+  PPT Region                         MetaSplice & CADD      n=   1,224  splice-altering=   244  normal=    980
+  PPT Region                         all three              n=   1,216  splice-altering=   243  normal=    973
+  Branch Point Region                MetaSplice             n=   1,161  splice-altering=    63  normal=  1,098
+  Branch Point Region                MetaSplice & SpliceAI  n=   1,155  splice-altering=    63  normal=  1,092
+  Branch Point Region                MetaSplice & CADD      n=   1,161  splice-altering=    63  normal=  1,098
+  Branch Point Region                all three              n=   1,155  splice-altering=    63  normal=  1,092
+  Deep Intronic                      MetaSplice             n=   2,123  splice-altering=   272  normal=  1,851
+  Deep Intronic                      MetaSplice & SpliceAI  n=   2,108  splice-altering=   271  normal=  1,837
+  Deep Intronic                      MetaSplice & CADD      n=   2,123  splice-altering=   272  normal=  1,851
+  Deep Intronic                      all three              n=   2,108  splice-altering=   271  normal=  1,837
+  Deep Intronic, sensitivity set     MetaSplice             n=   1,814  splice-altering=   162  normal=  1,652
+  Deep Intronic, sensitivity set     MetaSplice & SpliceAI  n=   1,802  splice-altering=   161  normal=  1,641
+  Deep Intronic, sensitivity set     MetaSplice & CADD      n=   1,814  splice-altering=   162  normal=  1,652
+  Deep Intronic, sensitivity set     all three              n=   1,802  splice-altering=   161  normal=  1,641
+
+7. Comparator coverage by set and region (no labels)
+  training             all                       413,199  SpliceAI  99.30%  CADD 100.00%  both  99.30%
+  training             Canonical Donor Site       20,576  SpliceAI  99.55%  CADD 100.00%  both  99.55%
+  training             Canonical Acceptor Site    17,126  SpliceAI  99.56%  CADD 100.00%  both  99.56%
+  training             Donor Region               26,476  SpliceAI  99.25%  CADD 100.00%  both  99.25%
+  training             Acceptor Region            64,628  SpliceAI  99.50%  CADD 100.00%  both  99.50%
+  training             PPT Region                 86,776  SpliceAI  99.38%  CADD 100.00%  both  99.38%
+  training             Branch Point Region         5,822  SpliceAI  99.24%  CADD 100.00%  both  99.24%
+  training             Deep Intronic             191,795  SpliceAI  99.14%  CADD 100.00%  both  99.14%
+  test strict          all                        28,465  SpliceAI  99.51%  CADD 100.00%  both  99.51%
+  test strict          Canonical Donor Site        1,730  SpliceAI  99.77%  CADD 100.00%  both  99.77%
+  test strict          Canonical Acceptor Site     1,495  SpliceAI  99.40%  CADD 100.00%  both  99.40%
+  test strict          Donor Region                1,766  SpliceAI  99.43%  CADD 100.00%  both  99.43%
+  test strict          Acceptor Region             4,810  SpliceAI  99.58%  CADD 100.00%  both  99.58%
+  test strict          PPT Region                  8,359  SpliceAI  99.52%  CADD 100.00%  both  99.52%
+  test strict          Branch Point Region           186  SpliceAI 100.00%  CADD 100.00%  both 100.00%
+  test strict          Deep Intronic              10,119  SpliceAI  99.45%  CADD 100.00%  both  99.45%
+  test reclassified    all                           823  SpliceAI  99.51%  CADD 100.00%  both  99.51%
+  test reclassified    Canonical Donor Site           63  SpliceAI 100.00%  CADD 100.00%  both 100.00%
+  test reclassified    Canonical Acceptor Site        58  SpliceAI  98.28%  CADD 100.00%  both  98.28%
+  test reclassified    Donor Region                  157  SpliceAI  99.36%  CADD 100.00%  both  99.36%
+  test reclassified    Acceptor Region               215  SpliceAI 100.00%  CADD 100.00%  both 100.00%
+  test reclassified    PPT Region                    164  SpliceAI  99.39%  CADD 100.00%  both  99.39%
+  test reclassified    Branch Point Region             6  SpliceAI 100.00%  CADD 100.00%  both 100.00%
+  test reclassified    Deep Intronic                 160  SpliceAI  99.38%  CADD 100.00%  both  99.38%
+  VUS                  all                        71,267  SpliceAI  99.19%  CADD 100.00%  both  99.19%
+  VUS                  Canonical Donor Site        4,274  SpliceAI  99.11%  CADD 100.00%  both  99.11%
+  VUS                  Canonical Acceptor Site     3,562  SpliceAI  99.30%  CADD 100.00%  both  99.30%
+  VUS                  Donor Region               30,058  SpliceAI  99.21%  CADD 100.00%  both  99.21%
+  VUS                  Acceptor Region            19,421  SpliceAI  99.21%  CADD 100.00%  both  99.21%
+  VUS                  PPT Region                  6,116  SpliceAI  99.40%  CADD 100.00%  both  99.40%
+  VUS                  Branch Point Region           465  SpliceAI  99.35%  CADD 100.00%  both  99.35%
+  VUS                  Deep Intronic               7,371  SpliceAI  98.89%  CADD 100.00%  both  98.89%
+  literature           all                           697  SpliceAI  99.57%  CADD 100.00%  both  99.57%
+  literature           Canonical Donor Site          145  SpliceAI  99.31%  CADD 100.00%  both  99.31%
+  literature           Canonical Acceptor Site       127  SpliceAI 100.00%  CADD 100.00%  both 100.00%
+  literature           Donor Region                  144  SpliceAI 100.00%  CADD 100.00%  both 100.00%
+  literature           Acceptor Region                95  SpliceAI  98.95%  CADD 100.00%  both  98.95%
+  literature           PPT Region                     39  SpliceAI 100.00%  CADD 100.00%  both 100.00%
+  literature           Branch Point Region            17  SpliceAI 100.00%  CADD 100.00%  both 100.00%
+  literature           Deep Intronic                 130  SpliceAI  99.23%  CADD 100.00%  both  99.23%
+  SpliceVarDB          all                        22,314  SpliceAI  99.38%  CADD 100.00%  both  99.38%
+  SpliceVarDB          Canonical Donor Site        2,752  SpliceAI  99.20%  CADD 100.00%  both  99.20%
+  SpliceVarDB          Canonical Acceptor Site     3,912  SpliceAI  99.54%  CADD 100.00%  both  99.54%
+  SpliceVarDB          Donor Region                2,675  SpliceAI  99.44%  CADD 100.00%  both  99.44%
+  SpliceVarDB          Acceptor Region             2,152  SpliceAI  99.40%  CADD 100.00%  both  99.40%
+  SpliceVarDB          PPT Region                  2,891  SpliceAI  99.31%  CADD 100.00%  both  99.31%
+  SpliceVarDB          Branch Point Region         2,894  SpliceAI  99.34%  CADD 100.00%  both  99.34%
+  SpliceVarDB          Deep Intronic               5,038  SpliceAI  99.36%  CADD 100.00%  both  99.36%
+
+wrote results/C0_cohorts.tsv (170 rows)

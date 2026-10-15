@@ -1,0 +1,1711 @@
+table	region	feature	n	missing
+training	Acceptor Region	phyloP100way_vertebrate	64628	0.0
+training	Acceptor Region	phyloP470way_mammalian	64628	0.06689051185244786
+training	Acceptor Region	phastCons100way_vertebrate	64628	0.0
+training	Acceptor Region	phastCons470way_mammalian	64628	0.0017794144952652101
+training	Acceptor Region	gnomAD_pLI	64628	0.029677539147118896
+training	Acceptor Region	gnomAD_LOEUF	64628	0.09608838274432134
+training	Acceptor Region	ClinGen_Haploinsufficiency_Score	64628	0.5644302778981246
+training	Acceptor Region	DANN_score	64628	0.0008510243238224917
+training	Acceptor Region	exon_length	64628	0.0
+training	Acceptor Region	exon_length_mod3	64628	0.0
+training	Acceptor Region	dist_to_boundary	64628	0.0
+training	Acceptor Region	spt_orig	64628	0.0
+training	Acceptor Region	spt_o_Adipose Tissue	64628	0.0
+training	Acceptor Region	spt_o_Blood	64628	0.0
+training	Acceptor Region	spt_o_Blood Vessel	64628	0.0
+training	Acceptor Region	spt_o_Brain	64628	0.0
+training	Acceptor Region	spt_o_Colon	64628	0.0
+training	Acceptor Region	spt_o_Heart	64628	0.0
+training	Acceptor Region	spt_o_Kidney	64628	0.0
+training	Acceptor Region	spt_o_Liver	64628	0.0
+training	Acceptor Region	spt_o_Lung	64628	0.0
+training	Acceptor Region	spt_o_Muscle	64628	0.0
+training	Acceptor Region	spt_o_Nerve	64628	0.0
+training	Acceptor Region	spt_o_Small Intestine	64628	0.0
+training	Acceptor Region	spt_o_Skin	64628	0.0
+training	Acceptor Region	spt_o_Spleen	64628	0.0
+training	Acceptor Region	spt_o_Stomach	64628	0.0
+training	Acceptor Region	pangolin_inc	64628	0.0
+training	Acceptor Region	pangolin_dec	64628	0.0
+training	Acceptor Region	pangolin_max	64628	0.0
+training	Acceptor Region	gpn_msa_score	64628	0.0
+training	Acceptor Region	r_Acceptor Region	64628	0.0
+training	Acceptor Region	r_Branch Point Region	64628	0.0
+training	Acceptor Region	r_Canonical Acceptor Site	64628	0.0
+training	Acceptor Region	r_Canonical Donor Site	64628	0.0
+training	Acceptor Region	r_Deep Intronic	64628	0.0
+training	Acceptor Region	r_Donor Region	64628	0.0
+training	Acceptor Region	r_PPT Region	64628	0.0
+training	Branch Point Region	phyloP100way_vertebrate	5822	0.0
+training	Branch Point Region	phyloP470way_mammalian	5822	0.06870491240123669
+training	Branch Point Region	phastCons100way_vertebrate	5822	0.0
+training	Branch Point Region	phastCons470way_mammalian	5822	0.01202335967021642
+training	Branch Point Region	gnomAD_pLI	5822	0.032119546547578155
+training	Branch Point Region	gnomAD_LOEUF	5822	0.09017519752662316
+training	Branch Point Region	ClinGen_Haploinsufficiency_Score	5822	0.5254208175884576
+training	Branch Point Region	DANN_score	5822	0.0013740982480247338
+training	Branch Point Region	exon_length	5822	0.0
+training	Branch Point Region	exon_length_mod3	5822	0.0
+training	Branch Point Region	dist_to_boundary	5822	0.0
+training	Branch Point Region	spt_orig	5822	0.0
+training	Branch Point Region	spt_o_Adipose Tissue	5822	0.0
+training	Branch Point Region	spt_o_Blood	5822	0.0
+training	Branch Point Region	spt_o_Blood Vessel	5822	0.0
+training	Branch Point Region	spt_o_Brain	5822	0.0
+training	Branch Point Region	spt_o_Colon	5822	0.0
+training	Branch Point Region	spt_o_Heart	5822	0.0
+training	Branch Point Region	spt_o_Kidney	5822	0.0
+training	Branch Point Region	spt_o_Liver	5822	0.0
+training	Branch Point Region	spt_o_Lung	5822	0.0
+training	Branch Point Region	spt_o_Muscle	5822	0.0
+training	Branch Point Region	spt_o_Nerve	5822	0.0
+training	Branch Point Region	spt_o_Small Intestine	5822	0.0
+training	Branch Point Region	spt_o_Skin	5822	0.0
+training	Branch Point Region	spt_o_Spleen	5822	0.0
+training	Branch Point Region	spt_o_Stomach	5822	0.0
+training	Branch Point Region	pangolin_inc	5822	0.0
+training	Branch Point Region	pangolin_dec	5822	0.0
+training	Branch Point Region	pangolin_max	5822	0.0
+training	Branch Point Region	gpn_msa_score	5822	0.0
+training	Branch Point Region	r_Acceptor Region	5822	0.0
+training	Branch Point Region	r_Branch Point Region	5822	0.0
+training	Branch Point Region	r_Canonical Acceptor Site	5822	0.0
+training	Branch Point Region	r_Canonical Donor Site	5822	0.0
+training	Branch Point Region	r_Deep Intronic	5822	0.0
+training	Branch Point Region	r_Donor Region	5822	0.0
+training	Branch Point Region	r_PPT Region	5822	0.0
+training	Canonical Acceptor Site	phyloP100way_vertebrate	17126	0.0
+training	Canonical Acceptor Site	phyloP470way_mammalian	17126	0.0650472965082331
+training	Canonical Acceptor Site	phastCons100way_vertebrate	17126	0.0
+training	Canonical Acceptor Site	phastCons470way_mammalian	17126	5.839075090505664e-05
+training	Canonical Acceptor Site	gnomAD_pLI	17126	0.02516641364007941
+training	Canonical Acceptor Site	gnomAD_LOEUF	17126	0.11660632955739811
+training	Canonical Acceptor Site	ClinGen_Haploinsufficiency_Score	17126	0.4501342987270816
+training	Canonical Acceptor Site	DANN_score	17126	0.0005255167581455098
+training	Canonical Acceptor Site	exon_length	17126	0.0
+training	Canonical Acceptor Site	exon_length_mod3	17126	0.0
+training	Canonical Acceptor Site	dist_to_boundary	17126	0.0
+training	Canonical Acceptor Site	spt_orig	17126	0.0
+training	Canonical Acceptor Site	spt_o_Adipose Tissue	17126	0.0
+training	Canonical Acceptor Site	spt_o_Blood	17126	0.0
+training	Canonical Acceptor Site	spt_o_Blood Vessel	17126	0.0
+training	Canonical Acceptor Site	spt_o_Brain	17126	0.0
+training	Canonical Acceptor Site	spt_o_Colon	17126	0.0
+training	Canonical Acceptor Site	spt_o_Heart	17126	0.0
+training	Canonical Acceptor Site	spt_o_Kidney	17126	0.0
+training	Canonical Acceptor Site	spt_o_Liver	17126	0.0
+training	Canonical Acceptor Site	spt_o_Lung	17126	0.0
+training	Canonical Acceptor Site	spt_o_Muscle	17126	0.0
+training	Canonical Acceptor Site	spt_o_Nerve	17126	0.0
+training	Canonical Acceptor Site	spt_o_Small Intestine	17126	0.0
+training	Canonical Acceptor Site	spt_o_Skin	17126	0.0
+training	Canonical Acceptor Site	spt_o_Spleen	17126	0.0
+training	Canonical Acceptor Site	spt_o_Stomach	17126	0.0
+training	Canonical Acceptor Site	pangolin_inc	17126	0.0
+training	Canonical Acceptor Site	pangolin_dec	17126	0.0
+training	Canonical Acceptor Site	pangolin_max	17126	0.0
+training	Canonical Acceptor Site	gpn_msa_score	17126	0.0
+training	Canonical Acceptor Site	r_Acceptor Region	17126	0.0
+training	Canonical Acceptor Site	r_Branch Point Region	17126	0.0
+training	Canonical Acceptor Site	r_Canonical Acceptor Site	17126	0.0
+training	Canonical Acceptor Site	r_Canonical Donor Site	17126	0.0
+training	Canonical Acceptor Site	r_Deep Intronic	17126	0.0
+training	Canonical Acceptor Site	r_Donor Region	17126	0.0
+training	Canonical Acceptor Site	r_PPT Region	17126	0.0
+training	Canonical Donor Site	phyloP100way_vertebrate	20576	0.0
+training	Canonical Donor Site	phyloP470way_mammalian	20576	0.06561041990668741
+training	Canonical Donor Site	phastCons100way_vertebrate	20576	0.0
+training	Canonical Donor Site	phastCons470way_mammalian	20576	4.860031104199067e-05
+training	Canonical Donor Site	gnomAD_pLI	20576	0.024834758942457232
+training	Canonical Donor Site	gnomAD_LOEUF	20576	0.11280132192846035
+training	Canonical Donor Site	ClinGen_Haploinsufficiency_Score	20576	0.46500777604976673
+training	Canonical Donor Site	DANN_score	20576	0.0008262052877138414
+training	Canonical Donor Site	exon_length	20576	0.0
+training	Canonical Donor Site	exon_length_mod3	20576	0.0
+training	Canonical Donor Site	dist_to_boundary	20576	0.0
+training	Canonical Donor Site	spt_orig	20576	0.0
+training	Canonical Donor Site	spt_o_Adipose Tissue	20576	0.0
+training	Canonical Donor Site	spt_o_Blood	20576	0.0
+training	Canonical Donor Site	spt_o_Blood Vessel	20576	0.0
+training	Canonical Donor Site	spt_o_Brain	20576	0.0
+training	Canonical Donor Site	spt_o_Colon	20576	0.0
+training	Canonical Donor Site	spt_o_Heart	20576	0.0
+training	Canonical Donor Site	spt_o_Kidney	20576	0.0
+training	Canonical Donor Site	spt_o_Liver	20576	0.0
+training	Canonical Donor Site	spt_o_Lung	20576	0.0
+training	Canonical Donor Site	spt_o_Muscle	20576	0.0
+training	Canonical Donor Site	spt_o_Nerve	20576	0.0
+training	Canonical Donor Site	spt_o_Small Intestine	20576	0.0
+training	Canonical Donor Site	spt_o_Skin	20576	0.0
+training	Canonical Donor Site	spt_o_Spleen	20576	0.0
+training	Canonical Donor Site	spt_o_Stomach	20576	0.0
+training	Canonical Donor Site	pangolin_inc	20576	0.0
+training	Canonical Donor Site	pangolin_dec	20576	0.0
+training	Canonical Donor Site	pangolin_max	20576	0.0
+training	Canonical Donor Site	gpn_msa_score	20576	0.0
+training	Canonical Donor Site	r_Acceptor Region	20576	0.0
+training	Canonical Donor Site	r_Branch Point Region	20576	0.0
+training	Canonical Donor Site	r_Canonical Acceptor Site	20576	0.0
+training	Canonical Donor Site	r_Canonical Donor Site	20576	0.0
+training	Canonical Donor Site	r_Deep Intronic	20576	0.0
+training	Canonical Donor Site	r_Donor Region	20576	0.0
+training	Canonical Donor Site	r_PPT Region	20576	0.0
+training	Deep Intronic	phyloP100way_vertebrate	191795	0.00010949190541984932
+training	Deep Intronic	phyloP470way_mammalian	191795	0.07150864203967779
+training	Deep Intronic	phastCons100way_vertebrate	191795	0.00010949190541984932
+training	Deep Intronic	phastCons470way_mammalian	191795	0.015172449751036262
+training	Deep Intronic	gnomAD_pLI	191795	0.03159623556401366
+training	Deep Intronic	gnomAD_LOEUF	191795	0.08537240282593395
+training	Deep Intronic	ClinGen_Haploinsufficiency_Score	191795	0.5554263666936051
+training	Deep Intronic	DANN_score	191795	0.0009749993482624677
+training	Deep Intronic	exon_length	191795	0.0
+training	Deep Intronic	exon_length_mod3	191795	0.0
+training	Deep Intronic	dist_to_boundary	191795	0.0
+training	Deep Intronic	spt_orig	191795	0.0
+training	Deep Intronic	spt_o_Adipose Tissue	191795	0.0
+training	Deep Intronic	spt_o_Blood	191795	0.0
+training	Deep Intronic	spt_o_Blood Vessel	191795	0.0
+training	Deep Intronic	spt_o_Brain	191795	0.0
+training	Deep Intronic	spt_o_Colon	191795	0.0
+training	Deep Intronic	spt_o_Heart	191795	0.0
+training	Deep Intronic	spt_o_Kidney	191795	0.0
+training	Deep Intronic	spt_o_Liver	191795	0.0
+training	Deep Intronic	spt_o_Lung	191795	0.0
+training	Deep Intronic	spt_o_Muscle	191795	0.0
+training	Deep Intronic	spt_o_Nerve	191795	0.0
+training	Deep Intronic	spt_o_Small Intestine	191795	0.0
+training	Deep Intronic	spt_o_Skin	191795	0.0
+training	Deep Intronic	spt_o_Spleen	191795	0.0
+training	Deep Intronic	spt_o_Stomach	191795	0.0
+training	Deep Intronic	pangolin_inc	191795	0.0
+training	Deep Intronic	pangolin_dec	191795	0.0
+training	Deep Intronic	pangolin_max	191795	0.0
+training	Deep Intronic	gpn_msa_score	191795	0.0
+training	Deep Intronic	r_Acceptor Region	191795	0.0
+training	Deep Intronic	r_Branch Point Region	191795	0.0
+training	Deep Intronic	r_Canonical Acceptor Site	191795	0.0
+training	Deep Intronic	r_Canonical Donor Site	191795	0.0
+training	Deep Intronic	r_Deep Intronic	191795	0.0
+training	Deep Intronic	r_Donor Region	191795	0.0
+training	Deep Intronic	r_PPT Region	191795	0.0
+training	Donor Region	phyloP100way_vertebrate	26476	0.0
+training	Donor Region	phyloP470way_mammalian	26476	0.07096993503550385
+training	Donor Region	phastCons100way_vertebrate	26476	0.0
+training	Donor Region	phastCons470way_mammalian	26476	0.007591781235836229
+training	Donor Region	gnomAD_pLI	26476	0.029347333434053484
+training	Donor Region	gnomAD_LOEUF	26476	0.10160145037014655
+training	Donor Region	ClinGen_Haploinsufficiency_Score	26476	0.557977035806013
+training	Donor Region	DANN_score	26476	0.0006798610061942891
+training	Donor Region	exon_length	26476	0.0
+training	Donor Region	exon_length_mod3	26476	0.0
+training	Donor Region	dist_to_boundary	26476	0.0
+training	Donor Region	spt_orig	26476	0.0
+training	Donor Region	spt_o_Adipose Tissue	26476	0.0
+training	Donor Region	spt_o_Blood	26476	0.0
+training	Donor Region	spt_o_Blood Vessel	26476	0.0
+training	Donor Region	spt_o_Brain	26476	0.0
+training	Donor Region	spt_o_Colon	26476	0.0
+training	Donor Region	spt_o_Heart	26476	0.0
+training	Donor Region	spt_o_Kidney	26476	0.0
+training	Donor Region	spt_o_Liver	26476	0.0
+training	Donor Region	spt_o_Lung	26476	0.0
+training	Donor Region	spt_o_Muscle	26476	0.0
+training	Donor Region	spt_o_Nerve	26476	0.0
+training	Donor Region	spt_o_Small Intestine	26476	0.0
+training	Donor Region	spt_o_Skin	26476	0.0
+training	Donor Region	spt_o_Spleen	26476	0.0
+training	Donor Region	spt_o_Stomach	26476	0.0
+training	Donor Region	pangolin_inc	26476	0.0
+training	Donor Region	pangolin_dec	26476	0.0
+training	Donor Region	pangolin_max	26476	0.0
+training	Donor Region	gpn_msa_score	26476	0.0
+training	Donor Region	r_Acceptor Region	26476	0.0
+training	Donor Region	r_Branch Point Region	26476	0.0
+training	Donor Region	r_Canonical Acceptor Site	26476	0.0
+training	Donor Region	r_Canonical Donor Site	26476	0.0
+training	Donor Region	r_Deep Intronic	26476	0.0
+training	Donor Region	r_Donor Region	26476	0.0
+training	Donor Region	r_PPT Region	26476	0.0
+training	PPT Region	phyloP100way_vertebrate	86776	0.0
+training	PPT Region	phyloP470way_mammalian	86776	0.07076841523001752
+training	PPT Region	phastCons100way_vertebrate	86776	0.0
+training	PPT Region	phastCons470way_mammalian	86776	0.005312528809809164
+training	PPT Region	gnomAD_pLI	86776	0.03029639531667742
+training	PPT Region	gnomAD_LOEUF	86776	0.09436941089702222
+training	PPT Region	ClinGen_Haploinsufficiency_Score	86776	0.5462685535171015
+training	PPT Region	DANN_score	86776	0.0008988660459113119
+training	PPT Region	exon_length	86776	0.0
+training	PPT Region	exon_length_mod3	86776	0.0
+training	PPT Region	dist_to_boundary	86776	0.0
+training	PPT Region	spt_orig	86776	0.0
+training	PPT Region	spt_o_Adipose Tissue	86776	0.0
+training	PPT Region	spt_o_Blood	86776	0.0
+training	PPT Region	spt_o_Blood Vessel	86776	0.0
+training	PPT Region	spt_o_Brain	86776	0.0
+training	PPT Region	spt_o_Colon	86776	0.0
+training	PPT Region	spt_o_Heart	86776	0.0
+training	PPT Region	spt_o_Kidney	86776	0.0
+training	PPT Region	spt_o_Liver	86776	0.0
+training	PPT Region	spt_o_Lung	86776	0.0
+training	PPT Region	spt_o_Muscle	86776	0.0
+training	PPT Region	spt_o_Nerve	86776	0.0
+training	PPT Region	spt_o_Small Intestine	86776	0.0
+training	PPT Region	spt_o_Skin	86776	0.0
+training	PPT Region	spt_o_Spleen	86776	0.0
+training	PPT Region	spt_o_Stomach	86776	0.0
+training	PPT Region	pangolin_inc	86776	0.0
+training	PPT Region	pangolin_dec	86776	0.0
+training	PPT Region	pangolin_max	86776	0.0
+training	PPT Region	gpn_msa_score	86776	1.152392366552964e-05
+training	PPT Region	r_Acceptor Region	86776	0.0
+training	PPT Region	r_Branch Point Region	86776	0.0
+training	PPT Region	r_Canonical Acceptor Site	86776	0.0
+training	PPT Region	r_Canonical Donor Site	86776	0.0
+training	PPT Region	r_Deep Intronic	86776	0.0
+training	PPT Region	r_Donor Region	86776	0.0
+training	PPT Region	r_PPT Region	86776	0.0
+test_candidates	Acceptor Region	phyloP100way_vertebrate	5025	0.0
+test_candidates	Acceptor Region	phyloP470way_mammalian	5025	0.06407960199004975
+test_candidates	Acceptor Region	phastCons100way_vertebrate	5025	0.0
+test_candidates	Acceptor Region	phastCons470way_mammalian	5025	0.001791044776119403
+test_candidates	Acceptor Region	gnomAD_pLI	5025	0.036616915422885574
+test_candidates	Acceptor Region	gnomAD_LOEUF	5025	0.09313432835820895
+test_candidates	Acceptor Region	ClinGen_Haploinsufficiency_Score	5025	0.5771144278606966
+test_candidates	Acceptor Region	DANN_score	5025	0.0011940298507462687
+test_candidates	Acceptor Region	exon_length	5025	0.0
+test_candidates	Acceptor Region	exon_length_mod3	5025	0.0
+test_candidates	Acceptor Region	dist_to_boundary	5025	0.0
+test_candidates	Acceptor Region	spt_orig	5025	0.0
+test_candidates	Acceptor Region	spt_o_Adipose Tissue	5025	0.0
+test_candidates	Acceptor Region	spt_o_Blood	5025	0.0
+test_candidates	Acceptor Region	spt_o_Blood Vessel	5025	0.0
+test_candidates	Acceptor Region	spt_o_Brain	5025	0.0
+test_candidates	Acceptor Region	spt_o_Colon	5025	0.0
+test_candidates	Acceptor Region	spt_o_Heart	5025	0.0
+test_candidates	Acceptor Region	spt_o_Kidney	5025	0.0
+test_candidates	Acceptor Region	spt_o_Liver	5025	0.0
+test_candidates	Acceptor Region	spt_o_Lung	5025	0.0
+test_candidates	Acceptor Region	spt_o_Muscle	5025	0.0
+test_candidates	Acceptor Region	spt_o_Nerve	5025	0.0
+test_candidates	Acceptor Region	spt_o_Small Intestine	5025	0.0
+test_candidates	Acceptor Region	spt_o_Skin	5025	0.0
+test_candidates	Acceptor Region	spt_o_Spleen	5025	0.0
+test_candidates	Acceptor Region	spt_o_Stomach	5025	0.0
+test_candidates	Acceptor Region	pangolin_inc	5025	0.0
+test_candidates	Acceptor Region	pangolin_dec	5025	0.0
+test_candidates	Acceptor Region	pangolin_max	5025	0.0
+test_candidates	Acceptor Region	gpn_msa_score	5025	0.0
+test_candidates	Acceptor Region	r_Acceptor Region	5025	0.0
+test_candidates	Acceptor Region	r_Branch Point Region	5025	0.0
+test_candidates	Acceptor Region	r_Canonical Acceptor Site	5025	0.0
+test_candidates	Acceptor Region	r_Canonical Donor Site	5025	0.0
+test_candidates	Acceptor Region	r_Deep Intronic	5025	0.0
+test_candidates	Acceptor Region	r_Donor Region	5025	0.0
+test_candidates	Acceptor Region	r_PPT Region	5025	0.0
+test_candidates	Branch Point Region	phyloP100way_vertebrate	192	0.0
+test_candidates	Branch Point Region	phyloP470way_mammalian	192	0.09375
+test_candidates	Branch Point Region	phastCons100way_vertebrate	192	0.0
+test_candidates	Branch Point Region	phastCons470way_mammalian	192	0.005208333333333333
+test_candidates	Branch Point Region	gnomAD_pLI	192	0.005208333333333333
+test_candidates	Branch Point Region	gnomAD_LOEUF	192	0.046875
+test_candidates	Branch Point Region	ClinGen_Haploinsufficiency_Score	192	0.3333333333333333
+test_candidates	Branch Point Region	DANN_score	192	0.010416666666666666
+test_candidates	Branch Point Region	exon_length	192	0.0
+test_candidates	Branch Point Region	exon_length_mod3	192	0.0
+test_candidates	Branch Point Region	dist_to_boundary	192	0.0
+test_candidates	Branch Point Region	spt_orig	192	0.0
+test_candidates	Branch Point Region	spt_o_Adipose Tissue	192	0.0
+test_candidates	Branch Point Region	spt_o_Blood	192	0.0
+test_candidates	Branch Point Region	spt_o_Blood Vessel	192	0.0
+test_candidates	Branch Point Region	spt_o_Brain	192	0.0
+test_candidates	Branch Point Region	spt_o_Colon	192	0.0
+test_candidates	Branch Point Region	spt_o_Heart	192	0.0
+test_candidates	Branch Point Region	spt_o_Kidney	192	0.0
+test_candidates	Branch Point Region	spt_o_Liver	192	0.0
+test_candidates	Branch Point Region	spt_o_Lung	192	0.0
+test_candidates	Branch Point Region	spt_o_Muscle	192	0.0
+test_candidates	Branch Point Region	spt_o_Nerve	192	0.0
+test_candidates	Branch Point Region	spt_o_Small Intestine	192	0.0
+test_candidates	Branch Point Region	spt_o_Skin	192	0.0
+test_candidates	Branch Point Region	spt_o_Spleen	192	0.0
+test_candidates	Branch Point Region	spt_o_Stomach	192	0.0
+test_candidates	Branch Point Region	pangolin_inc	192	0.0
+test_candidates	Branch Point Region	pangolin_dec	192	0.0
+test_candidates	Branch Point Region	pangolin_max	192	0.0
+test_candidates	Branch Point Region	gpn_msa_score	192	0.0
+test_candidates	Branch Point Region	r_Acceptor Region	192	0.0
+test_candidates	Branch Point Region	r_Branch Point Region	192	0.0
+test_candidates	Branch Point Region	r_Canonical Acceptor Site	192	0.0
+test_candidates	Branch Point Region	r_Canonical Donor Site	192	0.0
+test_candidates	Branch Point Region	r_Deep Intronic	192	0.0
+test_candidates	Branch Point Region	r_Donor Region	192	0.0
+test_candidates	Branch Point Region	r_PPT Region	192	0.0
+test_candidates	Canonical Acceptor Site	phyloP100way_vertebrate	1553	0.0
+test_candidates	Canonical Acceptor Site	phyloP470way_mammalian	1553	0.06503541532517708
+test_candidates	Canonical Acceptor Site	phastCons100way_vertebrate	1553	0.0
+test_candidates	Canonical Acceptor Site	phastCons470way_mammalian	1553	0.0
+test_candidates	Canonical Acceptor Site	gnomAD_pLI	1553	0.04571796522858983
+test_candidates	Canonical Acceptor Site	gnomAD_LOEUF	1553	0.12556342562781714
+test_candidates	Canonical Acceptor Site	ClinGen_Haploinsufficiency_Score	1553	0.49452672247263363
+test_candidates	Canonical Acceptor Site	DANN_score	1553	0.000643915003219575
+test_candidates	Canonical Acceptor Site	exon_length	1553	0.0
+test_candidates	Canonical Acceptor Site	exon_length_mod3	1553	0.0
+test_candidates	Canonical Acceptor Site	dist_to_boundary	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_orig	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Adipose Tissue	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Blood	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Blood Vessel	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Brain	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Colon	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Heart	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Kidney	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Liver	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Lung	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Muscle	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Nerve	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Small Intestine	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Skin	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Spleen	1553	0.0
+test_candidates	Canonical Acceptor Site	spt_o_Stomach	1553	0.0
+test_candidates	Canonical Acceptor Site	pangolin_inc	1553	0.0
+test_candidates	Canonical Acceptor Site	pangolin_dec	1553	0.0
+test_candidates	Canonical Acceptor Site	pangolin_max	1553	0.0
+test_candidates	Canonical Acceptor Site	gpn_msa_score	1553	0.0
+test_candidates	Canonical Acceptor Site	r_Acceptor Region	1553	0.0
+test_candidates	Canonical Acceptor Site	r_Branch Point Region	1553	0.0
+test_candidates	Canonical Acceptor Site	r_Canonical Acceptor Site	1553	0.0
+test_candidates	Canonical Acceptor Site	r_Canonical Donor Site	1553	0.0
+test_candidates	Canonical Acceptor Site	r_Deep Intronic	1553	0.0
+test_candidates	Canonical Acceptor Site	r_Donor Region	1553	0.0
+test_candidates	Canonical Acceptor Site	r_PPT Region	1553	0.0
+test_candidates	Canonical Donor Site	phyloP100way_vertebrate	1793	0.0
+test_candidates	Canonical Donor Site	phyloP470way_mammalian	1793	0.06804238706079196
+test_candidates	Canonical Donor Site	phastCons100way_vertebrate	1793	0.0
+test_candidates	Canonical Donor Site	phastCons470way_mammalian	1793	0.0005577244841048522
+test_candidates	Canonical Donor Site	gnomAD_pLI	1793	0.04852203011712214
+test_candidates	Canonical Donor Site	gnomAD_LOEUF	1793	0.13329615170105968
+test_candidates	Canonical Donor Site	ClinGen_Haploinsufficiency_Score	1793	0.5298382598996096
+test_candidates	Canonical Donor Site	DANN_score	1793	0.0005577244841048522
+test_candidates	Canonical Donor Site	exon_length	1793	0.0
+test_candidates	Canonical Donor Site	exon_length_mod3	1793	0.0
+test_candidates	Canonical Donor Site	dist_to_boundary	1793	0.0
+test_candidates	Canonical Donor Site	spt_orig	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Adipose Tissue	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Blood	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Blood Vessel	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Brain	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Colon	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Heart	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Kidney	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Liver	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Lung	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Muscle	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Nerve	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Small Intestine	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Skin	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Spleen	1793	0.0
+test_candidates	Canonical Donor Site	spt_o_Stomach	1793	0.0
+test_candidates	Canonical Donor Site	pangolin_inc	1793	0.0
+test_candidates	Canonical Donor Site	pangolin_dec	1793	0.0
+test_candidates	Canonical Donor Site	pangolin_max	1793	0.0
+test_candidates	Canonical Donor Site	gpn_msa_score	1793	0.0
+test_candidates	Canonical Donor Site	r_Acceptor Region	1793	0.0
+test_candidates	Canonical Donor Site	r_Branch Point Region	1793	0.0
+test_candidates	Canonical Donor Site	r_Canonical Acceptor Site	1793	0.0
+test_candidates	Canonical Donor Site	r_Canonical Donor Site	1793	0.0
+test_candidates	Canonical Donor Site	r_Deep Intronic	1793	0.0
+test_candidates	Canonical Donor Site	r_Donor Region	1793	0.0
+test_candidates	Canonical Donor Site	r_PPT Region	1793	0.0
+test_candidates	Deep Intronic	phyloP100way_vertebrate	10279	0.0001945714563673509
+test_candidates	Deep Intronic	phyloP470way_mammalian	10279	0.0867788695398385
+test_candidates	Deep Intronic	phastCons100way_vertebrate	10279	0.0001945714563673509
+test_candidates	Deep Intronic	phastCons470way_mammalian	10279	0.01196614456659208
+test_candidates	Deep Intronic	gnomAD_pLI	10279	0.03239614748516392
+test_candidates	Deep Intronic	gnomAD_LOEUF	10279	0.0935888705126958
+test_candidates	Deep Intronic	ClinGen_Haploinsufficiency_Score	10279	0.5560852222978889
+test_candidates	Deep Intronic	DANN_score	10279	0.0009728572818367545
+test_candidates	Deep Intronic	exon_length	10279	0.0
+test_candidates	Deep Intronic	exon_length_mod3	10279	0.0
+test_candidates	Deep Intronic	dist_to_boundary	10279	0.0
+test_candidates	Deep Intronic	spt_orig	10279	0.0
+test_candidates	Deep Intronic	spt_o_Adipose Tissue	10279	0.0
+test_candidates	Deep Intronic	spt_o_Blood	10279	0.0
+test_candidates	Deep Intronic	spt_o_Blood Vessel	10279	0.0
+test_candidates	Deep Intronic	spt_o_Brain	10279	0.0
+test_candidates	Deep Intronic	spt_o_Colon	10279	0.0
+test_candidates	Deep Intronic	spt_o_Heart	10279	0.0
+test_candidates	Deep Intronic	spt_o_Kidney	10279	0.0
+test_candidates	Deep Intronic	spt_o_Liver	10279	0.0
+test_candidates	Deep Intronic	spt_o_Lung	10279	0.0
+test_candidates	Deep Intronic	spt_o_Muscle	10279	0.0
+test_candidates	Deep Intronic	spt_o_Nerve	10279	0.0
+test_candidates	Deep Intronic	spt_o_Small Intestine	10279	0.0
+test_candidates	Deep Intronic	spt_o_Skin	10279	0.0
+test_candidates	Deep Intronic	spt_o_Spleen	10279	0.0
+test_candidates	Deep Intronic	spt_o_Stomach	10279	0.0
+test_candidates	Deep Intronic	pangolin_inc	10279	0.0
+test_candidates	Deep Intronic	pangolin_dec	10279	0.0
+test_candidates	Deep Intronic	pangolin_max	10279	0.0
+test_candidates	Deep Intronic	gpn_msa_score	10279	0.0
+test_candidates	Deep Intronic	r_Acceptor Region	10279	0.0
+test_candidates	Deep Intronic	r_Branch Point Region	10279	0.0
+test_candidates	Deep Intronic	r_Canonical Acceptor Site	10279	0.0
+test_candidates	Deep Intronic	r_Canonical Donor Site	10279	0.0
+test_candidates	Deep Intronic	r_Deep Intronic	10279	0.0
+test_candidates	Deep Intronic	r_Donor Region	10279	0.0
+test_candidates	Deep Intronic	r_PPT Region	10279	0.0
+test_candidates	Donor Region	phyloP100way_vertebrate	1923	0.0
+test_candidates	Donor Region	phyloP470way_mammalian	1923	0.07748309932397296
+test_candidates	Donor Region	phastCons100way_vertebrate	1923	0.0
+test_candidates	Donor Region	phastCons470way_mammalian	1923	0.007280291211648466
+test_candidates	Donor Region	gnomAD_pLI	1923	0.0327613104524181
+test_candidates	Donor Region	gnomAD_LOEUF	1923	0.09516380655226209
+test_candidates	Donor Region	ClinGen_Haploinsufficiency_Score	1923	0.5647425897035881
+test_candidates	Donor Region	DANN_score	1923	0.0005200208008320333
+test_candidates	Donor Region	exon_length	1923	0.0
+test_candidates	Donor Region	exon_length_mod3	1923	0.0
+test_candidates	Donor Region	dist_to_boundary	1923	0.0
+test_candidates	Donor Region	spt_orig	1923	0.0
+test_candidates	Donor Region	spt_o_Adipose Tissue	1923	0.0
+test_candidates	Donor Region	spt_o_Blood	1923	0.0
+test_candidates	Donor Region	spt_o_Blood Vessel	1923	0.0
+test_candidates	Donor Region	spt_o_Brain	1923	0.0
+test_candidates	Donor Region	spt_o_Colon	1923	0.0
+test_candidates	Donor Region	spt_o_Heart	1923	0.0
+test_candidates	Donor Region	spt_o_Kidney	1923	0.0
+test_candidates	Donor Region	spt_o_Liver	1923	0.0
+test_candidates	Donor Region	spt_o_Lung	1923	0.0
+test_candidates	Donor Region	spt_o_Muscle	1923	0.0
+test_candidates	Donor Region	spt_o_Nerve	1923	0.0
+test_candidates	Donor Region	spt_o_Small Intestine	1923	0.0
+test_candidates	Donor Region	spt_o_Skin	1923	0.0
+test_candidates	Donor Region	spt_o_Spleen	1923	0.0
+test_candidates	Donor Region	spt_o_Stomach	1923	0.0
+test_candidates	Donor Region	pangolin_inc	1923	0.0
+test_candidates	Donor Region	pangolin_dec	1923	0.0
+test_candidates	Donor Region	pangolin_max	1923	0.0
+test_candidates	Donor Region	gpn_msa_score	1923	0.0
+test_candidates	Donor Region	r_Acceptor Region	1923	0.0
+test_candidates	Donor Region	r_Branch Point Region	1923	0.0
+test_candidates	Donor Region	r_Canonical Acceptor Site	1923	0.0
+test_candidates	Donor Region	r_Canonical Donor Site	1923	0.0
+test_candidates	Donor Region	r_Deep Intronic	1923	0.0
+test_candidates	Donor Region	r_Donor Region	1923	0.0
+test_candidates	Donor Region	r_PPT Region	1923	0.0
+test_candidates	PPT Region	phyloP100way_vertebrate	8523	0.0
+test_candidates	PPT Region	phyloP470way_mammalian	8523	0.08306934178106301
+test_candidates	PPT Region	phastCons100way_vertebrate	8523	0.0
+test_candidates	PPT Region	phastCons470way_mammalian	8523	0.006335797254487857
+test_candidates	PPT Region	gnomAD_pLI	8523	0.036137510266338144
+test_candidates	PPT Region	gnomAD_LOEUF	8523	0.09538894755367829
+test_candidates	PPT Region	ClinGen_Haploinsufficiency_Score	8523	0.5679924909069577
+test_candidates	PPT Region	DANN_score	8523	0.0014079549454417458
+test_candidates	PPT Region	exon_length	8523	0.0
+test_candidates	PPT Region	exon_length_mod3	8523	0.0
+test_candidates	PPT Region	dist_to_boundary	8523	0.0
+test_candidates	PPT Region	spt_orig	8523	0.0
+test_candidates	PPT Region	spt_o_Adipose Tissue	8523	0.0
+test_candidates	PPT Region	spt_o_Blood	8523	0.0
+test_candidates	PPT Region	spt_o_Blood Vessel	8523	0.0
+test_candidates	PPT Region	spt_o_Brain	8523	0.0
+test_candidates	PPT Region	spt_o_Colon	8523	0.0
+test_candidates	PPT Region	spt_o_Heart	8523	0.0
+test_candidates	PPT Region	spt_o_Kidney	8523	0.0
+test_candidates	PPT Region	spt_o_Liver	8523	0.0
+test_candidates	PPT Region	spt_o_Lung	8523	0.0
+test_candidates	PPT Region	spt_o_Muscle	8523	0.0
+test_candidates	PPT Region	spt_o_Nerve	8523	0.0
+test_candidates	PPT Region	spt_o_Small Intestine	8523	0.0
+test_candidates	PPT Region	spt_o_Skin	8523	0.0
+test_candidates	PPT Region	spt_o_Spleen	8523	0.0
+test_candidates	PPT Region	spt_o_Stomach	8523	0.0
+test_candidates	PPT Region	pangolin_inc	8523	0.0
+test_candidates	PPT Region	pangolin_dec	8523	0.0
+test_candidates	PPT Region	pangolin_max	8523	0.0
+test_candidates	PPT Region	gpn_msa_score	8523	0.0
+test_candidates	PPT Region	r_Acceptor Region	8523	0.0
+test_candidates	PPT Region	r_Branch Point Region	8523	0.0
+test_candidates	PPT Region	r_Canonical Acceptor Site	8523	0.0
+test_candidates	PPT Region	r_Canonical Donor Site	8523	0.0
+test_candidates	PPT Region	r_Deep Intronic	8523	0.0
+test_candidates	PPT Region	r_Donor Region	8523	0.0
+test_candidates	PPT Region	r_PPT Region	8523	0.0
+vus	Acceptor Region	phyloP100way_vertebrate	19421	0.0
+vus	Acceptor Region	phyloP470way_mammalian	19421	0.061273878790999436
+vus	Acceptor Region	phastCons100way_vertebrate	19421	0.0
+vus	Acceptor Region	phastCons470way_mammalian	19421	0.0010813037433705782
+vus	Acceptor Region	gnomAD_pLI	19421	0.026723649657587147
+vus	Acceptor Region	gnomAD_LOEUF	19421	0.10504093507028474
+vus	Acceptor Region	ClinGen_Haploinsufficiency_Score	19421	0.48529941815560473
+vus	Acceptor Region	DANN_score	19421	0.0009268317800319242
+vus	Acceptor Region	exon_length	19421	0.0
+vus	Acceptor Region	exon_length_mod3	19421	0.0
+vus	Acceptor Region	dist_to_boundary	19421	0.0
+vus	Acceptor Region	spt_orig	19421	0.0
+vus	Acceptor Region	spt_o_Adipose Tissue	19421	0.0
+vus	Acceptor Region	spt_o_Blood	19421	0.0
+vus	Acceptor Region	spt_o_Blood Vessel	19421	0.0
+vus	Acceptor Region	spt_o_Brain	19421	0.0
+vus	Acceptor Region	spt_o_Colon	19421	0.0
+vus	Acceptor Region	spt_o_Heart	19421	0.0
+vus	Acceptor Region	spt_o_Kidney	19421	0.0
+vus	Acceptor Region	spt_o_Liver	19421	0.0
+vus	Acceptor Region	spt_o_Lung	19421	0.0
+vus	Acceptor Region	spt_o_Muscle	19421	0.0
+vus	Acceptor Region	spt_o_Nerve	19421	0.0
+vus	Acceptor Region	spt_o_Small Intestine	19421	0.0
+vus	Acceptor Region	spt_o_Skin	19421	0.0
+vus	Acceptor Region	spt_o_Spleen	19421	0.0
+vus	Acceptor Region	spt_o_Stomach	19421	0.0
+vus	Acceptor Region	pangolin_inc	19421	0.0
+vus	Acceptor Region	pangolin_dec	19421	0.0
+vus	Acceptor Region	pangolin_max	19421	0.0
+vus	Acceptor Region	gpn_msa_score	19421	0.0
+vus	Acceptor Region	r_Acceptor Region	19421	0.0
+vus	Acceptor Region	r_Branch Point Region	19421	0.0
+vus	Acceptor Region	r_Canonical Acceptor Site	19421	0.0
+vus	Acceptor Region	r_Canonical Donor Site	19421	0.0
+vus	Acceptor Region	r_Deep Intronic	19421	0.0
+vus	Acceptor Region	r_Donor Region	19421	0.0
+vus	Acceptor Region	r_PPT Region	19421	0.0
+vus	Branch Point Region	phyloP100way_vertebrate	465	0.0
+vus	Branch Point Region	phyloP470way_mammalian	465	0.1032258064516129
+vus	Branch Point Region	phastCons100way_vertebrate	465	0.0
+vus	Branch Point Region	phastCons470way_mammalian	465	0.012903225806451613
+vus	Branch Point Region	gnomAD_pLI	465	0.04086021505376344
+vus	Branch Point Region	gnomAD_LOEUF	465	0.13548387096774195
+vus	Branch Point Region	ClinGen_Haploinsufficiency_Score	465	0.5698924731182796
+vus	Branch Point Region	DANN_score	465	0.0
+vus	Branch Point Region	exon_length	465	0.0
+vus	Branch Point Region	exon_length_mod3	465	0.0
+vus	Branch Point Region	dist_to_boundary	465	0.0
+vus	Branch Point Region	spt_orig	465	0.0
+vus	Branch Point Region	spt_o_Adipose Tissue	465	0.0
+vus	Branch Point Region	spt_o_Blood	465	0.0
+vus	Branch Point Region	spt_o_Blood Vessel	465	0.0
+vus	Branch Point Region	spt_o_Brain	465	0.0
+vus	Branch Point Region	spt_o_Colon	465	0.0
+vus	Branch Point Region	spt_o_Heart	465	0.0
+vus	Branch Point Region	spt_o_Kidney	465	0.0
+vus	Branch Point Region	spt_o_Liver	465	0.0
+vus	Branch Point Region	spt_o_Lung	465	0.0
+vus	Branch Point Region	spt_o_Muscle	465	0.0
+vus	Branch Point Region	spt_o_Nerve	465	0.0
+vus	Branch Point Region	spt_o_Small Intestine	465	0.0
+vus	Branch Point Region	spt_o_Skin	465	0.0
+vus	Branch Point Region	spt_o_Spleen	465	0.0
+vus	Branch Point Region	spt_o_Stomach	465	0.0
+vus	Branch Point Region	pangolin_inc	465	0.0
+vus	Branch Point Region	pangolin_dec	465	0.0
+vus	Branch Point Region	pangolin_max	465	0.0
+vus	Branch Point Region	gpn_msa_score	465	0.0
+vus	Branch Point Region	r_Acceptor Region	465	0.0
+vus	Branch Point Region	r_Branch Point Region	465	0.0
+vus	Branch Point Region	r_Canonical Acceptor Site	465	0.0
+vus	Branch Point Region	r_Canonical Donor Site	465	0.0
+vus	Branch Point Region	r_Deep Intronic	465	0.0
+vus	Branch Point Region	r_Donor Region	465	0.0
+vus	Branch Point Region	r_PPT Region	465	0.0
+vus	Canonical Acceptor Site	phyloP100way_vertebrate	3562	0.0
+vus	Canonical Acceptor Site	phyloP470way_mammalian	3562	0.07860752386299831
+vus	Canonical Acceptor Site	phastCons100way_vertebrate	3562	0.0
+vus	Canonical Acceptor Site	phastCons470way_mammalian	3562	0.0
+vus	Canonical Acceptor Site	gnomAD_pLI	3562	0.0300393037619315
+vus	Canonical Acceptor Site	gnomAD_LOEUF	3562	0.09460976979225154
+vus	Canonical Acceptor Site	ClinGen_Haploinsufficiency_Score	3562	0.5603593486805165
+vus	Canonical Acceptor Site	DANN_score	3562	0.0011229646266142617
+vus	Canonical Acceptor Site	exon_length	3562	0.0
+vus	Canonical Acceptor Site	exon_length_mod3	3562	0.0
+vus	Canonical Acceptor Site	dist_to_boundary	3562	0.0
+vus	Canonical Acceptor Site	spt_orig	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Adipose Tissue	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Blood	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Blood Vessel	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Brain	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Colon	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Heart	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Kidney	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Liver	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Lung	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Muscle	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Nerve	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Small Intestine	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Skin	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Spleen	3562	0.0
+vus	Canonical Acceptor Site	spt_o_Stomach	3562	0.0
+vus	Canonical Acceptor Site	pangolin_inc	3562	0.0
+vus	Canonical Acceptor Site	pangolin_dec	3562	0.0
+vus	Canonical Acceptor Site	pangolin_max	3562	0.0
+vus	Canonical Acceptor Site	gpn_msa_score	3562	0.0
+vus	Canonical Acceptor Site	r_Acceptor Region	3562	0.0
+vus	Canonical Acceptor Site	r_Branch Point Region	3562	0.0
+vus	Canonical Acceptor Site	r_Canonical Acceptor Site	3562	0.0
+vus	Canonical Acceptor Site	r_Canonical Donor Site	3562	0.0
+vus	Canonical Acceptor Site	r_Deep Intronic	3562	0.0
+vus	Canonical Acceptor Site	r_Donor Region	3562	0.0
+vus	Canonical Acceptor Site	r_PPT Region	3562	0.0
+vus	Canonical Donor Site	phyloP100way_vertebrate	4274	0.0
+vus	Canonical Donor Site	phyloP470way_mammalian	4274	0.08703790360318203
+vus	Canonical Donor Site	phastCons100way_vertebrate	4274	0.0
+vus	Canonical Donor Site	phastCons470way_mammalian	4274	0.0002339728591483388
+vus	Canonical Donor Site	gnomAD_pLI	4274	0.028778661675245672
+vus	Canonical Donor Site	gnomAD_LOEUF	4274	0.10318203088441741
+vus	Canonical Donor Site	ClinGen_Haploinsufficiency_Score	4274	0.5889096864763688
+vus	Canonical Donor Site	DANN_score	4274	0.0009358914365933552
+vus	Canonical Donor Site	exon_length	4274	0.0
+vus	Canonical Donor Site	exon_length_mod3	4274	0.0
+vus	Canonical Donor Site	dist_to_boundary	4274	0.0
+vus	Canonical Donor Site	spt_orig	4274	0.0
+vus	Canonical Donor Site	spt_o_Adipose Tissue	4274	0.0
+vus	Canonical Donor Site	spt_o_Blood	4274	0.0
+vus	Canonical Donor Site	spt_o_Blood Vessel	4274	0.0
+vus	Canonical Donor Site	spt_o_Brain	4274	0.0
+vus	Canonical Donor Site	spt_o_Colon	4274	0.0
+vus	Canonical Donor Site	spt_o_Heart	4274	0.0
+vus	Canonical Donor Site	spt_o_Kidney	4274	0.0
+vus	Canonical Donor Site	spt_o_Liver	4274	0.0
+vus	Canonical Donor Site	spt_o_Lung	4274	0.0
+vus	Canonical Donor Site	spt_o_Muscle	4274	0.0
+vus	Canonical Donor Site	spt_o_Nerve	4274	0.0
+vus	Canonical Donor Site	spt_o_Small Intestine	4274	0.0
+vus	Canonical Donor Site	spt_o_Skin	4274	0.0
+vus	Canonical Donor Site	spt_o_Spleen	4274	0.0
+vus	Canonical Donor Site	spt_o_Stomach	4274	0.0
+vus	Canonical Donor Site	pangolin_inc	4274	0.0
+vus	Canonical Donor Site	pangolin_dec	4274	0.0
+vus	Canonical Donor Site	pangolin_max	4274	0.0
+vus	Canonical Donor Site	gpn_msa_score	4274	0.0
+vus	Canonical Donor Site	r_Acceptor Region	4274	0.0
+vus	Canonical Donor Site	r_Branch Point Region	4274	0.0
+vus	Canonical Donor Site	r_Canonical Acceptor Site	4274	0.0
+vus	Canonical Donor Site	r_Canonical Donor Site	4274	0.0
+vus	Canonical Donor Site	r_Deep Intronic	4274	0.0
+vus	Canonical Donor Site	r_Donor Region	4274	0.0
+vus	Canonical Donor Site	r_PPT Region	4274	0.0
+vus	Deep Intronic	phyloP100way_vertebrate	7371	0.000814000814000814
+vus	Deep Intronic	phyloP470way_mammalian	7371	0.06457739791073125
+vus	Deep Intronic	phastCons100way_vertebrate	7371	0.000814000814000814
+vus	Deep Intronic	phastCons470way_mammalian	7371	0.012345679012345678
+vus	Deep Intronic	gnomAD_pLI	7371	0.022656355989689323
+vus	Deep Intronic	gnomAD_LOEUF	7371	0.10622710622710622
+vus	Deep Intronic	ClinGen_Haploinsufficiency_Score	7371	0.45285578618911954
+vus	Deep Intronic	DANN_score	7371	0.00135666802333469
+vus	Deep Intronic	exon_length	7371	0.0
+vus	Deep Intronic	exon_length_mod3	7371	0.0
+vus	Deep Intronic	dist_to_boundary	7371	0.0
+vus	Deep Intronic	spt_orig	7371	0.0
+vus	Deep Intronic	spt_o_Adipose Tissue	7371	0.0
+vus	Deep Intronic	spt_o_Blood	7371	0.0
+vus	Deep Intronic	spt_o_Blood Vessel	7371	0.0
+vus	Deep Intronic	spt_o_Brain	7371	0.0
+vus	Deep Intronic	spt_o_Colon	7371	0.0
+vus	Deep Intronic	spt_o_Heart	7371	0.0
+vus	Deep Intronic	spt_o_Kidney	7371	0.0
+vus	Deep Intronic	spt_o_Liver	7371	0.0
+vus	Deep Intronic	spt_o_Lung	7371	0.0
+vus	Deep Intronic	spt_o_Muscle	7371	0.0
+vus	Deep Intronic	spt_o_Nerve	7371	0.0
+vus	Deep Intronic	spt_o_Small Intestine	7371	0.0
+vus	Deep Intronic	spt_o_Skin	7371	0.0
+vus	Deep Intronic	spt_o_Spleen	7371	0.0
+vus	Deep Intronic	spt_o_Stomach	7371	0.0
+vus	Deep Intronic	pangolin_inc	7371	0.0
+vus	Deep Intronic	pangolin_dec	7371	0.0
+vus	Deep Intronic	pangolin_max	7371	0.0
+vus	Deep Intronic	gpn_msa_score	7371	0.0
+vus	Deep Intronic	r_Acceptor Region	7371	0.0
+vus	Deep Intronic	r_Branch Point Region	7371	0.0
+vus	Deep Intronic	r_Canonical Acceptor Site	7371	0.0
+vus	Deep Intronic	r_Canonical Donor Site	7371	0.0
+vus	Deep Intronic	r_Deep Intronic	7371	0.0
+vus	Deep Intronic	r_Donor Region	7371	0.0
+vus	Deep Intronic	r_PPT Region	7371	0.0
+vus	Donor Region	phyloP100way_vertebrate	30058	0.0
+vus	Donor Region	phyloP470way_mammalian	30058	0.06497438285980438
+vus	Donor Region	phastCons100way_vertebrate	30058	0.0
+vus	Donor Region	phastCons470way_mammalian	30058	0.0027945971122496508
+vus	Donor Region	gnomAD_pLI	30058	0.02781289506953224
+vus	Donor Region	gnomAD_LOEUF	30058	0.10389912835185308
+vus	Donor Region	ClinGen_Haploinsufficiency_Score	30058	0.4989021225630448
+vus	Donor Region	DANN_score	30058	0.0009315323707498836
+vus	Donor Region	exon_length	30058	0.0
+vus	Donor Region	exon_length_mod3	30058	0.0
+vus	Donor Region	dist_to_boundary	30058	0.0
+vus	Donor Region	spt_orig	30058	0.0
+vus	Donor Region	spt_o_Adipose Tissue	30058	0.0
+vus	Donor Region	spt_o_Blood	30058	0.0
+vus	Donor Region	spt_o_Blood Vessel	30058	0.0
+vus	Donor Region	spt_o_Brain	30058	0.0
+vus	Donor Region	spt_o_Colon	30058	0.0
+vus	Donor Region	spt_o_Heart	30058	0.0
+vus	Donor Region	spt_o_Kidney	30058	0.0
+vus	Donor Region	spt_o_Liver	30058	0.0
+vus	Donor Region	spt_o_Lung	30058	0.0
+vus	Donor Region	spt_o_Muscle	30058	0.0
+vus	Donor Region	spt_o_Nerve	30058	0.0
+vus	Donor Region	spt_o_Small Intestine	30058	0.0
+vus	Donor Region	spt_o_Skin	30058	0.0
+vus	Donor Region	spt_o_Spleen	30058	0.0
+vus	Donor Region	spt_o_Stomach	30058	0.0
+vus	Donor Region	pangolin_inc	30058	0.0
+vus	Donor Region	pangolin_dec	30058	0.0
+vus	Donor Region	pangolin_max	30058	0.0
+vus	Donor Region	gpn_msa_score	30058	0.0
+vus	Donor Region	r_Acceptor Region	30058	0.0
+vus	Donor Region	r_Branch Point Region	30058	0.0
+vus	Donor Region	r_Canonical Acceptor Site	30058	0.0
+vus	Donor Region	r_Canonical Donor Site	30058	0.0
+vus	Donor Region	r_Deep Intronic	30058	0.0
+vus	Donor Region	r_Donor Region	30058	0.0
+vus	Donor Region	r_PPT Region	30058	0.0
+vus	PPT Region	phyloP100way_vertebrate	6116	0.0
+vus	PPT Region	phyloP470way_mammalian	6116	0.06098757357750163
+vus	PPT Region	phastCons100way_vertebrate	6116	0.0
+vus	PPT Region	phastCons470way_mammalian	6116	0.004087638979725311
+vus	PPT Region	gnomAD_pLI	6116	0.02354480052321779
+vus	PPT Region	gnomAD_LOEUF	6116	0.0946697187704382
+vus	PPT Region	ClinGen_Haploinsufficiency_Score	6116	0.4805428384565075
+vus	PPT Region	DANN_score	6116	0.0008175277959450621
+vus	PPT Region	exon_length	6116	0.0
+vus	PPT Region	exon_length_mod3	6116	0.0
+vus	PPT Region	dist_to_boundary	6116	0.0
+vus	PPT Region	spt_orig	6116	0.0
+vus	PPT Region	spt_o_Adipose Tissue	6116	0.0
+vus	PPT Region	spt_o_Blood	6116	0.0
+vus	PPT Region	spt_o_Blood Vessel	6116	0.0
+vus	PPT Region	spt_o_Brain	6116	0.0
+vus	PPT Region	spt_o_Colon	6116	0.0
+vus	PPT Region	spt_o_Heart	6116	0.0
+vus	PPT Region	spt_o_Kidney	6116	0.0
+vus	PPT Region	spt_o_Liver	6116	0.0
+vus	PPT Region	spt_o_Lung	6116	0.0
+vus	PPT Region	spt_o_Muscle	6116	0.0
+vus	PPT Region	spt_o_Nerve	6116	0.0
+vus	PPT Region	spt_o_Small Intestine	6116	0.0
+vus	PPT Region	spt_o_Skin	6116	0.0
+vus	PPT Region	spt_o_Spleen	6116	0.0
+vus	PPT Region	spt_o_Stomach	6116	0.0
+vus	PPT Region	pangolin_inc	6116	0.0
+vus	PPT Region	pangolin_dec	6116	0.0
+vus	PPT Region	pangolin_max	6116	0.0
+vus	PPT Region	gpn_msa_score	6116	0.0
+vus	PPT Region	r_Acceptor Region	6116	0.0
+vus	PPT Region	r_Branch Point Region	6116	0.0
+vus	PPT Region	r_Canonical Acceptor Site	6116	0.0
+vus	PPT Region	r_Canonical Donor Site	6116	0.0
+vus	PPT Region	r_Deep Intronic	6116	0.0
+vus	PPT Region	r_Donor Region	6116	0.0
+vus	PPT Region	r_PPT Region	6116	0.0
+literature	Acceptor Region	phyloP100way_vertebrate	95	0.0
+literature	Acceptor Region	phyloP470way_mammalian	95	0.042105263157894736
+literature	Acceptor Region	phastCons100way_vertebrate	95	0.0
+literature	Acceptor Region	phastCons470way_mammalian	95	0.0
+literature	Acceptor Region	gnomAD_pLI	95	0.021052631578947368
+literature	Acceptor Region	gnomAD_LOEUF	95	0.16842105263157894
+literature	Acceptor Region	ClinGen_Haploinsufficiency_Score	95	0.4631578947368421
+literature	Acceptor Region	DANN_score	95	0.0
+literature	Acceptor Region	exon_length	95	0.0
+literature	Acceptor Region	exon_length_mod3	95	0.0
+literature	Acceptor Region	dist_to_boundary	95	0.0
+literature	Acceptor Region	spt_orig	95	0.0
+literature	Acceptor Region	spt_o_Adipose Tissue	95	0.0
+literature	Acceptor Region	spt_o_Blood	95	0.0
+literature	Acceptor Region	spt_o_Blood Vessel	95	0.0
+literature	Acceptor Region	spt_o_Brain	95	0.0
+literature	Acceptor Region	spt_o_Colon	95	0.0
+literature	Acceptor Region	spt_o_Heart	95	0.0
+literature	Acceptor Region	spt_o_Kidney	95	0.0
+literature	Acceptor Region	spt_o_Liver	95	0.0
+literature	Acceptor Region	spt_o_Lung	95	0.0
+literature	Acceptor Region	spt_o_Muscle	95	0.0
+literature	Acceptor Region	spt_o_Nerve	95	0.0
+literature	Acceptor Region	spt_o_Small Intestine	95	0.0
+literature	Acceptor Region	spt_o_Skin	95	0.0
+literature	Acceptor Region	spt_o_Spleen	95	0.0
+literature	Acceptor Region	spt_o_Stomach	95	0.0
+literature	Acceptor Region	pangolin_inc	95	0.0
+literature	Acceptor Region	pangolin_dec	95	0.0
+literature	Acceptor Region	pangolin_max	95	0.0
+literature	Acceptor Region	gpn_msa_score	95	0.0
+literature	Acceptor Region	r_Acceptor Region	95	0.0
+literature	Acceptor Region	r_Branch Point Region	95	0.0
+literature	Acceptor Region	r_Canonical Acceptor Site	95	0.0
+literature	Acceptor Region	r_Canonical Donor Site	95	0.0
+literature	Acceptor Region	r_Deep Intronic	95	0.0
+literature	Acceptor Region	r_Donor Region	95	0.0
+literature	Acceptor Region	r_PPT Region	95	0.0
+literature	Branch Point Region	phyloP100way_vertebrate	17	0.0
+literature	Branch Point Region	phyloP470way_mammalian	17	0.058823529411764705
+literature	Branch Point Region	phastCons100way_vertebrate	17	0.0
+literature	Branch Point Region	phastCons470way_mammalian	17	0.0
+literature	Branch Point Region	gnomAD_pLI	17	0.0
+literature	Branch Point Region	gnomAD_LOEUF	17	0.23529411764705882
+literature	Branch Point Region	ClinGen_Haploinsufficiency_Score	17	0.47058823529411764
+literature	Branch Point Region	DANN_score	17	0.0
+literature	Branch Point Region	exon_length	17	0.0
+literature	Branch Point Region	exon_length_mod3	17	0.0
+literature	Branch Point Region	dist_to_boundary	17	0.0
+literature	Branch Point Region	spt_orig	17	0.0
+literature	Branch Point Region	spt_o_Adipose Tissue	17	0.0
+literature	Branch Point Region	spt_o_Blood	17	0.0
+literature	Branch Point Region	spt_o_Blood Vessel	17	0.0
+literature	Branch Point Region	spt_o_Brain	17	0.0
+literature	Branch Point Region	spt_o_Colon	17	0.0
+literature	Branch Point Region	spt_o_Heart	17	0.0
+literature	Branch Point Region	spt_o_Kidney	17	0.0
+literature	Branch Point Region	spt_o_Liver	17	0.0
+literature	Branch Point Region	spt_o_Lung	17	0.0
+literature	Branch Point Region	spt_o_Muscle	17	0.0
+literature	Branch Point Region	spt_o_Nerve	17	0.0
+literature	Branch Point Region	spt_o_Small Intestine	17	0.0
+literature	Branch Point Region	spt_o_Skin	17	0.0
+literature	Branch Point Region	spt_o_Spleen	17	0.0
+literature	Branch Point Region	spt_o_Stomach	17	0.0
+literature	Branch Point Region	pangolin_inc	17	0.0
+literature	Branch Point Region	pangolin_dec	17	0.0
+literature	Branch Point Region	pangolin_max	17	0.0
+literature	Branch Point Region	gpn_msa_score	17	0.0
+literature	Branch Point Region	r_Acceptor Region	17	0.0
+literature	Branch Point Region	r_Branch Point Region	17	0.0
+literature	Branch Point Region	r_Canonical Acceptor Site	17	0.0
+literature	Branch Point Region	r_Canonical Donor Site	17	0.0
+literature	Branch Point Region	r_Deep Intronic	17	0.0
+literature	Branch Point Region	r_Donor Region	17	0.0
+literature	Branch Point Region	r_PPT Region	17	0.0
+literature	Canonical Acceptor Site	phyloP100way_vertebrate	127	0.0
+literature	Canonical Acceptor Site	phyloP470way_mammalian	127	0.06299212598425197
+literature	Canonical Acceptor Site	phastCons100way_vertebrate	127	0.0
+literature	Canonical Acceptor Site	phastCons470way_mammalian	127	0.0
+literature	Canonical Acceptor Site	gnomAD_pLI	127	0.03937007874015748
+literature	Canonical Acceptor Site	gnomAD_LOEUF	127	0.1968503937007874
+literature	Canonical Acceptor Site	ClinGen_Haploinsufficiency_Score	127	0.49606299212598426
+literature	Canonical Acceptor Site	DANN_score	127	0.0
+literature	Canonical Acceptor Site	exon_length	127	0.0
+literature	Canonical Acceptor Site	exon_length_mod3	127	0.0
+literature	Canonical Acceptor Site	dist_to_boundary	127	0.0
+literature	Canonical Acceptor Site	spt_orig	127	0.0
+literature	Canonical Acceptor Site	spt_o_Adipose Tissue	127	0.0
+literature	Canonical Acceptor Site	spt_o_Blood	127	0.0
+literature	Canonical Acceptor Site	spt_o_Blood Vessel	127	0.0
+literature	Canonical Acceptor Site	spt_o_Brain	127	0.0
+literature	Canonical Acceptor Site	spt_o_Colon	127	0.0
+literature	Canonical Acceptor Site	spt_o_Heart	127	0.0
+literature	Canonical Acceptor Site	spt_o_Kidney	127	0.0
+literature	Canonical Acceptor Site	spt_o_Liver	127	0.0
+literature	Canonical Acceptor Site	spt_o_Lung	127	0.0
+literature	Canonical Acceptor Site	spt_o_Muscle	127	0.0
+literature	Canonical Acceptor Site	spt_o_Nerve	127	0.0
+literature	Canonical Acceptor Site	spt_o_Small Intestine	127	0.0
+literature	Canonical Acceptor Site	spt_o_Skin	127	0.0
+literature	Canonical Acceptor Site	spt_o_Spleen	127	0.0
+literature	Canonical Acceptor Site	spt_o_Stomach	127	0.0
+literature	Canonical Acceptor Site	pangolin_inc	127	0.0
+literature	Canonical Acceptor Site	pangolin_dec	127	0.0
+literature	Canonical Acceptor Site	pangolin_max	127	0.0
+literature	Canonical Acceptor Site	gpn_msa_score	127	0.0
+literature	Canonical Acceptor Site	r_Acceptor Region	127	0.0
+literature	Canonical Acceptor Site	r_Branch Point Region	127	0.0
+literature	Canonical Acceptor Site	r_Canonical Acceptor Site	127	0.0
+literature	Canonical Acceptor Site	r_Canonical Donor Site	127	0.0
+literature	Canonical Acceptor Site	r_Deep Intronic	127	0.0
+literature	Canonical Acceptor Site	r_Donor Region	127	0.0
+literature	Canonical Acceptor Site	r_PPT Region	127	0.0
+literature	Canonical Donor Site	phyloP100way_vertebrate	145	0.0
+literature	Canonical Donor Site	phyloP470way_mammalian	145	0.027586206896551724
+literature	Canonical Donor Site	phastCons100way_vertebrate	145	0.0
+literature	Canonical Donor Site	phastCons470way_mammalian	145	0.0
+literature	Canonical Donor Site	gnomAD_pLI	145	0.0
+literature	Canonical Donor Site	gnomAD_LOEUF	145	0.1793103448275862
+literature	Canonical Donor Site	ClinGen_Haploinsufficiency_Score	145	0.5310344827586206
+literature	Canonical Donor Site	DANN_score	145	0.0
+literature	Canonical Donor Site	exon_length	145	0.0
+literature	Canonical Donor Site	exon_length_mod3	145	0.0
+literature	Canonical Donor Site	dist_to_boundary	145	0.0
+literature	Canonical Donor Site	spt_orig	145	0.0
+literature	Canonical Donor Site	spt_o_Adipose Tissue	145	0.0
+literature	Canonical Donor Site	spt_o_Blood	145	0.0
+literature	Canonical Donor Site	spt_o_Blood Vessel	145	0.0
+literature	Canonical Donor Site	spt_o_Brain	145	0.0
+literature	Canonical Donor Site	spt_o_Colon	145	0.0
+literature	Canonical Donor Site	spt_o_Heart	145	0.0
+literature	Canonical Donor Site	spt_o_Kidney	145	0.0
+literature	Canonical Donor Site	spt_o_Liver	145	0.0
+literature	Canonical Donor Site	spt_o_Lung	145	0.0
+literature	Canonical Donor Site	spt_o_Muscle	145	0.0
+literature	Canonical Donor Site	spt_o_Nerve	145	0.0
+literature	Canonical Donor Site	spt_o_Small Intestine	145	0.0
+literature	Canonical Donor Site	spt_o_Skin	145	0.0
+literature	Canonical Donor Site	spt_o_Spleen	145	0.0
+literature	Canonical Donor Site	spt_o_Stomach	145	0.0
+literature	Canonical Donor Site	pangolin_inc	145	0.0
+literature	Canonical Donor Site	pangolin_dec	145	0.0
+literature	Canonical Donor Site	pangolin_max	145	0.0
+literature	Canonical Donor Site	gpn_msa_score	145	0.0
+literature	Canonical Donor Site	r_Acceptor Region	145	0.0
+literature	Canonical Donor Site	r_Branch Point Region	145	0.0
+literature	Canonical Donor Site	r_Canonical Acceptor Site	145	0.0
+literature	Canonical Donor Site	r_Canonical Donor Site	145	0.0
+literature	Canonical Donor Site	r_Deep Intronic	145	0.0
+literature	Canonical Donor Site	r_Donor Region	145	0.0
+literature	Canonical Donor Site	r_PPT Region	145	0.0
+literature	Deep Intronic	phyloP100way_vertebrate	130	0.0
+literature	Deep Intronic	phyloP470way_mammalian	130	0.05384615384615385
+literature	Deep Intronic	phastCons100way_vertebrate	130	0.0
+literature	Deep Intronic	phastCons470way_mammalian	130	0.007692307692307693
+literature	Deep Intronic	gnomAD_pLI	130	0.0
+literature	Deep Intronic	gnomAD_LOEUF	130	0.2692307692307692
+literature	Deep Intronic	ClinGen_Haploinsufficiency_Score	130	0.47692307692307695
+literature	Deep Intronic	DANN_score	130	0.0
+literature	Deep Intronic	exon_length	130	0.0
+literature	Deep Intronic	exon_length_mod3	130	0.0
+literature	Deep Intronic	dist_to_boundary	130	0.0
+literature	Deep Intronic	spt_orig	130	0.0
+literature	Deep Intronic	spt_o_Adipose Tissue	130	0.0
+literature	Deep Intronic	spt_o_Blood	130	0.0
+literature	Deep Intronic	spt_o_Blood Vessel	130	0.0
+literature	Deep Intronic	spt_o_Brain	130	0.0
+literature	Deep Intronic	spt_o_Colon	130	0.0
+literature	Deep Intronic	spt_o_Heart	130	0.0
+literature	Deep Intronic	spt_o_Kidney	130	0.0
+literature	Deep Intronic	spt_o_Liver	130	0.0
+literature	Deep Intronic	spt_o_Lung	130	0.0
+literature	Deep Intronic	spt_o_Muscle	130	0.0
+literature	Deep Intronic	spt_o_Nerve	130	0.0
+literature	Deep Intronic	spt_o_Small Intestine	130	0.0
+literature	Deep Intronic	spt_o_Skin	130	0.0
+literature	Deep Intronic	spt_o_Spleen	130	0.0
+literature	Deep Intronic	spt_o_Stomach	130	0.0
+literature	Deep Intronic	pangolin_inc	130	0.0
+literature	Deep Intronic	pangolin_dec	130	0.0
+literature	Deep Intronic	pangolin_max	130	0.0
+literature	Deep Intronic	gpn_msa_score	130	0.0
+literature	Deep Intronic	r_Acceptor Region	130	0.0
+literature	Deep Intronic	r_Branch Point Region	130	0.0
+literature	Deep Intronic	r_Canonical Acceptor Site	130	0.0
+literature	Deep Intronic	r_Canonical Donor Site	130	0.0
+literature	Deep Intronic	r_Deep Intronic	130	0.0
+literature	Deep Intronic	r_Donor Region	130	0.0
+literature	Deep Intronic	r_PPT Region	130	0.0
+literature	Donor Region	phyloP100way_vertebrate	144	0.0
+literature	Donor Region	phyloP470way_mammalian	144	0.013888888888888888
+literature	Donor Region	phastCons100way_vertebrate	144	0.0
+literature	Donor Region	phastCons470way_mammalian	144	0.0
+literature	Donor Region	gnomAD_pLI	144	0.006944444444444444
+literature	Donor Region	gnomAD_LOEUF	144	0.19444444444444445
+literature	Donor Region	ClinGen_Haploinsufficiency_Score	144	0.4305555555555556
+literature	Donor Region	DANN_score	144	0.0
+literature	Donor Region	exon_length	144	0.0
+literature	Donor Region	exon_length_mod3	144	0.0
+literature	Donor Region	dist_to_boundary	144	0.0
+literature	Donor Region	spt_orig	144	0.0
+literature	Donor Region	spt_o_Adipose Tissue	144	0.0
+literature	Donor Region	spt_o_Blood	144	0.0
+literature	Donor Region	spt_o_Blood Vessel	144	0.0
+literature	Donor Region	spt_o_Brain	144	0.0
+literature	Donor Region	spt_o_Colon	144	0.0
+literature	Donor Region	spt_o_Heart	144	0.0
+literature	Donor Region	spt_o_Kidney	144	0.0
+literature	Donor Region	spt_o_Liver	144	0.0
+literature	Donor Region	spt_o_Lung	144	0.0
+literature	Donor Region	spt_o_Muscle	144	0.0
+literature	Donor Region	spt_o_Nerve	144	0.0
+literature	Donor Region	spt_o_Small Intestine	144	0.0
+literature	Donor Region	spt_o_Skin	144	0.0
+literature	Donor Region	spt_o_Spleen	144	0.0
+literature	Donor Region	spt_o_Stomach	144	0.0
+literature	Donor Region	pangolin_inc	144	0.0
+literature	Donor Region	pangolin_dec	144	0.0
+literature	Donor Region	pangolin_max	144	0.0
+literature	Donor Region	gpn_msa_score	144	0.0
+literature	Donor Region	r_Acceptor Region	144	0.0
+literature	Donor Region	r_Branch Point Region	144	0.0
+literature	Donor Region	r_Canonical Acceptor Site	144	0.0
+literature	Donor Region	r_Canonical Donor Site	144	0.0
+literature	Donor Region	r_Deep Intronic	144	0.0
+literature	Donor Region	r_Donor Region	144	0.0
+literature	Donor Region	r_PPT Region	144	0.0
+literature	PPT Region	phyloP100way_vertebrate	39	0.0
+literature	PPT Region	phyloP470way_mammalian	39	0.02564102564102564
+literature	PPT Region	phastCons100way_vertebrate	39	0.0
+literature	PPT Region	phastCons470way_mammalian	39	0.0
+literature	PPT Region	gnomAD_pLI	39	0.0
+literature	PPT Region	gnomAD_LOEUF	39	0.1282051282051282
+literature	PPT Region	ClinGen_Haploinsufficiency_Score	39	0.41025641025641024
+literature	PPT Region	DANN_score	39	0.0
+literature	PPT Region	exon_length	39	0.0
+literature	PPT Region	exon_length_mod3	39	0.0
+literature	PPT Region	dist_to_boundary	39	0.0
+literature	PPT Region	spt_orig	39	0.0
+literature	PPT Region	spt_o_Adipose Tissue	39	0.0
+literature	PPT Region	spt_o_Blood	39	0.0
+literature	PPT Region	spt_o_Blood Vessel	39	0.0
+literature	PPT Region	spt_o_Brain	39	0.0
+literature	PPT Region	spt_o_Colon	39	0.0
+literature	PPT Region	spt_o_Heart	39	0.0
+literature	PPT Region	spt_o_Kidney	39	0.0
+literature	PPT Region	spt_o_Liver	39	0.0
+literature	PPT Region	spt_o_Lung	39	0.0
+literature	PPT Region	spt_o_Muscle	39	0.0
+literature	PPT Region	spt_o_Nerve	39	0.0
+literature	PPT Region	spt_o_Small Intestine	39	0.0
+literature	PPT Region	spt_o_Skin	39	0.0
+literature	PPT Region	spt_o_Spleen	39	0.0
+literature	PPT Region	spt_o_Stomach	39	0.0
+literature	PPT Region	pangolin_inc	39	0.0
+literature	PPT Region	pangolin_dec	39	0.0
+literature	PPT Region	pangolin_max	39	0.0
+literature	PPT Region	gpn_msa_score	39	0.0
+literature	PPT Region	r_Acceptor Region	39	0.0
+literature	PPT Region	r_Branch Point Region	39	0.0
+literature	PPT Region	r_Canonical Acceptor Site	39	0.0
+literature	PPT Region	r_Canonical Donor Site	39	0.0
+literature	PPT Region	r_Deep Intronic	39	0.0
+literature	PPT Region	r_Donor Region	39	0.0
+literature	PPT Region	r_PPT Region	39	0.0
+splicevardb	Acceptor Region	phyloP100way_vertebrate	2159	0.0
+splicevardb	Acceptor Region	phyloP470way_mammalian	2159	0.05604446503010653
+splicevardb	Acceptor Region	phastCons100way_vertebrate	2159	0.0
+splicevardb	Acceptor Region	phastCons470way_mammalian	2159	0.0009263547938860583
+splicevardb	Acceptor Region	gnomAD_pLI	2159	0.06067623899953682
+splicevardb	Acceptor Region	gnomAD_LOEUF	2159	0.06391848077813803
+splicevardb	Acceptor Region	ClinGen_Haploinsufficiency_Score	2159	0.8832792959703566
+splicevardb	Acceptor Region	DANN_score	2159	0.0
+splicevardb	Acceptor Region	exon_length	2159	0.0
+splicevardb	Acceptor Region	exon_length_mod3	2159	0.0
+splicevardb	Acceptor Region	dist_to_boundary	2159	0.0
+splicevardb	Acceptor Region	spt_orig	2159	0.0
+splicevardb	Acceptor Region	spt_o_Adipose Tissue	2159	0.0
+splicevardb	Acceptor Region	spt_o_Blood	2159	0.0
+splicevardb	Acceptor Region	spt_o_Blood Vessel	2159	0.0
+splicevardb	Acceptor Region	spt_o_Brain	2159	0.0
+splicevardb	Acceptor Region	spt_o_Colon	2159	0.0
+splicevardb	Acceptor Region	spt_o_Heart	2159	0.0
+splicevardb	Acceptor Region	spt_o_Kidney	2159	0.0
+splicevardb	Acceptor Region	spt_o_Liver	2159	0.0
+splicevardb	Acceptor Region	spt_o_Lung	2159	0.0
+splicevardb	Acceptor Region	spt_o_Muscle	2159	0.0
+splicevardb	Acceptor Region	spt_o_Nerve	2159	0.0
+splicevardb	Acceptor Region	spt_o_Small Intestine	2159	0.0
+splicevardb	Acceptor Region	spt_o_Skin	2159	0.0
+splicevardb	Acceptor Region	spt_o_Spleen	2159	0.0
+splicevardb	Acceptor Region	spt_o_Stomach	2159	0.0
+splicevardb	Acceptor Region	pangolin_inc	2159	0.0
+splicevardb	Acceptor Region	pangolin_dec	2159	0.0
+splicevardb	Acceptor Region	pangolin_max	2159	0.0
+splicevardb	Acceptor Region	gpn_msa_score	2159	0.0
+splicevardb	Acceptor Region	r_Acceptor Region	2159	0.0
+splicevardb	Acceptor Region	r_Branch Point Region	2159	0.0
+splicevardb	Acceptor Region	r_Canonical Acceptor Site	2159	0.0
+splicevardb	Acceptor Region	r_Canonical Donor Site	2159	0.0
+splicevardb	Acceptor Region	r_Deep Intronic	2159	0.0
+splicevardb	Acceptor Region	r_Donor Region	2159	0.0
+splicevardb	Acceptor Region	r_PPT Region	2159	0.0
+splicevardb	Branch Point Region	phyloP100way_vertebrate	2894	0.0
+splicevardb	Branch Point Region	phyloP470way_mammalian	2894	0.05044920525224603
+splicevardb	Branch Point Region	phastCons100way_vertebrate	2894	0.0
+splicevardb	Branch Point Region	phastCons470way_mammalian	2894	0.004492052522460262
+splicevardb	Branch Point Region	gnomAD_pLI	2894	0.04457498272287491
+splicevardb	Branch Point Region	gnomAD_LOEUF	2894	0.04561161022805805
+splicevardb	Branch Point Region	ClinGen_Haploinsufficiency_Score	2894	0.8624740843123704
+splicevardb	Branch Point Region	DANN_score	2894	0.0
+splicevardb	Branch Point Region	exon_length	2894	0.0
+splicevardb	Branch Point Region	exon_length_mod3	2894	0.0
+splicevardb	Branch Point Region	dist_to_boundary	2894	0.0
+splicevardb	Branch Point Region	spt_orig	2894	0.0
+splicevardb	Branch Point Region	spt_o_Adipose Tissue	2894	0.0
+splicevardb	Branch Point Region	spt_o_Blood	2894	0.0
+splicevardb	Branch Point Region	spt_o_Blood Vessel	2894	0.0
+splicevardb	Branch Point Region	spt_o_Brain	2894	0.0
+splicevardb	Branch Point Region	spt_o_Colon	2894	0.0
+splicevardb	Branch Point Region	spt_o_Heart	2894	0.0
+splicevardb	Branch Point Region	spt_o_Kidney	2894	0.0
+splicevardb	Branch Point Region	spt_o_Liver	2894	0.0
+splicevardb	Branch Point Region	spt_o_Lung	2894	0.0
+splicevardb	Branch Point Region	spt_o_Muscle	2894	0.0
+splicevardb	Branch Point Region	spt_o_Nerve	2894	0.0
+splicevardb	Branch Point Region	spt_o_Small Intestine	2894	0.0
+splicevardb	Branch Point Region	spt_o_Skin	2894	0.0
+splicevardb	Branch Point Region	spt_o_Spleen	2894	0.0
+splicevardb	Branch Point Region	spt_o_Stomach	2894	0.0
+splicevardb	Branch Point Region	pangolin_inc	2894	0.0
+splicevardb	Branch Point Region	pangolin_dec	2894	0.0
+splicevardb	Branch Point Region	pangolin_max	2894	0.0
+splicevardb	Branch Point Region	gpn_msa_score	2894	0.0
+splicevardb	Branch Point Region	r_Acceptor Region	2894	0.0
+splicevardb	Branch Point Region	r_Branch Point Region	2894	0.0
+splicevardb	Branch Point Region	r_Canonical Acceptor Site	2894	0.0
+splicevardb	Branch Point Region	r_Canonical Donor Site	2894	0.0
+splicevardb	Branch Point Region	r_Deep Intronic	2894	0.0
+splicevardb	Branch Point Region	r_Donor Region	2894	0.0
+splicevardb	Branch Point Region	r_PPT Region	2894	0.0
+splicevardb	Canonical Acceptor Site	phyloP100way_vertebrate	4410	0.0
+splicevardb	Canonical Acceptor Site	phyloP470way_mammalian	4410	0.05895691609977324
+splicevardb	Canonical Acceptor Site	phastCons100way_vertebrate	4410	0.0
+splicevardb	Canonical Acceptor Site	phastCons470way_mammalian	4410	0.0
+splicevardb	Canonical Acceptor Site	gnomAD_pLI	4410	0.05873015873015873
+splicevardb	Canonical Acceptor Site	gnomAD_LOEUF	4410	0.07142857142857142
+splicevardb	Canonical Acceptor Site	ClinGen_Haploinsufficiency_Score	4410	0.8655328798185941
+splicevardb	Canonical Acceptor Site	DANN_score	4410	0.0
+splicevardb	Canonical Acceptor Site	exon_length	4410	0.0
+splicevardb	Canonical Acceptor Site	exon_length_mod3	4410	0.0
+splicevardb	Canonical Acceptor Site	dist_to_boundary	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_orig	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Adipose Tissue	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Blood	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Blood Vessel	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Brain	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Colon	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Heart	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Kidney	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Liver	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Lung	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Muscle	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Nerve	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Small Intestine	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Skin	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Spleen	4410	0.0
+splicevardb	Canonical Acceptor Site	spt_o_Stomach	4410	0.0
+splicevardb	Canonical Acceptor Site	pangolin_inc	4410	0.0
+splicevardb	Canonical Acceptor Site	pangolin_dec	4410	0.0
+splicevardb	Canonical Acceptor Site	pangolin_max	4410	0.0
+splicevardb	Canonical Acceptor Site	gpn_msa_score	4410	0.0
+splicevardb	Canonical Acceptor Site	r_Acceptor Region	4410	0.0
+splicevardb	Canonical Acceptor Site	r_Branch Point Region	4410	0.0
+splicevardb	Canonical Acceptor Site	r_Canonical Acceptor Site	4410	0.0
+splicevardb	Canonical Acceptor Site	r_Canonical Donor Site	4410	0.0
+splicevardb	Canonical Acceptor Site	r_Deep Intronic	4410	0.0
+splicevardb	Canonical Acceptor Site	r_Donor Region	4410	0.0
+splicevardb	Canonical Acceptor Site	r_PPT Region	4410	0.0
+splicevardb	Canonical Donor Site	phyloP100way_vertebrate	2834	0.0
+splicevardb	Canonical Donor Site	phyloP470way_mammalian	2834	0.06810162314749471
+splicevardb	Canonical Donor Site	phastCons100way_vertebrate	2834	0.0
+splicevardb	Canonical Donor Site	phastCons470way_mammalian	2834	0.0007057163020465773
+splicevardb	Canonical Donor Site	gnomAD_pLI	2834	0.05822159491884263
+splicevardb	Canonical Donor Site	gnomAD_LOEUF	2834	0.08468595624558928
+splicevardb	Canonical Donor Site	ClinGen_Haploinsufficiency_Score	2834	0.8595624558927312
+splicevardb	Canonical Donor Site	DANN_score	2834	0.0
+splicevardb	Canonical Donor Site	exon_length	2834	0.0
+splicevardb	Canonical Donor Site	exon_length_mod3	2834	0.0
+splicevardb	Canonical Donor Site	dist_to_boundary	2834	0.0
+splicevardb	Canonical Donor Site	spt_orig	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Adipose Tissue	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Blood	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Blood Vessel	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Brain	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Colon	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Heart	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Kidney	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Liver	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Lung	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Muscle	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Nerve	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Small Intestine	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Skin	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Spleen	2834	0.0
+splicevardb	Canonical Donor Site	spt_o_Stomach	2834	0.0
+splicevardb	Canonical Donor Site	pangolin_inc	2834	0.0
+splicevardb	Canonical Donor Site	pangolin_dec	2834	0.0
+splicevardb	Canonical Donor Site	pangolin_max	2834	0.0
+splicevardb	Canonical Donor Site	gpn_msa_score	2834	0.0
+splicevardb	Canonical Donor Site	r_Acceptor Region	2834	0.0
+splicevardb	Canonical Donor Site	r_Branch Point Region	2834	0.0
+splicevardb	Canonical Donor Site	r_Canonical Acceptor Site	2834	0.0
+splicevardb	Canonical Donor Site	r_Canonical Donor Site	2834	0.0
+splicevardb	Canonical Donor Site	r_Deep Intronic	2834	0.0
+splicevardb	Canonical Donor Site	r_Donor Region	2834	0.0
+splicevardb	Canonical Donor Site	r_PPT Region	2834	0.0
+splicevardb	Deep Intronic	phyloP100way_vertebrate	5039	0.0
+splicevardb	Deep Intronic	phyloP470way_mammalian	5039	0.06290930740226236
+splicevardb	Deep Intronic	phastCons100way_vertebrate	5039	0.0
+splicevardb	Deep Intronic	phastCons470way_mammalian	5039	0.010517959912681087
+splicevardb	Deep Intronic	gnomAD_pLI	5039	0.04187338757690018
+splicevardb	Deep Intronic	gnomAD_LOEUF	5039	0.04485016868426275
+splicevardb	Deep Intronic	ClinGen_Haploinsufficiency_Score	5039	0.8640603294304425
+splicevardb	Deep Intronic	DANN_score	5039	0.0
+splicevardb	Deep Intronic	exon_length	5039	0.0
+splicevardb	Deep Intronic	exon_length_mod3	5039	0.0
+splicevardb	Deep Intronic	dist_to_boundary	5039	0.0
+splicevardb	Deep Intronic	spt_orig	5039	0.0
+splicevardb	Deep Intronic	spt_o_Adipose Tissue	5039	0.0
+splicevardb	Deep Intronic	spt_o_Blood	5039	0.0
+splicevardb	Deep Intronic	spt_o_Blood Vessel	5039	0.0
+splicevardb	Deep Intronic	spt_o_Brain	5039	0.0
+splicevardb	Deep Intronic	spt_o_Colon	5039	0.0
+splicevardb	Deep Intronic	spt_o_Heart	5039	0.0
+splicevardb	Deep Intronic	spt_o_Kidney	5039	0.0
+splicevardb	Deep Intronic	spt_o_Liver	5039	0.0
+splicevardb	Deep Intronic	spt_o_Lung	5039	0.0
+splicevardb	Deep Intronic	spt_o_Muscle	5039	0.0
+splicevardb	Deep Intronic	spt_o_Nerve	5039	0.0
+splicevardb	Deep Intronic	spt_o_Small Intestine	5039	0.0
+splicevardb	Deep Intronic	spt_o_Skin	5039	0.0
+splicevardb	Deep Intronic	spt_o_Spleen	5039	0.0
+splicevardb	Deep Intronic	spt_o_Stomach	5039	0.0
+splicevardb	Deep Intronic	pangolin_inc	5039	0.0
+splicevardb	Deep Intronic	pangolin_dec	5039	0.0
+splicevardb	Deep Intronic	pangolin_max	5039	0.0
+splicevardb	Deep Intronic	gpn_msa_score	5039	0.0
+splicevardb	Deep Intronic	r_Acceptor Region	5039	0.0
+splicevardb	Deep Intronic	r_Branch Point Region	5039	0.0
+splicevardb	Deep Intronic	r_Canonical Acceptor Site	5039	0.0
+splicevardb	Deep Intronic	r_Canonical Donor Site	5039	0.0
+splicevardb	Deep Intronic	r_Deep Intronic	5039	0.0
+splicevardb	Deep Intronic	r_Donor Region	5039	0.0
+splicevardb	Deep Intronic	r_PPT Region	5039	0.0
+splicevardb	Donor Region	phyloP100way_vertebrate	2681	0.0
+splicevardb	Donor Region	phyloP470way_mammalian	2681	0.05557627750839239
+splicevardb	Donor Region	phastCons100way_vertebrate	2681	0.0
+splicevardb	Donor Region	phastCons470way_mammalian	2681	0.002237970906378217
+splicevardb	Donor Region	gnomAD_pLI	2681	0.0525923162998881
+splicevardb	Donor Region	gnomAD_LOEUF	2681	0.0742260350615442
+splicevardb	Donor Region	ClinGen_Haploinsufficiency_Score	2681	0.8709436777321895
+splicevardb	Donor Region	DANN_score	2681	0.0
+splicevardb	Donor Region	exon_length	2681	0.0
+splicevardb	Donor Region	exon_length_mod3	2681	0.0
+splicevardb	Donor Region	dist_to_boundary	2681	0.0
+splicevardb	Donor Region	spt_orig	2681	0.0
+splicevardb	Donor Region	spt_o_Adipose Tissue	2681	0.0
+splicevardb	Donor Region	spt_o_Blood	2681	0.0
+splicevardb	Donor Region	spt_o_Blood Vessel	2681	0.0
+splicevardb	Donor Region	spt_o_Brain	2681	0.0
+splicevardb	Donor Region	spt_o_Colon	2681	0.0
+splicevardb	Donor Region	spt_o_Heart	2681	0.0
+splicevardb	Donor Region	spt_o_Kidney	2681	0.0
+splicevardb	Donor Region	spt_o_Liver	2681	0.0
+splicevardb	Donor Region	spt_o_Lung	2681	0.0
+splicevardb	Donor Region	spt_o_Muscle	2681	0.0
+splicevardb	Donor Region	spt_o_Nerve	2681	0.0
+splicevardb	Donor Region	spt_o_Small Intestine	2681	0.0
+splicevardb	Donor Region	spt_o_Skin	2681	0.0
+splicevardb	Donor Region	spt_o_Spleen	2681	0.0
+splicevardb	Donor Region	spt_o_Stomach	2681	0.0
+splicevardb	Donor Region	pangolin_inc	2681	0.0
+splicevardb	Donor Region	pangolin_dec	2681	0.0
+splicevardb	Donor Region	pangolin_max	2681	0.0
+splicevardb	Donor Region	gpn_msa_score	2681	0.0
+splicevardb	Donor Region	r_Acceptor Region	2681	0.0
+splicevardb	Donor Region	r_Branch Point Region	2681	0.0
+splicevardb	Donor Region	r_Canonical Acceptor Site	2681	0.0
+splicevardb	Donor Region	r_Canonical Donor Site	2681	0.0
+splicevardb	Donor Region	r_Deep Intronic	2681	0.0
+splicevardb	Donor Region	r_Donor Region	2681	0.0
+splicevardb	Donor Region	r_PPT Region	2681	0.0
+splicevardb	PPT Region	phyloP100way_vertebrate	2891	0.0
+splicevardb	PPT Region	phyloP470way_mammalian	2891	0.043583535108958835
+splicevardb	PPT Region	phastCons100way_vertebrate	2891	0.0
+splicevardb	PPT Region	phastCons470way_mammalian	2891	0.0041508128675198895
+splicevardb	PPT Region	gnomAD_pLI	2891	0.04600484261501211
+splicevardb	PPT Region	gnomAD_LOEUF	2891	0.05914908336215842
+splicevardb	PPT Region	ClinGen_Haploinsufficiency_Score	2891	0.8758215150466967
+splicevardb	PPT Region	DANN_score	2891	0.0
+splicevardb	PPT Region	exon_length	2891	0.0
+splicevardb	PPT Region	exon_length_mod3	2891	0.0
+splicevardb	PPT Region	dist_to_boundary	2891	0.0
+splicevardb	PPT Region	spt_orig	2891	0.0
+splicevardb	PPT Region	spt_o_Adipose Tissue	2891	0.0
+splicevardb	PPT Region	spt_o_Blood	2891	0.0
+splicevardb	PPT Region	spt_o_Blood Vessel	2891	0.0
+splicevardb	PPT Region	spt_o_Brain	2891	0.0
+splicevardb	PPT Region	spt_o_Colon	2891	0.0
+splicevardb	PPT Region	spt_o_Heart	2891	0.0
+splicevardb	PPT Region	spt_o_Kidney	2891	0.0
+splicevardb	PPT Region	spt_o_Liver	2891	0.0
+splicevardb	PPT Region	spt_o_Lung	2891	0.0
+splicevardb	PPT Region	spt_o_Muscle	2891	0.0
+splicevardb	PPT Region	spt_o_Nerve	2891	0.0
+splicevardb	PPT Region	spt_o_Small Intestine	2891	0.0
+splicevardb	PPT Region	spt_o_Skin	2891	0.0
+splicevardb	PPT Region	spt_o_Spleen	2891	0.0
+splicevardb	PPT Region	spt_o_Stomach	2891	0.0
+splicevardb	PPT Region	pangolin_inc	2891	0.0
+splicevardb	PPT Region	pangolin_dec	2891	0.0
+splicevardb	PPT Region	pangolin_max	2891	0.0
+splicevardb	PPT Region	gpn_msa_score	2891	0.0
+splicevardb	PPT Region	r_Acceptor Region	2891	0.0
+splicevardb	PPT Region	r_Branch Point Region	2891	0.0
+splicevardb	PPT Region	r_Canonical Acceptor Site	2891	0.0
+splicevardb	PPT Region	r_Canonical Donor Site	2891	0.0
+splicevardb	PPT Region	r_Deep Intronic	2891	0.0
+splicevardb	PPT Region	r_Donor Region	2891	0.0
+splicevardb	PPT Region	r_PPT Region	2891	0.0
+gnomad_reference	Acceptor Region	phyloP100way_vertebrate	328	0.0
+gnomad_reference	Acceptor Region	phyloP470way_mammalian	328	0.054878048780487805
+gnomad_reference	Acceptor Region	phastCons100way_vertebrate	328	0.0
+gnomad_reference	Acceptor Region	phastCons470way_mammalian	328	0.003048780487804878
+gnomad_reference	Acceptor Region	gnomAD_pLI	328	0.051829268292682924
+gnomad_reference	Acceptor Region	gnomAD_LOEUF	328	0.07317073170731707
+gnomad_reference	Acceptor Region	ClinGen_Haploinsufficiency_Score	328	0.7225609756097561
+gnomad_reference	Acceptor Region	DANN_score	328	0.003048780487804878
+gnomad_reference	Acceptor Region	exon_length	328	0.0
+gnomad_reference	Acceptor Region	exon_length_mod3	328	0.0
+gnomad_reference	Acceptor Region	dist_to_boundary	328	0.0
+gnomad_reference	Acceptor Region	spt_orig	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Adipose Tissue	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Blood	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Blood Vessel	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Brain	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Colon	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Heart	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Kidney	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Liver	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Lung	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Muscle	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Nerve	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Small Intestine	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Skin	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Spleen	328	0.0
+gnomad_reference	Acceptor Region	spt_o_Stomach	328	0.0
+gnomad_reference	Acceptor Region	pangolin_inc	328	0.0
+gnomad_reference	Acceptor Region	pangolin_dec	328	0.0
+gnomad_reference	Acceptor Region	pangolin_max	328	0.0
+gnomad_reference	Acceptor Region	gpn_msa_score	328	0.0
+gnomad_reference	Acceptor Region	r_Acceptor Region	328	0.0
+gnomad_reference	Acceptor Region	r_Branch Point Region	328	0.0
+gnomad_reference	Acceptor Region	r_Canonical Acceptor Site	328	0.0
+gnomad_reference	Acceptor Region	r_Canonical Donor Site	328	0.0
+gnomad_reference	Acceptor Region	r_Deep Intronic	328	0.0
+gnomad_reference	Acceptor Region	r_Donor Region	328	0.0
+gnomad_reference	Acceptor Region	r_PPT Region	328	0.0
+gnomad_reference	Branch Point Region	phyloP100way_vertebrate	1032	0.0
+gnomad_reference	Branch Point Region	phyloP470way_mammalian	1032	0.06686046511627906
+gnomad_reference	Branch Point Region	phastCons100way_vertebrate	1032	0.0
+gnomad_reference	Branch Point Region	phastCons470way_mammalian	1032	0.00872093023255814
+gnomad_reference	Branch Point Region	gnomAD_pLI	1032	0.04844961240310078
+gnomad_reference	Branch Point Region	gnomAD_LOEUF	1032	0.0872093023255814
+gnomad_reference	Branch Point Region	ClinGen_Haploinsufficiency_Score	1032	0.7189922480620154
+gnomad_reference	Branch Point Region	DANN_score	1032	0.0009689922480620155
+gnomad_reference	Branch Point Region	exon_length	1032	0.0
+gnomad_reference	Branch Point Region	exon_length_mod3	1032	0.0
+gnomad_reference	Branch Point Region	dist_to_boundary	1032	0.0
+gnomad_reference	Branch Point Region	spt_orig	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Adipose Tissue	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Blood	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Blood Vessel	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Brain	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Colon	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Heart	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Kidney	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Liver	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Lung	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Muscle	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Nerve	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Small Intestine	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Skin	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Spleen	1032	0.0
+gnomad_reference	Branch Point Region	spt_o_Stomach	1032	0.0
+gnomad_reference	Branch Point Region	pangolin_inc	1032	0.0
+gnomad_reference	Branch Point Region	pangolin_dec	1032	0.0
+gnomad_reference	Branch Point Region	pangolin_max	1032	0.0
+gnomad_reference	Branch Point Region	gpn_msa_score	1032	0.0
+gnomad_reference	Branch Point Region	r_Acceptor Region	1032	0.0
+gnomad_reference	Branch Point Region	r_Branch Point Region	1032	0.0
+gnomad_reference	Branch Point Region	r_Canonical Acceptor Site	1032	0.0
+gnomad_reference	Branch Point Region	r_Canonical Donor Site	1032	0.0
+gnomad_reference	Branch Point Region	r_Deep Intronic	1032	0.0
+gnomad_reference	Branch Point Region	r_Donor Region	1032	0.0
+gnomad_reference	Branch Point Region	r_PPT Region	1032	0.0
+gnomad_reference	Deep Intronic	phyloP100way_vertebrate	97644	0.005294744172709025
+gnomad_reference	Deep Intronic	phyloP470way_mammalian	97644	0.052896235303756506
+gnomad_reference	Deep Intronic	phastCons100way_vertebrate	97644	0.005294744172709025
+gnomad_reference	Deep Intronic	phastCons470way_mammalian	97644	0.017184875670804147
+gnomad_reference	Deep Intronic	gnomAD_pLI	97644	0.04536889107369629
+gnomad_reference	Deep Intronic	gnomAD_LOEUF	97644	0.08932448486338126
+gnomad_reference	Deep Intronic	ClinGen_Haploinsufficiency_Score	97644	0.6684281676293474
+gnomad_reference	Deep Intronic	DANN_score	97644	0.0016795706853467698
+gnomad_reference	Deep Intronic	exon_length	97644	0.0
+gnomad_reference	Deep Intronic	exon_length_mod3	97644	0.0
+gnomad_reference	Deep Intronic	dist_to_boundary	97644	0.0
+gnomad_reference	Deep Intronic	spt_orig	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Adipose Tissue	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Blood	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Blood Vessel	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Brain	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Colon	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Heart	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Kidney	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Liver	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Lung	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Muscle	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Nerve	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Small Intestine	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Skin	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Spleen	97644	0.0
+gnomad_reference	Deep Intronic	spt_o_Stomach	97644	0.0
+gnomad_reference	Deep Intronic	pangolin_inc	97644	0.0
+gnomad_reference	Deep Intronic	pangolin_dec	97644	0.0
+gnomad_reference	Deep Intronic	pangolin_max	97644	0.0
+gnomad_reference	Deep Intronic	gpn_msa_score	97644	1.0241284666748597e-05
+gnomad_reference	Deep Intronic	r_Acceptor Region	97644	0.0
+gnomad_reference	Deep Intronic	r_Branch Point Region	97644	0.0
+gnomad_reference	Deep Intronic	r_Canonical Acceptor Site	97644	0.0
+gnomad_reference	Deep Intronic	r_Canonical Donor Site	97644	0.0
+gnomad_reference	Deep Intronic	r_Deep Intronic	97644	0.0
+gnomad_reference	Deep Intronic	r_Donor Region	97644	0.0
+gnomad_reference	Deep Intronic	r_PPT Region	97644	0.0
+gnomad_reference	Donor Region	phyloP100way_vertebrate	255	0.0
+gnomad_reference	Donor Region	phyloP470way_mammalian	255	0.047058823529411764
+gnomad_reference	Donor Region	phastCons100way_vertebrate	255	0.0
+gnomad_reference	Donor Region	phastCons470way_mammalian	255	0.0
+gnomad_reference	Donor Region	gnomAD_pLI	255	0.043137254901960784
+gnomad_reference	Donor Region	gnomAD_LOEUF	255	0.07450980392156863
+gnomad_reference	Donor Region	ClinGen_Haploinsufficiency_Score	255	0.7450980392156863
+gnomad_reference	Donor Region	DANN_score	255	0.0
+gnomad_reference	Donor Region	exon_length	255	0.0
+gnomad_reference	Donor Region	exon_length_mod3	255	0.0
+gnomad_reference	Donor Region	dist_to_boundary	255	0.0
+gnomad_reference	Donor Region	spt_orig	255	0.0
+gnomad_reference	Donor Region	spt_o_Adipose Tissue	255	0.0
+gnomad_reference	Donor Region	spt_o_Blood	255	0.0
+gnomad_reference	Donor Region	spt_o_Blood Vessel	255	0.0
+gnomad_reference	Donor Region	spt_o_Brain	255	0.0
+gnomad_reference	Donor Region	spt_o_Colon	255	0.0
+gnomad_reference	Donor Region	spt_o_Heart	255	0.0
+gnomad_reference	Donor Region	spt_o_Kidney	255	0.0
+gnomad_reference	Donor Region	spt_o_Liver	255	0.0
+gnomad_reference	Donor Region	spt_o_Lung	255	0.0
+gnomad_reference	Donor Region	spt_o_Muscle	255	0.0
+gnomad_reference	Donor Region	spt_o_Nerve	255	0.0
+gnomad_reference	Donor Region	spt_o_Small Intestine	255	0.0
+gnomad_reference	Donor Region	spt_o_Skin	255	0.0
+gnomad_reference	Donor Region	spt_o_Spleen	255	0.0
+gnomad_reference	Donor Region	spt_o_Stomach	255	0.0
+gnomad_reference	Donor Region	pangolin_inc	255	0.0
+gnomad_reference	Donor Region	pangolin_dec	255	0.0
+gnomad_reference	Donor Region	pangolin_max	255	0.0
+gnomad_reference	Donor Region	gpn_msa_score	255	0.0
+gnomad_reference	Donor Region	r_Acceptor Region	255	0.0
+gnomad_reference	Donor Region	r_Branch Point Region	255	0.0
+gnomad_reference	Donor Region	r_Canonical Acceptor Site	255	0.0
+gnomad_reference	Donor Region	r_Canonical Donor Site	255	0.0
+gnomad_reference	Donor Region	r_Deep Intronic	255	0.0
+gnomad_reference	Donor Region	r_Donor Region	255	0.0
+gnomad_reference	Donor Region	r_PPT Region	255	0.0
+gnomad_reference	PPT Region	phyloP100way_vertebrate	741	0.0
+gnomad_reference	PPT Region	phyloP470way_mammalian	741	0.06477732793522267
+gnomad_reference	PPT Region	phastCons100way_vertebrate	741	0.0
+gnomad_reference	PPT Region	phastCons470way_mammalian	741	0.002699055330634278
+gnomad_reference	PPT Region	gnomAD_pLI	741	0.06477732793522267
+gnomad_reference	PPT Region	gnomAD_LOEUF	741	0.07692307692307693
+gnomad_reference	PPT Region	ClinGen_Haploinsufficiency_Score	741	0.7759784075573549
+gnomad_reference	PPT Region	DANN_score	741	0.0
+gnomad_reference	PPT Region	exon_length	741	0.0
+gnomad_reference	PPT Region	exon_length_mod3	741	0.0
+gnomad_reference	PPT Region	dist_to_boundary	741	0.0
+gnomad_reference	PPT Region	spt_orig	741	0.0
+gnomad_reference	PPT Region	spt_o_Adipose Tissue	741	0.0
+gnomad_reference	PPT Region	spt_o_Blood	741	0.0
+gnomad_reference	PPT Region	spt_o_Blood Vessel	741	0.0
+gnomad_reference	PPT Region	spt_o_Brain	741	0.0
+gnomad_reference	PPT Region	spt_o_Colon	741	0.0
+gnomad_reference	PPT Region	spt_o_Heart	741	0.0
+gnomad_reference	PPT Region	spt_o_Kidney	741	0.0
+gnomad_reference	PPT Region	spt_o_Liver	741	0.0
+gnomad_reference	PPT Region	spt_o_Lung	741	0.0
+gnomad_reference	PPT Region	spt_o_Muscle	741	0.0
+gnomad_reference	PPT Region	spt_o_Nerve	741	0.0
+gnomad_reference	PPT Region	spt_o_Small Intestine	741	0.0
+gnomad_reference	PPT Region	spt_o_Skin	741	0.0
+gnomad_reference	PPT Region	spt_o_Spleen	741	0.0
+gnomad_reference	PPT Region	spt_o_Stomach	741	0.0
+gnomad_reference	PPT Region	pangolin_inc	741	0.0
+gnomad_reference	PPT Region	pangolin_dec	741	0.0
+gnomad_reference	PPT Region	pangolin_max	741	0.0
+gnomad_reference	PPT Region	gpn_msa_score	741	0.0
+gnomad_reference	PPT Region	r_Acceptor Region	741	0.0
+gnomad_reference	PPT Region	r_Branch Point Region	741	0.0
+gnomad_reference	PPT Region	r_Canonical Acceptor Site	741	0.0
+gnomad_reference	PPT Region	r_Canonical Donor Site	741	0.0
+gnomad_reference	PPT Region	r_Deep Intronic	741	0.0
+gnomad_reference	PPT Region	r_Donor Region	741	0.0
+gnomad_reference	PPT Region	r_PPT Region	741	0.0
+gnomad_reference_stratified	Acceptor Region	phyloP100way_vertebrate	10000	0.0
+gnomad_reference_stratified	Acceptor Region	phyloP470way_mammalian	10000	0.0624
+gnomad_reference_stratified	Acceptor Region	phastCons100way_vertebrate	10000	0.0
+gnomad_reference_stratified	Acceptor Region	phastCons470way_mammalian	10000	0.002
+gnomad_reference_stratified	Acceptor Region	gnomAD_pLI	10000	0.0553
+gnomad_reference_stratified	Acceptor Region	gnomAD_LOEUF	10000	0.0867
+gnomad_reference_stratified	Acceptor Region	ClinGen_Haploinsufficiency_Score	10000	0.7675
+gnomad_reference_stratified	Acceptor Region	DANN_score	10000	0.001
+gnomad_reference_stratified	Acceptor Region	exon_length	10000	0.0
+gnomad_reference_stratified	Acceptor Region	exon_length_mod3	10000	0.0
+gnomad_reference_stratified	Acceptor Region	dist_to_boundary	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_orig	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Adipose Tissue	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Blood	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Blood Vessel	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Brain	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Colon	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Heart	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Kidney	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Liver	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Lung	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Muscle	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Nerve	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Small Intestine	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Skin	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Spleen	10000	0.0
+gnomad_reference_stratified	Acceptor Region	spt_o_Stomach	10000	0.0
+gnomad_reference_stratified	Acceptor Region	pangolin_inc	10000	0.0
+gnomad_reference_stratified	Acceptor Region	pangolin_dec	10000	0.0
+gnomad_reference_stratified	Acceptor Region	pangolin_max	10000	0.0
+gnomad_reference_stratified	Acceptor Region	gpn_msa_score	10000	0.0
+gnomad_reference_stratified	Acceptor Region	r_Acceptor Region	10000	0.0
+gnomad_reference_stratified	Acceptor Region	r_Branch Point Region	10000	0.0
+gnomad_reference_stratified	Acceptor Region	r_Canonical Acceptor Site	10000	0.0
+gnomad_reference_stratified	Acceptor Region	r_Canonical Donor Site	10000	0.0
+gnomad_reference_stratified	Acceptor Region	r_Deep Intronic	10000	0.0
+gnomad_reference_stratified	Acceptor Region	r_Donor Region	10000	0.0
+gnomad_reference_stratified	Acceptor Region	r_PPT Region	10000	0.0
+gnomad_reference_stratified	Branch Point Region	phyloP100way_vertebrate	10000	0.0
+gnomad_reference_stratified	Branch Point Region	phyloP470way_mammalian	10000	0.0694
+gnomad_reference_stratified	Branch Point Region	phastCons100way_vertebrate	10000	0.0
+gnomad_reference_stratified	Branch Point Region	phastCons470way_mammalian	10000	0.0102
+gnomad_reference_stratified	Branch Point Region	gnomAD_pLI	10000	0.0495
+gnomad_reference_stratified	Branch Point Region	gnomAD_LOEUF	10000	0.0863
+gnomad_reference_stratified	Branch Point Region	ClinGen_Haploinsufficiency_Score	10000	0.7186
+gnomad_reference_stratified	Branch Point Region	DANN_score	10000	0.0015
+gnomad_reference_stratified	Branch Point Region	exon_length	10000	0.0
+gnomad_reference_stratified	Branch Point Region	exon_length_mod3	10000	0.0
+gnomad_reference_stratified	Branch Point Region	dist_to_boundary	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_orig	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Adipose Tissue	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Blood	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Blood Vessel	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Brain	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Colon	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Heart	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Kidney	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Liver	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Lung	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Muscle	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Nerve	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Small Intestine	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Skin	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Spleen	10000	0.0
+gnomad_reference_stratified	Branch Point Region	spt_o_Stomach	10000	0.0
+gnomad_reference_stratified	Branch Point Region	pangolin_inc	10000	0.0
+gnomad_reference_stratified	Branch Point Region	pangolin_dec	10000	0.0
+gnomad_reference_stratified	Branch Point Region	pangolin_max	10000	0.0
+gnomad_reference_stratified	Branch Point Region	gpn_msa_score	10000	0.0
+gnomad_reference_stratified	Branch Point Region	r_Acceptor Region	10000	0.0
+gnomad_reference_stratified	Branch Point Region	r_Branch Point Region	10000	0.0
+gnomad_reference_stratified	Branch Point Region	r_Canonical Acceptor Site	10000	0.0
+gnomad_reference_stratified	Branch Point Region	r_Canonical Donor Site	10000	0.0
+gnomad_reference_stratified	Branch Point Region	r_Deep Intronic	10000	0.0
+gnomad_reference_stratified	Branch Point Region	r_Donor Region	10000	0.0
+gnomad_reference_stratified	Branch Point Region	r_PPT Region	10000	0.0
+gnomad_reference_stratified	Deep Intronic	phyloP100way_vertebrate	10000	0.0038
+gnomad_reference_stratified	Deep Intronic	phyloP470way_mammalian	10000	0.0516
+gnomad_reference_stratified	Deep Intronic	phastCons100way_vertebrate	10000	0.0038
+gnomad_reference_stratified	Deep Intronic	phastCons470way_mammalian	10000	0.0172
+gnomad_reference_stratified	Deep Intronic	gnomAD_pLI	10000	0.0464
+gnomad_reference_stratified	Deep Intronic	gnomAD_LOEUF	10000	0.091
+gnomad_reference_stratified	Deep Intronic	ClinGen_Haploinsufficiency_Score	10000	0.6627
+gnomad_reference_stratified	Deep Intronic	DANN_score	10000	0.0015
+gnomad_reference_stratified	Deep Intronic	exon_length	10000	0.0
+gnomad_reference_stratified	Deep Intronic	exon_length_mod3	10000	0.0
+gnomad_reference_stratified	Deep Intronic	dist_to_boundary	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_orig	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Adipose Tissue	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Blood	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Blood Vessel	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Brain	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Colon	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Heart	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Kidney	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Liver	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Lung	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Muscle	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Nerve	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Small Intestine	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Skin	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Spleen	10000	0.0
+gnomad_reference_stratified	Deep Intronic	spt_o_Stomach	10000	0.0
+gnomad_reference_stratified	Deep Intronic	pangolin_inc	10000	0.0
+gnomad_reference_stratified	Deep Intronic	pangolin_dec	10000	0.0
+gnomad_reference_stratified	Deep Intronic	pangolin_max	10000	0.0
+gnomad_reference_stratified	Deep Intronic	gpn_msa_score	10000	0.0
+gnomad_reference_stratified	Deep Intronic	r_Acceptor Region	10000	0.0
+gnomad_reference_stratified	Deep Intronic	r_Branch Point Region	10000	0.0
+gnomad_reference_stratified	Deep Intronic	r_Canonical Acceptor Site	10000	0.0
+gnomad_reference_stratified	Deep Intronic	r_Canonical Donor Site	10000	0.0
+gnomad_reference_stratified	Deep Intronic	r_Deep Intronic	10000	0.0
+gnomad_reference_stratified	Deep Intronic	r_Donor Region	10000	0.0
+gnomad_reference_stratified	Deep Intronic	r_PPT Region	10000	0.0
+gnomad_reference_stratified	Donor Region	phyloP100way_vertebrate	10000	0.0
+gnomad_reference_stratified	Donor Region	phyloP470way_mammalian	10000	0.0599
+gnomad_reference_stratified	Donor Region	phastCons100way_vertebrate	10000	0.0
+gnomad_reference_stratified	Donor Region	phastCons470way_mammalian	10000	0.0029
+gnomad_reference_stratified	Donor Region	gnomAD_pLI	10000	0.0488
+gnomad_reference_stratified	Donor Region	gnomAD_LOEUF	10000	0.0793
+gnomad_reference_stratified	Donor Region	ClinGen_Haploinsufficiency_Score	10000	0.7579
+gnomad_reference_stratified	Donor Region	DANN_score	10000	0.0018
+gnomad_reference_stratified	Donor Region	exon_length	10000	0.0
+gnomad_reference_stratified	Donor Region	exon_length_mod3	10000	0.0
+gnomad_reference_stratified	Donor Region	dist_to_boundary	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_orig	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Adipose Tissue	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Blood	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Blood Vessel	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Brain	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Colon	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Heart	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Kidney	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Liver	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Lung	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Muscle	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Nerve	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Small Intestine	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Skin	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Spleen	10000	0.0
+gnomad_reference_stratified	Donor Region	spt_o_Stomach	10000	0.0
+gnomad_reference_stratified	Donor Region	pangolin_inc	10000	0.0
+gnomad_reference_stratified	Donor Region	pangolin_dec	10000	0.0
+gnomad_reference_stratified	Donor Region	pangolin_max	10000	0.0
+gnomad_reference_stratified	Donor Region	gpn_msa_score	10000	0.0
+gnomad_reference_stratified	Donor Region	r_Acceptor Region	10000	0.0
+gnomad_reference_stratified	Donor Region	r_Branch Point Region	10000	0.0
+gnomad_reference_stratified	Donor Region	r_Canonical Acceptor Site	10000	0.0
+gnomad_reference_stratified	Donor Region	r_Canonical Donor Site	10000	0.0
+gnomad_reference_stratified	Donor Region	r_Deep Intronic	10000	0.0
+gnomad_reference_stratified	Donor Region	r_Donor Region	10000	0.0
+gnomad_reference_stratified	Donor Region	r_PPT Region	10000	0.0
+gnomad_reference_stratified	PPT Region	phyloP100way_vertebrate	10000	0.0
+gnomad_reference_stratified	PPT Region	phyloP470way_mammalian	10000	0.0594
+gnomad_reference_stratified	PPT Region	phastCons100way_vertebrate	10000	0.0
+gnomad_reference_stratified	PPT Region	phastCons470way_mammalian	10000	0.0054
+gnomad_reference_stratified	PPT Region	gnomAD_pLI	10000	0.0492
+gnomad_reference_stratified	PPT Region	gnomAD_LOEUF	10000	0.0825
+gnomad_reference_stratified	PPT Region	ClinGen_Haploinsufficiency_Score	10000	0.7515
+gnomad_reference_stratified	PPT Region	DANN_score	10000	0.0019
+gnomad_reference_stratified	PPT Region	exon_length	10000	0.0
+gnomad_reference_stratified	PPT Region	exon_length_mod3	10000	0.0
+gnomad_reference_stratified	PPT Region	dist_to_boundary	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_orig	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Adipose Tissue	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Blood	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Blood Vessel	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Brain	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Colon	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Heart	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Kidney	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Liver	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Lung	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Muscle	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Nerve	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Small Intestine	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Skin	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Spleen	10000	0.0
+gnomad_reference_stratified	PPT Region	spt_o_Stomach	10000	0.0
+gnomad_reference_stratified	PPT Region	pangolin_inc	10000	0.0
+gnomad_reference_stratified	PPT Region	pangolin_dec	10000	0.0
+gnomad_reference_stratified	PPT Region	pangolin_max	10000	0.0
+gnomad_reference_stratified	PPT Region	gpn_msa_score	10000	0.0
+gnomad_reference_stratified	PPT Region	r_Acceptor Region	10000	0.0
+gnomad_reference_stratified	PPT Region	r_Branch Point Region	10000	0.0
+gnomad_reference_stratified	PPT Region	r_Canonical Acceptor Site	10000	0.0
+gnomad_reference_stratified	PPT Region	r_Canonical Donor Site	10000	0.0
+gnomad_reference_stratified	PPT Region	r_Deep Intronic	10000	0.0
+gnomad_reference_stratified	PPT Region	r_Donor Region	10000	0.0
+gnomad_reference_stratified	PPT Region	r_PPT Region	10000	0.0

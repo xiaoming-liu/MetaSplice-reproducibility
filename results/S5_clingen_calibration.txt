@@ -1,0 +1,151 @@
+========================================================================================
+S5 -- ClinGen PP3/BP4 CALIBRATION OF METASPLICE v2.0 AND SPLICEAI (Amendment 3; Pejaver et al. 2022)
+========================================================================================
+prior 0.0441; c = 1124; LR needed: Supporting 2.406, Moderate 5.79, Strong 33.53, VeryStrong 1124
+windows: >= 100 labelled variants and >= 25 of each class; 10,000 bootstrap iterations; one-sided 95% bounds
+
+Cohorts (non-canonical, gnomAD AF < 0.01, gene with >= 1 P/LP in the training release):
+  derivation (training, out of fold)   n=299,331  P=3,598  B=295,733  MetaSplice scored 100.0%  SpliceAI scored 99.3%
+  validation (strict test set)         n=24,057  P=239  B=23,818  MetaSplice scored 100.0%  SpliceAI scored 99.5%
+  yield (VUS and conflicting)          n=61,016  MetaSplice scored 100.0%  SpliceAI scored 99.2%
+
+auPRC on the validation cohort, each tool on the variants it scores: MetaSplice 0.9368  SpliceAI 0.7455
+auPRC on the 23,936 validation variants both tools score: MetaSplice 0.9372  SpliceAI 0.7455
+SpliceAI leaves 121 validation variants unscored (1 P/LP)
+
+----------------------------------------------------------------------------------------
+1. CANDIDATE THRESHOLDS derived on the training data (out of fold), prior 0.0441
+----------------------------------------------------------------------------------------
+  MetaSplice: n=299,331 (P=3,598, B=295,733); grid 2000 points; median window half-width 0.000138
+    PP3_VeryStrong  (LR>=1124, posterior>=0.981):  score >= 0.994
+    PP3_Strong      (LR>=33.53, posterior>=0.607):  score >= 0.548
+    PP3_Moderate    (LR>=5.79, posterior>=0.211):  score >= 0.158
+    PP3_Supporting  (LR>=2.406, posterior>=0.100):  score >= 0.05
+    BP4_Supporting  (LR<=0.4156, posterior<=0.0188):  score <= 0.00281
+    BP4_Moderate    (LR<=0.1727, posterior<=0.0079):  score <= 0.00108
+    BP4_Strong      (LR<=0.02983, posterior<=0.0014):  score <= 1.83e-04
+    BP4_VeryStrong  (LR<=0.0008897, posterior<=0.0000):  score <= not reached
+  SpliceAI: n=297,322 (P=3,582, B=293,740); grid 101 points; median window half-width 0.01
+    PP3_VeryStrong  (LR>=1124, posterior>=0.981):  score >= not reached
+    PP3_Strong      (LR>=33.53, posterior>=0.607):  score >= 0.49
+    PP3_Moderate    (LR>=5.79, posterior>=0.211):  score >= 0.3
+    PP3_Supporting  (LR>=2.406, posterior>=0.100):  score >= 0.2
+    BP4_Supporting  (LR<=0.4156, posterior<=0.0188):  score <= 0.04
+    BP4_Moderate    (LR<=0.1727, posterior<=0.0079):  score <= 0.01
+    BP4_Strong      (LR<=0.02983, posterior<=0.0014):  score <= not reached
+    BP4_VeryStrong  (LR<=0.0008897, posterior<=0.0000):  score <= not reached
+
+----------------------------------------------------------------------------------------
+2. VALIDATION on the strict test set: interval LR must meet the level's LR
+   point = point estimate meets the requirement (Pejaver et al.'s criterion);
+   CI = the conservative exact 95% CI also lies wholly on the required side
+----------------------------------------------------------------------------------------
+  MetaSplice
+    interval                 P       B        LR            exact 95% CI  needed    point    CI
+    PP3_VeryStrong          93       0       inf   [1.73e+03, inf]>=1.12e+03meets    clears
+    PP3_Strong             115      13       882   [410, 2.11e+03]>=33.5    meets    clears
+    PP3_Moderate            14      31        45   [15.3, 122]  >=5.79    meets    clears
+    PP3_Supporting           2      69      2.89   [0.185, 15.4]>=2.41    meets    INCONCLUSIVE
+    Indeterminate            8    1664     0.479   [0.173, 1.06]                   
+    BP4_Supporting           1    2025    0.0492   [0.00059, 0.326]<=0.416   meets    clears
+    BP4_Moderate             3    7583    0.0394   [0.00612, 0.129]<=0.173   meets    clears
+    BP4_Strong               3   12433     0.024   [0.00376, 0.0781]<=0.0298  meets    INCONCLUSIVE
+  SpliceAI
+    interval                 P       B        LR            exact 95% CI  needed    point    CI
+    PP3_Strong             164      59       277   [186, 415]   >=33.5    meets    clears
+    PP3_Moderate            30     141      21.2   [11.4, 37.3] >=5.79    meets    clears
+    PP3_Supporting          17     263      6.44   [3.06, 12.3] >=2.41    meets    clears
+    Indeterminate           10    2356     0.423   [0.175, 0.855]                   
+    BP4_Supporting           2    2591    0.0769   [0.00618, 0.322]<=0.416   meets    clears
+    BP4_Moderate            15   18288    0.0817   [0.0421, 0.141]<=0.173   meets    clears
+    NoScore                  1     120      0.83   [0.00853, 6.49]                   
+
+----------------------------------------------------------------------------------------
+3. EVIDENCE ASSIGNED on the strict test set (share of each class)
+----------------------------------------------------------------------------------------
+  on the 23,936 variants SpliceAI scores (238 P/LP), separating accuracy from coverage:
+    MetaSplice       P with PP3 93.7% (Moderate+ 92.9%); B with BP4 92.5%; B given PP3 0.48%; P given BP4 2.9%
+    SpliceAI         P with PP3 88.7% (Moderate+ 81.5%); B with BP4 88.1%; B given PP3 1.95%; P given BP4 7.1%
+  on all validation variants (variants a tool does not score receive no evidence):
+  MetaSplice       P/LP with PP3: 93.7% (Moderate or stronger 92.9%); B/LB with BP4: 92.5%
+                   B/LB given PP3: 0.47% of B/LB; P/LP given BP4: 2.9% of P/LP
+  SpliceAI         P/LP with PP3: 88.3% (Moderate or stronger 81.2%); B/LB with BP4: 87.7%
+                   B/LB given PP3: 1.94% of B/LB; P/LP given BP4: 7.1% of P/LP
+
+----------------------------------------------------------------------------------------
+4. EVIDENCE YIELD on uncertain and conflicting variants (same cohort filters)
+----------------------------------------------------------------------------------------
+                MetaSplice  SpliceAI
+PP3_VeryStrong        3824         0
+PP3_Strong           11137     11558
+PP3_Moderate          3959      4624
+PP3_Supporting        3454      3664
+Indeterminate        13960      8060
+BP4_Supporting        5913      5092
+BP4_Moderate         10396     27519
+BP4_Strong            8373         0
+BP4_VeryStrong           0         0
+NoScore                  0       499
+total                61016     61016
+
+  VUS scored by both (n=60,517): MetaSplice evidence (rows) x SpliceAI (columns)
+SpliceAI        BP4_Moderate  BP4_Supporting  Indeterminate  PP3_Moderate  PP3_Strong  PP3_Supporting
+MetaSplice                                                                                           
+BP4_Moderate            7834            1047            976           142          68             223
+BP4_Strong              7287             598            317            24          12              46
+BP4_Supporting          3957             714            705           141          94             234
+Indeterminate           7064            1626           2654           836         634            1044
+PP3_Moderate             405             389           1058           698         793             590
+PP3_Strong               241             294           1351          2064        6105            1017
+PP3_Supporting           712             422            960           490         383             460
+PP3_VeryStrong            19               2             39           229        3469              50
+
+----------------------------------------------------------------------------------------
+5. SENSITIVITY
+----------------------------------------------------------------------------------------
+  a. prior of pathogenicity (same local LR curves; only the LR needed changes)
+     prior 0.1: c = 350; LR needed Supporting 2.08, Moderate 4.33, Strong 18.7, VeryStrong 350
+       MetaSplice       PP3 Sup 0.038  Mod 0.102  Str 0.384  Ver 0.972   |  BP4 Sup 0.00342  Mod 0.00217  Str 3.11e-04  Ver not reached
+       SpliceAI         PP3 Sup 0.2  Mod 0.26  Str 0.42  Ver 0.89   |  BP4 Sup 0.09  Mod 0.03  Str not reached  Ver not reached
+     prior 0.01: c = 8574; LR needed Supporting 3.1, Moderate 9.62, Strong 92.6, VeryStrong 8.57e+03
+       MetaSplice       PP3 Sup 0.084  Mod 0.19  Str 0.894  Ver not reached   |  BP4 Sup 0.00264  Mod 3.96e-04  Str not reached  Ver not reached
+       SpliceAI         PP3 Sup 0.22  Mod 0.36  Str 0.63  Ver not reached   |  BP4 Sup 0.04  Mod 0.00e+00  Str not reached  Ver not reached
+  b. window size (prior 0.0441)
+     >=10 of each class
+       MetaSplice       PP3 Sup 0.094  Mod 0.17  Str 0.548  Ver 0.995   |  BP4 Sup 0.00233  Mod 4.54e-04  Str 4.33e-05  Ver not reached
+       SpliceAI         PP3 Sup 0.26  Mod 0.35  Str 0.49  Ver not reached   |  BP4 Sup 0.04  Mod 0.02  Str not reached  Ver not reached
+     >=50 of each class
+       MetaSplice       PP3 Sup 0.036  Mod 0.126  Str 0.532  Ver 0.991   |  BP4 Sup 0.00486  Mod 0.00162  Str 2.31e-04  Ver not reached
+       SpliceAI         PP3 Sup 0.2  Mod 0.27  Str 0.49  Ver not reached   |  BP4 Sup 0.08  Mod 0.02  Str not reached  Ver not reached
+     >=3% of derivation variants (gnomAD-rule analogue)
+       MetaSplice       PP3 Sup 0.178  Mod 0.424  Str 0.506  Ver not reached   |  BP4 Sup 0.00389  Mod 4.51e-04  Str not reached  Ver not reached
+       SpliceAI         PP3 Sup 0.22  Mod 0.33  Str 0.58  Ver not reached   |  BP4 Sup 0.09  Mod 0.02  Str not reached  Ver not reached
+     >=100 labelled only
+       MetaSplice       PP3 Sup 0.15  Mod 0.17  Str 0.548  Ver 0.994   |  BP4 Sup 6.22e-06  Mod 6.22e-06  Str 6.22e-06  Ver 6.22e-06
+       SpliceAI         PP3 Sup 0.26  Mod 0.35  Str 0.49  Ver not reached   |  BP4 Sup 0.04  Mod 0.02  Str not reached  Ver not reached
+  c. thresholds derived directly on the strict test set (prior 0.0441)
+       MetaSplice       PP3 Sup 0.304  Mod 0.308  Str 0.454  Ver not reached   |  BP4 Sup 0.238  Mod 0.21  Str not reached  Ver not reached
+       SpliceAI         PP3 Sup 0.23  Mod 0.3  Str 0.45  Ver not reached   |  BP4 Sup 0.12  Mod 0.1  Str not reached  Ver not reached
+  d. local posterior of SpliceAI at the commonly applied cut-offs 0.2 (PP3) and 0.1 (BP4)
+       SpliceAI 0.20: lr 4.16 (one-sided 95% bounds 3.02 - 5.43); posterior 0.161
+       SpliceAI 0.10: lr 0.672 (one-sided 95% bounds 0.473 - 0.882); posterior 0.030
+
+----------------------------------------------------------------------------------------
+6. BY REGION on the strict test set (derivation thresholds; interval LR for any PP3 / any BP4)
+----------------------------------------------------------------------------------------
+  MetaSplice
+    Donor Region                     P= 100 B=  1584  PP3 in 98.0% of P, LR     111   BP4 in 92.9% of B, LR 0.0215
+    Acceptor Region                  P=  35 B=  4557  PP3 in 91.4% of P, LR     113   BP4 in 86.0% of B, LR 0.0664
+    PPT Region                       P=  19 B=  7968  PP3 in 89.5% of P, LR     446   BP4 in 92.4% of B, LR 0.0569
+    Branch Point Region              P=   5 B=   163  PP3 in 80.0% of P, LR    10.9   BP4 in 62.0% of B, LR 0
+    Deep Intronic                    P=  80 B=  9546  PP3 in 91.2% of P, LR     256   BP4 in 96.2% of B, LR 0.026
+    Deep Intronic, sensitivity set   P=  62 B=  7826  PP3 in 93.5% of P, LR     261   BP4 in 96.5% of B, LR 0
+  SpliceAI
+    Donor Region                     P= 100 B=  1584  PP3 in 88.0% of P, LR    30.3   BP4 in 88.4% of B, LR 0.0565
+    Acceptor Region                  P=  35 B=  4557  PP3 in 94.3% of P, LR    34.4   BP4 in 82.8% of B, LR 0.069
+    PPT Region                       P=  19 B=  7968  PP3 in 94.7% of P, LR    46.9   BP4 in 84.9% of B, LR 0.062
+    Branch Point Region              P=   5 B=   163  PP3 in 80.0% of P, LR    43.5   BP4 in 87.7% of B, LR 0
+    Deep Intronic                    P=  80 B=  9546  PP3 in 85.0% of P, LR    63.4   BP4 in 92.1% of B, LR 0.122
+    Deep Intronic, sensitivity set   P=  62 B=  7826  PP3 in 91.9% of P, LR    74.2   BP4 in 92.4% of B, LR 0.0699
+
+wrote results/S5_thresholds.tsv, S5_validation_intervals.tsv, S5_vus_yield.tsv, S5_curves.joblib

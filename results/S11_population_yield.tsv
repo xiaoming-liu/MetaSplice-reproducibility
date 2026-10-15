@@ -1,0 +1,197 @@
+tool	config	basis	n	level	share	prior	bound	flags	group
+MetaSplice	main	all the tool scores	100000	PP3 >= Supporting	0.02944	0.0441	0.4413525308267095		
+MetaSplice	main	all the tool scores	100000	PP3 >= Moderate	0.01134	0.0441	0.20919004419732795		
+MetaSplice	main	all the tool scores	100000	PP3 >= Strong	0.00357	0.0441	0.07261210659386515		
+MetaSplice	main	all the tool scores	100000	PP3 >= VeryStrong	0.0002	0.0441	0.04495044483985765		
+MetaSplice	main	all the tool scores	2302	PP3 >= Supporting	0.007384882710686359	0.0441	0.4413525308267095		Deep Intronic <= 50 bp
+MetaSplice	main	all the tool scores	2302	PP3 >= Moderate	0.004344048653344918	0.0441	0.20919004419732795		Deep Intronic <= 50 bp
+MetaSplice	main	all the tool scores	2302	PP3 >= Strong	0.002172024326672459	0.0441	0.07261210659386515		Deep Intronic <= 50 bp
+MetaSplice	main	all the tool scores	2302	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		Deep Intronic <= 50 bp
+MetaSplice	main	all the tool scores	16021	PP3 >= Supporting	0.011235253729480057	0.0441	0.4413525308267095		Deep Intronic 51-500 bp
+MetaSplice	main	all the tool scores	16021	PP3 >= Moderate	0.005742463017289807	0.0441	0.20919004419732795		Deep Intronic 51-500 bp
+MetaSplice	main	all the tool scores	16021	PP3 >= Strong	0.002496723050995568	0.0441	0.07261210659386515		Deep Intronic 51-500 bp
+MetaSplice	main	all the tool scores	16021	PP3 >= VeryStrong	0.00018725422882466764	0.0441	0.04495044483985765		Deep Intronic 51-500 bp
+MetaSplice	main	all the tool scores	79321	PP3 >= Supporting	0.032110033912835186	0.0441	0.4413525308267095		Deep Intronic > 500 bp
+MetaSplice	main	all the tool scores	79321	PP3 >= Moderate	0.011031126687762384	0.0441	0.20919004419732795		Deep Intronic > 500 bp
+MetaSplice	main	all the tool scores	79321	PP3 >= Strong	0.0026600774069918433	0.0441	0.07261210659386515		Deep Intronic > 500 bp
+MetaSplice	main	all the tool scores	79321	PP3 >= VeryStrong	1.2607001928871294e-05	0.0441	0.04495044483985765		Deep Intronic > 500 bp
+MetaSplice	main	all the tool scores	1944	PP3 >= Supporting	0.004629629629629629	0.0441	0.4413525308267095		DI sensitivity set <= 50 bp
+MetaSplice	main	all the tool scores	1944	PP3 >= Moderate	0.0030864197530864196	0.0441	0.20919004419732795		DI sensitivity set <= 50 bp
+MetaSplice	main	all the tool scores	1944	PP3 >= Strong	0.00257201646090535	0.0441	0.07261210659386515		DI sensitivity set <= 50 bp
+MetaSplice	main	all the tool scores	1944	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		DI sensitivity set <= 50 bp
+MetaSplice	main	all the tool scores	13699	PP3 >= Supporting	0.010219724067450179	0.0441	0.4413525308267095		DI sensitivity set 51-500 bp
+MetaSplice	main	all the tool scores	13699	PP3 >= Moderate	0.00525585809183152	0.0441	0.20919004419732795		DI sensitivity set 51-500 bp
+MetaSplice	main	all the tool scores	13699	PP3 >= Strong	0.0022629389006496824	0.0441	0.07261210659386515		DI sensitivity set 51-500 bp
+MetaSplice	main	all the tool scores	13699	PP3 >= VeryStrong	0.00014599605810643111	0.0441	0.04495044483985765		DI sensitivity set 51-500 bp
+MetaSplice	main	all the tool scores	78045	PP3 >= Supporting	0.03144339803959254	0.0441	0.4413525308267095		DI sensitivity set > 500 bp
+MetaSplice	main	all the tool scores	78045	PP3 >= Moderate	0.010686142610032673	0.0441	0.20919004419732795		DI sensitivity set > 500 bp
+MetaSplice	main	all the tool scores	78045	PP3 >= Strong	0.0025113716445640337	0.0441	0.07261210659386515		DI sensitivity set > 500 bp
+MetaSplice	main	all the tool scores	78045	PP3 >= VeryStrong	1.2813120635530783e-05	0.0441	0.04495044483985765		DI sensitivity set > 500 bp
+MetaSplice	main	all the tool scores	100000	BP4_Supporting	0.17187	0.0441			
+MetaSplice	main	all the tool scores	100000	BP4_Moderate	0.33656	0.0441			
+MetaSplice	main	all the tool scores	100000	BP4_Strong	0.17203	0.0441			
+MetaSplice	main	all the tool scores	100000	BP4_VeryStrong	0.0	0.0441			
+MetaSplice	main	both tools score	96024	PP3 >= Supporting	0.029242689327668082	0.0441	0.4413525308267095		
+MetaSplice	main	both tools score	96024	PP3 >= Moderate	0.011320086645005415	0.0441	0.20919004419732795		
+MetaSplice	main	both tools score	96024	PP3 >= Strong	0.0035824377239023577	0.0441	0.07261210659386515		
+MetaSplice	main	both tools score	96024	PP3 >= VeryStrong	0.00020828126301757893	0.0441	0.04495044483985765		
+MetaSplice	main	both tools score	2269	PP3 >= Supporting	0.007051564565888057	0.0441	0.4413525308267095		Deep Intronic <= 50 bp
+MetaSplice	main	both tools score	2269	PP3 >= Moderate	0.003966505068312032	0.0441	0.20919004419732795		Deep Intronic <= 50 bp
+MetaSplice	main	both tools score	2269	PP3 >= Strong	0.0017628911414720142	0.0441	0.07261210659386515		Deep Intronic <= 50 bp
+MetaSplice	main	both tools score	2269	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		Deep Intronic <= 50 bp
+MetaSplice	main	both tools score	15771	PP3 >= Supporting	0.011286538583476	0.0441	0.4413525308267095		Deep Intronic 51-500 bp
+MetaSplice	main	both tools score	15771	PP3 >= Moderate	0.005833491852133663	0.0441	0.20919004419732795		Deep Intronic 51-500 bp
+MetaSplice	main	both tools score	15771	PP3 >= Strong	0.0025363008052755056	0.0441	0.07261210659386515		Deep Intronic 51-500 bp
+MetaSplice	main	both tools score	15771	PP3 >= VeryStrong	0.00019022256039566293	0.0441	0.04495044483985765		Deep Intronic 51-500 bp
+MetaSplice	main	both tools score	75651	PP3 >= Supporting	0.031989002128193944	0.0441	0.4413525308267095		Deep Intronic > 500 bp
+MetaSplice	main	both tools score	75651	PP3 >= Moderate	0.011024308997898243	0.0441	0.20919004419732795		Deep Intronic > 500 bp
+MetaSplice	main	both tools score	75651	PP3 >= Strong	0.0026701563759897423	0.0441	0.07261210659386515		Deep Intronic > 500 bp
+MetaSplice	main	both tools score	75651	PP3 >= VeryStrong	1.3218595920741299e-05	0.0441	0.04495044483985765		Deep Intronic > 500 bp
+MetaSplice	main	both tools score	1915	PP3 >= Supporting	0.004177545691906005	0.0441	0.4413525308267095		DI sensitivity set <= 50 bp
+MetaSplice	main	both tools score	1915	PP3 >= Moderate	0.0026109660574412533	0.0441	0.20919004419732795		DI sensitivity set <= 50 bp
+MetaSplice	main	both tools score	1915	PP3 >= Strong	0.0020887728459530026	0.0441	0.07261210659386515		DI sensitivity set <= 50 bp
+MetaSplice	main	both tools score	1915	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		DI sensitivity set <= 50 bp
+MetaSplice	main	both tools score	13460	PP3 >= Supporting	0.01025260029717682	0.0441	0.4413525308267095		DI sensitivity set 51-500 bp
+MetaSplice	main	both tools score	13460	PP3 >= Moderate	0.005349182763744428	0.0441	0.20919004419732795		DI sensitivity set 51-500 bp
+MetaSplice	main	both tools score	13460	PP3 >= Strong	0.0023031203566121843	0.0441	0.07261210659386515		DI sensitivity set 51-500 bp
+MetaSplice	main	both tools score	13460	PP3 >= VeryStrong	0.00014858841010401187	0.0441	0.04495044483985765		DI sensitivity set 51-500 bp
+MetaSplice	main	both tools score	74409	PP3 >= Supporting	0.03131341638780255	0.0441	0.4413525308267095		DI sensitivity set > 500 bp
+MetaSplice	main	both tools score	74409	PP3 >= Moderate	0.010697630662957439	0.0441	0.20919004419732795		DI sensitivity set > 500 bp
+MetaSplice	main	both tools score	74409	PP3 >= Strong	0.0025400153207273315	0.0441	0.07261210659386515		DI sensitivity set > 500 bp
+MetaSplice	main	both tools score	74409	PP3 >= VeryStrong	1.3439234501202812e-05	0.0441	0.04495044483985765		DI sensitivity set > 500 bp
+MetaSplice	main	both tools score	96024	BP4_Supporting	0.17260268266266768	0.0441			
+MetaSplice	main	both tools score	96024	BP4_Moderate	0.33494751312171955	0.0441			
+MetaSplice	main	both tools score	96024	BP4_Strong	0.17161334666333417	0.0441			
+MetaSplice	main	both tools score	96024	BP4_VeryStrong	0.0	0.0441			
+MetaSplice	reference	all the tool scores	100000	PP3 >= Supporting	0.04116	0.0441	0.4413525308267095		
+MetaSplice	reference	all the tool scores	100000	PP3 >= Moderate	0.00995	0.0441	0.20919004419732795		
+MetaSplice	reference	all the tool scores	100000	PP3 >= Strong	0.00386	0.0441	0.07261210659386515		
+MetaSplice	reference	all the tool scores	100000	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		
+MetaSplice	reference	all the tool scores	2302	PP3 >= Supporting	0.009122502172024326	0.0441	0.4413525308267095		Deep Intronic <= 50 bp
+MetaSplice	reference	all the tool scores	2302	PP3 >= Moderate	0.0034752389226759338	0.0441	0.20919004419732795		Deep Intronic <= 50 bp
+MetaSplice	reference	all the tool scores	2302	PP3 >= Strong	0.002172024326672459	0.0441	0.07261210659386515		Deep Intronic <= 50 bp
+MetaSplice	reference	all the tool scores	16021	PP3 >= Supporting	0.014668247924598964	0.0441	0.4413525308267095		Deep Intronic 51-500 bp
+MetaSplice	reference	all the tool scores	16021	PP3 >= Moderate	0.005243118407090693	0.0441	0.20919004419732795		Deep Intronic 51-500 bp
+MetaSplice	reference	all the tool scores	16021	PP3 >= Strong	0.0025591411272704576	0.0441	0.07261210659386515		Deep Intronic 51-500 bp
+MetaSplice	reference	all the tool scores	79321	PP3 >= Supporting	0.045864273017233774	0.0441	0.4413525308267095		Deep Intronic > 500 bp
+MetaSplice	reference	all the tool scores	79321	PP3 >= Moderate	0.00945525144665347	0.0441	0.20919004419732795		Deep Intronic > 500 bp
+MetaSplice	reference	all the tool scores	79321	PP3 >= Strong	0.002962645453284754	0.0441	0.07261210659386515		Deep Intronic > 500 bp
+MetaSplice	reference	all the tool scores	1944	PP3 >= Supporting	0.006172839506172839	0.0441	0.4413525308267095		DI sensitivity set <= 50 bp
+MetaSplice	reference	all the tool scores	1944	PP3 >= Moderate	0.00257201646090535	0.0441	0.20919004419732795		DI sensitivity set <= 50 bp
+MetaSplice	reference	all the tool scores	1944	PP3 >= Strong	0.00257201646090535	0.0441	0.07261210659386515		DI sensitivity set <= 50 bp
+MetaSplice	reference	all the tool scores	13699	PP3 >= Supporting	0.01299364917147237	0.0441	0.4413525308267095		DI sensitivity set 51-500 bp
+MetaSplice	reference	all the tool scores	13699	PP3 >= Moderate	0.0047448718884590116	0.0441	0.20919004419732795		DI sensitivity set 51-500 bp
+MetaSplice	reference	all the tool scores	13699	PP3 >= Strong	0.002335936929702898	0.0441	0.07261210659386515		DI sensitivity set 51-500 bp
+MetaSplice	reference	all the tool scores	78045	PP3 >= Supporting	0.04511499775770389	0.0441	0.4413525308267095		DI sensitivity set > 500 bp
+MetaSplice	reference	all the tool scores	78045	PP3 >= Moderate	0.009135755013133448	0.0441	0.20919004419732795		DI sensitivity set > 500 bp
+MetaSplice	reference	all the tool scores	78045	PP3 >= Strong	0.0028060734191812414	0.0441	0.07261210659386515		DI sensitivity set > 500 bp
+MetaSplice	reference	all the tool scores	100000	BP4_Supporting	0.32962	0.0441			
+MetaSplice	reference	all the tool scores	100000	BP4_Moderate	0.1444	0.0441			
+MetaSplice	reference	all the tool scores	100000	BP4_Strong	0.10481	0.0441			
+MetaSplice	reference	all the tool scores	100000	BP4_VeryStrong	0.0	0.0441			
+MetaSplice	reference	both tools score	96024	PP3 >= Supporting	0.04088561193035074	0.0441	0.4413525308267095		
+MetaSplice	reference	both tools score	96024	PP3 >= Moderate	0.009945430309089395	0.0441	0.20919004419732795		
+MetaSplice	reference	both tools score	96024	PP3 >= Strong	0.003874031492126968	0.0441	0.07261210659386515		
+MetaSplice	reference	both tools score	96024	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		
+MetaSplice	reference	both tools score	2269	PP3 >= Supporting	0.00881445570736007	0.0441	0.4413525308267095		Deep Intronic <= 50 bp
+MetaSplice	reference	both tools score	2269	PP3 >= Moderate	0.003085059497576025	0.0441	0.20919004419732795		Deep Intronic <= 50 bp
+MetaSplice	reference	both tools score	2269	PP3 >= Strong	0.0017628911414720142	0.0441	0.07261210659386515		Deep Intronic <= 50 bp
+MetaSplice	reference	both tools score	15771	PP3 >= Supporting	0.01477395219072982	0.0441	0.4413525308267095		Deep Intronic 51-500 bp
+MetaSplice	reference	both tools score	15771	PP3 >= Moderate	0.005326231691078562	0.0441	0.20919004419732795		Deep Intronic 51-500 bp
+MetaSplice	reference	both tools score	15771	PP3 >= Strong	0.0025997083254073934	0.0441	0.07261210659386515		Deep Intronic 51-500 bp
+MetaSplice	reference	both tools score	75651	PP3 >= Supporting	0.04569668609800267	0.0441	0.4413525308267095		Deep Intronic > 500 bp
+MetaSplice	reference	both tools score	75651	PP3 >= Moderate	0.009451296083330028	0.0441	0.20919004419732795		Deep Intronic > 500 bp
+MetaSplice	reference	both tools score	75651	PP3 >= Strong	0.0029741840821667924	0.0441	0.07261210659386515		Deep Intronic > 500 bp
+MetaSplice	reference	both tools score	1915	PP3 >= Supporting	0.005744125326370757	0.0441	0.4413525308267095		DI sensitivity set <= 50 bp
+MetaSplice	reference	both tools score	1915	PP3 >= Moderate	0.0020887728459530026	0.0441	0.20919004419732795		DI sensitivity set <= 50 bp
+MetaSplice	reference	both tools score	1915	PP3 >= Strong	0.0020887728459530026	0.0441	0.07261210659386515		DI sensitivity set <= 50 bp
+MetaSplice	reference	both tools score	13460	PP3 >= Supporting	0.013075780089153046	0.0441	0.4413525308267095		DI sensitivity set 51-500 bp
+MetaSplice	reference	both tools score	13460	PP3 >= Moderate	0.0048291233283803865	0.0441	0.20919004419732795		DI sensitivity set 51-500 bp
+MetaSplice	reference	both tools score	13460	PP3 >= Strong	0.00237741456166419	0.0441	0.07261210659386515		DI sensitivity set 51-500 bp
+MetaSplice	reference	both tools score	74409	PP3 >= Supporting	0.044927360937521	0.0441	0.4413525308267095		DI sensitivity set > 500 bp
+MetaSplice	reference	both tools score	74409	PP3 >= Moderate	0.009152118695319114	0.0441	0.20919004419732795		DI sensitivity set > 500 bp
+MetaSplice	reference	both tools score	74409	PP3 >= Strong	0.002835678479753793	0.0441	0.07261210659386515		DI sensitivity set > 500 bp
+MetaSplice	reference	both tools score	96024	BP4_Supporting	0.3288136299258519	0.0441			
+MetaSplice	reference	both tools score	96024	BP4_Moderate	0.14353703240856452	0.0441			
+MetaSplice	reference	both tools score	96024	BP4_Strong	0.10470299091893694	0.0441			
+MetaSplice	reference	both tools score	96024	BP4_VeryStrong	0.0	0.0441			
+SpliceAI	main	all the tool scores	96024	PP3 >= Supporting	0.004457219028576189	0.0441	0.4413525308267095		
+SpliceAI	main	all the tool scores	96024	PP3 >= Moderate	0.002718070482379405	0.0441	0.20919004419732795		
+SpliceAI	main	all the tool scores	96024	PP3 >= Strong	0.001364242272765142	0.0441	0.07261210659386515		
+SpliceAI	main	all the tool scores	96024	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		
+SpliceAI	main	all the tool scores	2269	PP3 >= Supporting	0.011899515204936095	0.0441	0.4413525308267095		Deep Intronic <= 50 bp
+SpliceAI	main	all the tool scores	2269	PP3 >= Moderate	0.007051564565888057	0.0441	0.20919004419732795		Deep Intronic <= 50 bp
+SpliceAI	main	all the tool scores	2269	PP3 >= Strong	0.004407227853680035	0.0441	0.07261210659386515		Deep Intronic <= 50 bp
+SpliceAI	main	all the tool scores	15771	PP3 >= Supporting	0.007482087375562742	0.0441	0.4413525308267095		Deep Intronic 51-500 bp
+SpliceAI	main	all the tool scores	15771	PP3 >= Moderate	0.004058081288440809	0.0441	0.20919004419732795		Deep Intronic 51-500 bp
+SpliceAI	main	all the tool scores	15771	PP3 >= Strong	0.0013315579227696406	0.0441	0.07261210659386515		Deep Intronic 51-500 bp
+SpliceAI	main	all the tool scores	75651	PP3 >= Supporting	0.001282203804311906	0.0441	0.4413525308267095		Deep Intronic > 500 bp
+SpliceAI	main	all the tool scores	75651	PP3 >= Moderate	0.0006212740082748411	0.0441	0.20919004419732795		Deep Intronic > 500 bp
+SpliceAI	main	all the tool scores	75651	PP3 >= Strong	0.00021149753473186079	0.0441	0.07261210659386515		Deep Intronic > 500 bp
+SpliceAI	main	all the tool scores	1915	PP3 >= Supporting	0.011488250652741514	0.0441	0.4413525308267095		DI sensitivity set <= 50 bp
+SpliceAI	main	all the tool scores	1915	PP3 >= Moderate	0.007310704960835509	0.0441	0.20919004419732795		DI sensitivity set <= 50 bp
+SpliceAI	main	all the tool scores	1915	PP3 >= Strong	0.004699738903394256	0.0441	0.07261210659386515		DI sensitivity set <= 50 bp
+SpliceAI	main	all the tool scores	13460	PP3 >= Supporting	0.006389301634472511	0.0441	0.4413525308267095		DI sensitivity set 51-500 bp
+SpliceAI	main	all the tool scores	13460	PP3 >= Moderate	0.0036404160475482913	0.0441	0.20919004419732795		DI sensitivity set 51-500 bp
+SpliceAI	main	all the tool scores	13460	PP3 >= Strong	0.001188707280832095	0.0441	0.07261210659386515		DI sensitivity set 51-500 bp
+SpliceAI	main	all the tool scores	74409	PP3 >= Supporting	0.0011960918706070502	0.0441	0.4413525308267095		DI sensitivity set > 500 bp
+SpliceAI	main	all the tool scores	74409	PP3 >= Moderate	0.0005778870835517209	0.0441	0.20919004419732795		DI sensitivity set > 500 bp
+SpliceAI	main	all the tool scores	74409	PP3 >= Strong	0.00020158851751804217	0.0441	0.07261210659386515		DI sensitivity set > 500 bp
+SpliceAI	main	all the tool scores	96024	BP4_Supporting	0.012580188286261769	0.0441			
+SpliceAI	main	all the tool scores	96024	BP4_Moderate	0.9767349829209364	0.0441			
+SpliceAI	main	all the tool scores	96024	BP4_Strong	0.0	0.0441			
+SpliceAI	main	all the tool scores	96024	BP4_VeryStrong	0.0	0.0441			
+SpliceAI	main	both tools score	96024	PP3 >= Supporting	0.004457219028576189	0.0441	0.4413525308267095		
+SpliceAI	main	both tools score	96024	PP3 >= Moderate	0.002718070482379405	0.0441	0.20919004419732795		
+SpliceAI	main	both tools score	96024	PP3 >= Strong	0.001364242272765142	0.0441	0.07261210659386515		
+SpliceAI	main	both tools score	96024	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		
+SpliceAI	main	both tools score	2269	PP3 >= Supporting	0.011899515204936095	0.0441	0.4413525308267095		Deep Intronic <= 50 bp
+SpliceAI	main	both tools score	2269	PP3 >= Moderate	0.007051564565888057	0.0441	0.20919004419732795		Deep Intronic <= 50 bp
+SpliceAI	main	both tools score	2269	PP3 >= Strong	0.004407227853680035	0.0441	0.07261210659386515		Deep Intronic <= 50 bp
+SpliceAI	main	both tools score	15771	PP3 >= Supporting	0.007482087375562742	0.0441	0.4413525308267095		Deep Intronic 51-500 bp
+SpliceAI	main	both tools score	15771	PP3 >= Moderate	0.004058081288440809	0.0441	0.20919004419732795		Deep Intronic 51-500 bp
+SpliceAI	main	both tools score	15771	PP3 >= Strong	0.0013315579227696406	0.0441	0.07261210659386515		Deep Intronic 51-500 bp
+SpliceAI	main	both tools score	75651	PP3 >= Supporting	0.001282203804311906	0.0441	0.4413525308267095		Deep Intronic > 500 bp
+SpliceAI	main	both tools score	75651	PP3 >= Moderate	0.0006212740082748411	0.0441	0.20919004419732795		Deep Intronic > 500 bp
+SpliceAI	main	both tools score	75651	PP3 >= Strong	0.00021149753473186079	0.0441	0.07261210659386515		Deep Intronic > 500 bp
+SpliceAI	main	both tools score	1915	PP3 >= Supporting	0.011488250652741514	0.0441	0.4413525308267095		DI sensitivity set <= 50 bp
+SpliceAI	main	both tools score	1915	PP3 >= Moderate	0.007310704960835509	0.0441	0.20919004419732795		DI sensitivity set <= 50 bp
+SpliceAI	main	both tools score	1915	PP3 >= Strong	0.004699738903394256	0.0441	0.07261210659386515		DI sensitivity set <= 50 bp
+SpliceAI	main	both tools score	13460	PP3 >= Supporting	0.006389301634472511	0.0441	0.4413525308267095		DI sensitivity set 51-500 bp
+SpliceAI	main	both tools score	13460	PP3 >= Moderate	0.0036404160475482913	0.0441	0.20919004419732795		DI sensitivity set 51-500 bp
+SpliceAI	main	both tools score	13460	PP3 >= Strong	0.001188707280832095	0.0441	0.07261210659386515		DI sensitivity set 51-500 bp
+SpliceAI	main	both tools score	74409	PP3 >= Supporting	0.0011960918706070502	0.0441	0.4413525308267095		DI sensitivity set > 500 bp
+SpliceAI	main	both tools score	74409	PP3 >= Moderate	0.0005778870835517209	0.0441	0.20919004419732795		DI sensitivity set > 500 bp
+SpliceAI	main	both tools score	74409	PP3 >= Strong	0.00020158851751804217	0.0441	0.07261210659386515		DI sensitivity set > 500 bp
+SpliceAI	main	both tools score	96024	BP4_Supporting	0.012580188286261769	0.0441			
+SpliceAI	main	both tools score	96024	BP4_Moderate	0.9767349829209364	0.0441			
+SpliceAI	main	both tools score	96024	BP4_Strong	0.0	0.0441			
+SpliceAI	main	both tools score	96024	BP4_VeryStrong	0.0	0.0441			
+SpliceAI	reference	all the tool scores	96024	PP3 >= Supporting	0.0020203282512705157	0.0441	0.4413525308267095		
+SpliceAI	reference	all the tool scores	96024	PP3 >= Moderate	0.0	0.0441	0.20919004419732795		
+SpliceAI	reference	all the tool scores	96024	PP3 >= Strong	0.0	0.0441	0.07261210659386515		
+SpliceAI	reference	all the tool scores	96024	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		
+SpliceAI	reference	all the tool scores	2269	PP3 >= Supporting	0.004407227853680035	0.0441	0.4413525308267095		Deep Intronic <= 50 bp
+SpliceAI	reference	all the tool scores	15771	PP3 >= Supporting	0.002853338405934944	0.0441	0.4413525308267095		Deep Intronic 51-500 bp
+SpliceAI	reference	all the tool scores	75651	PP3 >= Supporting	0.00039655787762223895	0.0441	0.4413525308267095		Deep Intronic > 500 bp
+SpliceAI	reference	all the tool scores	1915	PP3 >= Supporting	0.004699738903394256	0.0441	0.4413525308267095		DI sensitivity set <= 50 bp
+SpliceAI	reference	all the tool scores	13460	PP3 >= Supporting	0.002674591381872214	0.0441	0.4413525308267095		DI sensitivity set 51-500 bp
+SpliceAI	reference	all the tool scores	74409	PP3 >= Supporting	0.0003762985660336787	0.0441	0.4413525308267095		DI sensitivity set > 500 bp
+SpliceAI	reference	all the tool scores	96024	BP4_Supporting	0.013767391485461968	0.0441			
+SpliceAI	reference	all the tool scores	96024	BP4_Moderate	0.9767349829209364	0.0441			
+SpliceAI	reference	all the tool scores	96024	BP4_Strong	0.0	0.0441			
+SpliceAI	reference	all the tool scores	96024	BP4_VeryStrong	0.0	0.0441			
+SpliceAI	reference	both tools score	96024	PP3 >= Supporting	0.0020203282512705157	0.0441	0.4413525308267095		
+SpliceAI	reference	both tools score	96024	PP3 >= Moderate	0.0	0.0441	0.20919004419732795		
+SpliceAI	reference	both tools score	96024	PP3 >= Strong	0.0	0.0441	0.07261210659386515		
+SpliceAI	reference	both tools score	96024	PP3 >= VeryStrong	0.0	0.0441	0.04495044483985765		
+SpliceAI	reference	both tools score	2269	PP3 >= Supporting	0.004407227853680035	0.0441	0.4413525308267095		Deep Intronic <= 50 bp
+SpliceAI	reference	both tools score	15771	PP3 >= Supporting	0.002853338405934944	0.0441	0.4413525308267095		Deep Intronic 51-500 bp
+SpliceAI	reference	both tools score	75651	PP3 >= Supporting	0.00039655787762223895	0.0441	0.4413525308267095		Deep Intronic > 500 bp
+SpliceAI	reference	both tools score	1915	PP3 >= Supporting	0.004699738903394256	0.0441	0.4413525308267095		DI sensitivity set <= 50 bp
+SpliceAI	reference	both tools score	13460	PP3 >= Supporting	0.002674591381872214	0.0441	0.4413525308267095		DI sensitivity set 51-500 bp
+SpliceAI	reference	both tools score	74409	PP3 >= Supporting	0.0003762985660336787	0.0441	0.4413525308267095		DI sensitivity set > 500 bp
+SpliceAI	reference	both tools score	96024	BP4_Supporting	0.013767391485461968	0.0441			
+SpliceAI	reference	both tools score	96024	BP4_Moderate	0.9767349829209364	0.0441			
+SpliceAI	reference	both tools score	96024	BP4_Strong	0.0	0.0441			
+SpliceAI	reference	both tools score	96024	BP4_VeryStrong	0.0	0.0441			

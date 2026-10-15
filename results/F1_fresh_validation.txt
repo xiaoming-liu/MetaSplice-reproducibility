@@ -1,0 +1,180 @@
+====================================================================================================
+F1 -- FRESH TEMPORAL VALIDATION OF METASPLICE v2.0, ClinVar 2026-09-28 (Amendment 5)
+Thresholds are exploratory candidate thresholds under the fallback prior 0.0441, not clinically validated.
+====================================================================================================
+protocol SHA-256 (live file): 6b4e5438cf2848840fcadb7e6da90cc8bfe7dfcf97b5870ee1d775396e143ddd
+
+Input lock (md5), before anything is computed
+  51c6e5d0db100b33b91907fa857cd9a7  models/metasplice_v2_full.joblib  ok
+  8be31360848f2cb43c2b02850bd03815  models/metasplice_v2_features.joblib  ok
+  f9cd3f227b0357a4c022f5d6814e4ab4  data/v2_features_fresh_20260928.csv  ok
+  6a009ca0e0d5c837d7b1633c739ceb41  results/S6_thresholds.tsv  ok
+  b269aafcfe17d1f6cdbcce71d15dbd2d  results/S11_thresholds.tsv  ok
+  c6738b75048c943e9a95f1545c34b752  data/v2_pathogenic_genes.csv  ok
+  d9e70ef71b2c1ca149e4cf4ed56d59e0  data/v2_variants_test_candidates.csv  ok
+  5f2a4b045d7e6113d44896babc0d0c47  data/v2_variants_training.csv  ok
+  every input equals its locked md5
+
+Denominator check against Amendment 5 (n, P/LP), before any auPRC is computed
+  all non-canonical                    MetaSplice n= 14,749 P=  275   recorded (14749, 275)   ok
+  all non-canonical                    SpliceAI   n= 14,552 P=  273   recorded (14552, 273)   ok
+  all non-canonical                    CADD       n= 14,749 P=  275   recorded (14749, 275)   ok
+  Donor Region                         MetaSplice n=  1,408 P=  135   recorded (1408, 135)   ok
+  Donor Region                         SpliceAI   n=  1,382 P=  133   recorded (1382, 133)   ok
+  Donor Region                         CADD       n=  1,408 P=  135   recorded (1408, 135)   ok
+  Acceptor Region                      MetaSplice n=  2,019 P=   65   recorded (2019, 65)   ok
+  Acceptor Region                      SpliceAI   n=  2,001 P=   65   recorded (2001, 65)   ok
+  Acceptor Region                      CADD       n=  2,019 P=   65   recorded (2019, 65)   ok
+  PPT Region                           MetaSplice n=  3,899 P=   26   recorded (3899, 26)   ok
+  PPT Region                           SpliceAI   n=  3,840 P=   26   recorded (3840, 26)   ok
+  PPT Region                           CADD       n=  3,899 P=   26   recorded (3899, 26)   ok
+  Branch Point Region                  MetaSplice n=    204 P=    3   recorded (204, 3)   ok
+  Branch Point Region                  SpliceAI   n=    203 P=    3   recorded (203, 3)   ok
+  Branch Point Region                  CADD       n=    204 P=    3   recorded (204, 3)   ok
+  Deep Intronic                        MetaSplice n=  7,219 P=   46   recorded (7219, 46)   ok
+  Deep Intronic                        SpliceAI   n=  7,126 P=   46   recorded (7126, 46)   ok
+  Deep Intronic                        CADD       n=  7,219 P=   46   recorded (7219, 46)   ok
+  Deep Intronic <= 50 bp               MetaSplice n=  5,544 P=    4   recorded (5544, 4)   ok
+  Deep Intronic <= 50 bp               SpliceAI   n=  5,462 P=    4   recorded (5462, 4)   ok
+  Deep Intronic <= 50 bp               CADD       n=  5,544 P=    4   recorded (5544, 4)   ok
+  Deep Intronic 51-500 bp              MetaSplice n=    432 P=   14   recorded (432, 14)   ok
+  Deep Intronic 51-500 bp              SpliceAI   n=    430 P=   14   recorded (430, 14)   ok
+  Deep Intronic 51-500 bp              CADD       n=    432 P=   14   recorded (432, 14)   ok
+  Deep Intronic > 500 bp               MetaSplice n=  1,243 P=   28   recorded (1243, 28)   ok
+  Deep Intronic > 500 bp               SpliceAI   n=  1,234 P=   28   recorded (1234, 28)   ok
+  Deep Intronic > 500 bp               CADD       n=  1,243 P=   28   recorded (1243, 28)   ok
+  DI sensitivity set                   MetaSplice n=  6,039 P=   38   recorded (6039, 38)   ok
+  DI sensitivity set                   SpliceAI   n=  5,957 P=   38   recorded (5957, 38)   ok
+  DI sensitivity set                   CADD       n=  6,039 P=   38   recorded (6039, 38)   ok
+  DI sensitivity set <= 50 bp          MetaSplice n=  4,626 P=    4   recorded (4626, 4)   ok
+  DI sensitivity set <= 50 bp          SpliceAI   n=  4,552 P=    4   recorded (4552, 4)   ok
+  DI sensitivity set <= 50 bp          CADD       n=  4,626 P=    4   recorded (4626, 4)   ok
+  DI sensitivity set 51-500 bp         MetaSplice n=    287 P=   11   recorded (287, 11)   ok
+  DI sensitivity set 51-500 bp         SpliceAI   n=    285 P=   11   recorded (285, 11)   ok
+  DI sensitivity set 51-500 bp         CADD       n=    287 P=   11   recorded (287, 11)   ok
+  DI sensitivity set > 500 bp          MetaSplice n=  1,126 P=   23   recorded (1126, 23)   ok
+  DI sensitivity set > 500 bp          SpliceAI   n=  1,120 P=   23   recorded (1120, 23)   ok
+  DI sensitivity set > 500 bp          CADD       n=  1,126 P=   23   recorded (1126, 23)   ok
+  calibration, all stars               MetaSplice n= 13,194 P=  273   recorded (13194, 273)   ok
+  calibration, all stars               SpliceAI   n= 13,011 P=  271   recorded (13011, 271)   ok
+  calibration, all stars               CADD       n= 13,194 P=  273   recorded (13194, 273)   ok
+  calibration, >= 1 star               MetaSplice n= 13,186 P=  265   recorded (13186, 265)   ok
+  calibration, >= 1 star               SpliceAI   n= 13,003 P=  263   recorded (13003, 263)   ok
+  calibration, >= 1 star               CADD       n= 13,186 P=  265   recorded (13186, 265)   ok
+  every denominator equals Amendment 5
+
+1. PRIMARY: non-canonical, each comparator on the variants both score (replication of Amendment 3's comparison)
+
+  all non-canonical                    vs SpliceAI      n=14,552 P= 273  0.8872 vs 0.7354  diff +0.1519 [+0.1070, +0.1972]  gene-clustered [+0.1044, +0.1983]  -> MetaSplice v2.0 better
+  all non-canonical                    vs CADD          n=14,749 P= 275  0.8812 vs 0.3892  diff +0.4920 [+0.4341, +0.5473]  gene-clustered [+0.4354, +0.5453]  -> MetaSplice v2.0 better
+  all non-canonical                    vs distance only n=14,749 P= 275  0.8812 vs 0.0144  diff +0.8667 [+0.8354, +0.8986]  gene-clustered [+0.8287, +0.9000]
+
+2. SECONDARY (no verdict): regions, Deep Intronic bands, sensitivity set; distance alone as a baseline
+  Donor Region                         vs SpliceAI      n= 1,382 P= 133  0.9522 vs 0.8501  diff +0.1021 [+0.0530, +0.1544]  gene-clustered [+0.0481, +0.1617]
+  Donor Region                         vs CADD          n= 1,408 P= 135  0.9413 vs 0.6491  diff +0.2922 [+0.2151, +0.3590]  gene-clustered [+0.2138, +0.3722]
+  Donor Region                         vs distance only n= 1,408 P= 135  0.9413 vs 0.0758  diff +0.8655 [+0.8319, +0.8938]  gene-clustered [+0.8326, +0.8927]
+  Acceptor Region                      vs SpliceAI      n= 2,001 P=  65  0.9534 vs 0.9098  diff +0.0436 [-0.0135, +0.1130]  gene-clustered [-0.0142, +0.1093]
+  Acceptor Region                      vs CADD          n= 2,019 P=  65  0.9533 vs 0.5871  diff +0.3662 [+0.2382, +0.4775]  gene-clustered [+0.2458, +0.4843]
+  Acceptor Region                      vs distance only n= 2,019 P=  65  0.9533 vs 0.0250  diff +0.9283 [+0.8922, +0.9598]  gene-clustered [+0.8899, +0.9575]
+  PPT Region                           vs SpliceAI      n= 3,840 P=  26  0.7421 vs 0.7383  diff +0.0038 [-0.1386, +0.1273]  gene-clustered [-0.1292, +0.1274]
+  PPT Region                           vs CADD          n= 3,899 P=  26  0.7421 vs 0.1423  diff +0.5998 [+0.3867, +0.7705]  gene-clustered [+0.3748, +0.7733]
+  PPT Region                           vs distance only n= 3,899 P=  26  0.7421 vs 0.0070  diff +0.7351 [+0.5629, +0.8781]  gene-clustered [+0.5367, +0.8744]
+  Branch Point Region                  n=204 P/LP=3: INCONCLUSIVE (< 20 P/LP). B/LB given candidate PP3 at S6 thresholds: MetaSplice 15 of 201 scored B/LB; SpliceAI 6 of 200 scored B/LB; on the 200 B/LB both score: MetaSplice 15, SpliceAI 6
+  Deep Intronic                        vs SpliceAI      n= 7,126 P=  46  0.6465 vs 0.3096  diff +0.3369 [+0.2151, +0.4237]  gene-clustered [+0.2189, +0.4321]
+  Deep Intronic                        vs CADD          n= 7,219 P=  46  0.6464 vs 0.1727  diff +0.4738 [+0.3493, +0.5862]  gene-clustered [+0.3503, +0.5816]
+  Deep Intronic                        vs distance only n= 7,219 P=  46  0.6464 vs 0.0176  diff +0.6289 [+0.4902, +0.7576]  gene-clustered [+0.4668, +0.7586]
+  Deep Intronic <= 50 bp               n=5,544 P/LP=4: INCONCLUSIVE (< 20 P/LP). B/LB given candidate PP3 at S6 thresholds: MetaSplice 10 of 5,540 scored B/LB; SpliceAI 78 of 5,458 scored B/LB; on the 5,458 B/LB both score: MetaSplice 10, SpliceAI 78
+  Deep Intronic 51-500 bp              n=432 P/LP=14: INCONCLUSIVE (< 20 P/LP). B/LB given candidate PP3 at S6 thresholds: MetaSplice 22 of 418 scored B/LB; SpliceAI 9 of 416 scored B/LB; on the 416 B/LB both score: MetaSplice 22, SpliceAI 9
+  Deep Intronic > 500 bp               vs SpliceAI      n= 1,234 P=  28  0.6609 vs 0.5493  diff +0.1115 [-0.0302, +0.2065]  gene-clustered [-0.0298, +0.2097]
+  Deep Intronic > 500 bp               vs CADD          n= 1,243 P=  28  0.6609 vs 0.2207  diff +0.4402 [+0.2816, +0.5725]  gene-clustered [+0.2681, +0.5730]
+  Deep Intronic > 500 bp               vs distance only n= 1,243 P=  28  0.6609 vs 0.0136  diff +0.6472 [+0.4810, +0.8061]  gene-clustered [+0.4606, +0.8068]
+  DI sensitivity set                   vs SpliceAI      n= 5,957 P=  38  0.6673 vs 0.3758  diff +0.2914 [+0.1573, +0.3986]  gene-clustered [+0.1685, +0.4101]
+  DI sensitivity set                   vs CADD          n= 6,039 P=  38  0.6672 vs 0.1882  diff +0.4790 [+0.3445, +0.6017]  gene-clustered [+0.3551, +0.6041]
+  DI sensitivity set                   vs distance only n= 6,039 P=  38  0.6672 vs 0.0160  diff +0.6512 [+0.5006, +0.7829]  gene-clustered [+0.4969, +0.7994]
+  DI sensitivity set <= 50 bp          n=4,626 P/LP=4: INCONCLUSIVE (< 20 P/LP). B/LB given candidate PP3 at S6 thresholds: MetaSplice 6 of 4,622 scored B/LB; SpliceAI 53 of 4,548 scored B/LB; on the 4,548 B/LB both score: MetaSplice 6, SpliceAI 53
+  DI sensitivity set 51-500 bp         n=287 P/LP=11: INCONCLUSIVE (< 20 P/LP). B/LB given candidate PP3 at S6 thresholds: MetaSplice 14 of 276 scored B/LB; SpliceAI 3 of 274 scored B/LB; on the 274 B/LB both score: MetaSplice 14, SpliceAI 3
+  DI sensitivity set > 500 bp          vs SpliceAI      n= 1,120 P=  23  0.7070 vs 0.6572  diff +0.0498 [-0.0591, +0.1639]  gene-clustered [-0.0536, +0.1556]
+  DI sensitivity set > 500 bp          vs CADD          n= 1,126 P=  23  0.7070 vs 0.2155  diff +0.4915 [+0.3115, +0.6265]  gene-clustered [+0.3048, +0.6231]
+  DI sensitivity set > 500 bp          vs distance only n= 1,126 P=  23  0.7070 vs 0.0122  diff +0.6948 [+0.5292, +0.8614]  gene-clustered [+0.4650, +0.8681]
+
+3. CALIBRATION: frozen thresholds, interval LR with exact CI (thresholds not changed afterwards)
+
+  calibration, all stars: n=13,194, P/LP 273, B/LB 12,921
+    MetaSplice v2.0, S6 thresholds
+      PP3_VeryStrong     97      2   2.3e+03   [463, 3.28e+04]        >=1.12e+03meets  INCONCLUSIVE
+      PP3_Strong        138     53       123   [78.6, 195]            >=33.5    meets  clears
+      PP3_Moderate       15     82      8.66   [3.52, 19.3]           >=5.79    meets  INCONCLUSIVE
+      PP3_Supporting      7    110      3.01   [0.855, 8.28]          >=2.41    meets  INCONCLUSIVE
+      Indeterminate       9    971     0.439   [0.167, 0.945]                          
+      BP4_Supporting      1    704    0.0672   [0.000779, 0.462]      <=0.416   meets  INCONCLUSIVE
+      BP4_Moderate        5   3259    0.0726   [0.0191, 0.189]        <=0.173   meets  INCONCLUSIVE
+      BP4_Strong          1   7740   0.00611   [7.57e-05, 0.0393]     <=0.0298  meets  INCONCLUSIVE
+    MetaSplice v2.0, S11 reference-window thresholds
+      PP3_Strong        235     62       179   [127, 256]             >=33.5    meets  clears
+      PP3_Moderate       13     61      10.1   [3.71, 24.5]           >=5.79    meets  INCONCLUSIVE
+      PP3_Supporting     10    179      2.64   [0.967, 6.09]          >=2.41    meets  INCONCLUSIVE
+      Indeterminate       8   1287     0.294   [0.106, 0.654]                          
+      BP4_Supporting      5   2415     0.098   [0.0256, 0.257]        <=0.416   meets  clears
+      BP4_Moderate        1   2795    0.0169   [0.000205, 0.111]      <=0.173   meets  clears
+      BP4_Strong          1   6122   0.00773   [9.53e-05, 0.0499]     <=0.0298  meets  INCONCLUSIVE
+    SpliceAI, S6 thresholds
+      PP3_Strong        199     53       178   [120, 267]             >=33.5    meets  clears
+      PP3_Moderate       29     94      14.6   [7.47, 27.2]           >=5.79    meets  clears
+      PP3_Supporting     15    132      5.38   [2.3, 11.3]            >=2.41    meets  INCONCLUSIVE
+      Indeterminate       9    473     0.901   [0.332, 2.01]                           
+      BP4_Supporting      5    780     0.303   [0.0764, 0.827]        <=0.416   meets  INCONCLUSIVE
+      BP4_Moderate       14  11208    0.0591   [0.0296, 0.104]        <=0.173   meets  clears
+      NoScore             2    181     0.523   [0.0371, 2.5]                           
+    SpliceAI, S11 reference-window thresholds
+      PP3_Supporting    217    103      99.7   [74.1, 134]            >=2.41    meets  clears
+      Indeterminate      35    571       2.9   [1.78, 4.49]                            
+      BP4_Supporting      5    858     0.276   [0.0697, 0.749]        <=0.416   meets  INCONCLUSIVE
+      BP4_Moderate       14  11208    0.0591   [0.0296, 0.104]        <=0.173   meets  clears
+      NoScore             2    181     0.523   [0.0371, 2.5]                           
+    SpliceAI, fixed score bands at 0.2 and 0.1 (the ClinGen SVI cut-offs, derived for spliceogenicity): a descriptive
+    comparison only -- no evidence-strength labels and no verdicts for pathogenicity on this cohort
+      score >= 0.2        243    279      41.2   [34.1, 49.3]
+      0.1 < score < 0.2     8    319      1.19   [0.4, 2.82]
+      score <= 0.1         20  12142     0.078   [0.0446, 0.125]
+      no score              2    181     0.523   [0.0371, 2.5]
+
+  calibration, >= 1 star: n=13,186, P/LP 265, B/LB 12,921
+    MetaSplice v2.0, S6 thresholds
+      PP3_VeryStrong     93      2  2.27e+03   [455, 3.25e+04]        >=1.12e+03meets  INCONCLUSIVE
+      PP3_Strong        135     53       124   [79.1, 197]            >=33.5    meets  clears
+      PP3_Moderate       15     82      8.92   [3.62, 19.9]           >=5.79    meets  INCONCLUSIVE
+      PP3_Supporting      7    110       3.1   [0.881, 8.53]          >=2.41    meets  INCONCLUSIVE
+      Indeterminate       9    971     0.452   [0.172, 0.973]                          
+      BP4_Supporting      1    704    0.0693   [0.000803, 0.476]      <=0.416   meets  INCONCLUSIVE
+      BP4_Moderate        4   3259    0.0598   [0.0128, 0.172]        <=0.173   meets  clears
+      BP4_Strong          1   7740    0.0063   [7.8e-05, 0.0404]      <=0.0298  meets  INCONCLUSIVE
+    MetaSplice v2.0, S11 reference-window thresholds
+      PP3_Strong        228     62       179   [127, 256]             >=33.5    meets  clears
+      PP3_Moderate       13     61      10.4   [3.83, 25.2]           >=5.79    meets  INCONCLUSIVE
+      PP3_Supporting     10    179      2.72   [0.997, 6.27]          >=2.41    meets  INCONCLUSIVE
+      Indeterminate       8   1287     0.303   [0.109, 0.673]                          
+      BP4_Supporting      5   2415     0.101   [0.0264, 0.265]        <=0.416   meets  clears
+      BP4_Moderate        0   2795         0   [0, 0.0788]            <=0.173   meets  clears
+      BP4_Strong          1   6122   0.00796   [9.81e-05, 0.0514]     <=0.0298  meets  INCONCLUSIVE
+    SpliceAI, S6 thresholds
+      PP3_Strong        195     53       179   [121, 270]             >=33.5    meets  clears
+      PP3_Moderate       28     94      14.5   [7.36, 27.3]           >=5.79    meets  clears
+      PP3_Supporting     14    132      5.17   [2.15, 11.1]           >=2.41    meets  INCONCLUSIVE
+      Indeterminate       9    473     0.928   [0.342, 2.06]                           
+      BP4_Supporting      4    780      0.25   [0.0511, 0.753]        <=0.416   meets  INCONCLUSIVE
+      BP4_Moderate       13  11208    0.0566   [0.0274, 0.102]        <=0.173   meets  clears
+      NoScore             2    181     0.539   [0.0383, 2.57]                          
+    SpliceAI, S11 reference-window thresholds
+      PP3_Supporting    212    103       100   [74.6, 135]            >=2.41    meets  clears
+      Indeterminate      34    571       2.9   [1.77, 4.51]                            
+      BP4_Supporting      4    858     0.227   [0.0467, 0.682]        <=0.416   meets  INCONCLUSIVE
+      BP4_Moderate       13  11208    0.0566   [0.0274, 0.102]        <=0.173   meets  clears
+      NoScore             2    181     0.539   [0.0383, 2.57]                          
+    SpliceAI, fixed score bands at 0.2 and 0.1 (the ClinGen SVI cut-offs, derived for spliceogenicity): a descriptive
+    comparison only -- no evidence-strength labels and no verdicts for pathogenicity on this cohort
+      score >= 0.2        237    279      41.4   [34.3, 49.5]
+      0.1 < score < 0.2     8    319      1.22   [0.412, 2.9]
+      score <= 0.1         18  12142    0.0723   [0.0399, 0.119]
+      no score              2    181     0.539   [0.0383, 2.57]
+
+wrote results/F1_fresh_validation.tsv (91 rows)

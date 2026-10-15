@@ -1,0 +1,78 @@
+C1 -- fresh temporal cohort (ClinVar 2026-09-28): counts only; no model loaded, no score computed
+input: f9cd3f227b0357a4c022f5d6814e4ab4  data/v2_features_fresh_20260928.csv
+cohort: 16,927 variants, P/LP 2,434, B/LB 14,493
+
+1. By region
+  Canonical Donor Site       n= 1,170  P/LP=1,159
+  Canonical Acceptor Site    n= 1,008  P/LP=1,000
+  Donor Region               n= 1,408  P/LP=  135
+  Acceptor Region            n= 2,019  P/LP=   65
+  PPT Region                 n= 3,899  P/LP=   26
+  Branch Point Region        n=   204  P/LP=    3
+  Deep Intronic              n= 7,219  P/LP=   46
+
+2. Non-canonical, each region, Deep Intronic bands, the sensitivity set and its bands
+  all non-canonical                    MetaSplice             n= 14,749  P/LP=  275  B/LB=14,474
+  all non-canonical                    MetaSplice & SpliceAI  n= 14,552  P/LP=  273  B/LB=14,279
+  all non-canonical                    MetaSplice & CADD      n= 14,749  P/LP=  275  B/LB=14,474
+  all non-canonical                    all three              n= 14,552  P/LP=  273  B/LB=14,279
+  Donor Region                         MetaSplice             n=  1,408  P/LP=  135  B/LB= 1,273
+  Donor Region                         MetaSplice & SpliceAI  n=  1,382  P/LP=  133  B/LB= 1,249
+  Donor Region                         MetaSplice & CADD      n=  1,408  P/LP=  135  B/LB= 1,273
+  Donor Region                         all three              n=  1,382  P/LP=  133  B/LB= 1,249
+  Acceptor Region                      MetaSplice             n=  2,019  P/LP=   65  B/LB= 1,954
+  Acceptor Region                      MetaSplice & SpliceAI  n=  2,001  P/LP=   65  B/LB= 1,936
+  Acceptor Region                      MetaSplice & CADD      n=  2,019  P/LP=   65  B/LB= 1,954
+  Acceptor Region                      all three              n=  2,001  P/LP=   65  B/LB= 1,936
+  PPT Region                           MetaSplice             n=  3,899  P/LP=   26  B/LB= 3,873
+  PPT Region                           MetaSplice & SpliceAI  n=  3,840  P/LP=   26  B/LB= 3,814
+  PPT Region                           MetaSplice & CADD      n=  3,899  P/LP=   26  B/LB= 3,873
+  PPT Region                           all three              n=  3,840  P/LP=   26  B/LB= 3,814
+  Branch Point Region                  MetaSplice             n=    204  P/LP=    3  B/LB=   201
+  Branch Point Region                  MetaSplice & SpliceAI  n=    203  P/LP=    3  B/LB=   200
+  Branch Point Region                  MetaSplice & CADD      n=    204  P/LP=    3  B/LB=   201
+  Branch Point Region                  all three              n=    203  P/LP=    3  B/LB=   200
+  Deep Intronic                        MetaSplice             n=  7,219  P/LP=   46  B/LB= 7,173
+  Deep Intronic                        MetaSplice & SpliceAI  n=  7,126  P/LP=   46  B/LB= 7,080
+  Deep Intronic                        MetaSplice & CADD      n=  7,219  P/LP=   46  B/LB= 7,173
+  Deep Intronic                        all three              n=  7,126  P/LP=   46  B/LB= 7,080
+  Deep Intronic <= 50 bp               MetaSplice             n=  5,544  P/LP=    4  B/LB= 5,540
+  Deep Intronic <= 50 bp               MetaSplice & SpliceAI  n=  5,462  P/LP=    4  B/LB= 5,458
+  Deep Intronic <= 50 bp               MetaSplice & CADD      n=  5,544  P/LP=    4  B/LB= 5,540
+  Deep Intronic <= 50 bp               all three              n=  5,462  P/LP=    4  B/LB= 5,458
+  Deep Intronic 51-500 bp              MetaSplice             n=    432  P/LP=   14  B/LB=   418
+  Deep Intronic 51-500 bp              MetaSplice & SpliceAI  n=    430  P/LP=   14  B/LB=   416
+  Deep Intronic 51-500 bp              MetaSplice & CADD      n=    432  P/LP=   14  B/LB=   418
+  Deep Intronic 51-500 bp              all three              n=    430  P/LP=   14  B/LB=   416
+  Deep Intronic > 500 bp               MetaSplice             n=  1,243  P/LP=   28  B/LB= 1,215
+  Deep Intronic > 500 bp               MetaSplice & SpliceAI  n=  1,234  P/LP=   28  B/LB= 1,206
+  Deep Intronic > 500 bp               MetaSplice & CADD      n=  1,243  P/LP=   28  B/LB= 1,215
+  Deep Intronic > 500 bp               all three              n=  1,234  P/LP=   28  B/LB= 1,206
+  DI sensitivity set                   MetaSplice             n=  6,039  P/LP=   38  B/LB= 6,001
+  DI sensitivity set                   MetaSplice & SpliceAI  n=  5,957  P/LP=   38  B/LB= 5,919
+  DI sensitivity set                   MetaSplice & CADD      n=  6,039  P/LP=   38  B/LB= 6,001
+  DI sensitivity set                   all three              n=  5,957  P/LP=   38  B/LB= 5,919
+  DI sensitivity set <= 50 bp          MetaSplice             n=  4,626  P/LP=    4  B/LB= 4,622
+  DI sensitivity set <= 50 bp          MetaSplice & SpliceAI  n=  4,552  P/LP=    4  B/LB= 4,548
+  DI sensitivity set <= 50 bp          MetaSplice & CADD      n=  4,626  P/LP=    4  B/LB= 4,622
+  DI sensitivity set <= 50 bp          all three              n=  4,552  P/LP=    4  B/LB= 4,548
+  DI sensitivity set 51-500 bp         MetaSplice             n=    287  P/LP=   11  B/LB=   276
+  DI sensitivity set 51-500 bp         MetaSplice & SpliceAI  n=    285  P/LP=   11  B/LB=   274
+  DI sensitivity set 51-500 bp         MetaSplice & CADD      n=    287  P/LP=   11  B/LB=   276
+  DI sensitivity set 51-500 bp         all three              n=    285  P/LP=   11  B/LB=   274
+  DI sensitivity set > 500 bp          MetaSplice             n=  1,126  P/LP=   23  B/LB= 1,103
+  DI sensitivity set > 500 bp          MetaSplice & SpliceAI  n=  1,120  P/LP=   23  B/LB= 1,097
+  DI sensitivity set > 500 bp          MetaSplice & CADD      n=  1,126  P/LP=   23  B/LB= 1,103
+  DI sensitivity set > 500 bp          all three              n=  1,120  P/LP=   23  B/LB= 1,097
+
+3. Calibration cohorts (non-canonical, gnomAD AF < 0.01, gene with >= 1 P/LP in the training release)
+  all stars                            MetaSplice             n= 13,194  P/LP=  273  B/LB=12,921
+  all stars                            MetaSplice & SpliceAI  n= 13,011  P/LP=  271  B/LB=12,740
+  all stars                            MetaSplice & CADD      n= 13,194  P/LP=  273  B/LB=12,921
+  all stars                            all three              n= 13,011  P/LP=  271  B/LB=12,740
+  >= 1 star                            MetaSplice             n= 13,186  P/LP=  265  B/LB=12,921
+  >= 1 star                            MetaSplice & SpliceAI  n= 13,003  P/LP=  263  B/LB=12,740
+  >= 1 star                            MetaSplice & CADD      n= 13,186  P/LP=  265  B/LB=12,921
+  >= 1 star                            all three              n= 13,003  P/LP=  263  B/LB=12,740
+
+wrote results/C1_fresh_cohorts.tsv (60 rows)

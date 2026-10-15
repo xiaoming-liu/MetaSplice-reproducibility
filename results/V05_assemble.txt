@@ -1,0 +1,31 @@
+V05 -- per-set feature tables from the scorer's union table, and the missingness-parity check
+  training                       413,199 rows; region, gene and gene ID equal V02's
+  test_candidates                 29,288 rows; region, gene and gene ID equal V02's
+  vus                             71,267 rows; region, gene and gene ID equal V02's
+  literature                         697 rows; region, gene and gene ID equal V02's
+  splicevardb                     22,908 rows; region, gene and gene ID equal V02's
+  gnomad_reference: gnomAD AF present in V02b and the scorer for all 100,000 rows, and equal
+  gnomad_reference               100,000 rows; region, gene and gene ID equal V02's
+  gnomad_reference_stratified: gnomAD AF present in V02b and the scorer for all 50,000 rows, and equal
+  gnomad_reference_stratified     50,000 rows; region, gene and gene ID equal V02's
+
+Missing rate by feature (all regions), per set:
+                                 training test_candidates     vus literature splicevardb gnomad_reference gnomad_reference_stratified
+phyloP100way_vertebrate             0.01%           0.01%   0.01%      0.00%       0.00%            0.52%                       0.08%
+phyloP470way_mammalian              7.00%           7.89%   6.58%      3.87%       5.73%            5.31%                       6.05%
+phastCons100way_vertebrate          0.01%           0.01%   0.01%      0.00%       0.00%            0.52%                       0.08%
+phastCons470way_mammalian           0.91%           0.69%   0.32%      0.14%       0.38%            1.69%                       0.75%
+gnomAD_pLI                          3.03%           3.57%   2.69%      1.15%       5.10%            4.56%                       4.98%
+gnomAD_LOEUF                        9.27%           9.80%  10.34%     19.94%       6.20%            8.91%                       8.52%
+ClinGen_Haploinsufficiency_Score   54.58%          55.74%  49.78%     47.63%      86.77%           67.01%                      73.16%
+DANN_score                          0.09%           0.11%   0.10%      0.00%       0.00%            0.17%                       0.15%
+gpn_msa_score                       0.00%           0.00%   0.00%      0.00%       0.00%            0.00%                       0.00%
+
+Gene-level values against the dbNSFP 5.4 gene file, and across tables:
+  genes represented 10,521; found in the dbNSFP gene file 10,516; with more than one set of values across tables 0; values equal to the source 10,521 of 10,521
+  PASS
+
+Parity with training within each region (tolerance 5 points; groups of >= 100 variants; LOEUF and ClinGen HI reported above, not gated):
+  phyloP470way, literature Donor Region: 2 of 144 variants, at positions the 470-way wigFix does not cover (checked against the source: chr11:103133710, chr2:151533439)
+  accepted: literature / Donor Region / phyloP470way_mammalian: missing 1.4% vs training 7.1%: 2 of 144 variants, at positions the 470-way wigFix does not cover (checked against the source: chr11:103133710, chr2:151533439)
+  PASS: every gated feature, region and set within tolerance, or the one verified exception

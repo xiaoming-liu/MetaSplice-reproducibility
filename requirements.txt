@@ -1,0 +1,11 @@
+# The environment the analyses ran in: Python 3.12.12 with these packages.
+numpy==2.3.5
+pandas==3.0.1
+scikit-learn==1.8.0
+xgboost==3.2.0
+scipy==1.17.1
+matplotlib==3.10.8
+joblib==1.5.3
+pysam==0.23.3
+pytest==9.1.1
+openpyxl==3.1.5        # scripts/splicevardb/restore_splicevardb.py reads the source studies' .xlsx files

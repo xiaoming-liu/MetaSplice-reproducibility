@@ -1,0 +1,12 @@
+V04 -- features of the union of the v2.0 variant sets through score_v2.py: 686,128 variants
+  group 0: 87,789 variants on chr2, chr4
+  group 1: 86,217 variants on chr1, chr15
+  group 2: 89,488 variants on chr3, chr8, chrX
+  group 3: 81,779 variants on chr10, chr11, chr20
+  group 4: 89,957 variants on chr12, chr13, chr17, chr21
+  group 5: 81,353 variants on chr18, chr6, chr7, chrY
+  group 6: 81,835 variants on chr16, chr22, chr9
+  group 7: 87,710 variants on chr14, chr19, chr5
+  8 scorer processes: 0.6 h
+  in scope: 686,128 of 686,128; not returned 0
+  wrote data/v2_features_union.tsv (686,128 rows, 48 columns)

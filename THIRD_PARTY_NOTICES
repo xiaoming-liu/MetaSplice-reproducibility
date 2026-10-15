@@ -1,0 +1,44 @@
+MetaSplice Release 2.0 reproducibility package -- third-party content
+======================================================================
+
+MetaSplice's code, model, scores and derived tables are under the MetaSplice licence (LICENSE). The data tables also
+carry values from the resources below, which keep their own terms. The wording of each licence and its source are
+recorded in the MetaSplice repository (docs/FEATURE_LICENCES.md).
+
+Variant sets
+------------
+ClinVar (NCBI): variants, classifications, review status and ClinVar identifiers, including the two release summaries
+  in data/clinvar/. NCBI places no restrictions on the use or distribution of ClinVar data and asks that ClinVar be
+  cited as the source. Landrum MJ, et al. Nucleic Acids Res. 2020;48:D835-44.
+SpliceVarDB set (data/v2_variants_splicevardb.csv, data/v2_features_splicevardb.csv): variants and source studies,
+  rebuilt for this study from SpliceVarDB's source studies with its published criteria (Sullivan PJ, et al. Am J Hum
+  Genet. 2024;111:2164-75). The classifications are not included, except 14 extracted by hand from two studies
+  (scripts/splicevardb/literature_classifications.csv); scripts/splicevardb/ restores the rest from the studies' files.
+  Sources: Chong R, et al. Mol Cell. 2019;73:183-94 (MFASS); Shiraishi Y, et al. Genome Res. 2018;28:1111-25
+  (SAVNet); Jayasinghe RG, et al. Cell Rep. 2018;23:270-81 (MiSplice); Casadei S, et al. Proc Natl Acad Sci USA.
+  2019;116:26798-807; Fraile-Bethencourt E, et al. J Pathol. 2019;248:409-20.
+  scripts/splicevardb/classify_all_datasets.py is the reconstruction's classifier, unchanged.
+gnomAD v4.1 (the reference samples and the allele frequencies in the feature tables): CC0. Chen S, et al. Nature.
+  2024;625:92-100.
+Literature-confirmed splice-altering variants: gene and HGVS description of each variant, curated for this study from
+  published reports.
+
+Feature values in the tables
+----------------------------
+SpliceTransformer (Apache-2.0; You N, et al. Nat Commun. 2024;15:9129) and Pangolin (GPL-3.0; Zeng T, Li YI. Genome
+  Biol. 2022;23:103) predictions, computed for this study.
+DANN (MIT; Quang D, et al. Bioinformatics. 2015;31:761-3).
+GPN-MSA (MIT; Benegas G, et al. Nat Biotechnol. 2025;43:1960-5).
+phyloP and phastCons, 100-way and 470-way (UCSC Genome Browser; free for public and commercial use). Pollard KS, et al.
+  Genome Res. 2010;20:110-21. Siepel A, et al. Genome Res. 2005;15:1034-50.
+Gene level: gnomAD pLI and LOEUF (gnomAD; CC0) and ClinGen haploinsufficiency scores (ClinGen; CC0), for HGNC's genes
+  (HGNC; CC0), with the rules and values of the dbNSFP 5.4 gene file (Liu X, et al. Genome Med. 2020;12:103).
+  scripts/build/gene_level/build_gene_level.py builds them from these sources.
+Regions and exon context: GENCODE v50 MANE Select and MANE Plus Clinical (GENCODE/Ensembl; no restrictions). Harrow J,
+  et al. Genome Res. 2012;22:1760-74. Morales J, et al. Nature. 2022;604:310-5.
+
+Not included
+------------
+SpliceAI (Illumina; precomputed scores free for academic and not-for-profit use) and CADD v1.7 (free for
+  non-commercial applications) scores. scripts/comparators/ rebuilds them from copies you obtain under their terms.
+  Jaganathan K, et al. Cell. 2019;176:535-48. Schubach M, et al. Nucleic Acids Res. 2024;52:D1143-54.

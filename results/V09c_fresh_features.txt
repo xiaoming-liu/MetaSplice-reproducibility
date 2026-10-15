@@ -1,0 +1,13 @@
+V09c -- features of the fresh cohort: 16,927 variants
+  reused SpliceTransformer (16,927 rows, exactly the cohort) and Pangolin (16,927 rows, exactly the cohort) from the earlier run
+  scorer (features only): 16,927 rows (reused from the earlier run)
+  every variant came back in scope once, with V09b's region, gene and gene ID
+  SpliceAI scored 98.68% (GRCh37 record 99.98%; hg19 REF equal for 16,923); CADD scored 100.00%
+
+Gene-level values against dbNSFP 5.4:
+  genes represented 3,522; found in the dbNSFP gene file 3,521; with more than one set of values across tables 0; values equal to the source 3,522 of 3,522
+
+Missingness parity with training (5 points; groups >= 100):
+  PASS
+
+wrote data/v2_features_fresh_20260928.csv (16,927 rows); no model score computed, no label used

@@ -1,0 +1,38 @@
+section	set	scope	n	group	mean_abs_shap	P	genes	pairs	estimate	lo	hi
+importance	training, out of fold	all	413199	Pangolin	3.9939422607421875						
+importance	training, out of fold	all	413199	SpliceTransformer	2.188995361328125						
+importance	training, out of fold	all	413199	exon context	1.647043228149414						
+importance	training, out of fold	all	413199	gene-level	0.9068316221237183						
+importance	training, out of fold	all	413199	conservation	0.7048701643943787						
+importance	training, out of fold	all	413199	GPN-MSA	0.529807984828949						
+importance	training, out of fold	all	413199	DANN	0.3487817645072937						
+importance	training, out of fold	all	413199	region	0.2555444836616516						
+importance	training, out of fold	non-canonical	375497	Pangolin	4.110526084899902						
+importance	training, out of fold	non-canonical	375497	SpliceTransformer	2.2015817165374756						
+importance	training, out of fold	non-canonical	375497	exon context	1.530145287513733						
+importance	training, out of fold	non-canonical	375497	gene-level	0.8879485130310059						
+importance	training, out of fold	non-canonical	375497	conservation	0.7069828510284424						
+importance	training, out of fold	non-canonical	375497	GPN-MSA	0.5274694561958313						
+importance	training, out of fold	non-canonical	375497	DANN	0.3255712389945984						
+importance	training, out of fold	non-canonical	375497	region	0.24881546199321747						
+importance	pooled, full model	all	46112	Pangolin	3.883204936981201						
+importance	pooled, full model	all	46112	SpliceTransformer	1.8862141370773315						
+importance	pooled, full model	all	46112	exon context	1.9060031175613403						
+importance	pooled, full model	all	46112	gene-level	0.8008308410644531						
+importance	pooled, full model	all	46112	conservation	0.6638653874397278						
+importance	pooled, full model	all	46112	GPN-MSA	0.45347023010253906						
+importance	pooled, full model	all	46112	DANN	0.3256833851337433						
+importance	pooled, full model	all	46112	region	0.25103336572647095						
+importance	pooled, full model	non-canonical	40619	Pangolin	4.052152633666992						
+importance	pooled, full model	non-canonical	40619	SpliceTransformer	1.8524672985076904						
+importance	pooled, full model	non-canonical	40619	exon context	1.7757781744003296						
+importance	pooled, full model	non-canonical	40619	gene-level	0.777665376663208						
+importance	pooled, full model	non-canonical	40619	conservation	0.677371084690094						
+importance	pooled, full model	non-canonical	40619	GPN-MSA	0.4405737817287445						
+importance	pooled, full model	non-canonical	40619	DANN	0.29637205600738525						
+importance	pooled, full model	non-canonical	40619	region	0.2473038136959076						
+within-gene concordance	pooled	MetaSplice	40296			600.0	353.0	19975.0	0.9896871088861077	0.9842727249398779	0.9954996342705001
+within-gene concordance	pooled	SpliceAI	40296			600.0	353.0	19975.0	0.9815269086357947	0.972452816739677	0.9885154462737175
+within-gene concordance	pooled	CADD	40296			600.0	353.0	19975.0	0.8782978723404256	0.8461124931037508	0.9189343621573133
+within-gene concordance	pooled	MetaSplice minus SpliceAI	40296			600.0	353.0		0.008160200250312943	-0.000388921460130745	0.018268676144589394
+within-gene concordance	pooled	MetaSplice minus CADD	40296			600.0	353.0		0.11138923654568211	0.07515106937277735	0.14102450117503446

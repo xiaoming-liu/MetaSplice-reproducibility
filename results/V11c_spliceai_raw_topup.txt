@@ -1,0 +1,21 @@
+V11c -- SpliceAI 1.3.1 raw scores, +-4,999 nt, for pooled calibration-cohort variants not yet scored (Amendment 9)
+  cbe7341aaab1dd6678dc9504b0952165  spliceai/annotations/grch37.txt  ok
+  140fc5c24a418d1cac65a5a8d4c543cf  spliceai/models/spliceai1.h5  ok
+  9d5a30fac2a3f11751ef530f44fe2eb2  spliceai/models/spliceai2.h5  ok
+  e44a2ecdf62ec9dc226ebcfed83b3b2f  spliceai/models/spliceai3.h5  ok
+  1449760f82aa8f08bcc4761280811a2c  spliceai/models/spliceai4.h5  ok
+  d35a0e714be8b359c176964e94091b2f  spliceai/models/spliceai5.h5  ok
+  a1847d63dd5ab2e4021b1f20a01b22c8  data/v2_features_pooled_test.csv  ok
+
+Pooled calibration cohort (all statuses): 37,860; with a row in V11 or V11b: 37,839; to score: 21 (GRCh37 record 21)
+  hg19 REF equal: 21; precomputed masked score present: 21
+
+Installation check: -D 50 -M 1 on 500 variants (seed 42; up to 100 per non-canonical region)
+  topup_check_d50_m1: 500 variants in 2 processes, 2.5 min; scored 500; skipped by SpliceAI 0
+  within 0.01 of V08's precomputed value: 99.20% (n=500); unscored 0; max |diff| 0.240; identical 97.20%
+  PASS
+
+Raw scores: -D 4999 -M 0 on 21 variants
+  topup_raw_d4999_m0: 21 variants in 1 processes, 0.4 min; scored 21; skipped by SpliceAI 0
+  scored 21 of 21; masked score present for 21
+wrote data/v2_spliceai_raw_d4999_topup.csv (21 rows; md5 52d94eb91cef1ec323409e33d7b36906); labels not used for SpliceAI settings or predictions

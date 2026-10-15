@@ -1,0 +1,61 @@
+cohort	subset	pairing	n	P	B
+fresh non-canonical	all non-canonical	MetaSplice	14749	275	14474
+fresh non-canonical	all non-canonical	MetaSplice & SpliceAI	14552	273	14279
+fresh non-canonical	all non-canonical	MetaSplice & CADD	14749	275	14474
+fresh non-canonical	all non-canonical	all three	14552	273	14279
+fresh non-canonical	Donor Region	MetaSplice	1408	135	1273
+fresh non-canonical	Donor Region	MetaSplice & SpliceAI	1382	133	1249
+fresh non-canonical	Donor Region	MetaSplice & CADD	1408	135	1273
+fresh non-canonical	Donor Region	all three	1382	133	1249
+fresh non-canonical	Acceptor Region	MetaSplice	2019	65	1954
+fresh non-canonical	Acceptor Region	MetaSplice & SpliceAI	2001	65	1936
+fresh non-canonical	Acceptor Region	MetaSplice & CADD	2019	65	1954
+fresh non-canonical	Acceptor Region	all three	2001	65	1936
+fresh non-canonical	PPT Region	MetaSplice	3899	26	3873
+fresh non-canonical	PPT Region	MetaSplice & SpliceAI	3840	26	3814
+fresh non-canonical	PPT Region	MetaSplice & CADD	3899	26	3873
+fresh non-canonical	PPT Region	all three	3840	26	3814
+fresh non-canonical	Branch Point Region	MetaSplice	204	3	201
+fresh non-canonical	Branch Point Region	MetaSplice & SpliceAI	203	3	200
+fresh non-canonical	Branch Point Region	MetaSplice & CADD	204	3	201
+fresh non-canonical	Branch Point Region	all three	203	3	200
+fresh non-canonical	Deep Intronic	MetaSplice	7219	46	7173
+fresh non-canonical	Deep Intronic	MetaSplice & SpliceAI	7126	46	7080
+fresh non-canonical	Deep Intronic	MetaSplice & CADD	7219	46	7173
+fresh non-canonical	Deep Intronic	all three	7126	46	7080
+fresh non-canonical	Deep Intronic <= 50 bp	MetaSplice	5544	4	5540
+fresh non-canonical	Deep Intronic <= 50 bp	MetaSplice & SpliceAI	5462	4	5458
+fresh non-canonical	Deep Intronic <= 50 bp	MetaSplice & CADD	5544	4	5540
+fresh non-canonical	Deep Intronic <= 50 bp	all three	5462	4	5458
+fresh non-canonical	Deep Intronic 51-500 bp	MetaSplice	432	14	418
+fresh non-canonical	Deep Intronic 51-500 bp	MetaSplice & SpliceAI	430	14	416
+fresh non-canonical	Deep Intronic 51-500 bp	MetaSplice & CADD	432	14	418
+fresh non-canonical	Deep Intronic 51-500 bp	all three	430	14	416
+fresh non-canonical	Deep Intronic > 500 bp	MetaSplice	1243	28	1215
+fresh non-canonical	Deep Intronic > 500 bp	MetaSplice & SpliceAI	1234	28	1206
+fresh non-canonical	Deep Intronic > 500 bp	MetaSplice & CADD	1243	28	1215
+fresh non-canonical	Deep Intronic > 500 bp	all three	1234	28	1206
+fresh non-canonical	DI sensitivity set	MetaSplice	6039	38	6001
+fresh non-canonical	DI sensitivity set	MetaSplice & SpliceAI	5957	38	5919
+fresh non-canonical	DI sensitivity set	MetaSplice & CADD	6039	38	6001
+fresh non-canonical	DI sensitivity set	all three	5957	38	5919
+fresh non-canonical	DI sensitivity set <= 50 bp	MetaSplice	4626	4	4622
+fresh non-canonical	DI sensitivity set <= 50 bp	MetaSplice & SpliceAI	4552	4	4548
+fresh non-canonical	DI sensitivity set <= 50 bp	MetaSplice & CADD	4626	4	4622
+fresh non-canonical	DI sensitivity set <= 50 bp	all three	4552	4	4548
+fresh non-canonical	DI sensitivity set 51-500 bp	MetaSplice	287	11	276
+fresh non-canonical	DI sensitivity set 51-500 bp	MetaSplice & SpliceAI	285	11	274
+fresh non-canonical	DI sensitivity set 51-500 bp	MetaSplice & CADD	287	11	276
+fresh non-canonical	DI sensitivity set 51-500 bp	all three	285	11	274
+fresh non-canonical	DI sensitivity set > 500 bp	MetaSplice	1126	23	1103
+fresh non-canonical	DI sensitivity set > 500 bp	MetaSplice & SpliceAI	1120	23	1097
+fresh non-canonical	DI sensitivity set > 500 bp	MetaSplice & CADD	1126	23	1103
+fresh non-canonical	DI sensitivity set > 500 bp	all three	1120	23	1097
+fresh calibration	all stars	MetaSplice	13194	273	12921
+fresh calibration	all stars	MetaSplice & SpliceAI	13011	271	12740
+fresh calibration	all stars	MetaSplice & CADD	13194	273	12921
+fresh calibration	all stars	all three	13011	271	12740
+fresh calibration	>= 1 star	MetaSplice	13186	265	12921
+fresh calibration	>= 1 star	MetaSplice & SpliceAI	13003	263	12740
+fresh calibration	>= 1 star	MetaSplice & CADD	13186	265	12921
+fresh calibration	>= 1 star	all three	13003	263	12740

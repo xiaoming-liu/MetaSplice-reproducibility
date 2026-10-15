@@ -1,0 +1,55 @@
+V10 -- distance-balanced training experiment (Amendment 4); XGBoost parameters {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'tree_method': 'hist', 'random_state': 42, 'n_jobs': -1}
+training: 413,199 rows, P/LP 41,032; Deep Intronic 191,795
+
+Check: folds
+  fold map equals models/metasplice_v2_folds.json, rows in v2_oof.csv order, folds equal: True
+
+Control: unweighted V06 refit
+  out-of-fold vs v2_oof.csv: max |diff| 1.11e-16; full model vs the saved v2.0 model: max |diff| 0.00e+00
+  the control reproduces v2.0 exactly
+
+Candidate: distance-balanced weights, per fit from that fit's rows only
+  fold 0 (fit on 332,654 rows): DI P/LP 479, DI B/LB 154,332; total B/LB weight 154,332.0 (= count); ESS of DI B/LB 11,386; weight range 0.2012-37.3761
+    <= 50: P 58, B 92,861, w 0.2012  51-100: P 37, B 13,003, w 0.9168  101-250: P 58, B 31,891, w 0.5860  251-500: P 81, B 12,913, w 2.0211  501-1000: P 108, B 931, w 37.3761  > 1000: P 137, B 2,733, w 16.1511
+    fitted in 4 s
+  fold 1 (fit on 331,156 rows): DI P/LP 412, DI B/LB 153,394; total B/LB weight 153,394.0 (= count); ESS of DI B/LB 11,858; weight range 0.2330-36.1033
+    <= 50: P 58, B 92,688, w 0.2330  51-100: P 36, B 13,049, w 1.0272  101-250: P 52, B 31,727, w 0.6102  251-500: P 60, B 12,480, w 1.7900  501-1000: P 80, B 825, w 36.1033  > 1000: P 126, B 2,625, w 17.8711
+    fitted in 4 s
+  fold 2 (fit on 331,984 rows): DI P/LP 449, DI B/LB 153,245; total B/LB weight 153,245.0 (= count); ESS of DI B/LB 12,058; weight range 0.2144-33.2727
+    <= 50: P 58, B 92,330, w 0.2144  51-100: P 33, B 12,983, w 0.8675  101-250: P 48, B 31,298, w 0.5234  251-500: P 75, B 12,766, w 2.0051  501-1000: P 97, B 995, w 33.2727  > 1000: P 138, B 2,873, w 16.3939
+    fitted in 4 s
+  fold 3 (fit on 323,666 rows): DI P/LP 419, DI B/LB 149,476; total B/LB weight 149,476.0 (= count); ESS of DI B/LB 10,839; weight range 0.2340-41.8023
+    <= 50: P 59, B 89,932, w 0.2340  51-100: P 39, B 12,764, w 1.0900  101-250: P 59, B 31,319, w 0.6720  251-500: P 64, B 12,421, w 1.8381  501-1000: P 88, B 751, w 41.8023  > 1000: P 110, B 2,289, w 17.1437
+    fitted in 4 s
+  fold 4 (fit on 333,336 rows): DI P/LP 449, DI B/LB 154,525; total B/LB weight 154,525.0 (= count); ESS of DI B/LB 11,975; weight range 0.2031-35.8059
+    <= 50: P 55, B 93,189, w 0.2031  51-100: P 43, B 13,045, w 1.1344  101-250: P 51, B 31,717, w 0.5534  251-500: P 76, B 12,880, w 2.0307  501-1000: P 103, B 990, w 35.8059  > 1000: P 121, B 2,704, w 15.4004
+    fitted in 4 s
+  full (fit on 413,199 rows): DI P/LP 552, DI B/LB 191,243; total B/LB weight 191,243.0 (= count); ESS of DI B/LB 14,541; weight range 0.2164-36.7125
+    <= 50: P 72, B 115,250, w 0.2164  51-100: P 47, B 16,211, w 1.0045  101-250: P 67, B 39,488, w 0.5878  251-500: P 89, B 15,865, w 1.9436  501-1000: P 119, B 1,123, w 36.7125  > 1000: P 158, B 3,306, w 16.5577
+
+Check: refitting candidate fold 0 gives identical predictions: True
+
+Candidate model files (md5, for locking):
+  e575a0003133a4a1b1282df66a7b0818  models/distance_weighting/candidate_full.joblib
+  f3e96bc9f660194355f6ba64ef45e98c  models/distance_weighting/candidate_fold0.joblib
+  def3fc5e5992828cf401f36fc8df6ce0  models/distance_weighting/candidate_fold1.joblib
+  5e94f8fd74006f2297cb8555c8990e87  models/distance_weighting/candidate_fold2.joblib
+  91fe4f6b4013ae99095c6ff0d281ee2c  models/distance_weighting/candidate_fold3.joblib
+  c49320d5d15f4254c2cedf2da825640b  models/distance_weighting/candidate_fold4.joblib
+
+Check: files read during training (audited; writes listed separately):
+  read   /mnt/Work0/Splice_altering_variant/reproducibility_v2/data/v2_features_training.csv
+  read   /mnt/Work0/Splice_altering_variant/reproducibility_v2/data/v2_oof.csv
+  read   /mnt/Work0/Splice_altering_variant/reproducibility_v2/models/metasplice_v2_folds.json
+  read   /mnt/Work0/Splice_altering_variant/reproducibility_v2/models/metasplice_v2_full.joblib
+  wrote  /mnt/Work0/Splice_altering_variant/reproducibility_v2/data/v2_oof_distance_weighting.csv
+  wrote  /mnt/Work0/Splice_altering_variant/reproducibility_v2/models/distance_weighting/candidate_features.joblib
+  wrote  /mnt/Work0/Splice_altering_variant/reproducibility_v2/models/distance_weighting/candidate_fold0.joblib
+  wrote  /mnt/Work0/Splice_altering_variant/reproducibility_v2/models/distance_weighting/candidate_fold1.joblib
+  wrote  /mnt/Work0/Splice_altering_variant/reproducibility_v2/models/distance_weighting/candidate_fold2.joblib
+  wrote  /mnt/Work0/Splice_altering_variant/reproducibility_v2/models/distance_weighting/candidate_fold3.joblib
+  wrote  /mnt/Work0/Splice_altering_variant/reproducibility_v2/models/distance_weighting/candidate_fold4.joblib
+  wrote  /mnt/Work0/Splice_altering_variant/reproducibility_v2/models/distance_weighting/candidate_full.joblib
+  validation or test tables among them: 0
+
+wrote models/distance_weighting/, data/v2_oof_distance_weighting.csv; no performance computed here

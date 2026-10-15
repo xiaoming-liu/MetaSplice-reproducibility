@@ -1,0 +1,30 @@
+V02b -- gnomAD v4.1 population reference, GRCh38, GENCODE v50 MANE scope
+MANE transcript spans on 24 chromosomes; pathogenic genes 5,133; ClinVar variants (either release) 4,412,683
+chr1: eligible 6,713,263 (242 s)
+chr2: eligible 6,804,057 (247 s)
+chr3: eligible 5,231,329 (215 s)
+chr4: eligible 3,895,980 (184 s)
+chr5: eligible 4,196,471 (177 s)
+chr6: eligible 4,866,727 (172 s)
+chr7: eligible 5,188,946 (178 s)
+chr8: eligible 3,897,984 (162 s)
+chr9: eligible 3,291,480 (135 s)
+chr10: eligible 4,608,876 (152 s)
+chr11: eligible 3,623,237 (154 s)
+chr12: eligible 3,935,693 (147 s)
+chr13: eligible 1,888,166 (99 s)
+chr14: eligible 2,557,052 (102 s)
+chr15: eligible 3,152,902 (105 s)
+chr16: eligible 3,517,863 (113 s)
+chr17: eligible 2,680,243 (110 s)
+chr18: eligible 1,873,330 (86 s)
+chr19: eligible 1,734,386 (90 s)
+chr20: eligible 1,888,374 (82 s)
+chr21: eligible 959,391 (51 s)
+chr22: eligible 1,159,603 (63 s)
+chrX: eligible 3,165,909 (115 s)
+counts: gnomAD SNVs read 599,621,719; PASS, 0 < AF < 0.01 586,884,220; outside every MANE transcript span (prefilter) 335,547,398; inside a MANE exon (prefilter) 27,993,334; in a ClinVar release 368,013; out of scope: inside a GENCODE basic exon 8,944,714; out of scope: outside MANE transcripts 1,357,259; in scope, canonical region (not in the non-canonical reference) 246,481; in a gene without P/LP in training 131,595,759
+eligible 80,831,262; by region: Deep Intronic 79,004,118, Branch Point Region 812,074, PPT Region 561,812, Acceptor Region 261,975, Donor Region 191,283
+uniform sample: 100,000; by region: Deep Intronic 97,644, Branch Point Region 1,032, PPT Region 741, Acceptor Region 328, Donor Region 255; Deep Intronic canonical or exonic in some GENCODE v50 transcript 3956
+stratified sample: 50,000; by region: Acceptor Region 10,000, Donor Region 10,000, PPT Region 10,000, Branch Point Region 10,000, Deep Intronic 10,000; Deep Intronic canonical or exonic in some GENCODE v50 transcript 388
+Every REF allele of both samples equals the GRCh38 base.

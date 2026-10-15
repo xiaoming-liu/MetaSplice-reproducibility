@@ -1,0 +1,65 @@
+V08 -- comparator scores: SpliceAI v1.3 (GRCh37 precomputed, through the GRCh37 coordinates) and CADD v1.7 (GRCh38)
+variants: 536,257 distinct, from 537,359 set rows (training 413,199, vus 71,267, test strict 28,465, splicevardb 22,908, test reclassified 823, literature 697)
+GRCh37 coordinates: present 536,225; REF equal to hg19 536,225; REF differs 0
+
+SpliceAI: 532,484 of 536,225 GRCh37 alleles found, 573 s; unreadable records 0; first record differs from the max over all records for 2,287
+CADD: 536,257 of 536,257 GRCh38 alleles found, 457 s; position covered but allele absent 0
+
+Check: SpliceAI equals v1's lookup (same files, same rule) wherever the GRCh37 variant is in both
+  in both: 444,982; identical: 444,982
+  scored by v1's lookup but not here: 0
+
+Reported: CADD against v1's test table (v1 reached GRCh38 through its own liftover)
+  in both: 105,294; identical 105,288; differ 6
+
+Coverage by set and region (no labels): n; GRCh37 coordinates; hg19 REF equal; SpliceAI scored; CADD scored
+  training           all                       413,199    99.99%    99.99%    99.30%   100.00%
+  training           Acceptor Region            64,628   100.00%   100.00%    99.50%   100.00%
+  training           Branch Point Region         5,822    99.97%    99.97%    99.24%   100.00%
+  training           Canonical Acceptor Site    17,126   100.00%   100.00%    99.56%   100.00%
+  training           Canonical Donor Site       20,576   100.00%   100.00%    99.55%   100.00%
+  training           Deep Intronic             191,795    99.99%    99.99%    99.14%   100.00%
+  training           Donor Region               26,476   100.00%   100.00%    99.25%   100.00%
+  training           PPT Region                 86,776   100.00%   100.00%    99.38%   100.00%
+  test strict        all                        28,465   100.00%   100.00%    99.51%   100.00%
+  test strict        Acceptor Region             4,810   100.00%   100.00%    99.58%   100.00%
+  test strict        Branch Point Region           186   100.00%   100.00%   100.00%   100.00%
+  test strict        Canonical Acceptor Site     1,495   100.00%   100.00%    99.40%   100.00%
+  test strict        Canonical Donor Site        1,730   100.00%   100.00%    99.77%   100.00%
+  test strict        Deep Intronic              10,119   100.00%   100.00%    99.45%   100.00%
+  test strict        Donor Region                1,766   100.00%   100.00%    99.43%   100.00%
+  test strict        PPT Region                  8,359   100.00%   100.00%    99.52%   100.00%
+  test reclassified  all                           823   100.00%   100.00%    99.51%   100.00%
+  test reclassified  Acceptor Region               215   100.00%   100.00%   100.00%   100.00%
+  test reclassified  Branch Point Region             6   100.00%   100.00%   100.00%   100.00%
+  test reclassified  Canonical Acceptor Site        58   100.00%   100.00%    98.28%   100.00%
+  test reclassified  Canonical Donor Site           63   100.00%   100.00%   100.00%   100.00%
+  test reclassified  Deep Intronic                 160   100.00%   100.00%    99.38%   100.00%
+  test reclassified  Donor Region                  157   100.00%   100.00%    99.36%   100.00%
+  test reclassified  PPT Region                    164   100.00%   100.00%    99.39%   100.00%
+  vus                all                        71,267    99.99%    99.99%    99.19%   100.00%
+  vus                Acceptor Region            19,421    99.99%    99.99%    99.21%   100.00%
+  vus                Branch Point Region           465   100.00%   100.00%    99.35%   100.00%
+  vus                Canonical Acceptor Site     3,562    99.97%    99.97%    99.30%   100.00%
+  vus                Canonical Donor Site        4,274   100.00%   100.00%    99.11%   100.00%
+  vus                Deep Intronic               7,371    99.93%    99.93%    98.89%   100.00%
+  vus                Donor Region               30,058   100.00%   100.00%    99.21%   100.00%
+  vus                PPT Region                  6,116   100.00%   100.00%    99.40%   100.00%
+  literature         all                           697   100.00%   100.00%    99.57%   100.00%
+  literature         Acceptor Region                95   100.00%   100.00%    98.95%   100.00%
+  literature         Branch Point Region            17   100.00%   100.00%   100.00%   100.00%
+  literature         Canonical Acceptor Site       127   100.00%   100.00%   100.00%   100.00%
+  literature         Canonical Donor Site          145   100.00%   100.00%    99.31%   100.00%
+  literature         Deep Intronic                 130   100.00%   100.00%    99.23%   100.00%
+  literature         Donor Region                  144   100.00%   100.00%   100.00%   100.00%
+  literature         PPT Region                     39   100.00%   100.00%   100.00%   100.00%
+  splicevardb        all                        22,314   100.00%   100.00%    99.38%   100.00%
+  splicevardb        Acceptor Region             2,152   100.00%   100.00%    99.40%   100.00%
+  splicevardb        Branch Point Region         2,894   100.00%   100.00%    99.34%   100.00%
+  splicevardb        Canonical Acceptor Site     3,912   100.00%   100.00%    99.54%   100.00%
+  splicevardb        Canonical Donor Site        2,752   100.00%   100.00%    99.20%   100.00%
+  splicevardb        Deep Intronic               5,038   100.00%   100.00%    99.36%   100.00%
+  splicevardb        Donor Region                2,675   100.00%   100.00%    99.44%   100.00%
+  splicevardb        PPT Region                  2,891   100.00%   100.00%    99.31%   100.00%
+
+wrote data/v2_comparators.csv (536,257 rows)

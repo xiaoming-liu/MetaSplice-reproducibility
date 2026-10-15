@@ -1,0 +1,36 @@
+========================================================================================
+S8 -- CANDIDATE INTERVALS AGAINST MEASURED SPLICING (SpliceVarDB; Amendment 3)
+========================================================================================
+non-canonical, AF < 0.01: n=7,318; splice-altering 2,688; normal 4,630 (equals Amendment 3)
+LR = (share of splice-altering in the interval) / (share of normal in the interval)
+
+MetaSplice v2.0, S6 candidate intervals
+  interval         altering  normal       LR   exact 95% CI
+  PP3_VeryStrong        417       2      359   [79.7, 4.75e+03]
+  PP3_Strong           1359      24     97.5   [59.8, 170]
+  PP3_Moderate          278      22     21.8   [12, 42.2]
+  PP3_Supporting        138      21     11.3   [5.79, 23.6]
+  Indeterminate         247     347     1.23   [0.949, 1.58]
+  BP4_Supporting         65     365    0.307   [0.204, 0.452]
+  BP4_Moderate          114    1480    0.133   [0.102, 0.171]
+  BP4_Strong             70    2369   0.0509   [0.0372, 0.0683]
+  splice-altering given candidate PP3: 81.5%; normal given candidate BP4: 91.0%; splice-altering given candidate BP4: 9.3%
+
+SpliceAI, S6 candidate intervals
+  interval         altering  normal       LR   exact 95% CI
+  PP3_Strong           1460      32     78.6   [51.2, 126]
+  PP3_Moderate          359      22     28.1   [15.8, 53.6]
+  PP3_Supporting        163      23     12.2   [6.48, 24.4]
+  Indeterminate         213     113     3.25   [2.27, 4.68]
+  BP4_Supporting        161     241     1.15   [0.837, 1.58]
+  BP4_Moderate          317    4164    0.131   [0.115, 0.149]
+  NoScore                15      35    0.738   [0.261, 1.95]
+  splice-altering given candidate PP3: 73.7%; normal given candidate BP4: 95.1%; splice-altering given candidate BP4: 17.8%
+
+SpliceAI, ClinGen cut-offs 0.2 / 0.1
+  interval         altering  normal       LR   exact 95% CI
+  PP3_Supporting       1982      77     44.3   [33.6, 59.6]
+  Indeterminate         177      78     3.91   [2.57, 6]
+  BP4_Supporting        514    4440    0.199   [0.181, 0.219]
+  NoScore                15      35    0.738   [0.261, 1.95]
+  splice-altering given candidate PP3: 73.7%; normal given candidate BP4: 95.9%; splice-altering given candidate BP4: 19.1%

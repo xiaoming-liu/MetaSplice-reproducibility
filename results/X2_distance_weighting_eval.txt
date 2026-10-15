@@ -1,0 +1,92 @@
+========================================================================================================
+X2 -- DISTANCE-BALANCED CANDIDATE vs UNWEIGHTED CONTROL (Amendment 4). Identical variants; paired.
+========================================================================================================
+
+1. GENE-DISJOINT OUT-OF-FOLD PREDICTIONS ON THE DERIVATION DATA (the basis for choosing)
+  413,199 variants, 41,032 P/LP; control = v2.0 out-of-fold (reproduced exactly by V10)
+
+  derivation, out of fold: paired auPRC, candidate minus control; gene-clustered bootstrap 95% CI (1,000 iterations, seed 42)
+  subset                                    n   P/LP  genes  control  candidate     diff                95% CI
+  all                                 413,199  41032   6961   0.9942     0.9936  -0.0006   [-0.0009, -0.0003]
+  pooled non-canonical                375,497   3599   6786   0.8779     0.8679  -0.0100   [-0.0140, -0.0064]
+  Canonical Donor Site                 20,576  20443   2640   0.9983     0.9983  -0.0000   [-0.0003, +0.0002]
+  Canonical Acceptor Site              17,126  16990   2362   0.9972     0.9972  +0.0000   [-0.0005, +0.0005]
+  Donor Region                         26,476   1862   4285   0.9559     0.9558  -0.0001   [-0.0025, +0.0021]
+  Acceptor Region                      64,628    784   5231   0.8562     0.8526  -0.0036   [-0.0088, +0.0024]
+  PPT Region                           86,776    348   3630   0.7105     0.7012  -0.0093   [-0.0205, +0.0030]
+  Branch Point Region                   5,822     53   1997   0.5551     0.5649  +0.0099   [-0.0272, +0.0533]
+  Deep Intronic                       191,795    552   4876   0.7132     0.6474  -0.0658   [-0.0891, -0.0424]
+  Deep Intronic <= 50 bp              115,322     72   4384   0.4723     0.4604  -0.0119   [-0.0619, +0.0401]
+  Deep Intronic 51-500 bp              71,767    203   3397   0.6507     0.6389  -0.0119   [-0.0347, +0.0116]
+  Deep Intronic > 500 bp                4,706    277    964   0.8215     0.8104  -0.0110   [-0.0345, +0.0110]
+  DI sensitivity set                  159,226    364   4604   0.7325     0.6638  -0.0687   [-0.0982, -0.0430]
+  DI sensitivity set <= 50 bp          93,732     42   4117   0.4251     0.3927  -0.0323   [-0.1053, +0.0474]
+  DI sensitivity set 51-500 bp         61,455    125   3206   0.6358     0.6170  -0.0188   [-0.0451, +0.0093]
+  DI sensitivity set > 500 bp           4,039    197    811   0.8557     0.8480  -0.0077   [-0.0356, +0.0176]
+  Deep Intronic bin <= 50             115,322     72   4384   0.4723     0.4604  -0.0119   [-0.0619, +0.0401]
+  Deep Intronic bin 51-100             16,258     47   2784   0.5155     0.5570  +0.0416   [-0.0161, +0.0932]
+  Deep Intronic bin 101-250            39,555     67   3053   0.5753     0.5646  -0.0106   [-0.0586, +0.0383]
+  Deep Intronic bin 251-500            15,954     89   2305   0.7770     0.7792  +0.0022   [-0.0244, +0.0252]
+  Deep Intronic bin 501-1000            1,242    119    385   0.8664     0.8460  -0.0204   [-0.0522, +0.0096]
+  Deep Intronic bin > 1000              3,464    158    739   0.7855     0.7869  +0.0015   [-0.0224, +0.0244]
+
+  derivation, out of fold: Deep Intronic (n=191,795, P/LP 552, B/LB 191,243)
+    recall 80%  control   threshold 0.04975 (recall 80.1%)  FP 763 (FPR 0.399%)   by band: <= 50 bp: 152 of 115,250; 51-500 bp: 307 of 71,564; > 500 bp: 304 of 4,429
+    recall 80%  candidate threshold 0.01845 (recall 80.1%)  FP 2,148 (FPR 1.123%)   by band: <= 50 bp: 1,205 of 115,250; 51-500 bp: 811 of 71,564; > 500 bp: 132 of 4,429
+    recall 90%  control   threshold 0.002354 (recall 90.0%)  FP 9,922 (FPR 5.188%)   by band: <= 50 bp: 3,224 of 115,250; 51-500 bp: 4,695 of 71,564; > 500 bp: 2,003 of 4,429
+    recall 90%  candidate threshold 0.001792 (recall 90.0%)  FP 25,465 (FPR 13.316%)   by band: <= 50 bp: 16,276 of 115,250; 51-500 bp: 8,621 of 71,564; > 500 bp: 568 of 4,429
+
+  derivation, out of fold: DI sensitivity set (n=159,226, P/LP 364, B/LB 158,862)
+    recall 80%  control   threshold 0.05621 (recall 80.2%)  FP 498 (FPR 0.313%)   by band: <= 50 bp: 101 of 93,690; 51-500 bp: 186 of 61,330; > 500 bp: 211 of 3,842
+    recall 80%  candidate threshold 0.02117 (recall 80.2%)  FP 1,327 (FPR 0.835%)   by band: <= 50 bp: 719 of 93,690; 51-500 bp: 522 of 61,330; > 500 bp: 86 of 3,842
+    recall 90%  control   threshold 0.002047 (recall 90.1%)  FP 8,730 (FPR 5.495%)   by band: <= 50 bp: 2,621 of 93,690; 51-500 bp: 4,309 of 61,330; > 500 bp: 1,800 of 3,842
+    recall 90%  candidate threshold 0.001259 (recall 90.1%)  FP 27,276 (FPR 17.170%)   by band: <= 50 bp: 17,083 of 93,690; 51-500 bp: 9,578 of 61,330; > 500 bp: 615 of 3,842
+
+  derivation, out of fold: pooled non-canonical (n=375,497, P/LP 3599, B/LB 371,898)
+    recall 80%  control   threshold 0.7727 (recall 80.0%)  FP 440 (FPR 0.118%)
+    recall 80%  candidate threshold 0.7549 (recall 80.0%)  FP 482 (FPR 0.130%)
+    recall 90%  control   threshold 0.1221 (recall 90.0%)  FP 1,762 (FPR 0.474%)
+    recall 90%  candidate threshold 0.08209 (recall 90.0%)  FP 2,303 (FPR 0.619%)
+
+
+2. STRICT TEST SET -- EXPLORATORY: this set motivated the redesign and is not independent for choosing a model
+  28,465 variants, 3,451 P/LP; control = the frozen v2.0 full model; candidate = candidate_full.joblib
+
+  strict test (exploratory): paired auPRC, candidate minus control; gene-clustered bootstrap 95% CI (1,000 iterations, seed 42)
+  subset                                    n   P/LP  genes  control  candidate     diff                95% CI
+  all                                  28,465   3451   3299   0.9954     0.9951  -0.0004   [-0.0013, +0.0004]
+  pooled non-canonical                 25,240    244   3134   0.9358     0.9242  -0.0116   [-0.0216, -0.0036]
+  Canonical Donor Site                  1,730   1723    968   0.9987     0.9987  +0.0000   [-0.0002, +0.0003]
+  Canonical Acceptor Site               1,495   1484    840   0.9957     0.9963  +0.0006   [-0.0002, +0.0019]
+  Donor Region                          1,766    102   1113   0.9768     0.9782  +0.0014   [-0.0010, +0.0044]
+  Acceptor Region                       4,810     36   1917   0.8976     0.8892  -0.0084   [-0.0280, +0.0061]
+  PPT Region                            8,359     21   2310   0.8822     0.8510  -0.0312   [-0.1031, +0.0232]
+  Branch Point Region                     186      5     98   0.6551     0.6693  +0.0142   [-0.0844, +0.1215]  (5 P/LP: not interpreted)
+  Deep Intronic                        10,119     80   2447   0.9236     0.8967  -0.0269   [-0.0547, -0.0067]
+  Deep Intronic <= 50 bp                9,766      4          counts only
+  Deep Intronic 51-500 bp                 203     29    109   0.9056     0.9032  -0.0023   [-0.0441, +0.0292]
+  Deep Intronic > 500 bp                  150     47     84   0.9567     0.9523  -0.0043   [-0.0158, +0.0092]
+  DI sensitivity set                    8,312     62   2226   0.9494     0.9293  -0.0201   [-0.0404, -0.0002]
+  DI sensitivity set <= 50 bp           8,022      3          counts only
+  DI sensitivity set 51-500 bp            163     17     82   0.9485     0.9496  +0.0010   [-0.0675, +0.0492]
+  DI sensitivity set > 500 bp             127     42     70   0.9649     0.9559  -0.0091   [-0.0201, +0.0008]
+
+  strict test (exploratory): Deep Intronic (n=10,119, P/LP 80, B/LB 10,039)
+    recall 80%  control   threshold 0.598 (recall 80.0%)  FP 5 (FPR 0.050%)   by band: <= 50 bp: 1 of 9,762; 51-500 bp: 1 of 174; > 500 bp: 3 of 103
+    recall 80%  candidate threshold 0.4938 (recall 80.0%)  FP 4 (FPR 0.040%)   by band: <= 50 bp: 2 of 9,762; 51-500 bp: 2 of 174; > 500 bp: 0 of 103
+    recall 90%  control   threshold 0.2544 (recall 90.0%)  FP 10 (FPR 0.100%)   by band: <= 50 bp: 2 of 9,762; 51-500 bp: 2 of 174; > 500 bp: 6 of 103
+    recall 90%  candidate threshold 0.06541 (recall 90.0%)  FP 31 (FPR 0.309%)   by band: <= 50 bp: 21 of 9,762; 51-500 bp: 7 of 174; > 500 bp: 3 of 103
+
+  strict test (exploratory): DI sensitivity set (n=8,312, P/LP 62, B/LB 8,250)
+    recall 80%  control   threshold 0.8868 (recall 80.6%)  FP 0 (FPR 0.000%)   by band: <= 50 bp: 0 of 8,019; 51-500 bp: 0 of 146; > 500 bp: 0 of 85
+    recall 80%  candidate threshold 0.7587 (recall 80.6%)  FP 2 (FPR 0.024%)   by band: <= 50 bp: 1 of 8,019; 51-500 bp: 1 of 146; > 500 bp: 0 of 85
+    recall 90%  control   threshold 0.3922 (recall 90.3%)  FP 3 (FPR 0.036%)   by band: <= 50 bp: 1 of 8,019; 51-500 bp: 0 of 146; > 500 bp: 2 of 85
+    recall 90%  candidate threshold 0.2617 (recall 90.3%)  FP 5 (FPR 0.061%)   by band: <= 50 bp: 2 of 8,019; 51-500 bp: 2 of 146; > 500 bp: 1 of 85
+
+  strict test (exploratory): pooled non-canonical (n=25,240, P/LP 244, B/LB 24,996)
+    recall 80%  control   threshold 0.8248 (recall 80.3%)  FP 8 (FPR 0.032%)
+    recall 80%  candidate threshold 0.7659 (recall 80.3%)  FP 12 (FPR 0.048%)
+    recall 90%  control   threshold 0.4225 (recall 90.2%)  FP 21 (FPR 0.084%)
+    recall 90%  candidate threshold 0.2538 (recall 90.2%)  FP 34 (FPR 0.136%)
+
+wrote results/X2_distance_weighting_eval.tsv (62 rows)

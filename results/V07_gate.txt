@@ -1,0 +1,50 @@
+V07 -- equivalence gate: production path from a VCF against the stored tables, model-matched
+training sample: 1,000 ({'Acceptor Region': 200, 'Branch Point Region': 200, 'Deep Intronic': 200, 'Donor Region': 200, 'PPT Region': 200})
+strict test sample: 986 ({'Acceptor Region': 200, 'Branch Point Region': 186, 'Deep Intronic': 200, 'Donor Region': 200, 'PPT Region': 200})
+
+Fresh SpliceTransformer and Pangolin runs (V03 launcher, TF32 off)
+  spt: 1,986 variants in 204 s
+  pangolin: 1,986 variants in 131 s
+
+Command-line scorer, scoring mode, committed model
+  1,986 rows for 1,986 requested variants, in 35 min
+  PASS  every requested variant scored in scope, exactly once  [missing 0, unexpected 0, duplicated 0]
+
+Features: fresh against the stored tables
+  PASS  training sample: one-to-one join keeps all 1,000 keys  [1,000 joined]
+  PASS  training sample: region identical  [0 differ]
+  PASS  training sample: gene identical  [0 differ]
+  PASS  training sample: gene_id identical  [0 differ]
+  PASS  training sample: every feature matches for >= 99% of 1,000 variants  [least matching: ClinGen_Haploinsufficiency_Score 100.00%; identical bit for bit: 37 of 38 features]
+  PASS  strict test sample: one-to-one join keeps all 986 keys  [986 joined]
+  PASS  strict test sample: region identical  [0 differ]
+  PASS  strict test sample: gene identical  [0 differ]
+  PASS  strict test sample: gene_id identical  [0 differ]
+  PASS  strict test sample: every feature matches for >= 99% of 986 variants  [least matching: ClinGen_Haploinsufficiency_Score 100.00%; identical bit for bit: 37 of 38 features]
+
+Scores, model-matched
+  PASS  strict test scores: one-to-one join keeps all 986 keys  [986 joined]
+  PASS  strict test: scorer (full model) vs full model, stored features all                  n=  986  within 1e-4 100.00%  max |diff| 4.99e-07
+  PASS  strict test: scorer (full model) vs full model, stored features Acceptor Region      n=  200  within 1e-4 100.00%  max |diff| 4.99e-07
+  PASS  strict test: scorer (full model) vs full model, stored features Branch Point Region  n=  186  within 1e-4 100.00%  max |diff| 4.98e-07
+  PASS  strict test: scorer (full model) vs full model, stored features Deep Intronic        n=  200  within 1e-4 100.00%  max |diff| 4.98e-07
+  PASS  strict test: scorer (full model) vs full model, stored features Donor Region         n=  200  within 1e-4 100.00%  max |diff| 4.97e-07
+  PASS  strict test: scorer (full model) vs full model, stored features PPT Region           n=  200  within 1e-4 100.00%  max |diff| 4.99e-07
+  PASS  training scores: one-to-one join keeps all 1,000 keys  [1,000 joined]
+  PASS  training: scorer (full model) vs full model, stored features all                  n= 1000  within 1e-4 100.00%  max |diff| 5.00e-07
+  PASS  training: scorer (full model) vs full model, stored features Acceptor Region      n=  200  within 1e-4 100.00%  max |diff| 4.93e-07
+  PASS  training: scorer (full model) vs full model, stored features Branch Point Region  n=  200  within 1e-4 100.00%  max |diff| 5.00e-07
+  PASS  training: scorer (full model) vs full model, stored features Deep Intronic        n=  200  within 1e-4 100.00%  max |diff| 4.91e-07
+  PASS  training: scorer (full model) vs full model, stored features Donor Region         n=  200  within 1e-4 100.00%  max |diff| 4.98e-07
+  PASS  training: scorer (full model) vs full model, stored features PPT Region           n=  200  within 1e-4 100.00%  max |diff| 4.98e-07
+  PASS  training, fresh features: one-to-one join keeps all 1,000 keys  [1,000 joined]
+  PASS  training, saved out-of-fold scores: one-to-one join keeps all 1,000 keys  [1,000 joined]
+  PASS  training: fold from the fold map equals the saved fold  [0 differ]
+  PASS  training: assigned fold model, fresh features, vs saved OOF all                  n= 1000  within 1e-4 100.00%  max |diff| 1.11e-16
+  PASS  training: assigned fold model, fresh features, vs saved OOF Acceptor Region      n=  200  within 1e-4 100.00%  max |diff| 1.11e-16
+  PASS  training: assigned fold model, fresh features, vs saved OOF Branch Point Region  n=  200  within 1e-4 100.00%  max |diff| 9.99e-17
+  PASS  training: assigned fold model, fresh features, vs saved OOF Deep Intronic        n=  200  within 1e-4 100.00%  max |diff| 9.99e-17
+  PASS  training: assigned fold model, fresh features, vs saved OOF Donor Region         n=  200  within 1e-4 100.00%  max |diff| 1.11e-16
+  PASS  training: assigned fold model, fresh features, vs saved OOF PPT Region           n=  200  within 1e-4 100.00%  max |diff| 9.89e-17
+
+GATE: PASS

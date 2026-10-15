@@ -1,0 +1,44 @@
+
+V03 device -- union of the v2.0 variant sets: 686,128 variants; SpliceTransformer database md5 da949f5ea3b9ee57940aa8d650684e3c
+  spt gpu1: 500 variants in 61 s
+  spt gpu2: 500 variants in 58 s
+  spt cpu: 500 variants in 672 s
+  spt gpu4: 500 variants in 54 s
+  spt gpu_tf32: 500 variants in 59 s
+  spt gpu1 vs gpu2: 500 variants, 0 differ in any output, 0 missing on one side; largest difference 0 (score)
+  spt gpu1 vs cpu: 500 variants, 407 differ in any output, 0 missing on one side; largest difference 0.000739 (Muscle)
+  spt gpu1 vs gpu4: 500 variants, 0 differ in any output, 0 missing on one side; largest difference 0 (score)
+  spt gpu_tf32 vs cpu: 500 variants, 407 differ in any output, 0 missing on one side; largest difference 0.101 (Small Intestine)
+  spt gpu1 vs gpu_tf32: 500 variants, 407 differ in any output, 0 missing on one side; largest difference 0.101 (Small Intestine)
+  pangolin gpu1: 500 variants in 45 s
+  pangolin gpu2: 500 variants in 45 s
+  pangolin cpu: 500 variants in 361 s
+  pangolin gpu4: 500 variants in 36 s
+  pangolin gpu_tf32: 500 variants in 44 s
+  pangolin gpu1 vs gpu2: 500 variants, 0 differ in any output, 0 missing on one side; largest difference 0 (inc)
+  pangolin gpu1 vs cpu: 500 variants, 0 differ in any output, 0 missing on one side; largest difference 0 (inc)
+  pangolin gpu1 vs gpu4: 500 variants, 0 differ in any output, 0 missing on one side; largest difference 0 (inc)
+  pangolin gpu_tf32 vs cpu: 500 variants, 0 differ in any output, 0 missing on one side; largest difference 0 (inc)
+  pangolin gpu1 vs gpu_tf32: 500 variants, 0 differ in any output, 0 missing on one side; largest difference 0 (inc)
+  SpliceTransformer database unchanged: True
+
+V03 throughput -- union of the v2.0 variant sets: 686,128 variants; SpliceTransformer database md5 da949f5ea3b9ee57940aa8d650684e3c
+  spt, 1 process(es): 5,000 variants in 563 s = 8.9 variants/s; union would take 21.4 h
+  spt, 4 process(es): 5,000 variants in 510 s = 9.8 variants/s; union would take 19.4 h
+  pangolin, 1 process(es): 5,000 variants in 426 s = 11.7 variants/s; union would take 16.3 h
+  pangolin, 4 process(es): 5,000 variants in 324 s = 15.4 variants/s; union would take 12.3 h
+  SpliceTransformer database unchanged: True
+
+V03 run -- union of the v2.0 variant sets: 686,128 variants; SpliceTransformer database md5 da949f5ea3b9ee57940aa8d650684e3c
+  both tools, 4 processes each, at the same time: 31.1 h
+  spt: rows for 686,128 of 686,128 union variants; missing 0
+  pangolin: rows for 686,128 of 686,128 union variants; missing 0
+  Pangolin blank output (scored 0.0, as in training), by set and region:
+    training                      0.00% of 413,199; by region Acceptor Region 0.00%, Branch Point Region 0.00%, Canonical Acceptor Site 0.00%, Canonical Donor Site 0.00%, Deep Intronic 0.00%, Donor Region 0.00%, PPT Region 0.00%
+    test_candidates               0.00% of 29,288; by region Acceptor Region 0.00%, Branch Point Region 0.00%, Canonical Acceptor Site 0.00%, Canonical Donor Site 0.00%, Deep Intronic 0.00%, Donor Region 0.00%, PPT Region 0.00%
+    vus                           0.00% of 71,267; by region Acceptor Region 0.00%, Branch Point Region 0.00%, Canonical Acceptor Site 0.00%, Canonical Donor Site 0.00%, Deep Intronic 0.00%, Donor Region 0.00%, PPT Region 0.00%
+    literature                    0.00% of 697; by region Acceptor Region 0.00%, Branch Point Region 0.00%, Canonical Acceptor Site 0.00%, Canonical Donor Site 0.00%, Deep Intronic 0.00%, Donor Region 0.00%, PPT Region 0.00%
+    splicevardb                   0.00% of 22,908; by region Acceptor Region 0.00%, Branch Point Region 0.00%, Canonical Acceptor Site 0.00%, Canonical Donor Site 0.00%, Deep Intronic 0.00%, Donor Region 0.00%, PPT Region 0.00%
+    gnomad_reference              0.00% of 100,000; by region Acceptor Region 0.00%, Branch Point Region 0.00%, Deep Intronic 0.00%, Donor Region 0.00%, PPT Region 0.00%
+    gnomad_reference_stratified   0.00% of 50,000; by region Acceptor Region 0.00%, Branch Point Region 0.00%, Deep Intronic 0.00%, Donor Region 0.00%, PPT Region 0.00%
+  SpliceTransformer database unchanged: True

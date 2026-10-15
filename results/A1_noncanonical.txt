@@ -1,0 +1,44 @@
+================================================================================================
+A1 -- METASPLICE v2.0 AND COMPARATORS ON THE STRICT TEST SET (Amendment 3)
+================================================================================================
+strict test set: N=28,465  P=3,451  B=25,014
+  canonical:     N=3,225  P=3,207
+  non-canonical: N=25,240  P=244
+
+Each tool on the variants it scores: auPRC [stratified bootstrap 95% CI], AUROC
+
+  all non-exonic (N=28,465, P=3,451)
+  tool              n scored     cov      P    auPRC              95% CI    AUROC
+  MetaSplice v2.0     28,465  100.0%  3,451   0.9954   [0.9933, 0.9972]   0.9988
+  SpliceAI            28,326   99.5%  3,437   0.9780   [0.9734, 0.9823]   0.9907
+  CADD                28,465  100.0%  3,451   0.9768   [0.9721, 0.9810]   0.9901
+
+  canonical (N=3,225, P=3,207)
+  tool              n scored     cov      P    auPRC              95% CI    AUROC
+  MetaSplice v2.0      3,225  100.0%  3,207   0.9975   [0.9963, 0.9985]   0.6873
+  SpliceAI             3,212   99.6%  3,194   0.9947   [0.9927, 0.9966]   0.5319
+  CADD                 3,225  100.0%  3,207   0.9959   [0.9944, 0.9973]   0.5775
+
+  non-canonical (N=25,240, P=244)
+  tool              n scored     cov      P    auPRC              95% CI    AUROC
+  MetaSplice v2.0     25,240  100.0%    244   0.9358   [0.9091, 0.9604]   0.9860
+  SpliceAI            25,114   99.5%    243   0.7430   [0.6925, 0.7908]   0.9586
+  CADD                25,240  100.0%    244   0.3371   [0.2799, 0.4015]   0.8689
+
+Paired, MetaSplice v2.0 minus comparator, on the variants both score (1,000 iterations, seed 42)
+  all non-canonical                vs SpliceAI  n= 25,114 P= 243  0.9362 vs 0.7430  diff +0.1931 [+0.1562, +0.2373]
+  all non-canonical                vs CADD      n= 25,240 P= 244  0.9358 vs 0.3371  diff +0.5987 [+0.5395, +0.6504]
+  Donor Region                     vs SpliceAI  n=  1,756 P= 101  0.9776 vs 0.8788  diff +0.0988 [+0.0552, +0.1422]
+  Donor Region                     vs CADD      n=  1,766 P= 102  0.9768 vs 0.7588  diff +0.2180 [+0.1428, +0.2897]
+  Acceptor Region                  vs SpliceAI  n=  4,790 P=  36  0.8976 vs 0.7298  diff +0.1679 [+0.0765, +0.2636]
+  Acceptor Region                  vs CADD      n=  4,810 P=  36  0.8976 vs 0.1208  diff +0.7768 [+0.6330, +0.8560]
+  PPT Region                       vs SpliceAI  n=  8,319 P=  21  0.8822 vs 0.7053  diff +0.1769 [+0.0487, +0.3263]
+  PPT Region                       vs CADD      n=  8,359 P=  21  0.8822 vs 0.0639  diff +0.8183 [+0.6425, +0.9257]
+  Branch Point Region              vs SpliceAI  n=    186 P=   5  0.6551 vs 0.7667  diff -0.1115 [-0.3024, +0.0925]  (5 P/LP: reported, not interpreted)
+  Branch Point Region              vs CADD      n=    186 P=   5  0.6551 vs 0.1133  diff +0.5418 [+0.0736, +0.8716]  (5 P/LP: reported, not interpreted)
+  Deep Intronic                    vs SpliceAI  n= 10,063 P=  80  0.9236 vs 0.6836  diff +0.2400 [+0.1651, +0.3211]
+  Deep Intronic                    vs CADD      n= 10,119 P=  80  0.9236 vs 0.4273  diff +0.4964 [+0.3908, +0.6008]
+  Deep Intronic, sensitivity set   vs SpliceAI  n=  8,260 P=  62  0.9494 vs 0.7249  diff +0.2245 [+0.1426, +0.3048]
+  Deep Intronic, sensitivity set   vs CADD      n=  8,312 P=  62  0.9494 vs 0.4539  diff +0.4955 [+0.3770, +0.6170]
+
+wrote results/A1_noncanonical.tsv (23 rows) and figures/A1_pr_noncanonical.png

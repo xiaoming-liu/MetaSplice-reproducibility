@@ -1,0 +1,15 @@
+chr19,pos19,ref19,alt19,dataset,svdb_class,doi
+chr11,108205690,T,G,Casadei_2019_PNAS,Normal,10.1073/pnas.1915608116
+chr17,41267802,A,G,Casadei_2019_PNAS,Normal,10.1073/pnas.1915608116
+chr13,32971308,G,A,Casadei_2019_PNAS,Normal,10.1073/pnas.1915608116
+chr17,33428059,G,A,Casadei_2019_PNAS,Normal,10.1073/pnas.1915608116
+chr11,108098321,G,T,Casadei_2019_PNAS,Splice-altering,10.1073/pnas.1915608116
+chr11,108202286,T,C,Casadei_2019_PNAS,Splice-altering,10.1073/pnas.1915608116
+chr13,32921038,G,A,Casadei_2019_PNAS,Splice-altering,10.1073/pnas.1915608116
+chr13,32937673,A,C,Casadei_2019_PNAS,Splice-altering,10.1073/pnas.1915608116
+chr11,108170438,T,A,Casadei_2019_PNAS,Splice-altering,10.1073/pnas.1915608116
+chr11,108225525,T,G,Casadei_2019_PNAS,Splice-altering,10.1073/pnas.1915608116
+chr2,215617291,A,C,Casadei_2019_PNAS,Splice-altering,10.1073/pnas.1915608116
+chr22,29121360,A,T,Casadei_2019_PNAS,Low-frequency splice-altering,10.1073/pnas.1915608116
+chr13,32893468,T,C,Fraile_Bethencourt_2019_J_Pathol,Splice-altering,10.1002/path.5268
+chr13,32900376,C,A,Fraile_Bethencourt_2019_J_Pathol,Splice-altering,10.1002/path.5268

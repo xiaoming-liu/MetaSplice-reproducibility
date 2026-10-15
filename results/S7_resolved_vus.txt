@@ -1,0 +1,29 @@
+========================================================================================
+S7 -- UNCERTAIN OR CONFLICTING AT TRAINING TIME, RESOLVED BY 2026-04-15 (S6 thresholds; Amendment 3)
+========================================================================================
+
+all resolved: n=659  later P/LP=107  later B/LB=552
+  MetaSplice   later-P/LP assigned candidate PP3  97.2%   later-B/LB assigned candidate BP4  81.9%   later-P/LP assigned candidate BP4   0.9%
+  SpliceAI     later-P/LP assigned candidate PP3  93.5%   later-B/LB assigned candidate BP4  73.0%   later-P/LP assigned candidate BP4   4.7%
+
+SpliceAI-scored: n=656  later P/LP=106  later B/LB=550
+  MetaSplice   later-P/LP assigned candidate PP3  98.1%   later-B/LB assigned candidate BP4  81.8%   later-P/LP assigned candidate BP4   0.9%
+  SpliceAI     later-P/LP assigned candidate PP3  94.3%   later-B/LB assigned candidate BP4  73.3%   later-P/LP assigned candidate BP4   4.7%
+
+Interval LRs (all resolved):
+      tool       interval  P   B     LR  lo95_exact  hi95_exact point_verdict   ci_verdict
+MetaSplice PP3_VeryStrong 38   0    inf        32.1         inf         meets INCONCLUSIVE
+MetaSplice     PP3_Strong 59   6   50.7        17.2         194         meets INCONCLUSIVE
+MetaSplice   PP3_Moderate  7   4   9.03        1.14        87.8         meets INCONCLUSIVE
+MetaSplice PP3_Supporting  0   6      0           0        11.8         BELOW INCONCLUSIVE
+MetaSplice  Indeterminate  2  84  0.123     0.00827       0.618                           
+MetaSplice BP4_Supporting  1  64 0.0806    0.000784       0.667         meets INCONCLUSIVE
+MetaSplice   BP4_Moderate  0 170      0           0       0.152         meets       clears
+MetaSplice     BP4_Strong  0 218      0           0       0.115         meets INCONCLUSIVE
+  SpliceAI     PP3_Strong 83  19   22.5          12        44.5         BELOW INCONCLUSIVE
+  SpliceAI   PP3_Moderate 10  30   1.72       0.511        5.05         BELOW INCONCLUSIVE
+  SpliceAI PP3_Supporting  7  61  0.592       0.161         1.7         BELOW INCONCLUSIVE
+  SpliceAI  Indeterminate  1  37  0.139     0.00124        1.28                           
+  SpliceAI BP4_Supporting  0  34      0           0       0.984         meets INCONCLUSIVE
+  SpliceAI   BP4_Moderate  5 369 0.0699       0.018       0.185         meets INCONCLUSIVE
+  SpliceAI        NoScore  1   2   2.58     0.00803         192                           

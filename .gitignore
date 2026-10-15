@@ -1,0 +1,5 @@
+# data/ comes from the release: python get_data.py
+data/
+metasplice_v2_reproducibility_data.tar.gz*
+__pycache__/
+.pytest_cache/

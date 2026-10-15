@@ -1,0 +1,39 @@
+section	set	threshold	share	n	rule	code	count	P	B	NP	NB	LR	lo95_exact	hi95_exact	diff	lo	hi	gene_lo	gene_hi
+score shares	VUS cohort	0.1	0.3312082076832306	61016.0															
+score shares	VUS cohort	0.2	0.30001966697259735	61016.0															
+score shares	VUS cohort	0.5	0.251294742362659	61016.0															
+score shares	all VUS in scope	0.1	0.4034125191182455	71267.0															
+score shares	all VUS in scope	0.2	0.3750263095121164	71267.0															
+score shares	all VUS in scope	0.5	0.331696297023868	71267.0															
+VUS codes	VUS cohort		0.24568965517241378		MetaSplice	PP3	14991.0												
+VUS codes	VUS cohort		0.3543824570604432		MetaSplice	BP4	21623.0												
+VUS codes	VUS cohort		0.39992788776714305		MetaSplice	neither	24402.0												
+VUS codes	VUS cohort		0.3252589484725318		SpliceAI, masked	PP3	19846.0												
+VUS codes	VUS cohort		0.6044152353481054		SpliceAI, masked	BP4	36879.0												
+VUS codes	VUS cohort		0.07032581617936279		SpliceAI, masked	neither	4291.0												
+VUS codes	VUS cohort		0.3863740658188016		SpliceAI, raw (first record)	PP3	23575.0												
+VUS codes	VUS cohort		0.513766880818146		SpliceAI, raw (first record)	BP4	31348.0												
+VUS codes	VUS cohort		0.09985905336305231		SpliceAI, raw (first record)	neither	6093.0												
+VUS codes	VUS cohort		0.3889799396879507		SpliceAI, raw (all genes)	PP3	23734.0												
+VUS codes	VUS cohort		0.5109807263668545		SpliceAI, raw (all genes)	BP4	31178.0												
+VUS codes	VUS cohort		0.10003933394519471		SpliceAI, raw (all genes)	neither	6104.0												
+resolved VUS					MetaSplice	PP3		97.0	6.0	107.0	552.0	83.40186915887851	32.243423594076674	281.37240922048585					
+resolved VUS					MetaSplice	BP4		0.0	388.0	107.0	552.0	0.0	0.0	0.061063597808218247					
+resolved VUS					SpliceAI, masked	PP3		100.0	110.0	107.0	552.0	4.689889549702634	3.5783824775263744	6.014868170736834					
+resolved VUS					SpliceAI, masked	BP4		5.0	412.0	107.0	552.0	0.06260774884311768	0.016277141157007836	0.16377181239885857					
+resolved VUS					SpliceAI, raw (first record)	PP3		100.0	212.0	107.0	552.0	2.433433256921178	1.9901313813536772	2.8928608680266623					
+resolved VUS					SpliceAI, raw (first record)	BP4		6.0	313.0	107.0	552.0	0.09889223970618972	0.028956741378662703	0.2464283995327765					
+resolved VUS					SpliceAI, raw (all genes)	PP3		105.0	212.0	107.0	552.0	2.555104919767237	2.1439215712953708	2.9568113194528705					
+resolved VUS					SpliceAI, raw (all genes)	BP4		1.0	311.0	107.0	552.0	0.01658803377708327	0.00019237342762659293	0.11295150012514747					
+resolved VUS difference					MetaSplice minus SpliceAI, masked	P/LP given PP3									-0.028037383177570097	-0.102803738317757	0.04672897196261682	-0.11113505747126436	0.0600765765765765
+resolved VUS difference					MetaSplice minus SpliceAI, masked	B/LB given PP3									-0.18840579710144928	-0.22282608695652173	-0.15760869565217392	-0.2259931886583241	-0.15196011340306972
+resolved VUS difference					MetaSplice minus SpliceAI, masked	B/LB given BP4									-0.04347826086956519	-0.08514492753623189	-0.0036231884057971015	-0.08898515155233772	0.002104574262882264
+resolved VUS difference					MetaSplice minus SpliceAI, masked	P/LP given BP4									-0.04672897196261682	-0.09345794392523364	-0.009345794392523364	-0.11812358200987588	0.0
+resolved VUS difference					MetaSplice minus SpliceAI, raw (first record)	P/LP given PP3									-0.028037383177570097	-0.09345794392523364	0.04672897196261682	-0.11237011066993326	0.060910326086956484
+resolved VUS difference					MetaSplice minus SpliceAI, raw (first record)	B/LB given PP3									-0.37318840579710144	-0.41308876811594203	-0.33152173913043476	-0.42721037080329893	-0.32123214849480936
+resolved VUS difference					MetaSplice minus SpliceAI, raw (first record)	B/LB given BP4									0.13586956521739135	0.09057971014492754	0.17572463768115942	0.08739393939393938	0.18667625899280577
+resolved VUS difference					MetaSplice minus SpliceAI, raw (first record)	P/LP given BP4									-0.056074766355140186	-0.11214953271028037	-0.018691588785046728	-0.13044494108086144	0.0
+resolved VUS difference					MetaSplice minus SpliceAI, raw (all genes)	P/LP given PP3									-0.07476635514018692	-0.1308411214953271	-0.018691588785046728	-0.13762258778867448	-0.020833333333333332
+resolved VUS difference					MetaSplice minus SpliceAI, raw (all genes)	B/LB given PP3									-0.37318840579710144	-0.41308876811594203	-0.33152173913043476	-0.42721037080329893	-0.32123214849480936
+resolved VUS difference					MetaSplice minus SpliceAI, raw (all genes)	B/LB given BP4									0.13949275362318847	0.09420289855072464	0.1793478260869565	0.09154561775746695	0.1893340882849276
+resolved VUS difference					MetaSplice minus SpliceAI, raw (all genes)	P/LP given BP4									-0.009345794392523364	-0.028271028037383163	0.0	-0.032791388938929925	0.0

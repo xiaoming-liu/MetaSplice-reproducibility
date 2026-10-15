@@ -1,0 +1,26 @@
+V06 -- MetaSplice v2.0 training: 38 features, XGBoost 3.2.0, {'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.1, 'tree_method': 'hist', 'random_state': 42, 'n_jobs': -1}
+training: 413,199 variants, P/LP 41,032, 6,961 genes
+  fold 0: 80,545 variants (7,636 P/LP) held out; 4 s
+  fold 1: 82,043 variants (8,739 P/LP) held out; 4 s
+  fold 2: 81,215 variants (7,807 P/LP) held out; 5 s
+  fold 3: 89,533 variants (8,777 P/LP) held out; 4 s
+  fold 4: 79,863 variants (8,073 P/LP) held out; 4 s
+
+Refit check: the same fits again give identical predictions
+  full model and fold 0: identical
+
+Out-of-fold results (derivation data only)
+  all                                          n=413,199  P/LP=41,032  auPRC 0.9942  AUROC 0.9987
+  non-canonical                                n=375,497  P/LP= 3,599  auPRC 0.8779  AUROC 0.9870
+  Acceptor Region                              n= 64,628  P/LP=   784  auPRC 0.8562  AUROC 0.9797
+  Branch Point Region                          n=  5,822  P/LP=    53  auPRC 0.5551  AUROC 0.9325
+  Canonical Acceptor Site                      n= 17,126  P/LP=16,990  auPRC 0.9972  AUROC 0.8063
+  Canonical Donor Site                         n= 20,576  P/LP=20,443  auPRC 0.9983  AUROC 0.8289
+  Deep Intronic                                n=191,795  P/LP=   552  auPRC 0.7132  AUROC 0.9695
+  Donor Region                                 n= 26,476  P/LP= 1,862  auPRC 0.9559  AUROC 0.9953
+  PPT Region                                   n= 86,776  P/LP=   348  auPRC 0.7105  AUROC 0.9757
+  Deep Intronic, wider sensitivity set (O5)    n=159,226  P/LP=   364  auPRC 0.7325  AUROC 0.9646
+
+Full model, top 12 features by gain: pangolin_max 10762, pangolin_dec 160, spt_o_Lung 157, dist_to_boundary 141, r_Donor Region 74, spt_o_Brain 61, spt_orig 33, r_Acceptor Region 32, r_Branch Point Region 27, r_Deep Intronic 26, spt_o_Kidney 23, spt_o_Nerve 20
+
+wrote models/ (full, 5 folds, feature list, fold map) and data/v2_oof.csv

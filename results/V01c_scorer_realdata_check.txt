@@ -1,0 +1,24 @@
+V01c -- scorer v2.0 on real data: 60 v1 training variants on chr21 and chr22
+sample: 60 variants; regions {'Deep Intronic': 23, 'PPT Region': 15, 'Acceptor Region': 12, 'Canonical Donor Site': 4, 'Donor Region': 3, 'Canonical Acceptor Site': 2, 'Branch Point Region': 1}
+
+1. GRCh38 input (60 variants; in scope under MANE: 57; out of scope: {'inside a GENCODE basic exon': 2, 'outside MANE transcripts': 1})
+  PASS  out-of-scope rows carry no features
+  PASS  phyloP100way_vertebrate equals v1  [0 differ; v2 missing 0]
+  PASS  phyloP470way_mammalian equals v1  [0 differ; v2 missing 0]
+  PASS  phastCons100way_vertebrate equals v1  [0 differ; v2 missing 0]
+  PASS  phastCons470way_mammalian equals v1  [0 differ; v2 missing 0]
+  PASS  gpn_msa_score equals v1  [0 differ; v2 missing 0]
+  PASS  DANN_score equals v1  [0 differ; v2 missing 0]
+  PASS  gnomAD AF (reported) equals v1  [0 differ]
+  reported only (annotation or source differs by design):
+    spt_orig: present 57/57
+    pangolin_max: present 57/57
+    exon_length: present 57/57
+    gnomAD_pLI: present 56/57
+    gnomAD_LOEUF: present 52/57
+
+2. hg19 input
+  PASS  lifted to the ClinVar GRCh38 coordinates  [60/60; status {'lifted (forward)': 60}]
+  PASS  features identical to the GRCh38-input run
+
+V01c: ALL CHECKS PASSED

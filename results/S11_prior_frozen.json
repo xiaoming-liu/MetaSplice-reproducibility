@@ -1,0 +1,29 @@
+{
+  "prior": 0.0441,
+  "promoted": false,
+  "reason": "not promoted; failed: fit <= 0.02; 25- and 100-bin estimates within a factor of 1.5",
+  "estimate": 0.0311281829170824,
+  "ci95": [
+    0.02858215746387665,
+    0.03403547578917487
+  ],
+  "fit": 0.41338167296380945,
+  "estimate_25_bins": 0.08396999179436113,
+  "estimate_100_bins": 0.00652847431141897,
+  "primary_row": {
+    "bins": 50,
+    "af": "all",
+    "region": "pooled",
+    "sample": "uniform",
+    "genes": "all"
+  },
+  "model": "MetaSplice v2.0 (out-of-fold components; gene-matched fold scores of the reference)",
+  "created": "2026-10-01T20:45:10",
+  "inputs": {
+    "data/v2_gnomad_reference_scores.csv": "7c13a0241d915f8dfd268c06981afa74",
+    "data/v2_oof.csv": "cb80fac8f03f0e4cfdcd2e11e7424884",
+    "data/v2_features_training.csv": "4de7d586fd8e4e81ceb7cc84d669f2d2",
+    "data/v2_pathogenic_genes.csv": "c6738b75048c943e9a95f1545c34b752",
+    "models/metasplice_v2_folds.json": "dca7cf706ac3e6832495d5e8cf8e6e82"
+  }
+}

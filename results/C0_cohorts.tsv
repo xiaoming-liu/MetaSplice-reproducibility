@@ -1,0 +1,171 @@
+cohort	subset	pairing	n	P	B	P_is	B_is
+test set	all regions	MetaSplice	28465	3451	25014	P/LP	B/LB
+test set	Canonical Donor Site	MetaSplice	1730	1723	7	P/LP	B/LB
+test set	Canonical Acceptor Site	MetaSplice	1495	1484	11	P/LP	B/LB
+test set	Donor Region	MetaSplice	1766	102	1664	P/LP	B/LB
+test set	Acceptor Region	MetaSplice	4810	36	4774	P/LP	B/LB
+test set	PPT Region	MetaSplice	8359	21	8338	P/LP	B/LB
+test set	Branch Point Region	MetaSplice	186	5	181	P/LP	B/LB
+test set	Deep Intronic	MetaSplice	10119	80	10039	P/LP	B/LB
+test set	Deep Intronic, sensitivity set	MetaSplice	8312	62	8250	P/LP	B/LB
+non-canonical test set	all non-canonical	MetaSplice	25240	244	24996	P/LP	B/LB
+non-canonical test set	all non-canonical	MetaSplice & SpliceAI	25114	243	24871	P/LP	B/LB
+non-canonical test set	all non-canonical	MetaSplice & CADD	25240	244	24996	P/LP	B/LB
+non-canonical test set	all non-canonical	all three	25114	243	24871	P/LP	B/LB
+non-canonical test set	Donor Region	MetaSplice	1766	102	1664	P/LP	B/LB
+non-canonical test set	Donor Region	MetaSplice & SpliceAI	1756	101	1655	P/LP	B/LB
+non-canonical test set	Donor Region	MetaSplice & CADD	1766	102	1664	P/LP	B/LB
+non-canonical test set	Donor Region	all three	1756	101	1655	P/LP	B/LB
+non-canonical test set	Acceptor Region	MetaSplice	4810	36	4774	P/LP	B/LB
+non-canonical test set	Acceptor Region	MetaSplice & SpliceAI	4790	36	4754	P/LP	B/LB
+non-canonical test set	Acceptor Region	MetaSplice & CADD	4810	36	4774	P/LP	B/LB
+non-canonical test set	Acceptor Region	all three	4790	36	4754	P/LP	B/LB
+non-canonical test set	PPT Region	MetaSplice	8359	21	8338	P/LP	B/LB
+non-canonical test set	PPT Region	MetaSplice & SpliceAI	8319	21	8298	P/LP	B/LB
+non-canonical test set	PPT Region	MetaSplice & CADD	8359	21	8338	P/LP	B/LB
+non-canonical test set	PPT Region	all three	8319	21	8298	P/LP	B/LB
+non-canonical test set	Branch Point Region	MetaSplice	186	5	181	P/LP	B/LB
+non-canonical test set	Branch Point Region	MetaSplice & SpliceAI	186	5	181	P/LP	B/LB
+non-canonical test set	Branch Point Region	MetaSplice & CADD	186	5	181	P/LP	B/LB
+non-canonical test set	Branch Point Region	all three	186	5	181	P/LP	B/LB
+non-canonical test set	Deep Intronic	MetaSplice	10119	80	10039	P/LP	B/LB
+non-canonical test set	Deep Intronic	MetaSplice & SpliceAI	10063	80	9983	P/LP	B/LB
+non-canonical test set	Deep Intronic	MetaSplice & CADD	10119	80	10039	P/LP	B/LB
+non-canonical test set	Deep Intronic	all three	10063	80	9983	P/LP	B/LB
+non-canonical test set	Deep Intronic, sensitivity set	MetaSplice	8312	62	8250	P/LP	B/LB
+non-canonical test set	Deep Intronic, sensitivity set	MetaSplice & SpliceAI	8260	62	8198	P/LP	B/LB
+non-canonical test set	Deep Intronic, sensitivity set	MetaSplice & CADD	8312	62	8250	P/LP	B/LB
+non-canonical test set	Deep Intronic, sensitivity set	all three	8260	62	8198	P/LP	B/LB
+calibration derivation (training, out of fold)	derivation, all stars	MetaSplice	299331	3598	295733	P/LP	B/LB
+calibration derivation (training, out of fold)	derivation, all stars	MetaSplice & SpliceAI	297322	3582	293740	P/LP	B/LB
+calibration derivation (training, out of fold)	derivation, all stars	MetaSplice & CADD	299331	3598	295733	P/LP	B/LB
+calibration derivation (training, out of fold)	derivation, all stars	all three	297322	3582	293740	P/LP	B/LB
+calibration derivation (training, out of fold)	derivation, >= 1 star	MetaSplice	294612	3018	291594	P/LP	B/LB
+calibration derivation (training, out of fold)	derivation, >= 1 star	MetaSplice & SpliceAI	292638	3004	289634	P/LP	B/LB
+calibration derivation (training, out of fold)	derivation, >= 1 star	MetaSplice & CADD	294612	3018	291594	P/LP	B/LB
+calibration derivation (training, out of fold)	derivation, >= 1 star	all three	292638	3004	289634	P/LP	B/LB
+calibration validation (test set)	validation, all stars (S5)	MetaSplice	24057	239	23818	P/LP	B/LB
+calibration validation (test set)	validation, all stars (S5)	MetaSplice & SpliceAI	23936	238	23698	P/LP	B/LB
+calibration validation (test set)	validation, all stars (S5)	MetaSplice & CADD	24057	239	23818	P/LP	B/LB
+calibration validation (test set)	validation, all stars (S5)	all three	23936	238	23698	P/LP	B/LB
+calibration validation (test set)	validation, >= 1 star (S6-S10)	MetaSplice	24049	231	23818	P/LP	B/LB
+calibration validation (test set)	validation, >= 1 star (S6-S10)	MetaSplice & SpliceAI	23928	230	23698	P/LP	B/LB
+calibration validation (test set)	validation, >= 1 star (S6-S10)	MetaSplice & CADD	24049	231	23818	P/LP	B/LB
+calibration validation (test set)	validation, >= 1 star (S6-S10)	all three	23928	230	23698	P/LP	B/LB
+reclassified subgroup	all regions	MetaSplice	823	228	595	P/LP	B/LB
+reclassified subgroup	Canonical Donor Site	MetaSplice	63	62	1	P/LP	B/LB
+reclassified subgroup	Canonical Acceptor Site	MetaSplice	58	56	2	P/LP	B/LB
+reclassified subgroup	Donor Region	MetaSplice	157	57	100	P/LP	B/LB
+reclassified subgroup	Acceptor Region	MetaSplice	215	24	191	P/LP	B/LB
+reclassified subgroup	PPT Region	MetaSplice	164	16	148	P/LP	B/LB
+reclassified subgroup	Branch Point Region	MetaSplice	6	2	4	P/LP	B/LB
+reclassified subgroup	Deep Intronic	MetaSplice	160	11	149	P/LP	B/LB
+reclassified subgroup	Deep Intronic, sensitivity set	MetaSplice	123	8	115	P/LP	B/LB
+resolved VUS (S7)	resolved VUS (S7)	MetaSplice	659	107	552	P/LP	B/LB
+resolved VUS (S7)	resolved VUS (S7)	MetaSplice & SpliceAI	656	106	550	P/LP	B/LB
+resolved VUS (S7)	resolved VUS (S7)	MetaSplice & CADD	659	107	552	P/LP	B/LB
+resolved VUS (S7)	resolved VUS (S7)	all three	656	106	550	P/LP	B/LB
+literature	all regions	MetaSplice	697	697	0	P/LP	B/LB
+literature	all regions	MetaSplice & SpliceAI	694	694	0	P/LP	B/LB
+literature	all regions	MetaSplice & CADD	697	697	0	P/LP	B/LB
+literature	all regions	all three	694	694	0	P/LP	B/LB
+literature	Canonical Donor Site	MetaSplice	145	145	0	P/LP	B/LB
+literature	Canonical Donor Site	MetaSplice & SpliceAI	144	144	0	P/LP	B/LB
+literature	Canonical Donor Site	MetaSplice & CADD	145	145	0	P/LP	B/LB
+literature	Canonical Donor Site	all three	144	144	0	P/LP	B/LB
+literature	Canonical Acceptor Site	MetaSplice	127	127	0	P/LP	B/LB
+literature	Canonical Acceptor Site	MetaSplice & SpliceAI	127	127	0	P/LP	B/LB
+literature	Canonical Acceptor Site	MetaSplice & CADD	127	127	0	P/LP	B/LB
+literature	Canonical Acceptor Site	all three	127	127	0	P/LP	B/LB
+literature	Donor Region	MetaSplice	144	144	0	P/LP	B/LB
+literature	Donor Region	MetaSplice & SpliceAI	144	144	0	P/LP	B/LB
+literature	Donor Region	MetaSplice & CADD	144	144	0	P/LP	B/LB
+literature	Donor Region	all three	144	144	0	P/LP	B/LB
+literature	Acceptor Region	MetaSplice	95	95	0	P/LP	B/LB
+literature	Acceptor Region	MetaSplice & SpliceAI	94	94	0	P/LP	B/LB
+literature	Acceptor Region	MetaSplice & CADD	95	95	0	P/LP	B/LB
+literature	Acceptor Region	all three	94	94	0	P/LP	B/LB
+literature	PPT Region	MetaSplice	39	39	0	P/LP	B/LB
+literature	PPT Region	MetaSplice & SpliceAI	39	39	0	P/LP	B/LB
+literature	PPT Region	MetaSplice & CADD	39	39	0	P/LP	B/LB
+literature	PPT Region	all three	39	39	0	P/LP	B/LB
+literature	Branch Point Region	MetaSplice	17	17	0	P/LP	B/LB
+literature	Branch Point Region	MetaSplice & SpliceAI	17	17	0	P/LP	B/LB
+literature	Branch Point Region	MetaSplice & CADD	17	17	0	P/LP	B/LB
+literature	Branch Point Region	all three	17	17	0	P/LP	B/LB
+literature	Deep Intronic	MetaSplice	130	130	0	P/LP	B/LB
+literature	Deep Intronic	MetaSplice & SpliceAI	129	129	0	P/LP	B/LB
+literature	Deep Intronic	MetaSplice & CADD	130	130	0	P/LP	B/LB
+literature	Deep Intronic	all three	129	129	0	P/LP	B/LB
+literature	Deep Intronic, sensitivity set	MetaSplice	114	114	0	P/LP	B/LB
+literature	Deep Intronic, sensitivity set	MetaSplice & SpliceAI	113	113	0	P/LP	B/LB
+literature	Deep Intronic, sensitivity set	MetaSplice & CADD	114	114	0	P/LP	B/LB
+literature	Deep Intronic, sensitivity set	all three	113	113	0	P/LP	B/LB
+SpliceVarDB strict endpoint (A6)	all regions	MetaSplice	12731	8015	4716	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	all regions	MetaSplice & SpliceAI	12646	7966	4680	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	all regions	MetaSplice & CADD	12731	8015	4716	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	all regions	all three	12646	7966	4680	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Canonical Donor Site	MetaSplice	2200	2199	1	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Canonical Donor Site	MetaSplice & SpliceAI	2182	2181	1	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Canonical Donor Site	MetaSplice & CADD	2200	2199	1	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Canonical Donor Site	all three	2182	2181	1	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Canonical Acceptor Site	MetaSplice	3132	3126	6	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Canonical Acceptor Site	MetaSplice & SpliceAI	3116	3110	6	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Canonical Acceptor Site	MetaSplice & CADD	3132	3126	6	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Canonical Acceptor Site	all three	3116	3110	6	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Donor Region	MetaSplice	1700	1399	301	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Donor Region	MetaSplice & SpliceAI	1688	1391	297	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Donor Region	MetaSplice & CADD	1700	1399	301	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Donor Region	all three	1688	1391	297	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Acceptor Region	MetaSplice	1121	711	410	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Acceptor Region	MetaSplice & SpliceAI	1112	706	406	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Acceptor Region	MetaSplice & CADD	1121	711	410	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Acceptor Region	all three	1112	706	406	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	PPT Region	MetaSplice	1246	244	1002	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	PPT Region	MetaSplice & SpliceAI	1237	243	994	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	PPT Region	MetaSplice & CADD	1246	244	1002	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	PPT Region	all three	1237	243	994	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Branch Point Region	MetaSplice	1175	63	1112	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Branch Point Region	MetaSplice & SpliceAI	1169	63	1106	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Branch Point Region	MetaSplice & CADD	1175	63	1112	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Branch Point Region	all three	1169	63	1106	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Deep Intronic	MetaSplice	2157	273	1884	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Deep Intronic	MetaSplice & SpliceAI	2142	272	1870	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Deep Intronic	MetaSplice & CADD	2157	273	1884	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Deep Intronic	all three	2142	272	1870	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Deep Intronic, sensitivity set	MetaSplice	1846	163	1683	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Deep Intronic, sensitivity set	MetaSplice & SpliceAI	1834	162	1672	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Deep Intronic, sensitivity set	MetaSplice & CADD	1846	163	1683	splice-altering	normal
+SpliceVarDB strict endpoint (A6)	Deep Intronic, sensitivity set	all three	1834	162	1672	splice-altering	normal
+SpliceVarDB broad endpoint (A6)	all regions	MetaSplice	22274	17558	4716	splice-altering or low-frequency	normal
+SpliceVarDB broad endpoint (A6)	all regions	MetaSplice & SpliceAI	22135	17455	4680	splice-altering or low-frequency	normal
+SpliceVarDB broad endpoint (A6)	all regions	MetaSplice & CADD	22274	17558	4716	splice-altering or low-frequency	normal
+SpliceVarDB broad endpoint (A6)	all regions	all three	22135	17455	4680	splice-altering or low-frequency	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	all non-canonical	MetaSplice	7318	2688	4630	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	all non-canonical	MetaSplice & SpliceAI	7268	2673	4595	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	all non-canonical	MetaSplice & CADD	7318	2688	4630	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	all non-canonical	all three	7268	2673	4595	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Donor Region	MetaSplice	1693	1398	295	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Donor Region	MetaSplice & SpliceAI	1681	1390	291	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Donor Region	MetaSplice & CADD	1693	1398	295	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Donor Region	all three	1681	1390	291	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Acceptor Region	MetaSplice	1117	711	406	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Acceptor Region	MetaSplice & SpliceAI	1108	706	402	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Acceptor Region	MetaSplice & CADD	1117	711	406	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Acceptor Region	all three	1108	706	402	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	PPT Region	MetaSplice	1224	244	980	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	PPT Region	MetaSplice & SpliceAI	1216	243	973	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	PPT Region	MetaSplice & CADD	1224	244	980	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	PPT Region	all three	1216	243	973	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Branch Point Region	MetaSplice	1161	63	1098	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Branch Point Region	MetaSplice & SpliceAI	1155	63	1092	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Branch Point Region	MetaSplice & CADD	1161	63	1098	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Branch Point Region	all three	1155	63	1092	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Deep Intronic	MetaSplice	2123	272	1851	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Deep Intronic	MetaSplice & SpliceAI	2108	271	1837	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Deep Intronic	MetaSplice & CADD	2123	272	1851	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Deep Intronic	all three	2108	271	1837	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Deep Intronic, sensitivity set	MetaSplice	1814	162	1652	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Deep Intronic, sensitivity set	MetaSplice & SpliceAI	1802	161	1641	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Deep Intronic, sensitivity set	MetaSplice & CADD	1814	162	1652	splice-altering	normal
+SpliceVarDB S8 (non-canonical, AF < 0.01)	Deep Intronic, sensitivity set	all three	1802	161	1641	splice-altering	normal

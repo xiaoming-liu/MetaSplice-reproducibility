@@ -1,0 +1,29 @@
+V11 -- SpliceAI 1.3.1 raw scores, +-4,999 nt (-A grch37 -D 4999 -M 0), for X3's cohorts (Amendment 7)
+  SpliceAI 1.3.1, TensorFlow 2.15.1, Keras 2.15.0
+  cbe7341aaab1dd6678dc9504b0952165  spliceai/annotations/grch37.txt  ok
+  140fc5c24a418d1cac65a5a8d4c543cf  spliceai/models/spliceai1.h5  ok
+  9d5a30fac2a3f11751ef530f44fe2eb2  spliceai/models/spliceai2.h5  ok
+  e44a2ecdf62ec9dc226ebcfed83b3b2f  spliceai/models/spliceai3.h5  ok
+  1449760f82aa8f08bcc4761280811a2c  spliceai/models/spliceai4.h5  ok
+  d35a0e714be8b359c176964e94091b2f  spliceai/models/spliceai5.h5  ok
+  530d89d3ef07fdb2a9b3c701fb4ca486  /mnt/Work0/Splice_altering_variant/hg19/hg19.fa
+
+X3's four cohorts: 37,251 distinct variants; GRCh37 record 37,249
+  hg19 REF equal: 37,249; precomputed masked score present: 36,947
+
+Installation check: -D 50 -M 1 on 500 variants (seed 42; up to 100 per non-canonical region)
+  check_d50_m1: 500 variants in 2 processes, 2.4 min; scored 500; skipped by SpliceAI 0
+  within 0.01 of V08's precomputed value: 99.20% (n=500); unscored 0; max |diff| 0.250; identical 98.40%
+  PASS
+
+Raw scores: -D 4999 -M 0 on 37,249 variants
+  raw_d4999_m0: 37,249 variants in 4 processes, 93.6 min; scored 36,947; skipped by SpliceAI 0
+
+Coverage by cohort (scored by the raw run; by the precomputed masked lookup)
+  development, >= 1 star       n= 24,049  raw  23,928  masked  23,928
+  validation, >= 1 star        n= 13,186  raw  13,003  masked  13,003
+  development, all statuses    n= 24,057  raw  23,936  masked  23,936
+  validation, all statuses     n= 13,194  raw  13,011  masked  13,011
+
+Variants with both scores: 36,947; raw >= masked for 99.70%; raw differs from masked by > 0.05 for 10.98%
+wrote data/v2_spliceai_raw_d4999.csv (37,251 rows; md5 31b81cc8553720bc33ed7a39e8636206); no label read

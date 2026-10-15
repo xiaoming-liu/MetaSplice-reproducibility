@@ -1,0 +1,45 @@
+========================================================================================
+S6 -- CALIBRATION ON CLINVAR RECORDS WITH >= 1 REVIEW STAR (Amendment 3)
+========================================================================================
+derivation >= 1 star: n=294,612 P=3,018; validation >= 1 star: n=24,049 P=231 (denominators equal Amendment 3)
+
+MetaSplice: n=294,612 (P=3,018)
+  level              S6 (>=1 star)      S5 (all)
+  PP3_VeryStrong             0.994         0.994
+  PP3_Strong                 0.544         0.548
+  PP3_Moderate                0.14         0.158
+  PP3_Supporting             0.052          0.05
+  BP4_Supporting           0.00386       0.00281
+  BP4_Moderate              0.0017       0.00108
+  BP4_Strong              2.75e-04      1.83e-04
+  BP4_VeryStrong       not reached   not reached
+  validation (>=1 star):  interval            P      B         LR   exact 95% CI         needed    point  CI
+                          PP3_VeryStrong     89      0        inf   [1.71e+03, inf]>=1.12e+03meets  clears
+                          PP3_Strong        111     13        880   [408, 2.11e+03]>=33.5    meets  clears
+                          PP3_Moderate       14     34       42.5   [14.7, 113] >=5.79    meets  clears
+                          PP3_Supporting      2     63       3.27   [0.207, 17.7]>=2.41    meets  INCONCLUSIVE
+                          Indeterminate       8   1249       0.66   [0.237, 1.47]                 
+                          BP4_Supporting      0   1276          0   [0, 0.373]  <=0.416   meets  clears
+                          BP4_Moderate        2   6554     0.0315   [0.00257, 0.129]<=0.173   meets  clears
+                          BP4_Strong          5  14629     0.0352   [0.00949, 0.0895]<=0.0298  ABOVE  INCONCLUSIVE
+
+SpliceAI: n=292,638 (P=3,004)
+  level              S6 (>=1 star)      S5 (all)
+  PP3_VeryStrong       not reached   not reached
+  PP3_Strong                  0.49          0.49
+  PP3_Moderate                 0.3           0.3
+  PP3_Supporting               0.2           0.2
+  BP4_Supporting              0.08          0.04
+  BP4_Moderate                0.03          0.01
+  BP4_Strong           not reached   not reached
+  BP4_VeryStrong       not reached   not reached
+  validation (>=1 star):  interval            P      B         LR   exact 95% CI         needed    point  CI
+                          PP3_Strong        157     59        274   [184, 412]  >=33.5    meets  clears
+                          PP3_Moderate       29    141       21.2   [11.3, 37.6]>=5.79    meets  clears
+                          PP3_Supporting     17    263       6.66   [3.17, 12.7]>=2.41    meets  clears
+                          Indeterminate       9   1120      0.829   [0.317, 1.77]                 
+                          BP4_Supporting      1   1804     0.0572   [0.000683, 0.38]<=0.416   meets  clears
+                          BP4_Moderate       17  20311     0.0863   [0.0467, 0.143]<=0.173   meets  clears
+                          NoScore             1    120      0.859   [0.00883, 6.72]                 
+
+wrote results/S6_thresholds.tsv and results/S6_validation_intervals.tsv
