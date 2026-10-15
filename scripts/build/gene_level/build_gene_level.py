@@ -4,7 +4,7 @@
   python build_gene_level.py --gtf /path/to/metasplice_v2_data/gencode/gencode.v50.annotation.gtf.gz \\
       [--gnomad-dir DIR] [--out metasplice_gene_level_dbNSFP5.4.tsv.gz]
 
-Three values per gene, all released under CC0 by their sources:
+Three values per gene, from gnomAD (open data; CC0 named for its primary data) and ClinGen (CC0):
   gnomAD_pLI                        gnomAD v2.1.1 gnomad.v2.1.1.lof_metrics.by_gene.txt.bgz, column pLI
   gnomAD_LOEUF                      gnomAD v4.1 gnomad.v4.1.constraint_metrics.tsv, column lof.oe_ci.upper, from rows
                                     that are the MANE Select transcript, have an Ensembl gene ID and carry no

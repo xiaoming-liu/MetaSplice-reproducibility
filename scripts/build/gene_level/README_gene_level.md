@@ -3,7 +3,7 @@
 Gene-level inputs of MetaSplice Release 2.0: three values for 19,230 of the 19,299 GENCODE v50 MANE genes. md5
 `088ba4d5101c01a8697fbbf503affd06`.
 
-| Column | Meaning | Source (CC0) |
+| Column | Meaning | Source |
 |---|---|---|
 | `gnomAD_pLI` | Probability of loss-of-function intolerance | gnomAD v2.1.1, `lof_metrics.by_gene` |
 | `gnomAD_LOEUF` | Loss-of-function observed/expected upper bound fraction | gnomAD v4.1, `constraint_metrics` (MANE Select transcript) |
@@ -30,8 +30,9 @@ whether its output is identical to this file. It needs Python 3.6 or newer and n
 These are the rules of the dbNSFP 5.4 gene file, and the values are its values: this file was first extracted from that
 gene file, and building it from the sources gives the same bytes.
 
-**Terms.** gnomAD, ClinGen and HGNC release these data under CC0. The file is distributed as part of MetaSplice
-(`LICENSE`).
+**Terms.** ClinGen and HGNC release their data under CC0. gnomAD releases its data openly and dedicates "the primary
+data from the gnomAD exomes and genomes" to CC0; its terms do not name the constraint metrics (pLI, LOEUF) separately.
+The file is distributed as part of MetaSplice (`LICENSE`).
 
 **Please cite** gnomAD (Karczewski KJ, et al. Nature. 2020;581:434-43, for pLI; Chen S, et al. Nature.
 2024;625:92-100, for LOEUF), ClinGen (https://clinicalgenome.org), HGNC (https://www.genenames.org) and dbNSFP (Liu X,

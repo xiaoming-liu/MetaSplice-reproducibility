@@ -31,7 +31,8 @@ DANN (MIT; Quang D, et al. Bioinformatics. 2015;31:761-3).
 GPN-MSA (MIT; Benegas G, et al. Nat Biotechnol. 2025;43:1960-5).
 phyloP and phastCons, 100-way and 470-way (UCSC Genome Browser; free for public and commercial use). Pollard KS, et al.
   Genome Res. 2010;20:110-21. Siepel A, et al. Genome Res. 2005;15:1034-50.
-Gene level: gnomAD pLI and LOEUF (gnomAD; CC0) and ClinGen haploinsufficiency scores (ClinGen; CC0), for HGNC's genes
+Gene level: gnomAD pLI and LOEUF (gnomAD; open data, with CC0 named for its primary data) and ClinGen
+  haploinsufficiency scores (ClinGen; CC0), for HGNC's genes
   (HGNC; CC0), with the rules and values of the dbNSFP 5.4 gene file (Liu X, et al. Genome Med. 2020;12:103).
   scripts/build/gene_level/build_gene_level.py builds them from these sources.
 Regions and exon context: GENCODE v50 MANE Select and MANE Plus Clinical (GENCODE/Ensembl; no restrictions). Harrow J,
