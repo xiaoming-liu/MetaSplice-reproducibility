@@ -62,7 +62,9 @@ def fig2():
         ax.set_xlim(0, 1); ax.set_ylim(0, 1.02)
         ax.set_xlabel("Recall"); ax.set_ylabel("Precision")
         ax.set_title(title, fontsize=7, color=INK, loc="left")
-        ax.legend(loc="lower left", fontsize=6, handlelength=1.2, title="auPRC (coverage)", title_fontsize=6)
+        # below the axes, under the x-axis label: inside the plot it covered the curves
+        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.19), fontsize=6, handlelength=1.2,
+                  title="auPRC (coverage)", title_fontsize=6)
         ax.grid(color=GRID, lw=0.4)
 
     n = main[(main.row == "non-canonical") & (main.tool == "MetaSplice")].iloc[0]
@@ -78,7 +80,7 @@ def fig2():
     ax.axvline(0, color=MUTED, lw=0.6, ls="--")
     ax.set_yticks(ys); ax.set_yticklabels([LABEL[r] for r in REGIONS])
     ax.set_xlabel("Paired difference in auPRC (95% CI)")
-    ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), fontsize=6, handlelength=1, ncol=1)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.19), fontsize=6, handlelength=1, ncol=1)  # as in A and C
     ax.grid(axis="x", color=GRID, lw=0.4)
     ax.set_yticklabels([LABEL[r] for r in REGIONS], fontsize=6.2)
     panel(ax, "B")

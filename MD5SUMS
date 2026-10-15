@@ -199,7 +199,7 @@ e828169b7ab6b225fdb58646d694581d  scripts/comparators/originals.md5
 f2f384259cdec8410588a7d87d4a3be1  scripts/comparators/run_spliceai_raw.py
 c089b102572b651edd8e1671e4272f68  scripts/comparators/stripped_columns.json
 3e014d74fd3f24a6c15ed5ec706d3619  scripts/figures/make_fig1_design_v3.py
-938a98492c16c51d2c9107db60f7f03d  scripts/figures/make_figs_v2.py
+412ed7f6a4a10e4ef2c80d86f1547668  scripts/figures/make_figs_v2.py
 4a42ae0bb345ff20165bfa10b3cadb3c  scripts/score_v2.py
 ecc519134b0d7d08df8241e08a93f4c3  scripts/splicevardb/classify_all_datasets.py
 0f9cdfccd1ee472ca5c4ef335d612c3e  scripts/splicevardb/literature_classifications.csv
