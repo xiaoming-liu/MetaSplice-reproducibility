@@ -1,8 +1,8 @@
 a6cdfd42e3a5443a688c97582f9ffe6a  .gitignore
 ec34f13969c99e74e47e70481ff7a379  LICENSE
 4ad4b4788ec7d1e36339566cca1e22b5  MANIFEST.md
-4f74113969c19af7a30f393a8715ef11  README.md
-10b360b979ebf2a77832573b65c16fe9  THIRD_PARTY_NOTICES
+b0de45c2a1a9adc13657e259b3a10073  README.md
+2264c836a81b767da4fa1e1f9e78f1a7  THIRD_PARTY_NOTICES
 a7e78305d93ff4c01a2915ab121af131  data/A3b_gene_disjoint_scores.csv
 3c0116eaa075ee7c658ca5c70ec44763  data/clinvar/clinvar_20250831.GRCh37.summary.gz
 111c595ba957c7fc93b8833188d4b029  data/clinvar/clinvar_20250831.GRCh38.summary.gz
@@ -190,8 +190,8 @@ c0dd6e8c4e06cc6b7746a0a3b602e3e9  scripts/build/V10_distance_weighting.py
 c38fdfd7e465f7edfc8f2e78413687e2  scripts/build/V11b_spliceai_raw_vus.py
 620b57fce8910f729a88da0de414a7b1  scripts/build/V11c_spliceai_raw_topup.py
 8cacb75f406db3ae84ceb5fbaa9a1636  scripts/build/V12_pooled_test_set.py
-604fa2d947ae907cc0e71fbf358c86d5  scripts/build/gene_level/README_gene_level.md
-4aba579745e2e914c73477885b1bda84  scripts/build/gene_level/build_gene_level.py
+9d6307ce7b073c0edc25bd391b0d129c  scripts/build/gene_level/README_gene_level.md
+60376adf61b044f345b86e2b5256e7bf  scripts/build/gene_level/build_gene_level.py
 40be4351db8511b53428bc2e56da02d4  scripts/build/gene_level/sources/ClinGen_gene_curation_list_GRCh38_20260728.tsv
 c1e2209cf4eca9dd5643c67b17bb2648  scripts/build/gene_level/sources/hgnc_ensembl_20260728.tsv.gz
 2437be092d0a5dacbe6f504d4931ad66  scripts/comparators/lookup_comparators.py

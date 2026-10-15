@@ -101,9 +101,10 @@ intermediate table of the feature build, is not included; the per-set feature ta
 
 **Gene-level values.** `scripts/build/R01_gene_level_extract.py` took the three gene-level values (gnomAD pLI and
 LOEUF, ClinGen haploinsufficiency score) from the dbNSFP 5.4 gene file. `scripts/build/gene_level/build_gene_level.py`
-builds the same file from the original sources, gnomAD, ClinGen and HGNC (all CC0), and its output is byte-identical
-(md5 `088ba4d5101c01a8697fbbf503affd06`). It needs the GENCODE v50 GTF from the data bundle and downloads the gnomAD
-files; `scripts/build/gene_level/README_gene_level.md` describes it.
+builds the same file from the original sources, gnomAD, ClinGen and HGNC (ClinGen and HGNC under CC0; gnomAD as open
+data, with CC0 named for its primary data), and its output is byte-identical (md5 `088ba4d5101c01a8697fbbf503affd06`).
+It needs the GENCODE v50 GTF from the data bundle and downloads the gnomAD files;
+`scripts/build/gene_level/README_gene_level.md` describes it.
 
 **Retraining.** `scripts/build/V06_train.py` retrains the model from `data/v2_features_training.csv`. Note that it
 writes into `models/`, replacing the package's files, so run it in a copy of the package. In an independent rerun:
