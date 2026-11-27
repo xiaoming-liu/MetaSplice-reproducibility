@@ -123,7 +123,7 @@ e1a1fe322c8d0934e5cee162dc6e8d01  scripts/comparators/stripped_columns.json
 d8403e5c0601c0bba6115b617bc34322  scripts/figures/make_fig4_gm.py
 b5e6dc027e33c425122b9ae07af7ad47  scripts/figures/make_figS1_design.py
 0955573a253cf06db259910308f91442  scripts/figures/make_figs_gm.py
-4a42ae0bb345ff20165bfa10b3cadb3c  scripts/score_v2.py
+67fe53e58cb64ac2f10d6e49e0112394  scripts/score_v2.py
 ecc519134b0d7d08df8241e08a93f4c3  scripts/splicevardb/classify_all_datasets.py
 0f9cdfccd1ee472ca5c4ef335d612c3e  scripts/splicevardb/literature_classifications.csv
 6c2a074dd8b44a33dcf26d00e6414ca1  scripts/splicevardb/restore_splicevardb.py

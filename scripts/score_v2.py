@@ -6,13 +6,14 @@ Input:  VCF or TSV/CSV of SNVs (chr, pos, ref, alt). GRCh38 by default; --genome
         GRCh37 input to GRCh38 with the Ensembl chain, and reports variants it cannot lift.
 Output: TSV with the score, region and gene of each in-scope variant. --features-out also writes
         the 38-feature matrix; every v2.0 training and evaluation table is built that way, so
-        training and scoring share one feature code path (docs/METASPLICE_V2_PLAN.md).
+        training and scoring share one feature code path.
 
 Annotation: GENCODE v50. MANE Select + MANE Plus Clinical transcripts define regions, genes, exon
 context and the exon-overlap filter; a variant outside every MANE transcript of its gene is out of
-scope (decision O1). A Deep Intronic position inside an exon of any GENCODE basic transcript is out
-of scope too (decision O5); variants in MANE splice regions stay in scope whatever overlaps them.
-Pass the full GENCODE v50 GTF: the MANE subset lacks the basic transcripts rule O5 needs, and is refused.
+scope (the MANE-transcript rule). A Deep Intronic position inside an exon of any GENCODE basic
+transcript is out of scope too (the basic-exon rule); variants in MANE splice regions stay in scope
+whatever overlaps them. Pass the full GENCODE v50 GTF: the MANE subset lacks the basic transcripts
+the basic-exon rule needs, and is refused.
 
 Changes from v1 (the 53-feature model, scorer v1.0.x, GRCh37):
   - 38 features: no allele frequency (reported, not used), RVIS, Eigen, GERP++, ESE/ESS or SMS.
@@ -121,8 +122,8 @@ def parse_mane_gtf(gtf_path):
       gene_exons   {chrom: {gene_name: [(strand, start, end)]}}, GTF order (region classification)
       exons_by_chr {chrom: [(start, end, strand, gene_name)]}           (exon context)
       gene_id      {(chrom, gene_name): gene_id}
-      spans        {gene_id: [(chrom, start, end)]}, one per MANE transcript (scope rule O1)
-      basic_exons  {chrom: (starts, ends)}, merged exons of every basic transcript (scope rule O5)
+      spans        {gene_id: [(chrom, start, end)]}, one per MANE transcript (MANE-transcript rule)
+      basic_exons  {chrom: (starts, ends)}, merged exons of every basic transcript (basic-exon rule)
       basic_non_mane  number of basic transcripts that are not MANE (0 for the MANE subset)
     Raises ValueError for a GTF without MANE tags: v2.0 is defined on MANE transcripts only."""
     gene_exons = defaultdict(lambda: defaultdict(list))
@@ -260,7 +261,7 @@ def assign_regions(variants, gtf_path):
     Returns ({i: region} for the seven in-scope regions, {i: (gene_name, gene_id)} for every
     classified variant). A variant overlapping a MANE exon is Exonic and out of scope, whatever
     splice-region label another MANE transcript would give it. Entries of `variants` that are None
-    (not lifted) are skipped. The span rule (O1) is applied by in_mane_transcript / scope."""
+    (not lifted) are skipped. The MANE-transcript rule is applied by in_mane_transcript / scope."""
     g = parse_mane_gtf(gtf_path)
     index = {c: build_training_index(g["gene_exons"][c]) for c in g["gene_exons"]}
     merged = build_merged_exons(g["gene_exons"])
@@ -307,12 +308,13 @@ def in_basic_exon(variants, idx, gtf_path):
 def scope(variants, gtf_path):
     """({i: region} in scope, {i: (gene_name, gene_id)}, {i: reason} for classified variants out of scope).
 
-    In scope: one of the seven regions, inside a MANE transcript of the assigned gene (O1), and, for
-    Deep Intronic, not inside an exon of any GENCODE basic transcript (O5). Needs the full GENCODE GTF:
-    a GTF with no basic transcript outside MANE (the MANE subset) would skip rule O5 without notice."""
+    In scope: one of the seven regions, inside a MANE transcript of the assigned gene (the
+    MANE-transcript rule), and, for Deep Intronic, not inside an exon of any GENCODE basic transcript
+    (the basic-exon rule). Needs the full GENCODE GTF: a GTF with no basic transcript outside MANE (the
+    MANE subset) would skip the basic-exon rule without notice."""
     g = parse_mane_gtf(gtf_path)
     if not g["basic_non_mane"]:
-        raise ValueError(f"{gtf_path} has no basic transcript outside MANE; scope rule O5 needs the full "
+        raise ValueError(f"{gtf_path} has no basic transcript outside MANE; the basic-exon rule needs the full "
                          "GENCODE v50 GTF, not its MANE subset")
     regions, genes = assign_regions(variants, gtf_path)
     inside = in_mane_transcript(variants, genes, gtf_path)
@@ -574,7 +576,7 @@ def compute_gpn_msa(variants, hg38_map, gpn_msa_file):
 
 
 def compute_gene_level(genes, dbnsfp_path):
-    """pLI, LOEUF and ClinGen HI from the dbNSFP gene file, looked up by Ensembl gene ID (decision O2).
+    """pLI, LOEUF and ClinGen HI from the dbNSFP gene file, looked up by Ensembl gene ID.
 
     `genes` is {i: (gene_name, gene_id)}; the GENCODE version suffix is dropped. A row listing several
     IDs serves each of them; when an ID appears in more than one row the last wins, as v1 kept the last
