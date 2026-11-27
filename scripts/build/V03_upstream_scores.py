@@ -1,4 +1,4 @@
-"""V03 -- SpliceTransformer and Pangolin on GRCh38 for every v2.0 variant (docs/METASPLICE_V2_PLAN.md, Task 4).
+"""V03 -- SpliceTransformer and Pangolin on GRCh38 for every v2.0 variant.
 
 Every run disables TF32 (NVIDIA_TF32_OVERRIDE=0). The first device check (2026-09-30) found that
 SpliceTransformer on the GPU with TF32, PyTorch's default for convolutions on this GPU, differs
@@ -9,18 +9,18 @@ TF32 off, GPU runs match the CPU within 7.4e-4, are identical from run to run, a
 Modes:
   device      500 variants of the union (seed 11): each tool twice on the GPU, once on the CPU, once
               on the GPU in 4 chunks run at the same time, and once on the GPU with TF32 allowed; the
-              largest difference per output (Step 1).
+              largest difference per output.
   throughput  5,000 variants on the GPU, as 1 process and as 4 processes in parallel; variants per
-              second for each tool (Step 2).
+              second for each tool.
   run         the union of every variant set, deduplicated by chr:pos:ref:alt, in --chunks parallel
-              processes per tool, both tools at the same time (Steps 3-4); then the coverage checks of
-              Step 5: every variant has a SpliceTransformer row and a Pangolin row, and Pangolin's
+              processes per tool, both tools at the same time; then the coverage checks:
+              every variant has a SpliceTransformer row and a Pangolin row, and Pangolin's
               blank output (scored 0.0, as in training) is counted by set and region.
 Outputs go under tools/v2 (outside git); each mode appends to results/V03_upstream_scores.txt.
 
 SpliceTransformer runs from annotation_v2/spt_run with PYENSEMBL_CACHE_DIR set, and the md5 of the
-pyensembl database V01b verified is checked before and after every run. Pangolin uses the MANE database
-(annotation_v2/gencode.v50.mane.db) with pipeline/04's defaults.
+pyensembl database is checked before and after every run. Pangolin uses the MANE database
+(annotation_v2/gencode.v50.mane.db) with Pangolin's default settings.
 
 Usage:  python V03_upstream_scores.py {device,throughput,run} [--chunks 4]
 """

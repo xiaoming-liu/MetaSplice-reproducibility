@@ -1,0 +1,47 @@
+S15a -- EXACT POPULATION AND NUMERATOR OF THE LOWER BOUND ON THE INTRONIC PRIOR
+  population: gnomAD v4.1 joint SNVs, chr1-22 and X, FILTER PASS, 0 < AF < 0.01, in scope (scorer's scope(), full GENCODE v50 GTF) in a non-canonical region, gene with >= 1 P/LP SNV in the training release; ClinVar variants kept
+  pathogenic genes 5,133; ClinVar variants (either release) 4,412,683
+  chrY (left out by V02b): PASS, 0 < AF < 0.01 699,530; after the prefilters 80,222; eligible not ClinVar 0, ClinVar 0
+  chr1: eligible not ClinVar 6,713,263, ClinVar 25,641 (460 s)
+  chr2: eligible not ClinVar 6,804,057, ClinVar 26,786 (378 s)
+  chr3: eligible not ClinVar 5,231,329, ClinVar 15,954 (427 s)
+  chr4: eligible not ClinVar 3,895,980, ClinVar 9,270 (339 s)
+  chr5: eligible not ClinVar 4,196,471, ClinVar 13,446 (268 s)
+  chr6: eligible not ClinVar 4,866,727, ClinVar 12,431 (315 s)
+  chr7: eligible not ClinVar 5,188,946, ClinVar 14,221 (244 s)
+  chr8: eligible not ClinVar 3,897,984, ClinVar 9,269 (268 s)
+  chr9: eligible not ClinVar 3,291,480, ClinVar 14,963 (251 s)
+  chr10: eligible not ClinVar 4,608,876, ClinVar 10,733 (205 s)
+  chr11: eligible not ClinVar 3,623,237, ClinVar 16,324 (277 s)
+  chr12: eligible not ClinVar 3,935,693, ClinVar 12,463 (213 s)
+  chr13: eligible not ClinVar 1,888,166, ClinVar 4,190 (191 s)
+  chr14: eligible not ClinVar 2,557,052, ClinVar 9,296 (152 s)
+  chr15: eligible not ClinVar 3,152,902, ClinVar 10,629 (153 s)
+  chr16: eligible not ClinVar 3,517,863, ClinVar 15,506 (187 s)
+  chr17: eligible not ClinVar 2,680,243, ClinVar 16,149 (157 s)
+  chr18: eligible not ClinVar 1,873,330, ClinVar 5,102 (167 s)
+  chr19: eligible not ClinVar 1,734,386, ClinVar 16,557 (155 s)
+  chr20: eligible not ClinVar 1,888,374, ClinVar 6,191 (125 s)
+  chr21: eligible not ClinVar 959,391, ClinVar 3,809 (75 s)
+  chr22: eligible not ClinVar 1,159,603, ClinVar 6,324 (84 s)
+  chrX: eligible not ClinVar 3,165,909, ClinVar 9,836 (134 s)
+  gnomAD SNVs read 599,621,719; PASS, 0 < AF < 0.01 586,884,220; after the prefilters 223,343,488
+  not ClinVar: out of scope: inside a GENCODE basic exon 8,944,714; out of scope: outside MANE transcripts 1,357,259; in scope, canonical region 246,481; non-canonical, gene without P/LP in training 131,595,759; classified 222,975,475; duplicate eligible variants 0; eligible Donor Region 191,283; eligible Acceptor Region 261,975; eligible PPT Region 561,812; eligible Branch Point Region 812,074; eligible Deep Intronic 79,004,118
+  ClinVar: out of scope: inside a GENCODE basic exon 23,796; out of scope: outside MANE transcripts 138; in scope, canonical region 24,381; non-canonical, gene without P/LP in training 34,608; classified 368,013; duplicate eligible variants 0; eligible Donor Region 36,545; eligible Acceptor Region 57,365; eligible PPT Region 70,099; eligible Branch Point Region 3,968; eligible Deep Intronic 117,113
+
+  check: variants in neither release reproduce V02b's eligible count in every region: yes; ClinVar variants after the prefilters 368,013 (V02b 368,013): equal
+  check: duplicate eligible variants 0
+
+  population by region (not ClinVar + ClinVar = total):
+    Donor Region                191,283 +   36,545 =       227,828
+    Acceptor Region             261,975 +   57,365 =       319,340
+    PPT Region                  561,812 +   70,099 =       631,911
+    Branch Point Region         812,074 +    3,968 =       816,042
+    Deep Intronic            79,004,118 +  117,113 =    79,121,231
+    all five regions         80,831,262 +  285,090 =    81,116,352
+
+  eligible ClinVar variants in the 2025-08-31 release 257,980 (records 257,980; variants with more than one record 0); P/LP 1,242; P/LP with >= 1 star 1,099; of these also with a B/LB record 0
+  numerator: eligible, P/LP with >= 1 star in the training release, no B/LB record: 1,099
+  training calibration cohort, P/LP with >= 1 star and 0 < AF < 0.01: 1,099; in both 1,099 (region, gene ID and AF equal for 1,099); only here 0; only in the cohort 0
+
+wrote data/v2_gnomad_eligible_clinvar.csv (285,090 rows) and results/S15a_prior_population.txt

@@ -1,7 +1,6 @@
-"""A6 -- SpliceVarDB external validation at the variant level (Amendment 3).
+"""A6 -- SpliceVarDB external validation at the variant level.
 
-v1's A6 on v2.0. SpliceVarDB is distributed as assay records; variants are analysed once each
-(common.load_splicevardb). Policy, as in v1:
+The SpliceVarDB set consists of assay records; variants are analysed once each (common.load_splicevardb):
   * the primary analysis is variant level, on assay-concordant variants; the 40 variants called
     splice-altering by one assay and low-frequency splice-altering by another are excluded and reported
     separately;
@@ -10,7 +9,7 @@ v1's A6 on v2.0. SpliceVarDB is distributed as assay records; variants are analy
   * pooled and within-region auPRC for MetaSplice v2.0, SpliceAI and CADD, with paired differences;
     sensitivity and false-positive rate at scores 0.1, 0.2 and 0.5;
   * secondary: the assay records by source, with a variant-clustered bootstrap.
-The Deep Intronic rows are accompanied by the deep-intronic sensitivity set (decision O5).
+The Deep Intronic rows are accompanied by the deep-intronic sensitivity set (common.deep_intronic_sensitivity).
 SpliceVarDB measures splicing, not pathogenicity.
 
 Writes results/A6_splicevardb.txt.
@@ -25,11 +24,11 @@ from common import (OUT, REGIONS, ROOT, Tee, add_comparators, auprc, boot_ci, de
 
 COMPARATORS = [("MetaSplice v2.0", "MetaSplice"), ("SpliceAI", "spliceai_max"), ("CADD v1.7", "cadd_phred")]
 THRESHOLDS = (0.1, 0.2, 0.5)
-EXPECTED = {"strict": (12731, 8015, 4716), "broad": (22274, 17558, 4716)}       # Amendment 3
+EXPECTED = {"strict": (12731, 8015, 4716), "broad": (22274, 17558, 4716)}       # recorded (n, positive, negative)
 
 
 def cluster_boot_ci(y, s, clusters, n_boot=1000, seed=42, stat=average_precision_score):
-    """Bootstrap resampling whole variants, so repeated assay records stay together (v1)."""
+    """Bootstrap resampling whole variants, so repeated assay records stay together."""
     y = np.asarray(y); s = np.asarray(s, dtype=float); clusters = np.asarray(clusters)
     ok = ~np.isnan(s)
     y, s, clusters = y[ok], s[ok], clusters[ok]
@@ -54,7 +53,7 @@ def cluster_boot_ci(y, s, clusters, n_boot=1000, seed=42, stat=average_precision
 
 
 def cluster_boot_prop(values, clusters, thr, n_boot=1000, seed=42):
-    """CI for the proportion at or above `thr`, resampling variants not records (v1)."""
+    """CI for the proportion at or above `thr`, resampling variants not records."""
     values = np.asarray(values, dtype=float); clusters = np.asarray(clusters)
     ok = ~np.isnan(values)
     values, clusters = values[ok], clusters[ok]
@@ -130,7 +129,7 @@ def within_region(out, sub, y):
 def main():
     out = Tee(f"{OUT}/results/A6_splicevardb.txt")
     out("=" * 88)
-    out("A6 -- SpliceVarDB EXTERNAL VALIDATION, VARIANT LEVEL (MetaSplice v2.0; Amendment 3)")
+    out("A6 -- SpliceVarDB EXTERNAL VALIDATION, VARIANT LEVEL (MetaSplice v2.0)")
     out("=" * 88)
     out("Target: experimentally measured splice disruption, not ClinVar pathogenicity. MetaSplice was trained on")
     out("pathogenicity; SpliceAI on splicing. Read the per-region numbers: classes are distributed very unevenly")
@@ -156,11 +155,11 @@ def main():
         y = sub[col].astype(int).values
         got = (len(sub), int(y.sum()), int((y == 0).sum()))
         if got != EXPECTED[key]:
-            raise SystemExit(f"{key} endpoint {got} differs from Amendment 3's {EXPECTED[key]}")
+            raise SystemExit(f"{key} endpoint {got} differs from the recorded {EXPECTED[key]}")
         out("\n" + "=" * 88)
         out(label)
         out("=" * 88)
-        out(f"N={len(sub):,}  positive={int(y.sum()):,}  negative={int((y == 0).sum()):,}  prevalence={y.mean():.1%} (equals Amendment 3)")
+        out(f"N={len(sub):,}  positive={int(y.sum()):,}  negative={int((y == 0).sum()):,}  prevalence={y.mean():.1%} (equals the recorded values)")
         pooled_block(out, sub, y)
         within_region(out, sub, y)
 

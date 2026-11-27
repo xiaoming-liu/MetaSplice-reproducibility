@@ -1,0 +1,159 @@
+section	name	numerator	denominator	bound	pp3	bp4	cohort	rule	code	P	B	LR	lo95_exact	hi95_exact	point	ci	count	NP	NB	diff	lo	hi	gene_lo	gene_hi	threshold	share	n
+lower bound	main	1099.0	81116352.0	1.3548439653696458e-05																							
+lower bound sensitivity	all review statuses	1242.0	81116352.0	1.5311339444850774e-05																							
+lower bound sensitivity	>= 2 stars	617.0	81116352.0	7.606357840155337e-06																							
+lower bound sensitivity	>= 1 star, AF < 1e-4	1044.0	81116352.0	1.287040127248326e-05																							
+lower bound by region	Donor Region	540.0	227828.0	0.0023702091051143845																							
+lower bound by region	Acceptor Region	254.0	319340.0	0.0007953904928915889																							
+lower bound by region	PPT Region	123.0	631911.0	0.0001946476639906569																							
+lower bound by region	Branch Point Region	21.0	816042.0	2.57339695750954e-05																							
+lower bound by region	Deep Intronic	161.0	79121231.0	2.0348520613891865e-06																							
+sensitivity thresholds	all review statuses			1.5311339444850774e-05	0.18199042622032935	0.0007595699783414121																					
+sensitivity thresholds	>= 2 stars			7.606357840155337e-06	0.19798956887104724	0.000528756954357873																					
+sensitivity thresholds	>= 1 star, AF < 1e-4			1.287040127248326e-05	0.18199042622032935	0.0007095684305143541																					
+levels							calibration cohort, >= 1 star	MetaSplice	PP3_Moderate	477.0	49.0	627.5845985453004	436.6503302622122	923.5315355320279	meets	clears											
+levels							calibration cohort, >= 1 star	MetaSplice	PP3_Supporting	56.0	116.0	31.122897028994153	18.594036622759244	51.150282531481686	meets	clears											
+levels							calibration cohort, >= 1 star	MetaSplice	Indeterminate	36.0	8373.0	0.27718606147540475	0.18194629788132197	0.40312743284936503													
+levels							calibration cohort, >= 1 star	MetaSplice	BP4_Supporting	9.0	28725.0	0.020199120041197248	0.008153991843386305	0.04118035801284829	meets	clears											
+levels							calibration cohort, >= 1 star	SpliceAI (precomputed masked)	PP3_Moderate	333.0	63.0	340.76396440929307	236.7489192183039	498.0055353699944	meets	clears											
+levels							calibration cohort, >= 1 star	SpliceAI (precomputed masked)	PP3_Supporting	135.0	227.0	38.340510342514825	27.63497434661329	52.74324208077881	meets	clears											
+levels							calibration cohort, >= 1 star	SpliceAI (precomputed masked)	Indeterminate	86.0	11672.0	0.4750104351703186	0.36749260602822104	0.6012367929921529													
+levels							calibration cohort, >= 1 star	SpliceAI (precomputed masked)	BP4_Supporting	22.0	24999.0	0.05673486455029136	0.0331022802934191	0.09012979108877708	meets	clears											
+levels							calibration cohort, >= 1 star	SpliceAI (precomputed masked)	NoScore	2.0	302.0	0.4269460803409794	0.031416605860117616	1.9690535207623745													
+levels							calibration cohort, all statuses	MetaSplice	PP3_Moderate	462.0	34.0	851.0346020761247	553.0821237334372	1360.319569577321	meets	clears											
+levels							calibration cohort, all statuses	MetaSplice	PP3_Supporting	86.0	128.0	42.079700630252105	27.20756563792553	64.45127328449014	meets	clears											
+levels							calibration cohort, all statuses	MetaSplice	Indeterminate	39.0	11835.0	0.20638612859592506	0.13852290493195957	0.29458789449046674													
+levels							calibration cohort, all statuses	MetaSplice	BP4_Supporting	8.0	25268.0	0.019829112585353914	0.007468508515524065	0.04219071484603831	meets	clears											
+levels							calibration cohort, all statuses	SpliceAI (precomputed masked)	PP3_Moderate	347.0	66.0	329.28329513623635	230.796981526382	476.6126868360063	meets	clears											
+levels							calibration cohort, all statuses	SpliceAI (precomputed masked)	PP3_Supporting	131.0	207.0	39.635570170097026	28.24957537483836	55.162347185970525	meets	clears											
+levels							calibration cohort, all statuses	SpliceAI (precomputed masked)	Indeterminate	93.0	11689.0	0.49829869495920537	0.38965639069638075	0.6249075500143505													
+levels							calibration cohort, all statuses	SpliceAI (precomputed masked)	BP4_Supporting	22.0	25001.0	0.05511241735204542	0.03214904930962083	0.08758097764591033	meets	clears											
+levels							calibration cohort, all statuses	SpliceAI (precomputed masked)	NoScore	2.0	302.0	0.4147698814625188	0.03051999627452156	1.913186974981975													
+rounding							calibration cohort, >= 1 star										0.0										
+rule							calibration cohort, >= 1 star	MetaSplice	PP3	533.0	165.0	208.2539477823215	169.75651240337038	255.95224988779742		clears		578.0	37263.0								
+rule							calibration cohort, >= 1 star	MetaSplice	BP4	9.0	28725.0	0.020199120041197248	0.008153991843386305	0.04118035801284829		clears		578.0	37263.0								
+rule							calibration cohort, >= 1 star	MetaSplice	neither	36.0	8373.0							578.0	37263.0								
+rule							calibration cohort, >= 1 star	SpliceAI raw, first record	PP3	524.0	1654.0	20.424233168621317	18.700620224958087	22.172951408414278		clears		578.0	37263.0								
+rule							calibration cohort, >= 1 star	SpliceAI raw, first record	BP4	39.0	32966.0	0.07626904893308342	0.05186641066165011	0.10742414901243214		inconclusive		578.0	37263.0								
+rule							calibration cohort, >= 1 star	SpliceAI raw, first record	neither	15.0	2643.0							578.0	37263.0								
+rule							calibration cohort, >= 1 star	SpliceAI raw, all genes	PP3	537.0	1671.0	20.717999291806702	19.054719538158295	22.391924167946065		clears		578.0	37263.0								
+rule							calibration cohort, >= 1 star	SpliceAI raw, all genes	BP4	25.0	32923.0	0.048954270670570635	0.029779559072539815	0.07528120905449533		clears		578.0	37263.0								
+rule							calibration cohort, >= 1 star	SpliceAI raw, all genes	neither	16.0	2669.0							578.0	37263.0								
+rule							calibration cohort, >= 1 star	SpliceAI masked	PP3	520.0	848.0	39.53279036364823	35.36223340809805	43.96477675742759		clears		578.0	37263.0								
+rule							calibration cohort, >= 1 star	SpliceAI masked	BP4	38.0	34999.0	0.06999676016447726	0.04738624275926956	0.09892844312589236		clears		578.0	37263.0								
+rule							calibration cohort, >= 1 star	SpliceAI masked	neither	20.0	1416.0							578.0	37263.0								
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI raw, first record	P/LP given PP3											0.01557093425605538	-0.008693771626297576	0.03806228373702422	-0.020001672240802675	0.05986043184819287			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI raw, first record	B/LB given PP3											-0.03995920886670423	-0.04213428870461316	-0.0378659796581059	-0.04234600623670931	-0.03757686686677845			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI raw, first record	B/LB given BP4											-0.11381262914955859	-0.1183768080938196	-0.10962482891876661	-0.12570162092687265	-0.1027533925690894			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI raw, first record	P/LP given BP4											-0.051903114186851215	-0.07093425605536333	-0.03460207612456748	-0.09169440035368126	-0.020403473889555827			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI raw, all genes	P/LP given PP3											-0.00692041522491349	-0.029411764705882353	0.015570934256055362	-0.029315775183274505	0.014842759793030428			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI raw, all genes	B/LB given PP3											-0.04041542548909105	-0.04258916351340472	-0.0382685237366825	-0.042793641953918465	-0.03800021719802704			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI raw, all genes	B/LB given BP4											-0.11265866945763903	-0.11711550331427957	-0.10844403295494191	-0.12421704702983836	-0.10177090311168922			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI raw, all genes	P/LP given BP4											-0.027681660899653977	-0.04325259515570934	-0.015570934256055362	-0.04248812152847487	-0.013421217787796508			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI masked	P/LP given PP3											0.02249134948096887	-0.0017733564013840807	0.04844290657439446	-0.003762689798426026	0.054251543517839104			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI masked	B/LB given PP3											-0.018329173711188043	-0.01983267584467166	-0.01685317875640716	-0.019970635549975444	-0.01671843339292808			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI masked	B/LB given BP4											-0.168370769932641	-0.1723968816252046	-0.1641822987950514	-0.17935734696409578	-0.1572774900138295			
+rule difference							calibration cohort, >= 1 star	MetaSplice minus SpliceAI masked	P/LP given BP4											-0.05017301038062283	-0.06747404844290658	-0.0328719723183391	-0.07448933468765871	-0.03052064631956912			
+rule							calibration cohort, all statuses	MetaSplice	PP3	549.0	165.0	208.38792971734148	169.9716286098345	256.00891863799063		clears		595.0	37265.0								
+rule							calibration cohort, all statuses	MetaSplice	BP4	10.0	28727.0	0.021801877014947724	0.009305695723939602	0.042935555097813015		clears		595.0	37265.0								
+rule							calibration cohort, all statuses	MetaSplice	neither	36.0	8373.0							595.0	37265.0								
+rule							calibration cohort, all statuses	SpliceAI raw, first record	PP3	540.0	1654.0	20.447603467021633	18.73580961955241	22.186485128952434		clears		595.0	37265.0								
+rule							calibration cohort, all statuses	SpliceAI raw, first record	BP4	40.0	32968.0	0.0759891435341426	0.051947059185629876	0.10659433966800481		clears		595.0	37265.0								
+rule							calibration cohort, all statuses	SpliceAI raw, first record	neither	15.0	2643.0							595.0	37265.0								
+rule							calibration cohort, all statuses	SpliceAI raw, all genes	PP3	553.0	1671.0	20.726827894533038	19.073694795954285	22.393218084023356		clears		595.0	37265.0								
+rule							calibration cohort, all statuses	SpliceAI raw, all genes	BP4	26.0	32925.0	0.04945745040613056	0.030412378930393214	0.07544122739779902		clears		595.0	37265.0								
+rule							calibration cohort, all statuses	SpliceAI raw, all genes	neither	16.0	2669.0							595.0	37265.0								
+rule							calibration cohort, all statuses	SpliceAI masked	PP3	535.0	848.0	39.5131897098462	35.36221758632076	43.93002171108674		clears		595.0	37265.0								
+rule							calibration cohort, all statuses	SpliceAI masked	BP4	40.0	35001.0	0.07157538596136148	0.04899040146214636	0.1002784112587656		clears		595.0	37265.0								
+rule							calibration cohort, all statuses	SpliceAI masked	neither	20.0	1416.0							595.0	37265.0								
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI raw, first record	P/LP given PP3											0.015126050420168125	-0.0067226890756302525	0.03865546218487395	-0.016529609764107056	0.05634381104143107			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI raw, first record	B/LB given PP3											-0.03995706426942171	-0.04202468804508252	-0.03783577083053804	-0.04242323585697531	-0.037441902090749234			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI raw, first record	B/LB given BP4											-0.1138065208640815	-0.11842211190124782	-0.10921373943378505	-0.12612560536114942	-0.10177451979224661			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI raw, first record	P/LP given BP4											-0.05042016806722689	-0.06890756302521009	-0.03361344537815126	-0.08856089808615676	-0.02158983673100043			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI raw, all genes	P/LP given PP3											-0.006722689075630228	-0.025210084033613446	0.013445378151260505	-0.026889593737346472	0.014091819286324973			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI raw, all genes	B/LB given PP3											-0.04041325640681605	-0.042560042935730576	-0.038239635046290084	-0.04286010223497293	-0.03796518734112455			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI raw, all genes	B/LB given BP4											-0.11265262310478996	-0.11724137931034483	-0.10795652757278948	-0.1248878079794308	-0.10132046381741762			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI raw, all genes	P/LP given BP4											-0.026890756302521007	-0.04201680672268908	-0.015126050420168067	-0.04117060759680072	-0.01446373413395399			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI masked	P/LP given PP3											0.02352941176470591	0.0	0.04710084033613442	-0.0034195402298850576	0.05152260951483749			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI masked	B/LB given PP3											-0.01832818999060781	-0.019884610224070842	-0.01685227425197907	-0.020020369290438524	-0.016669626249241874			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI masked	B/LB given BP4											-0.16836173353012207	-0.17273581108278546	-0.16425399168120222	-0.1795908845871388	-0.15740860712296417			
+rule difference							calibration cohort, all statuses	MetaSplice minus SpliceAI masked	P/LP given BP4											-0.05042016806722689	-0.06890756302521009	-0.03361344537815126	-0.07072659704760254	-0.03150849948160248			
+rule							resolved VUS, >= 1 star	MetaSplice	PP3	146.0	15.0	44.91328976034858	24.401930915767853	90.00338142434454		clears		153.0	706.0								
+rule							resolved VUS, >= 1 star	MetaSplice	BP4	0.0	409.0	0.0	0.0	0.05261367329833016		clears		153.0	706.0								
+rule							resolved VUS, >= 1 star	MetaSplice	neither	7.0	282.0							153.0	706.0								
+rule							resolved VUS, >= 1 star	SpliceAI raw, first record	PP3	145.0	220.0	3.0412953060011882	2.5319596573843355	3.590616669224205		inconclusive		153.0	706.0								
+rule							resolved VUS, >= 1 star	SpliceAI raw, first record	BP4	8.0	455.0	0.08113193995546937	0.02927886613404823	0.17910480365808767		inconclusive		153.0	706.0								
+rule							resolved VUS, >= 1 star	SpliceAI raw, first record	neither	0.0	31.0							153.0	706.0								
+rule							resolved VUS, >= 1 star	SpliceAI raw, all genes	PP3	150.0	220.0	3.1461675579322637	2.6616152916064117	3.6526611866377228		inconclusive		153.0	706.0								
+rule							resolved VUS, >= 1 star	SpliceAI raw, all genes	BP4	3.0	452.0	0.03062640985597779	0.004575843931673948	0.10406138551050527		clears		153.0	706.0								
+rule							resolved VUS, >= 1 star	SpliceAI raw, all genes	neither	0.0	34.0							153.0	706.0								
+rule							resolved VUS, >= 1 star	SpliceAI masked	PP3	144.0	113.0	5.880270692347736	4.5665608972811444	7.490294753990267		inconclusive		153.0	706.0								
+rule							resolved VUS, >= 1 star	SpliceAI masked	BP4	7.0	559.0	0.05778292235200579	0.019529950926917068	0.13142647109963532		inconclusive		153.0	706.0								
+rule							resolved VUS, >= 1 star	SpliceAI masked	neither	2.0	34.0							153.0	706.0								
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI raw, first record	P/LP given PP3											0.0065359477124183885	-0.0392156862745098	0.0457516339869281	-0.04432402208051775	0.06452660242982823			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI raw, first record	B/LB given PP3											-0.29036827195467424	-0.3243626062322946	-0.2563385269121813	-0.3328567937438905	-0.25066212979134456			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI raw, first record	B/LB given BP4											-0.06515580736543913	-0.10198300283286119	-0.0226628895184136	-0.11070336350845522	-0.020700290275761986			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI raw, first record	P/LP given BP4											-0.05228758169934641	-0.08513071895424836	-0.0196078431372549	-0.10828409178113729	-0.008			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI raw, all genes	P/LP given PP3											-0.02614379084967311	-0.058823529411764705	0.0	-0.06015037593984962	0.0			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI raw, all genes	B/LB given PP3											-0.29036827195467424	-0.3243626062322946	-0.2563385269121813	-0.3328567937438905	-0.25066212979134456			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI raw, all genes	B/LB given BP4											-0.060906515580736564	-0.09915014164305949	-0.021246458923512748	-0.10674475356495533	-0.015943681240380796			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI raw, all genes	P/LP given BP4											-0.0196078431372549	-0.0457516339869281	0.0	-0.04479308005427408	0.0			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI masked	P/LP given PP3											0.013071895424836666	-0.032679738562091505	0.05228758169934641	-0.03704394693200663	0.06994463869463868			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI masked	B/LB given PP3											-0.1388101983002833	-0.16572237960339944	-0.10906515580736544	-0.16908200693079703	-0.10978626682740607			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI masked	B/LB given BP4											-0.21246458923512757	-0.24929178470254956	-0.17280453257790368	-0.2559310394500244	-0.17231861410795246			
+rule difference							resolved VUS, >= 1 star	MetaSplice minus SpliceAI masked	P/LP given BP4											-0.0457516339869281	-0.0784313725490196	-0.013071895424836602	-0.09494424352019289	-0.00787247785433071			
+rule							resolved VUS, all statuses	MetaSplice	PP3	146.0	15.0	45.040522875817	24.470502365494955	90.25950358123124		clears		153.0	708.0								
+rule							resolved VUS, all statuses	MetaSplice	BP4	0.0	411.0	0.0	0.0	0.052490441562872164		clears		153.0	708.0								
+rule							resolved VUS, all statuses	MetaSplice	neither	7.0	282.0							153.0	708.0								
+rule							resolved VUS, all statuses	SpliceAI raw, first record	PP3	145.0	220.0	3.0499108734402847	2.5389168065544134	3.6010594413847037		inconclusive		153.0	708.0								
+rule							resolved VUS, all statuses	SpliceAI raw, first record	BP4	8.0	457.0	0.08100570644012528	0.029239709662105644	0.17878284363364053		inconclusive		153.0	708.0								
+rule							resolved VUS, all statuses	SpliceAI raw, first record	neither	0.0	31.0							153.0	708.0								
+rule							resolved VUS, all statuses	SpliceAI raw, all genes	PP3	150.0	220.0	3.155080213903743	2.6689286998445962	3.6632844060079477		inconclusive		153.0	708.0								
+rule							resolved VUS, all statuses	SpliceAI raw, all genes	BP4	3.0	454.0	0.030577869914485616	0.004569605265279084	0.10387097802774937		clears		153.0	708.0								
+rule							resolved VUS, all statuses	SpliceAI raw, all genes	neither	0.0	34.0							153.0	708.0								
+rule							resolved VUS, all statuses	SpliceAI masked	PP3	144.0	113.0	5.896928682977616	4.579237091711584	7.511868286446351		inconclusive		153.0	708.0								
+rule							resolved VUS, all statuses	SpliceAI masked	BP4	7.0	561.0	0.057740030058369154	0.01951803366982303	0.13130910733703968		inconclusive		153.0	708.0								
+rule							resolved VUS, all statuses	SpliceAI masked	neither	2.0	34.0							153.0	708.0								
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI raw, first record	P/LP given PP3											0.0065359477124183885	-0.0392156862745098	0.0457516339869281	-0.04381537960853596	0.070433625374293			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI raw, first record	B/LB given PP3											-0.2895480225988701	-0.327683615819209	-0.2542372881355932	-0.3333333333333333	-0.25265514184397164			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI raw, first record	B/LB given BP4											-0.06497175141242939	-0.1059322033898305	-0.02256355932203393	-0.10927403375448738	-0.019263384461069108			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI raw, first record	P/LP given BP4											-0.05228758169934641	-0.08513071895424836	-0.0196078431372549	-0.11046591445364451	-0.012041105598866059			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI raw, all genes	P/LP given PP3											-0.02614379084967311	-0.058823529411764705	0.0	-0.0625	0.005592276211510973			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI raw, all genes	B/LB given PP3											-0.2895480225988701	-0.327683615819209	-0.2542372881355932	-0.3333333333333333	-0.25265514184397164			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI raw, all genes	B/LB given BP4											-0.06073446327683618	-0.10310734463276836	-0.01832627118644071	-0.10396014917867918	-0.015240552130796036			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI raw, all genes	P/LP given BP4											-0.0196078431372549	-0.0457516339869281	0.0	-0.04697986577181208	0.0			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI masked	P/LP given PP3											0.013071895424836666	-0.032679738562091505	0.05228758169934641	-0.03937789026371703	0.0753930471068794			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI masked	B/LB given PP3											-0.1384180790960452	-0.16666666666666666	-0.1087217514124294	-0.16877421747835733	-0.10969977747783899			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI masked	B/LB given BP4											-0.211864406779661	-0.25	-0.17231638418079095	-0.2550153292900845	-0.1676296472674724			
+rule difference							resolved VUS, all statuses	MetaSplice minus SpliceAI masked	P/LP given BP4											-0.0457516339869281	-0.0784313725490196	-0.013071895424836602	-0.09723069105691057	-0.007459942932396842			
+remaining VUS shares																									0.1	0.3314959852573384	60776.0
+remaining VUS shares																									0.2	0.3002336448598131	60776.0
+remaining VUS shares																									0.5	0.2514314861129393	60776.0
+remaining VUS codes								MetaSplice	PP3								18475.0									0.3039851257075161	
+remaining VUS codes								MetaSplice	BP4								16099.0									0.26489074634724236	
+remaining VUS codes								MetaSplice	neither								26202.0									0.4311241279452415	
+remaining VUS codes								SpliceAI raw, first record	PP3								23508.0									0.386797420034224	
+remaining VUS codes								SpliceAI raw, first record	BP4								31179.0									0.5130150059233908	
+remaining VUS codes								SpliceAI raw, first record	neither								6089.0									0.10018757404238515	
+remaining VUS codes								SpliceAI raw, all genes	PP3								23667.0									0.3894135843095959	
+remaining VUS codes								SpliceAI raw, all genes	BP4								31010.0									0.5102343030143478	
+remaining VUS codes								SpliceAI raw, all genes	neither								6099.0									0.10035211267605634	
+remaining VUS codes								SpliceAI masked	PP3								19785.0									0.32553968671844147	
+remaining VUS codes								SpliceAI masked	BP4								36705.0									0.6039390548900881	
+remaining VUS codes								SpliceAI masked	neither								4286.0									0.07052125839147032	
+population								gene-matched fold score	PP3																	0.00731	
+population								gene-matched fold score	BP4																	0.39866	
+population								full model	PP3																	0.00909	
+population								full model	BP4																	0.32859	
+gnomAD benign reference								MetaSplice	PP3	533.0	731.0	126.1484717810839	112.56793803888287	140.66714547122		clears		578.0	100000.0								
+gnomAD benign reference								MetaSplice	BP4	9.0	39866.0	0.03905818054496404	0.015729291163860865	0.0798155369735612		clears		578.0	100000.0								
+region				0.0023702091051143845			Donor Region	MetaSplice	PP3	267.0	51.0	54.7973615916955	39.20476584987482	77.74430586374758		clears		272.0	2847.0								
+region				0.0023702091051143845			Donor Region	MetaSplice	BP4	2.0	2079.0	0.010069179186826246	0.0008217705441508277	0.041521467993604004		clears		272.0	2847.0								
+region				0.0007953904928915889			Acceptor Region	MetaSplice	PP3	110.0	26.0	231.16354234001292	138.71071201850847	395.1203437071626		clears		119.0	6502.0								
+region				0.0007953904928915889			Acceptor Region	MetaSplice	BP4	1.0	4129.0	0.013232902751800647	0.00016301072213379208	0.08435171201164784		clears		119.0	6502.0								
+region				0.0001946476639906569			PPT Region	MetaSplice	PP3	45.0	20.0	460.2236842105263	230.14411165775778	921.6946927841277		clears		57.0	11659.0								
+region				0.0001946476639906569			PPT Region	MetaSplice	BP4	2.0	9077.0	0.04506860408706022	0.0037521626156964013	0.1754413634812878		inconclusive		57.0	11659.0								
+region				2.57339695750954e-05			Branch Point Region	MetaSplice	PP3	7.0	12.0	26.760416666666668	7.061464727578876	64.9391523998253		inconclusive		8.0	367.0								
+region				2.57339695750954e-05			Branch Point Region	MetaSplice	BP4	0.0	131.0	0.0	0.0	1.4000631555792118		inconclusive		8.0	367.0								
+region				2.0348520613891865e-06			Deep Intronic	MetaSplice	PP3	104.0	56.0	241.85480093676813	161.77585768479025	358.73346005706395		clears		122.0	15888.0								
+region				2.0348520613891865e-06			Deep Intronic	MetaSplice	BP4	4.0	13309.0	0.039140283476360754	0.008621056859423349	0.10797438236120335		inconclusive		122.0	15888.0								

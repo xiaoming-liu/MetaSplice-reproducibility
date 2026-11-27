@@ -1,14 +1,14 @@
-"""Shared inputs for the Amendment 8 analyses (P1-P3): input locks, the two test cohorts and their rows, and the
-denominator checks. Nothing here computes a performance metric.
+"""Shared inputs of the analyses on the temporal test set (P1, P2, Q1, S15): input locks (md5), the test set, the
+remaining-VUS cohort, report rows, and the denominator checks. Nothing here computes a performance metric.
 """
 import hashlib, os
 import numpy as np
 import pandas as pd
 from common import (CLINVAR_2025, NONCANONICAL, OUT, ROOT, add_comparators, deep_intronic_sensitivity, in_training,
-                    load_fresh, load_test, score)
+                    score)
 from calib import in_cohort
 
-LOCKS = {      # Amendment 8; values recorded by C0, F1, X3 and S11_prior_frozen.json (fold models: first recorded here)
+LOCKS = {      # md5 of the inputs, checked before an analysis computes anything
     "models/metasplice_v2_full.joblib": "51c6e5d0db100b33b91907fa857cd9a7",
     "models/metasplice_v2_features.joblib": "8be31360848f2cb43c2b02850bd03815",
     "models/metasplice_v2_folds.json": "dca7cf706ac3e6832495d5e8cf8e6e82",
@@ -28,15 +28,12 @@ LOCKS = {      # Amendment 8; values recorded by C0, F1, X3 and S11_prior_frozen
     "data/v2_pathogenic_genes.csv": "c6738b75048c943e9a95f1545c34b752",
     "data/v2_spliceai_raw_d4999.csv": "31b81cc8553720bc33ed7a39e8636206",
     "data/v2_spliceai_raw_d4999_vus.csv": "5578901fa0ac8a8034fd11cf3986755d",
-    "data/v2_features_pooled_test.csv": "a1847d63dd5ab2e4021b1f20a01b22c8",          # V12 (Amendment 9)
-    "results/S6_thresholds.tsv": "6a009ca0e0d5c837d7b1633c739ceb41",
+    "data/v2_features_pooled_test.csv": "a1847d63dd5ab2e4021b1f20a01b22c8",          # V12
     CLINVAR_2025["GRCh38"]: "111c595ba957c7fc93b8833188d4b029",
     CLINVAR_2025["GRCh37"]: "3c0116eaa075ee7c658ca5c70ec44763",
 }
-EXPECTED = {   # Amendment 8: (n, P/LP)
-    ("development", "non-canonical"): (25240, 244), ("development", "non-canonical, SpliceAI-scored"): (25114, 243),
-    ("september", "non-canonical"): (14749, 275), ("september", "non-canonical, SpliceAI-scored"): (14552, 273),
-    ("pooled", "non-canonical"): (40619, 602), ("pooled", "non-canonical, SpliceAI-scored"): (40296, 600),   # Amendment 9
+EXPECTED = {   # recorded denominators: (n, P/LP)
+    ("pooled", "non-canonical"): (40619, 602), ("pooled", "non-canonical, SpliceAI-scored"): (40296, 600),
 }
 MIN_P = 20
 
@@ -60,13 +57,13 @@ def verify_locks(log, files, extra=None):
         log(f"  {got}  {f}  {'ok' if got == w else 'DIFFERS from ' + w}")
         bad += [f] if got != w else []
     if bad:
-        raise SystemExit(f"inputs differ from Amendment 8's locks; nothing computed: {bad}")
+        raise SystemExit(f"inputs differ from their locked md5; nothing computed: {bad}")
     log("  every input equals its locked md5")
 
 
 def pooled_cohort(with_scores=True):
-    """The pooled temporal test set (V12, Amendment 9), labelled by ClinVar 2026-09-28, with MetaSplice (full model),
-    SpliceAI (precomputed masked, V08) and CADD (PHRED). Column source: '2026-04-15' or '2026-09-28'."""
+    """The temporal test set (V12), labelled by ClinVar 2026-09-28, with MetaSplice (full model), SpliceAI (precomputed
+    masked, V08) and CADD (PHRED). Column source: '2026-04-15' or '2026-09-28'."""
     d = pd.read_csv(f"{OUT}/data/v2_features_pooled_test.csv", low_memory=False)
     if in_training(d).any():
         raise ValueError("a pooled test variant is in the training data")
@@ -76,26 +73,14 @@ def pooled_cohort(with_scores=True):
     return d
 
 
-def test_cohorts(with_scores=True, kind="separate"):
-    """kind='separate': {'development': April strict test set, 'september': fresh cohort}; kind='pooled':
-    {'pooled': the Amendment 9 set}. All regions, with MetaSplice (full model), SpliceAI (precomputed masked, V08) and
-    CADD (PHRED)."""
-    if kind == "pooled":
-        return {"pooled": pooled_cohort(with_scores)}
-    dev = add_comparators(load_test("strict"))
-    sep = load_fresh()
-    out = {}
-    for name, d in [("development", dev), ("september", sep)]:
-        d = d.reset_index(drop=True)
-        d["MetaSplice"] = score(d) if with_scores else 0.0
-        d["SpliceAI"], d["CADD"] = d.spliceai_max, d.cadd_phred
-        out[name] = d
-    return out
+def test_cohorts(with_scores=True):
+    """{'pooled': the temporal test set}, all regions, with MetaSplice (full model), SpliceAI (precomputed masked, V08)
+    and CADD (PHRED)."""
+    return {"pooled": pooled_cohort(with_scores)}
 
 
 def check_denominators(log, cohorts):
-    amend = "Amendment 9" if "pooled" in cohorts else "Amendment 8"
-    log(f"\nDenominator check against {amend} (n, P/LP), before anything is computed")
+    log("\nDenominator check against the recorded values (n, P/LP), before anything is computed")
     bad = []
     for name, d in cohorts.items():
         nc = d[d.region.isin(NONCANONICAL)]
@@ -105,8 +90,8 @@ def check_denominators(log, cohorts):
             log(f"  {name:<12} {tag:<32} n={got[0]:>7,} P/LP={got[1]:>4}   recorded {EXPECTED[(name, tag)]}   {'ok' if ok else 'DIFFERS'}")
             bad += [(name, tag)] if not ok else []
     if bad:
-        raise SystemExit(f"denominators differ from {amend}; nothing computed: {bad}")
-    log(f"  every denominator equals {amend}")
+        raise SystemExit(f"denominators differ from the recorded values; nothing computed: {bad}")
+    log("  every denominator equals its recorded value")
 
 
 def rows(d):
@@ -124,9 +109,8 @@ def rows(d):
 
 
 def load_vus_cohort(pgenes):
-    """S5's VUS yield cohort (S5_clingen_calibration.load_yield, same logic; S5's module opens its log file when imported,
-    so it is not imported): uncertain and conflicting variants of the 2026-04-15 release under the calibration-cohort
-    filters, with MetaSplice (full model) and SpliceAI (precomputed masked). S5 logged n=61,016."""
+    """Uncertain and conflicting variants of the 2026-04-15 release (V02's VUS set) under the calibration-cohort filters
+    (61,016 variants), with MetaSplice (full model) and SpliceAI (precomputed masked)."""
     vus = pd.read_csv(f"{ROOT}/data/v2_features_vus.csv", low_memory=False)
     if in_training(vus).any():
         raise ValueError("a VUS is in the training data")

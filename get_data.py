@@ -3,17 +3,17 @@
 
   python get_data.py [--archive FILE] [--keep]
 
-Downloads metasplice_v2_reproducibility_data.tar.gz (291,082,658 bytes) from release v2.0.1 of
+Downloads metasplice_v2_reproducibility_data.tar.gz (278,006,297 bytes) from release v2.0.2 of
 https://github.com/xiaoming-liu/MetaSplice-reproducibility, checks its SHA-256, unpacks data/ next to this script, and
 checks every data file against MD5SUMS. --archive FILE uses a copy you already have; --keep keeps the downloaded
 archive. Python 3.8 or newer, standard library only.
 """
 import argparse, hashlib, os, sys, tarfile, urllib.request
 
-TAG = "v2.0.1"
+TAG = "v2.0.2"
 NAME = "metasplice_v2_reproducibility_data.tar.gz"
 URL = f"https://github.com/xiaoming-liu/MetaSplice-reproducibility/releases/download/{TAG}/{NAME}"
-SHA256 = "79bbb3ffd8ed3ec1acc627364680bcc5a7f07b398ea161edfdf89740630fc9db"
+SHA256 = "1a30a38e5da97b339584e88896e31d707c956ebe0241426a70e578086444282a"
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 

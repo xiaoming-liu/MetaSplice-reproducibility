@@ -18,8 +18,9 @@ SpliceVarDB set (data/v2_variants_splicevardb.csv, data/v2_features_splicevardb.
   (SAVNet); Jayasinghe RG, et al. Cell Rep. 2018;23:270-81 (MiSplice); Casadei S, et al. Proc Natl Acad Sci USA.
   2019;116:26798-807; Fraile-Bethencourt E, et al. J Pathol. 2019;248:409-20.
   scripts/splicevardb/classify_all_datasets.py is the reconstruction's classifier, unchanged.
-gnomAD v4.1 (the reference samples and the allele frequencies in the feature tables): CC0. Chen S, et al. Nature.
-  2024;625:92-100.
+gnomAD v4.1 (the reference samples, the allele frequencies in the feature tables, and the allele frequencies of the
+  ClinVar variants in the population of the prior's lower bound, data/v2_gnomad_eligible_clinvar.csv): CC0. Chen S, et
+  al. Nature. 2024;625:92-100.
 Literature-confirmed splice-altering variants: gene and HGVS description of each variant, curated for this study from
   published reports.
 

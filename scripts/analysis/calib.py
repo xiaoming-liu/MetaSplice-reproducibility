@@ -1,10 +1,9 @@
 """Shared ClinGen-style calibration code (Pejaver et al. 2022) for the v2.0 analyses. No side effects.
 
-The framework (lr_levels through fmt_t) is v1's calib.py unchanged: prior 0.0441 with c = 1124, windows of
->= 100 labelled variants and >= 25 of each class, 10,000 bootstrap iterations, exact Clopper-Pearson
-intervals. The data layer is v2.0's (docs/METASPLICE_V2_PLAN.md, Task 8):
-  - one MetaSplice model, v2.0 (38 features); compared_models() is ["MetaSplice"], and the reduced-model
-    machinery of v1 (G1 JSON, LOEUF recoding, refits) is gone: v2.0 encodes a missing LOEUF as missing;
+Local likelihood ratios in score windows of >= 100 labelled variants with >= 25 of each class, 10,000 bootstrap
+iterations, exact Clopper-Pearson intervals; the requirements follow from the prior (lr_levels; the default is the
+missense prior 0.0441 with c = 1124, Pejaver et al. 2022). The data layer:
+  - one MetaSplice model, v2.0 (38 features); compared_models() is ["MetaSplice"]; a missing LOEUF stays missing;
   - pathogenic genes and the fold map are keyed by Ensembl gene ID;
   - in_cohort reads the scorer's gnomad_af, which is never missing (0.0 means looked up and not found);
   - SpliceAI and CADD come from data/v2_comparators.csv (V08).
@@ -18,13 +17,13 @@ from scipy.stats import beta
 from common import (ROOT, OUT, NONCANONICAL, load_train, load_test, add_comparators, score, training_release)
 
 SEED = 42
-N_BOOT = int(os.environ.get("S5_NBOOT", "10000"))
+N_BOOT = int(os.environ.get("CALIB_NBOOT", "10000"))
 MIN_LABELLED = 100
 MIN_CLASS = 25
 MIN_FRACTION = 0.0
 LEVELS = ["Supporting", "Moderate", "Strong", "VeryStrong"]
 MODEL_DIR = f"{ROOT}/models"
-# Review statuses with no ClinVar star (v1's S6)
+# Review statuses with no ClinVar star
 ZERO_STAR = {"no_assertion_criteria_provided", "no_classification_provided",
              "no_classifications_from_unflagged_records", "no_interpretation_for_the_single_variant"}
 
@@ -240,7 +239,7 @@ def fmt_t(v):
 
 def pathogenic_genes():
     """Ensembl gene IDs with >= 1 P/LP SNV of any region in the 2025-08-31 release, inside the gene's MANE
-    transcripts (V02; v1's rule, keyed by gene ID)."""
+    transcripts (V02; keyed by gene ID)."""
     return set(pd.read_csv(f"{ROOT}/data/v2_pathogenic_genes.csv").gene_id)
 
 
@@ -265,13 +264,14 @@ def one_star(df):
 
 
 def was_vus_2025(df):
-    """True where the ClinVar ID was uncertain or conflicting in the 2025-08-31 release (S7's resolved VUS)."""
+    """True where the ClinVar ID was uncertain or conflicting in the 2025-08-31 release (the resolved VUS)."""
     clnsig = training_release()[2]
     return df.clinvar_id.map(clnsig).fillna("").str.contains("Uncertain|Conflicting")
 
 
 def load_thresholds(tool, prior=PRIOR, path=None):
-    """(pp3, bp4) dicts of score thresholds from S5_thresholds.tsv; unreached levels are None."""
+    """(pp3, bp4) dicts of score thresholds from a thresholds table (path; default results/S5_thresholds.tsv);
+    unreached levels are None."""
     t = pd.read_csv(path or f"{OUT}/results/S5_thresholds.tsv", sep="\t")
     t = t[(t.tool == tool) & np.isclose(t.prior, prior)]
     pp3, bp4 = {}, {}
@@ -302,11 +302,11 @@ def load_validation_cohort(subset="strict", one_star_only=False):
 
 
 def one_star_cohorts(subset="strict"):
-    """(derivation, validation) restricted to >= 1-star ClinVar records (v1's S6 cohorts)."""
+    """(derivation, validation) restricted to >= 1-star ClinVar records."""
     return load_derivation_cohort(one_star_only=True), load_validation_cohort(subset, one_star_only=True)
 
 
-# ----------------------------------------------------------------------------- prior (Task 11; AJHG plan Task 3.3)
+# ----------------------------------------------------------------------------- prior (mixture estimate)
 
 def _logit(s):
     s = np.clip(np.asarray(s, float), 1e-7, 1 - 1e-7)

@@ -29,6 +29,7 @@ from lookup_comparators import load, md5, originals     # noqa: E402
 STEPS = [("V11", "V11_spliceai_raw.py", "data/v2_spliceai_raw_d4999.csv"),
          ("V11b", "V11b_spliceai_raw_vus.py", "data/v2_spliceai_raw_d4999_vus.csv"),
          ("V11c", "V11c_spliceai_raw_topup.py", "data/v2_spliceai_raw_d4999_topup.csv")]
+LOOKUP = ["data/v2_comparators.csv", "data/v2_features_pooled_test.csv", "data/v2_features_fresh_20260928.csv"]
 
 
 def point(v11, v08, env, pkg, hg19, work):
@@ -44,6 +45,11 @@ def main():
     ap.add_argument("--check-only", action="store_true")
     ap.add_argument("--only", default="V11,V11b,V11c")
     args = ap.parse_args()
+    want, ok = originals(), []
+    stale = [f for f in LOOKUP if not os.path.exists(os.path.join(ROOT, f)) or md5(os.path.join(ROOT, f)) != want[f]]
+    if stale:
+        raise SystemExit(f"not as lookup_comparators.py rebuilds them (missing or different md5): {', '.join(stale)}\n"
+                         "run scripts/comparators/lookup_comparators.py first (README.md, 'SpliceAI and CADD scores')")
     env = os.path.abspath(args.spliceai_env)
     pkg = subprocess.run([f"{env}/bin/python", "-c", "import os, spliceai; print(os.path.dirname(spliceai.__file__))"],
                          capture_output=True, text=True, check=True, env=dict(os.environ, TF_CPP_MIN_LOG_LEVEL="3")).stdout.strip()
@@ -57,7 +63,6 @@ def main():
             os.symlink(hg19 + ext, link)
     v08 = load("v08", os.path.join(BUILD, "V08_comparators.py"),
                ('P = "/mnt/Work0/Splice_altering_variant"', f'P = "{root}"'))
-    want, ok = originals(), []
     for name, script, out in STEPS:
         if name not in args.only.split(","):
             continue

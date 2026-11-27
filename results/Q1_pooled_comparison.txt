@@ -1,5 +1,5 @@
 ========================================================================================================
-Q1 -- DISCRIMINATION ON THE POOLED TEMPORAL TEST SET (Amendment 9; pooled reassessment, descriptive, no verdict)
+Q1 -- DISCRIMINATION ON THE TEMPORAL TEST SET
 ========================================================================================================
 
 Input lock (md5), before anything is computed
@@ -11,7 +11,7 @@ Input lock (md5), before anything is computed
   5f2a4b045d7e6113d44896babc0d0c47  data/v2_variants_training.csv  ok
   every input equals its locked md5
 
-Denominator check against Amendment 9 (n, P/LP; SpliceAI-scored n, P/LP), before anything is computed
+Denominator check against the recorded values (n, P/LP; SpliceAI-scored n, P/LP), before anything is computed
   non-canonical                    (40619, 602)  SpliceAI (40296, 600)   recorded (40619, 602) (40296, 600)   ok
   Donor Region                     (3314, 283)  SpliceAI (3278, 281)   recorded (3314, 283) (3278, 281)   ok
   Acceptor Region                  (7021, 123)  SpliceAI (6983, 123)   recorded (7021, 123) (6983, 123)   ok
@@ -22,7 +22,7 @@ Denominator check against Amendment 9 (n, P/LP; SpliceAI-scored n, P/LP), before
   Canonical Donor Site             (2951, 2932)  SpliceAI (2937, 2918)   recorded (2951, 2932) (2937, 2918)   ok
   Canonical Acceptor Site          (2542, 2522)  SpliceAI (2516, 2497)   recorded (2542, 2522) (2516, 2497)   ok
   all non-exonic                   (46112, 6056)  SpliceAI (45749, 6015)   recorded (46112, 6056) (45749, 6015)   ok
-  every denominator equals Amendment 9
+  every denominator equals its recorded value
 
 1. POOLED SET: each tool on the variants it scores; paired differences on the variants both score
   all non-exonic                   n=46,112 P/LP=6056
@@ -85,106 +85,4 @@ Denominator check against Amendment 9 (n, P/LP; SpliceAI-scored n, P/LP), before
   Deep Intronic                    (P/LP 126) gene-disjoint auPRC 0.8269 [0.7658, 0.8806]; full minus gene-disjoint -0.0029 [-0.0194, +0.0149] (n=17,479); gene-disjoint minus SpliceAI +0.2759 [+0.2083, +0.3449] (n=17,331); gene-disjoint minus CADD +0.4994 [+0.4155, +0.5826] (n=17,479)
   Deep Intronic, sensitivity set   (P/LP 99) gene-disjoint auPRC 0.8489 [0.7864, 0.9101]; full minus gene-disjoint -0.0020 [-0.0207, +0.0197] (n=14,459); gene-disjoint minus SpliceAI +0.2419 [+0.1727, +0.3114] (n=14,325); gene-disjoint minus CADD +0.4965 [+0.4020, +0.5902] (n=14,459)
 
-3. SUPPLEMENT -- April-origin variants, classified as of September 2026
-  all non-exonic                   n=29,185 P/LP=3622
-      MetaSplice             cov 100.0%  auPRC 0.9954 [0.9935, 0.9972]  AUROC 0.9988
-      SpliceAI               cov  99.5%  auPRC 0.9773 [0.9730, 0.9814]  AUROC 0.9905
-      CADD                   cov 100.0%  auPRC 0.9722 [0.9679, 0.9765]  AUROC 0.9880
-      MetaSplice minus SpliceAI               n=29,045 P/LP=3608  +0.0181 [+0.0143, +0.0217]  gene-clustered [+0.0126, +0.0247]
-      MetaSplice minus CADD                   n=29,185 P/LP=3622  +0.0232 [+0.0193, +0.0271]  gene-clustered [+0.0186, +0.0286]
-  canonical                        n=3,315 P/LP=3295
-      MetaSplice             cov 100.0%  auPRC 0.9976 [0.9964, 0.9986]  AUROC 0.7260
-      SpliceAI               cov  99.6%  auPRC 0.9948 [0.9927, 0.9967]  AUROC 0.5645
-      CADD                   cov 100.0%  auPRC 0.9957 [0.9942, 0.9972]  AUROC 0.5927
-      MetaSplice minus SpliceAI               n=3,301 P/LP=3281  +0.0028 [+0.0007, +0.0049]  gene-clustered [+0.0004, +0.0058]
-      MetaSplice minus CADD                   n=3,315 P/LP=3295  +0.0019 [+0.0000, +0.0035]  gene-clustered [-0.0008, +0.0056]
-  non-canonical                    n=25,870 P/LP=327
-      MetaSplice             cov 100.0%  auPRC 0.9474 [0.9269, 0.9667]  AUROC 0.9890
-      SpliceAI               cov  99.5%  auPRC 0.7798 [0.7423, 0.8200]  AUROC 0.9652
-      CADD                   cov 100.0%  auPRC 0.3483 [0.2979, 0.4030]  AUROC 0.8753
-      MetaSplice minus SpliceAI               n=25,744 P/LP=327  +0.1677 [+0.1317, +0.2012]  gene-clustered [+0.1304, +0.2110]
-      MetaSplice minus CADD                   n=25,870 P/LP=327  +0.5991 [+0.5446, +0.6488]  gene-clustered [+0.5441, +0.6560]
-  Donor Region                     n=1,906 P/LP=148
-      MetaSplice             cov 100.0%  auPRC 0.9816 [0.9616, 0.9961]  AUROC 0.9924
-      SpliceAI               cov  99.5%  auPRC 0.8801 [0.8333, 0.9209]  AUROC 0.9679
-      CADD                   cov 100.0%  auPRC 0.7318 [0.6570, 0.8063]  AUROC 0.9555
-      MetaSplice minus SpliceAI               n=1,896 P/LP=148  +0.1015 [+0.0629, +0.1437]  gene-clustered [+0.0606, +0.1565]
-      MetaSplice minus CADD                   n=1,906 P/LP=148  +0.2498 [+0.1772, +0.3194]  gene-clustered [+0.1816, +0.3304]
-  Acceptor Region                  n=5,002 P/LP=58
-      MetaSplice             cov 100.0%  auPRC 0.9438 [0.8858, 0.9871]  AUROC 0.9841
-      SpliceAI               cov  99.6%  auPRC 0.7992 [0.7084, 0.8812]  AUROC 0.9725
-      CADD                   cov 100.0%  auPRC 0.1945 [0.1240, 0.3162]  AUROC 0.8425
-      MetaSplice minus SpliceAI               n=4,982 P/LP=58  +0.1446 [+0.0733, +0.2263]  gene-clustered [+0.0697, +0.2300]
-      MetaSplice minus CADD                   n=5,002 P/LP=58  +0.7493 [+0.6309, +0.8249]  gene-clustered [+0.6205, +0.8342]
-  PPT Region                       n=8,511 P/LP=35
-      MetaSplice             cov 100.0%  auPRC 0.8703 [0.7625, 0.9599]  AUROC 0.9810
-      SpliceAI               cov  99.5%  auPRC 0.7274 [0.6032, 0.8492]  AUROC 0.9769
-      CADD                   cov 100.0%  auPRC 0.0888 [0.0317, 0.2234]  AUROC 0.7259
-      MetaSplice minus SpliceAI               n=8,470 P/LP=35  +0.1429 [+0.0568, +0.2429]  gene-clustered [+0.0569, +0.2511]
-      MetaSplice minus CADD                   n=8,511 P/LP=35  +0.7815 [+0.6291, +0.8813]  gene-clustered [+0.6287, +0.8878]
-  Branch Point Region              n=191 P/LP=6: counts only (< 20 P/LP)
-  Deep Intronic                    n=10,260 P/LP=80
-      MetaSplice             cov 100.0%  auPRC 0.9312 [0.8817, 0.9722]  AUROC 0.9875
-      SpliceAI               cov  99.5%  auPRC 0.6986 [0.6082, 0.7862]  AUROC 0.9484
-      CADD                   cov 100.0%  auPRC 0.4380 [0.3318, 0.5433]  AUROC 0.8464
-      MetaSplice minus SpliceAI               n=10,205 P/LP=80  +0.2326 [+0.1588, +0.3089]  gene-clustered [+0.1533, +0.3334]
-      MetaSplice minus CADD                   n=10,260 P/LP=80  +0.4931 [+0.3872, +0.6002]  gene-clustered [+0.4002, +0.5855]
-  Deep Intronic, sensitivity set   n=8,420 P/LP=61
-      MetaSplice             cov 100.0%  auPRC 0.9560 [0.9076, 0.9927]  AUROC 0.9990
-      SpliceAI               cov  99.4%  auPRC 0.7444 [0.6551, 0.8322]  AUROC 0.9767
-      CADD                   cov 100.0%  auPRC 0.4677 [0.3444, 0.5884]  AUROC 0.8643
-      MetaSplice minus SpliceAI               n=8,368 P/LP=61  +0.2117 [+0.1369, +0.2869]  gene-clustered [+0.1284, +0.3187]
-      MetaSplice minus CADD                   n=8,420 P/LP=61  +0.4883 [+0.3701, +0.6107]  gene-clustered [+0.3874, +0.5892]
-
-3. SUPPLEMENT -- September-origin variants
-  all non-exonic                   n=16,927 P/LP=2434
-      MetaSplice             cov 100.0%  auPRC 0.9936 [0.9912, 0.9957]  AUROC 0.9984
-      SpliceAI               cov  98.7%  auPRC 0.9748 [0.9690, 0.9803]  AUROC 0.9904
-      CADD                   cov 100.0%  auPRC 0.9687 [0.9625, 0.9744]  AUROC 0.9885
-      MetaSplice minus SpliceAI               n=16,704 P/LP=2407  +0.0188 [+0.0139, +0.0242]  gene-clustered [+0.0132, +0.0258]
-      MetaSplice minus CADD                   n=16,927 P/LP=2434  +0.0249 [+0.0204, +0.0300]  gene-clustered [+0.0198, +0.0303]
-  canonical                        n=2,178 P/LP=2159
-      MetaSplice             cov 100.0%  auPRC 0.9975 [0.9961, 0.9986]  AUROC 0.7854
-      SpliceAI               cov  98.8%  auPRC 0.9945 [0.9919, 0.9969]  AUROC 0.6365
-      CADD                   cov 100.0%  auPRC 0.9940 [0.9909, 0.9968]  AUROC 0.6362
-      MetaSplice minus SpliceAI               n=2,152 P/LP=2134  +0.0030 [+0.0006, +0.0057]  gene-clustered [+0.0003, +0.0065]
-      MetaSplice minus CADD                   n=2,178 P/LP=2159  +0.0035 [+0.0011, +0.0060]  gene-clustered [+0.0007, +0.0067]
-  non-canonical                    n=14,749 P/LP=275
-      MetaSplice             cov 100.0%  auPRC 0.8812 [0.8500, 0.9128]  AUROC 0.9890
-      SpliceAI               cov  98.7%  auPRC 0.7354 [0.6818, 0.7927]  AUROC 0.9691
-      CADD                   cov 100.0%  auPRC 0.3892 [0.3301, 0.4517]  AUROC 0.9071
-      MetaSplice minus SpliceAI               n=14,552 P/LP=273  +0.1519 [+0.1070, +0.1972]  gene-clustered [+0.1044, +0.1983]
-      MetaSplice minus CADD                   n=14,749 P/LP=275  +0.4920 [+0.4341, +0.5473]  gene-clustered [+0.4354, +0.5453]
-  Donor Region                     n=1,408 P/LP=135
-      MetaSplice             cov 100.0%  auPRC 0.9413 [0.9087, 0.9689]  AUROC 0.9934
-      SpliceAI               cov  98.2%  auPRC 0.8501 [0.7858, 0.9121]  AUROC 0.9731
-      CADD                   cov 100.0%  auPRC 0.6491 [0.5691, 0.7345]  AUROC 0.9339
-      MetaSplice minus SpliceAI               n=1,382 P/LP=133  +0.1021 [+0.0530, +0.1544]  gene-clustered [+0.0481, +0.1617]
-      MetaSplice minus CADD                   n=1,408 P/LP=135  +0.2922 [+0.2151, +0.3590]  gene-clustered [+0.2138, +0.3722]
-  Acceptor Region                  n=2,019 P/LP=65
-      MetaSplice             cov 100.0%  auPRC 0.9533 [0.9191, 0.9854]  AUROC 0.9978
-      SpliceAI               cov  99.1%  auPRC 0.9098 [0.8314, 0.9788]  AUROC 0.9968
-      CADD                   cov 100.0%  auPRC 0.5871 [0.4824, 0.7160]  AUROC 0.9478
-      MetaSplice minus SpliceAI               n=2,001 P/LP=65  +0.0436 [-0.0135, +0.1130]  gene-clustered [-0.0142, +0.1093]
-      MetaSplice minus CADD                   n=2,019 P/LP=65  +0.3662 [+0.2382, +0.4775]  gene-clustered [+0.2458, +0.4843]
-  PPT Region                       n=3,899 P/LP=26
-      MetaSplice             cov 100.0%  auPRC 0.7421 [0.5731, 0.8857]  AUROC 0.9850
-      SpliceAI               cov  98.5%  auPRC 0.7383 [0.5668, 0.9127]  AUROC 0.9891
-      CADD                   cov 100.0%  auPRC 0.1423 [0.0604, 0.2884]  AUROC 0.7672
-      MetaSplice minus SpliceAI               n=3,840 P/LP=26  +0.0038 [-0.1386, +0.1273]  gene-clustered [-0.1292, +0.1274]
-      MetaSplice minus CADD                   n=3,899 P/LP=26  +0.5998 [+0.3867, +0.7705]  gene-clustered [+0.3748, +0.7733]
-  Branch Point Region              n=204 P/LP=3: counts only (< 20 P/LP)
-  Deep Intronic                    n=7,219 P/LP=46
-      MetaSplice             cov 100.0%  auPRC 0.6464 [0.5084, 0.7759]  AUROC 0.9591
-      SpliceAI               cov  98.7%  auPRC 0.3096 [0.2106, 0.4520]  AUROC 0.8977
-      CADD                   cov 100.0%  auPRC 0.1727 [0.0868, 0.2958]  AUROC 0.7952
-      MetaSplice minus SpliceAI               n=7,126 P/LP=46  +0.3369 [+0.2151, +0.4237]  gene-clustered [+0.2189, +0.4321]
-      MetaSplice minus CADD                   n=7,219 P/LP=46  +0.4738 [+0.3493, +0.5862]  gene-clustered [+0.3503, +0.5816]
-  Deep Intronic, sensitivity set   n=6,039 P/LP=38
-      MetaSplice             cov 100.0%  auPRC 0.6672 [0.5161, 0.8004]  AUROC 0.9527
-      SpliceAI               cov  98.6%  auPRC 0.3758 [0.2479, 0.5556]  AUROC 0.8964
-      CADD                   cov 100.0%  auPRC 0.1882 [0.0929, 0.3248]  AUROC 0.7750
-      MetaSplice minus SpliceAI               n=5,957 P/LP=38  +0.2914 [+0.1573, +0.3986]  gene-clustered [+0.1685, +0.4101]
-      MetaSplice minus CADD                   n=6,039 P/LP=38  +0.4790 [+0.3445, +0.6017]  gene-clustered [+0.3551, +0.6041]
-
-wrote results/Q1_pooled_comparison.tsv (131 rows) and results/Q1_pooled_pr_curves.tsv (105,199 points)
+wrote results/Q1_pooled_comparison.tsv (49 rows) and results/Q1_pooled_pr_curves.tsv (105,199 points)

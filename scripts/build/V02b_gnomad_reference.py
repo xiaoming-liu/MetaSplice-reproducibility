@@ -1,18 +1,16 @@
-"""V02b -- gnomAD v4.1 population reference of MetaSplice v2.0, native GRCh38
-(docs/METASPLICE_V2_PLAN.md, Task 3, Step 3).
+"""V02b -- gnomAD v4.1 population reference of MetaSplice v2.0, GRCh38.
 
-Eligible population, as S11a but on GRCh38 with the v2.0 scope (no liftover is needed any more):
-gnomAD v4.1 joint SNVs on chromosomes 1-22 and X (as S11a), FILTER PASS, 0 < AF < 0.01, not in
+Eligible population: gnomAD v4.1 joint SNVs on chromosomes 1-22 and X, FILTER PASS (the tables hold only PASS SNVs), 0 < AF < 0.01, not in
 either ClinVar release (2025-08-31 or 2026-04-15, GRCh38, any classification), in scope by the v2.0
-scorer's scope() on the full GENCODE v50 GTF (MANE regions; inside a MANE transcript of the assigned gene,
-O1; Deep Intronic not inside a GENCODE basic exon, O5) in one of the five non-canonical regions, in a
+scorer's scope() on the full GENCODE v50 GTF (MANE regions; inside a MANE transcript of the assigned gene;
+Deep Intronic not inside a GENCODE basic exon) in one of the five non-canonical regions, in a
 gene with >= 1 P/LP SNV in the training release (data/v2_pathogenic_genes.csv, from V02).
 
 Two vectorized prefilters make the exact classification affordable; they only remove variants the
 exact rule would also put out of scope: positions outside every MANE transcript span, and positions
 inside a MANE exon (the exon-overlap filter makes those Exonic).
 
-Samples (decision O3):
+Samples:
   primary    uniform, 100,000 variants, seed 42          -> data/v2_variants_gnomad_reference.csv
   secondary  10,000 per non-canonical region, seed 43     -> data/v2_variants_gnomad_reference_stratified.csv
              (all of a region that has fewer)

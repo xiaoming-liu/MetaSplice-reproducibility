@@ -1,4 +1,4 @@
-"""V01b -- Verify SpliceTransformer's MANE annotation (docs/METASPLICE_V2_PLAN.md, Task 1, Step 5).
+"""V01b -- Verify SpliceTransformer's MANE annotation.
 
 SpliceTransformer finds the genes at a variant with pyensembl's genes_at_locus, which uses gene
 spans (sptransformer.py:68-72), and it names its pyensembl database gencode.v38 whatever GTF it is

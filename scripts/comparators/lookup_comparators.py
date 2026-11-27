@@ -6,7 +6,7 @@ functions, from copies you obtain under their terms:
   - SpliceAI v1.3 precomputed masked SNV scores, GRCh37 (Illumina: spliceai_scores.masked.snv.hg19.vcf.gz), split by
     chromosome; --split-spliceai does the split;
   - CADD v1.7 GRCh38 whole_genome_SNVs.tsv.gz, with its tabix index;
-  - the MetaSplice Release 2.0 data bundle (its GRCh37 FASTA and chain tables), for the gnomAD reference lookup.
+  - the MetaSplice Release 2.0 data bundle (its GRCh37 FASTA, for the reference-allele check).
 
   python lookup_comparators.py --split-spliceai spliceai_scores.masked.snv.hg19.vcf.gz --out SPLICEAI_DIR
   python lookup_comparators.py --spliceai SPLICEAI_DIR --cadd whole_genome_SNVs.tsv.gz --bundle metasplice_v2_data
@@ -16,10 +16,8 @@ Steps:
      literature and SpliceVarDB variants; V08's comparison with the v1 deposit is not repeated.
   2. The fresh cohort's spliceai_max and cadd_phred, as V09c computed them, restored into
      data/v2_features_fresh_20260928.csv.
-  3. The pooled test set's spliceai_max and cadd_phred, as V12 took them (April variants from step 1, the others from
+  3. The test set's spliceai_max and cadd_phred, as V12 took them (April variants from step 1, the others from
      step 2), restored into data/v2_features_pooled_test.csv.
-  4. The four comparator columns of results/S12_mechanism.tsv, restored from step 1.
-  5. data/v2_gnomad_spliceai.csv: V08b, run unchanged (it also rewrites results/V08b_gnomad_spliceai.txt).
 Columns are restored at the text level into their original positions (stripped_columns.json). Every rebuilt file is
 checked against originals.md5; the script exits 1 if any differs. The raw SpliceAI files (data/v2_spliceai_raw_d4999*.csv)
 are rebuilt by run_spliceai_raw.py.
@@ -186,7 +184,7 @@ def step2_fresh(v08, workers, tmp):
 
 
 def shim_root(spliceai_dir, cadd, bundle, tmp):
-    """A folder laid out like the original working tree, for V08b's unchanged code (its paths derive from one root)."""
+    """A folder laid out like the original working tree, for V08's unchanged code (its paths derive from one root)."""
     r = os.path.join(tmp, "root")
     os.makedirs(os.path.join(r, "MetaSplice"))
     os.makedirs(os.path.join(r, "hg19"))
@@ -241,7 +239,7 @@ def main():
         restore(rel, positions[rel], fresh)
         ok.append(check(rel, want[rel]))
 
-        print("3. pooled test set (V12)", flush=True)
+        print("3. test set (V12)", flush=True)
         rel = "data/v2_features_pooled_test.csv"
         def pooled(r, head):
             k = tuple(r[head.index(c)] for c in KEY)
@@ -250,16 +248,6 @@ def main():
         restore(rel, positions[rel], pooled)
         ok.append(check(rel, want[rel]))
 
-        print("4. results/S12_mechanism.tsv", flush=True)
-        rel = "results/S12_mechanism.tsv"
-        restore(rel, positions[rel], {k: v + v for k, v in cmp_text.items()})
-        ok.append(check(rel, want[rel]))
-
-        print("5. data/v2_gnomad_spliceai.csv (V08b, unchanged)", flush=True)
-        v08b = load("v08b", os.path.join(BUILD, "V08b_gnomad_spliceai.py"), edit)
-        v08b.v08 = v08                 # V08b loads V08 itself, with the original root; use the one loaded here
-        v08b.main()
-        ok.append(check("data/v2_gnomad_spliceai.csv", want["data/v2_gnomad_spliceai.csv"]))
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
     print(f"{sum(ok)} of {len(ok)} files equal the originals" + ("" if all(ok) else "; see DIFFERS above"))

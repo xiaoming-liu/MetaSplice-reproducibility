@@ -1,4 +1,4 @@
-"""V09c -- Features and comparator scores of the fresh temporal cohort (docs/METASPLICE_V2_PLAN.md, Task 11 Step 8).
+"""V09c -- Features and comparator scores of the fresh temporal cohort.
 
 The same code paths as every v2.0 table: SpliceTransformer and Pangolin through V03's launcher (TF32 off), then
 score_v2.py --features-only in chromosome groups (as V04); SpliceAI and CADD with V08's functions (SpliceAI through

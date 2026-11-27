@@ -1,23 +1,23 @@
-"""V08 -- Comparator scores for the v2.0 variant sets (docs/METASPLICE_V2_PLAN.md, Task 8 Step 2).
+"""V08 -- Comparator scores for the v2.0 variant sets.
 
 SpliceAI v1.3: the precomputed masked SNV files used here are on GRCh37, so each variant is looked up
 with its GRCh37 coordinates from V02 (chr19, pos19, ref19, alt19: the GRCh37 ClinVar record with the
 same ClinVar ID, or the original coordinates of a lifted set). The GRCh37 REF must equal hg19's base.
-The value is v1's (S5a_spliceai_lookup.py): the max of DS_AG, DS_AL, DS_DG and DS_DL in the first
+The value is the max of DS_AG, DS_AL, DS_DG and DS_DL in the first
 record for the allele, in file order; spliceai_max_allgenes keeps the max over all of the allele's
 records (one per overlapping gene).
 CADD v1.7: read on GRCh38 directly through its tabix index, by exact chromosome, position, REF and ALT.
-PHRED is the score used, as in v1.
+PHRED is the score used.
 
 Sets: training, test candidates, VUS, literature and SpliceVarDB. The gnomAD samples have no GRCh37
-coordinates and are left to Task 11. Labels are not read. A variant in more than one set gets one row,
+coordinates and are not scored here. Labels are not read. A variant in more than one set gets one row,
 and its GRCh37 coordinates must agree between the sets. Nothing fails silently: a missing SpliceAI
-file or a failed tabix query raises an error, and unreadable SpliceAI records (v1 skipped them) are
-counted in the log.
+file or a failed tabix query raises an error, and unreadable SpliceAI records are counted in
+the log.
 
-Check: the SpliceAI values must equal v1's lookup (data/S5_spliceai_train_vus.csv of the v1 deposit;
-same files, same rule) wherever the GRCh37 variant is in both. CADD values are compared with v1's test
-table, where v1 reached GRCh38 by its own liftover; that comparison is reported, not required.
+Check: the SpliceAI values must equal those of the MetaSplice v1 reproducibility deposit (S5_spliceai_train_vus.csv;
+same files, same rule) wherever the GRCh37 variant is in both. CADD values are compared with the v1 deposit's test
+table, which reached GRCh38 by liftover; that comparison is reported, not required.
 
 Writes data/v2_comparators.csv and results/V08_comparators.txt.
 """
@@ -94,7 +94,7 @@ def spliceai_chrom(c, keys, tmp):
             fl = info.split("SpliceAI=")[1].split(";")[0].split(",")[0].split("|")
             try:
                 rows.append((int(pos), ref, alt, max(float(fl[2]), float(fl[3]), float(fl[4]), float(fl[5]))))
-            except (ValueError, IndexError):      # counted and reported, as v1 skipped them
+            except (ValueError, IndexError):      # counted and reported
                 unreadable += 1
     d = pd.DataFrame(rows, columns=["pos19", "ref19", "alt19", "ds"])
     g = d.groupby(["pos19", "ref19", "alt19"], sort=False)["ds"]

@@ -1,12 +1,11 @@
-"""V11c -- SpliceAI raw scores (+-4,999 nt) for the pooled calibration-cohort variants V11 and V11b did not score
-(protocol Amendment 9).
+"""V11c -- SpliceAI raw scores (+-4,999 nt) for the pooled calibration-cohort variants V11 and V11b did not score.
 
 Reuses V11 unchanged: SpliceAI 1.3.1 (-A grch37 -D 4999 -M 0), its asserted annotation and model files, V08's GRCh37
 coordinates, hg19 REF check and value rule (the first record for the allele; the all-genes maximum kept beside it), and
 V11's installation check (-D 50 -M 1 on a seeded sample, seed 42, up to 100 variants per non-canonical region of the
 pooled calibration cohort with a precomputed masked score; >= 99% within 0.01 of V08's value) before any raw score.
 Variants: the pooled calibration cohort (all review statuses; V12) less those with a row in V11's or V11b's output
-(Amendment 9 recorded 21). Labels are read with the cohort but not used to select SpliceAI settings or to calculate its
+(21 variants). Labels are read with the cohort but not used to select SpliceAI settings or to calculate its
 predictions.
 
 Writes data/v2_spliceai_raw_d4999_topup.csv and results/V11c_spliceai_raw_topup.txt.
@@ -54,22 +53,23 @@ def main():
     log(f"  {got}  data/v2_features_pooled_test.csv  {'ok' if got == POOLED_MD5 else 'DIFFERS from ' + POOLED_MD5}")
     bad += ["pooled"] if got != POOLED_MD5 else []
     if bad:
-        raise SystemExit(f"inputs differ from Amendments 7 and 9: {bad}")
+        raise SystemExit(f"inputs differ from their recorded md5: {bad}")
     fai = [(l.split("\t")[0], int(l.split("\t")[1])) for l in open(v11.HG19 + ".fai")]
 
     p = pd.read_csv(f"{V2}/data/v2_features_pooled_test.csv", low_memory=False)
     cal = p[in_cohort(p, pathogenic_genes())].rename(columns={"spliceai_max": "SpliceAI"})
-    have = pd.concat([pd.read_csv(f"{V2}/{f}", usecols=KEY) for f in RAW]).drop_duplicates()
-    j = cal.merge(have.assign(_have=1), on=KEY, how="left")
-    todo = j[j._have.isna()].drop(columns="_have").reset_index(drop=True)
-    log(f"\nPooled calibration cohort (all statuses): {len(cal):,}; with a row in V11 or V11b: {len(cal) - len(todo):,}; "
-        f"to score: {len(todo)} (GRCh37 record {int(todo.pos19.notna().sum())})")
-    if len(todo) != 21:
-        raise SystemExit(f"{len(todo)} variants to score; Amendment 9 recorded 21")
-    ok = v11.v08.hg19_ref_ok(todo.assign(pos19=todo.pos19.astype("Int64")))
-    q = todo[ok].copy()
-    q["pos19"] = q.pos19.astype(int)
-    log(f"  hg19 REF equal: {len(q)}; precomputed masked score present: {int(q.SpliceAI.notna().sum())}")
+    if not args.check_only:     # the variants to score need V11's and V11b's output; the installation check does not
+        have = pd.concat([pd.read_csv(f"{V2}/{f}", usecols=KEY) for f in RAW]).drop_duplicates()
+        j = cal.merge(have.assign(_have=1), on=KEY, how="left")
+        todo = j[j._have.isna()].drop(columns="_have").reset_index(drop=True)
+        log(f"\nPooled calibration cohort (all statuses): {len(cal):,}; with a row in V11 or V11b: {len(cal) - len(todo):,}; "
+            f"to score: {len(todo)} (GRCh37 record {int(todo.pos19.notna().sum())})")
+        if len(todo) != 21:
+            raise SystemExit(f"{len(todo)} variants to score; recorded 21")
+        ok = v11.v08.hg19_ref_ok(todo.assign(pos19=todo.pos19.astype("Int64")))
+        q = todo[ok].copy()
+        q["pos19"] = q.pos19.astype(int)
+        log(f"  hg19 REF equal: {len(q)}; precomputed masked score present: {int(q.SpliceAI.notna().sum())}")
 
     pool = cal[cal.SpliceAI.notna() & cal.region.isin(NONCANONICAL) & cal.pos19.notna()].copy()
     pool["pos19"] = pool.pos19.astype(int)

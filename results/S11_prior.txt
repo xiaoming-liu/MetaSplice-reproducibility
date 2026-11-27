@@ -1,5 +1,5 @@
 ================================================================================================
-S11_prior -- PRIOR FOR RARE NON-CANONICAL VARIANTS, MetaSplice v2.0 (Task 11, Steps 3-4)
+S11_prior -- MIXTURE ESTIMATE OF THE PRIOR FOR RARE NON-CANONICAL VARIANTS, MetaSplice v2.0
 ================================================================================================
 components: >= 1-star derivation cohort, out-of-fold: P/LP 3,018, B/LB 291,594
 reference: uniform 100,000, stratified 50,000 (fold scores; genes outside the fold map flagged)
@@ -25,11 +25,11 @@ stratified Branch Point Region             all                 all              
 stratified Deep Intronic                   all                 all                 50  10,000   448 127,453   0.1946   [0.1600, 0.2352]  0.3851
 stratified Deep Intronic, sensitivity set  all                 all                 50   9,612   283 103,570   0.1769   [0.1438, 0.2164]  0.4166
 
-Decision (promotion rule fixed in the plan before this run):
+Acceptance criteria (pre-specified):
   FAIL  fit <= 0.02
   FAIL  25- and 100-bin estimates within a factor of 1.5
   PASS  95% CI excludes 0.0441
   primary estimate 0.0311 [0.0286, 0.0340], fit 0.4134; 25 bins 0.0840; 100 bins 0.0065
-  -> prior for Stage 3: 0.0441 (not promoted; failed: fit <= 0.02; 25- and 100-bin estimates within a factor of 1.5)
+  -> estimate not accepted; failed: fit <= 0.02; 25- and 100-bin estimates within a factor of 1.5
 
 wrote results/S11_prior.tsv, results/S11_prior_frozen.json and figures/S11_prior_fit.png

@@ -1,10 +1,7 @@
-"""Shared definitions, loaders and checks for the MetaSplice v2.0 analyses (docs/METASPLICE_V2_PLAN.md).
-
-Task 5 added check_missingness_parity, the standing check that would have caught v1's hg38 bridge
-defect (71,362 training rows with no conservation, GPN-MSA or allele frequency). Task 8 adds the
-loaders ported from v1 (load_train, load_test, load_literature, in_training), score(), the comparator
-columns and the statistics the analyses share. Everything reads the v2.0 tables in data/ and models/;
-nothing here computes features.
+"""Shared definitions, loaders and checks for the MetaSplice v2.0 analyses: the feature list and regions, the
+missingness-parity check (check_missingness_parity), the variant-set loaders (load_train, load_test,
+load_literature, load_splicevardb, in_training), score(), the comparator columns and the statistics the analyses
+share. Everything reads the v2.0 tables in data/ and models/; nothing here computes features.
 """
 import functools
 import importlib.util
@@ -35,10 +32,10 @@ SETS = ["training", "test_candidates", "vus", "literature", "splicevardb", "gnom
 NONCANONICAL = ["Donor Region", "Acceptor Region", "PPT Region", "Branch Point Region", "Deep Intronic"]
 CANONICAL = ["Canonical Donor Site", "Canonical Acceptor Site"]
 REGIONS = CANONICAL + NONCANONICAL
-NONCANONICAL_REGIONS = NONCANONICAL                 # v1's name, kept for the ported scripts
+NONCANONICAL_REGIONS = NONCANONICAL                 # alias
 KEY = ["chr", "pos", "ref", "alt"]
 MODEL_DIR = f"{ROOT}/models"
-# The comparators of the v2.0 protocol, and their score columns (data/v2_comparators.csv, built by V08)
+# The comparators and their score columns (data/v2_comparators.csv, built by V08)
 COMPARATORS = [("SpliceAI", "spliceai_max"), ("CADD", "cadd_phred")]
 # The ClinVar release the training labels came from, both builds (raw inputs pinned in results/V00_inputs.txt);
 # override with METASPLICE_V2_CLINVAR_2025_GRCH38 / _GRCH37 where the package is moved.
@@ -67,9 +64,8 @@ def check_missingness_parity(tables, features=None, reference="training", tol=0.
     {(table, region, feature): reason}; the reasons are logged, so they reach the results log. Groups
     smaller than min_n are reported in the table but not checked: their rates are too noisy.
 
-    v1's training table lacked conservation, GPN-MSA and allele frequency for 18.7% of rows, almost
-    all benign, while every test table had them: a feature missing at a different rate in training
-    than where the model is applied puts the model out of distribution without an error."""
+    A feature missing at a different rate in training than where the model is applied puts the model out of
+    distribution without an error."""
     explained = explained or {}
     features = [f for f in FEATURES if f not in REPORTED_NOT_GATED] if features is None else features
     m = missingness_table(tables, features)
@@ -172,8 +168,8 @@ def in_training(df):
 
 
 def deep_intronic_sensitivity(df):
-    """Deep Intronic rows at positions neither canonical nor exonic in any GENCODE v50 transcript: the wider
-    sensitivity set of decision O5, reported beside every deep-intronic result with its own denominator."""
+    """Deep Intronic rows at positions neither canonical nor exonic in any GENCODE v50 transcript: the deep-intronic
+    sensitivity set, reported beside every deep-intronic result with its own denominator."""
     return (df["region"] == "Deep Intronic") & ~_flag(df, "canonical_any_gencode") & ~_flag(df, "exonic_any_gencode")
 
 
@@ -196,13 +192,12 @@ def load_train():
 
 
 def load_test(subset="strict"):
-    """Test candidates of the 2026-04-15 release (V02), defined against the training data by v1's rule
-    of 2026-09-29.
+    """Test candidates of the 2026-04-15 release (V02), defined against the training data.
 
     subset="strict" (the test set): absent from the training data, by variant and by ClinVar ID, and from
       the 2025-08-31 release the training labels came from, by GRCh38 variant or by ClinVar ID (either build).
     subset="reclassified": absent from the training data but in the 2025-08-31 release with a classification
-      training does not use. A subgroup for S7, not part of the test set.
+      training does not use. Not part of the test set.
 
     The rule is recomputed at every load and must reproduce V02's subset column on every row; no returned
     variant is in the training data. Adds is_canonical; label as int.
@@ -227,8 +222,8 @@ def load_test(subset="strict"):
 
 
 def load_literature():
-    """Literature-confirmed splice-altering variants (all P/LP; v1's mapped set lifted to GRCh38, in scope; V02),
-    less any variant in the training data, as in v1."""
+    """Literature-confirmed splice-altering variants (all splice-altering with experimental support, label 1; no
+    clinical classification; the curated set lifted to GRCh38, eligible; V02), less any variant in the training data."""
     lit = pd.read_csv(f"{ROOT}/data/v2_features_literature.csv", low_memory=False)
     trained = in_training(lit)
     print(f"  [literature set: {len(lit):,} variants; excluded {int(trained.sum())} in the training data; "
@@ -239,7 +234,7 @@ def load_literature():
 
 
 def load_splicevardb():
-    """SpliceVarDB at the variant level, by v1's rule (A6): one row per SNV (features are per variant), with
+    """SpliceVarDB at the variant level: one row per SNV (features are per variant), with
     svdb_classes (every class its assay records report), n_assay_records and datasets. assay_concordant is
     False where the records disagree; those variants are excluded from the primary analysis.
     label_strict: 1 splice-altering, 0 normal, -1 low-frequency or discordant (excluded);
@@ -297,7 +292,7 @@ def add_comparators(df):
     return m.drop(columns="_looked_up")
 
 
-# ----------------------------------------------------------------------------- statistics (from v1)
+# ----------------------------------------------------------------------------- statistics
 
 def auprc(y, s):
     y = np.asarray(y); s = np.asarray(s, dtype=float)

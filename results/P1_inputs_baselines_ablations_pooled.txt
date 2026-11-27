@@ -1,5 +1,5 @@
 ====================================================================================================
-P1 -- INPUTS, BASELINES AND ABLATIONS (Amendment 8; descriptive, no verdict)
+P1 -- INPUTS, BASELINES AND ABLATIONS
 ====================================================================================================
 
 Input lock (md5), before anything is computed
@@ -17,10 +17,10 @@ Input lock (md5), before anything is computed
   a1847d63dd5ab2e4021b1f20a01b22c8  data/v2_features_pooled_test.csv  ok
   every input equals its locked md5
 
-Denominator check against Amendment 9 (n, P/LP), before anything is computed
+Denominator check against the recorded values (n, P/LP), before anything is computed
   pooled       non-canonical                    n= 40,619 P/LP= 602   recorded (40619, 602)   ok
   pooled       non-canonical, SpliceAI-scored   n= 40,296 P/LP= 600   recorded (40296, 600)   ok
-  every denominator equals Amendment 9
+  every denominator equals its recorded value
 
 ====================================================================================================
 1. STANDALONE INPUTS -- pooled
@@ -159,7 +159,7 @@ Denominator check against Amendment 9 (n, P/LP), before anything is computed
     pooled       Deep Intronic                    (P/LP 126) auPRC 0.8039 [0.7383, 0.8656]; minus full model -0.0201 [-0.0423, +0.0013] (n=17,479); minus SpliceAI +0.2529 [+0.1873, +0.3182] (n=17,331); minus CADD +0.4764 [+0.3937, +0.5584] (n=17,479)
     pooled       Deep Intronic, sensitivity set   (P/LP 99) auPRC 0.8347 [0.7659, 0.9005]; minus full model -0.0122 [-0.0337, +0.0057] (n=14,459); minus SpliceAI +0.2276 [+0.1593, +0.2931] (n=14,325); minus CADD +0.4823 [+0.3906, +0.5761] (n=14,459)
 
-  (d) ablation (c) with A3b's gene folds (7,194 genes, seed 42), pooled test set
+  (d) ablation (c), gene-disjoint (7,194 genes in 5 folds, seed 42), pooled test set
     non-canonical                    (P/LP 602) auPRC 0.9030 [0.8834, 0.9214]; minus full model -0.0129 [-0.0215, -0.0045] (n=40,619); minus SpliceAI +0.1497 [+0.1211, +0.1787] (n=40,296); minus CADD +0.5393 [+0.4986, +0.5765] (n=40,619)
     Donor Region                     (P/LP 283) auPRC 0.9582 [0.9399, 0.9736]; minus full model -0.0064 [-0.0162, +0.0033] (n=3,314); minus SpliceAI +0.0990 [+0.0681, +0.1330] (n=3,278); minus CADD +0.2704 [+0.2219, +0.3189] (n=3,314)
     Acceptor Region                  (P/LP 123) auPRC 0.9440 [0.9103, 0.9707]; minus full model -0.0028 [-0.0177, +0.0103] (n=7,021); minus SpliceAI +0.0794 [+0.0346, +0.1263] (n=6,983); minus CADD +0.5954 [+0.5111, +0.6705] (n=7,021)

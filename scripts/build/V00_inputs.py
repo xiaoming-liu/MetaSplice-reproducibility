@@ -1,4 +1,4 @@
-"""V00 -- Manifest of every raw input of MetaSplice v2.0 (docs/METASPLICE_V2_PLAN.md, Task 1).
+"""V00 -- Manifest of every raw input of MetaSplice v2.0.
 
 Records the path, size and md5 of each input file, and of every file inside the input
 directories, in results/V00_inputs.txt. A later change to any input shows up as a changed md5.

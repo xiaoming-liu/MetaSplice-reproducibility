@@ -24,7 +24,7 @@ mkdir -p results/logs figures
 
 # Comparator scores present and equal to the originals? (precomputed SpliceAI and CADD; raw SpliceAI)
 check() { grep -E "$1" scripts/comparators/originals.md5 | md5sum -c --quiet --status 2>/dev/null; }
-HAVE_CMP=0; check 'v2_comparators|v2_gnomad_spliceai|v2_features_pooled|v2_features_fresh|S12_mechanism' && HAVE_CMP=1
+HAVE_CMP=0; check 'v2_comparators|v2_features_pooled|v2_features_fresh' && HAVE_CMP=1
 HAVE_RAW=0; check 'v2_spliceai_raw' && HAVE_RAW=1
 HAVE_SVDB=0; check 'splicevardb' && HAVE_SVDB=1
 state() { [[ $1 == 1 ]] && echo present || echo absent; }
@@ -35,37 +35,15 @@ echo "SpliceAI and CADD scores $(state $HAVE_CMP); raw SpliceAI $(state $HAVE_RA
 STEPS=(
   "literature_recovery|scripts/analysis/literature_recovery.py|none"
   "S11_reference_scores|scripts/analysis/S11_reference_scores.py|none"
-  "X2_distance_weighting_eval|scripts/analysis/X2_distance_weighting_eval.py|none"
-  "C0_cohorts|scripts/analysis/C0_cohorts.py|cmp,svdb"
-  "A1_noncanonical|scripts/analysis/A1_noncanonical.py|cmp"
-  "A3b_gene_heldout_retrain|scripts/analysis/A3b_gene_heldout_retrain.py|cmp"
   "A6_splicevardb|scripts/analysis/A6_splicevardb.py|cmp,svdb"
-  "S5_clingen_calibration|scripts/analysis/S5_clingen_calibration.py|cmp"
-  "S5_calibration_figure|scripts/analysis/S5_calibration_figure.py|none"
-  "S6_review_status|scripts/analysis/S6_review_status.py|cmp"
-  "S7_resolved_vus|scripts/analysis/S7_resolved_vus.py|cmp"
-  "S8_splicevardb_endpoint|scripts/analysis/S8_splicevardb_endpoint.py|cmp,svdb"
-  "S9_per_gene|scripts/analysis/S9_per_gene.py|cmp"
-  "S10_head_to_head|scripts/analysis/S10_head_to_head.py|cmp"
   "S11_prior|scripts/analysis/S11_prior.py|cmp"
-  "S11_prior_diagnostic|scripts/analysis/S11_prior_diagnostic.py|cmp"
-  "S11_recalibrate|scripts/analysis/S11_recalibrate.py|cmp"
-  "S12_mechanism|scripts/analysis/S12_mechanism.py|cmp"
-  "X1_distance_control|scripts/analysis/X1_distance_control.py|cmp"
-  "C1_fresh_cohorts|scripts/analysis/C1_fresh_cohorts.py|cmp"
-  "F1_fresh_validation|scripts/analysis/F1_fresh_validation.py|cmp"
-  "X3_supporting_rule|scripts/analysis/X3_supporting_rule.py|cmp"
-  "X3_supporting_rule_raw|scripts/analysis/X3_supporting_rule.py --spliceai raw|cmp,raw"
-  "X3_supporting_rule_raw_allgenes|scripts/analysis/X3_supporting_rule.py --spliceai raw_allgenes|cmp,raw"
-  "P1_inputs_baselines_ablations|scripts/analysis/P1_inputs_baselines_ablations.py|cmp"
-  "P1_inputs_baselines_ablations_pooled|scripts/analysis/P1_inputs_baselines_ablations.py --cohort pooled|cmp"
-  "P2_importance_within_gene|scripts/analysis/P2_importance_within_gene.py|cmp"
-  "P2_importance_within_gene_pooled|scripts/analysis/P2_importance_within_gene.py --cohort pooled|cmp"
-  "P3_vus_rule|scripts/analysis/P3_vus_rule.py|cmp,raw"
   "Q1_pooled_comparison|scripts/analysis/Q1_pooled_comparison.py|cmp"
-  "Q2_pooled_calibration_rule|scripts/analysis/Q2_pooled_calibration_rule.py|cmp,raw"
-  "figures_ajhg|scripts/figures/make_figs_v2.py|none"
-  "figure1_design|scripts/figures/make_fig1_design_v3.py|none"
+  "P1_inputs_baselines_ablations|scripts/analysis/P1_inputs_baselines_ablations.py|cmp"
+  "P2_importance_within_gene|scripts/analysis/P2_importance_within_gene.py|cmp"
+  "S15_lower_bound_prior|scripts/analysis/S15_lower_bound_prior.py|cmp,raw"
+  "figures_1_to_3|scripts/figures/make_figs_gm.py|none"
+  "figure_4|scripts/figures/make_fig4_gm.py|none"
+  "figure_S1|scripts/figures/make_figS1_design.py|none"
 )
 
 failed=(); skipped=()

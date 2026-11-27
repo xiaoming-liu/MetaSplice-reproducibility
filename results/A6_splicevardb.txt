@@ -1,5 +1,5 @@
 ========================================================================================
-A6 -- SpliceVarDB EXTERNAL VALIDATION, VARIANT LEVEL (MetaSplice v2.0; Amendment 3)
+A6 -- SpliceVarDB EXTERNAL VALIDATION, VARIANT LEVEL (MetaSplice v2.0)
 ========================================================================================
 Target: experimentally measured splice disruption, not ClinVar pathogenicity. MetaSplice was trained on
 pathogenicity; SpliceAI on splicing. Read the per-region numbers: classes are distributed very unevenly
@@ -27,7 +27,7 @@ PPT Region                                        1645    1002              244
 ========================================================================================
 STRICT (splice-altering against normal; low-frequency excluded)
 ========================================================================================
-N=12,731  positive=8,015  negative=4,716  prevalence=63.0% (equals Amendment 3)
+N=12,731  positive=8,015  negative=4,716  prevalence=63.0% (equals the recorded values)
 
   POOLED (region-confounded; interpret with care)
   Tool                   N    cov    auPRC               95% CI    AUROC
@@ -80,7 +80,7 @@ N=12,731  positive=8,015  negative=4,716  prevalence=63.0% (equals Amendment 3)
 ========================================================================================
 BROAD (splice-altering or low-frequency against normal)
 ========================================================================================
-N=22,274  positive=17,558  negative=4,716  prevalence=78.8% (equals Amendment 3)
+N=22,274  positive=17,558  negative=4,716  prevalence=78.8% (equals the recorded values)
 
   POOLED (region-confounded; interpret with care)
   Tool                   N    cov    auPRC               95% CI    AUROC

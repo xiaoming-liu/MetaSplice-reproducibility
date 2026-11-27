@@ -1,8 +1,8 @@
-"""V06 -- Train MetaSplice v2.0 (docs/METASPLICE_V2_PLAN.md, Task 6).
+"""V06 -- Train MetaSplice v2.0.
 
-The 38 features (score_v2.FEATURES, the G1 clinical model's list and order) and v1's hyperparameters
+The 38 features (score_v2.FEATURES, in model order) and the hyperparameters
 (XGBoost: 300 trees, depth 6, learning rate 0.1, hist, seed 42), with scale_pos_weight set per fit and
-no tuning. Five gene-grouped folds keyed by Ensembl gene ID, by v1's rule (a seeded shuffle of the
+no tuning. Five gene-grouped folds keyed by Ensembl gene ID, by a fixed rule (a seeded shuffle of the
 genes in order of first appearance, i % 5), give out-of-fold scores; the full model is fitted on every
 training variant. Derivation data only: no test, VUS, literature, SpliceVarDB or gnomAD table is read.
 
@@ -25,7 +25,7 @@ PARAMS = dict(n_estimators=300, max_depth=6, learning_rate=0.1, tree_method="his
 
 
 def gene_folds(tr, seed=42):
-    """Gene-grouped folds by v1's rule (calib.gene_fold_map), keyed by Ensembl gene ID."""
+    """Gene-grouped folds (calib.gene_fold_map), keyed by Ensembl gene ID."""
     genes = list(dict.fromkeys(tr.gene_id.fillna("UNKNOWN")))
     np.random.RandomState(seed).shuffle(genes)
     return {g: i % 5 for i, g in enumerate(genes)}

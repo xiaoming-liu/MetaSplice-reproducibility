@@ -1,9 +1,10 @@
-"""V11b -- SpliceAI raw scores (+-4,999 nt) for the VUS and resolved-VUS cohorts (protocol Amendment 8, P3).
+"""V11b -- SpliceAI raw scores (+-4,999 nt) for the VUS and resolved-VUS cohorts.
 
 Reuses V11 unchanged: SpliceAI 1.3.1 (-A grch37 -D 4999 -M 0), its asserted annotation and model files, V08's GRCh37
 coordinates, hg19 REF check and value rule (the first record for the allele; the all-genes maximum kept beside it), and
 V11's installation check (-D 50 -M 1 on a seeded sample, >= 99% within 0.01 of V08's precomputed value) before any raw
-score. Variants: S5's VUS yield cohort (61,016; paper_cohorts.load_vus_cohort, S5's logic) and S7's resolved-VUS cohort (659). The cohort loaders read labels with
+score. Variants: the VUS cohort (61,016; paper_cohorts.load_vus_cohort) and the reclassified 2026-04-15 test candidates in the >= 1-star calibration cohort that were uncertain or
+conflicting in the training release (659; calib.one_star_cohorts('reclassified'), calib.was_vus_2025). The cohort loaders read labels with
 the variants; labels are not used to select SpliceAI settings or to calculate its predictions.
 
 Writes data/v2_spliceai_raw_d4999_vus.csv and results/V11b_spliceai_raw_vus.txt.
@@ -47,14 +48,14 @@ def main():
         log(f"  {got}  spliceai/{f}  {'ok' if got == want else 'DIFFERS from ' + want}")
         bad += [f] if got != want else []
     if bad:
-        raise SystemExit(f"SpliceAI files differ from Amendment 7: {bad}")
+        raise SystemExit(f"SpliceAI files differ from their recorded md5: {bad}")
     fai = [(l.split("\t")[0], int(l.split("\t")[1])) for l in open(v11.HG19 + ".fai")]
 
     yld = load_vus_cohort(pathogenic_genes())
     _, val = one_star_cohorts("reclassified")
     res = val[was_vus_2025(val)]
     if (len(yld), (len(res), int(res.label.sum()))) != (61016, (659, 107)):
-        raise SystemExit(f"cohorts differ from Amendment 8: VUS {len(yld):,}, resolved {len(res)} ({int(res.label.sum())})")
+        raise SystemExit(f"cohorts differ from the recorded sizes: VUS {len(yld):,}, resolved {len(res)} ({int(res.label.sum())})")
     u = pd.concat([d[KEY + K19 + ["region", "SpliceAI"]] for d in (yld, res)]).drop_duplicates(KEY).reset_index(drop=True)
     log(f"\nVUS cohort {len(yld):,} and resolved-VUS cohort {len(res)}: {len(u):,} distinct variants; "
         f"GRCh37 record {int(u.pos19.notna().sum()):,}")

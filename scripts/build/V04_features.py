@@ -1,4 +1,4 @@
-"""V04 -- The 38-feature table of every v2.0 variant, built by the v2.0 scorer (docs/METASPLICE_V2_PLAN.md, Task 5).
+"""V04 -- The 38-feature table of every v2.0 variant, built by the v2.0 scorer.
 
 One feature code path: the union of the V02 variant sets goes through score_v2.py --features-only, the
 same code production scoring runs, with every source of the 38 features and the SpliceTransformer and

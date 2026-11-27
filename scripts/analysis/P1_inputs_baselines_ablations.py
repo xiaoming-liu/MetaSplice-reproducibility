@@ -1,7 +1,7 @@
-"""P1 -- Inputs, baselines and ablations (protocol Amendment 8; descriptive, no verdict).
+"""P1 -- Inputs, baselines and ablations on the temporal test set.
 
-On the non-canonical variants of the development test set (April 2026 strict test set) and the September 2026 cohort,
-with rows for each non-canonical region with >= 20 P/LP, Deep Intronic and the deep-intronic sensitivity set:
+On the non-canonical variants of the temporal test set (V12), with rows for each non-canonical region with >= 20 P/LP,
+Deep Intronic and the deep-intronic sensitivity set:
   1. Standalone inputs: 12 inputs scored alone (Pangolin max, increase, -decrease; SpliceTransformer aggregate;
      -GPN-MSA; DANN; phyloP and phastCons 100-way and 470-way; pLI; -LOEUF), each on the variants it covers: auPRC with a
      stratified bootstrap CI and AUROC; MetaSplice minus the input, paired, on the variants both cover.
@@ -10,13 +10,12 @@ with rows for each non-canonical region with >= 20 P/LP, Deep Intronic and the d
      training-median imputation, class_weight='balanced', lbfgs, max_iter=1000). MetaSplice minus each, paired.
   3. Ablations: the full model's parameters retrained on all training variants without (a) the gene-level features,
      (b) DANN and GPN-MSA, (c) both; auPRC, paired difference against the full model, against SpliceAI (precomputed
-     masked) and against CADD. (d) ablation (c) with A3b's gene folds on the development test set, against SpliceAI and
-     CADD.
-Paired differences: common.paired_boot_diff (1,000 iterations, seed 42). Inputs and denominators are asserted first;
+     masked) and against CADD. (d) ablation (c) under the gene-disjoint protocol (five gene folds over the union of
+     training and test genes, seed 42), against the full model, SpliceAI and CADD.
+Paired differences: common.paired_boot_diff (1,000 iterations, seed 42). Inputs (md5) and denominators are checked first;
 --check-only stops there.
 
-Writes results/P1_inputs_baselines_ablations.txt and .tsv; with --cohort pooled (Amendment 9) the same analyses on the
-pooled temporal test set, written to results/P1_inputs_baselines_ablations_pooled.txt and .tsv.
+Writes results/P1_inputs_baselines_ablations_pooled.txt and .tsv.
 """
 import argparse, importlib.util, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -47,7 +46,7 @@ ABLATIONS = [("(a) without gene-level", GENE_LEVEL), ("(b) without DANN and GPN-
 LOCK_FILES = ["models/metasplice_v2_full.joblib", "models/metasplice_v2_features.joblib", "data/v2_features_training.csv",
               "data/v2_oof.csv", "data/v2_features_test_candidates.csv", "data/v2_variants_test_candidates.csv",
               "data/v2_variants_training.csv", "data/v2_comparators.csv", "data/v2_features_fresh_20260928.csv",
-              CLINVAR_2025["GRCh38"], CLINVAR_2025["GRCh37"]]   # read by the development-cohort loader (added after review)
+              CLINVAR_2025["GRCh38"], CLINVAR_2025["GRCh37"], "data/v2_features_pooled_test.csv"]
 
 
 def fit(train, feats):
@@ -61,22 +60,20 @@ def predict(model, d, feats):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check-only", action="store_true")
-    ap.add_argument("--cohort", choices=["separate", "pooled"], default="separate",
-                    help="pooled: the Amendment 9 pooled test set instead of the two releases")
     args = ap.parse_args()
-    stem = "P1_inputs_baselines_ablations" + ("_pooled" if args.cohort == "pooled" else "")
+    stem = "P1_inputs_baselines_ablations_pooled"
     log = Tee(os.devnull if args.check_only else f"{OUT}/results/{stem}.txt")
     log("=" * 100)
-    log("P1 -- INPUTS, BASELINES AND ABLATIONS (Amendment 8; descriptive, no verdict)" + ("  [check only]" if args.check_only else ""))
+    log("P1 -- INPUTS, BASELINES AND ABLATIONS" + ("  [check only]" if args.check_only else ""))
     log("=" * 100)
-    verify_locks(log, LOCK_FILES + (["data/v2_features_pooled_test.csv"] if args.cohort == "pooled" else []))
-    coh = test_cohorts(with_scores=not args.check_only, kind=args.cohort)
+    verify_locks(log, LOCK_FILES)
+    coh = test_cohorts(with_scores=not args.check_only)
     check_denominators(log, coh)
     if args.check_only:
         return
     train = load_train()
     if (len(train), int(train.label.sum())) != (413199, 41032):
-        raise SystemExit("training denominators differ from Amendment 8")
+        raise SystemExit("training denominators differ from the recorded values (413,199; 41,032 P/LP)")
     tsv = []
 
     def report(name, d, cols, title):
@@ -141,8 +138,8 @@ def main():
                 log(f"    {name:<12} {tag:<32} (P/LP {int(y.sum())}) " + "; ".join(parts))
                 tsv.append(rec)
 
-    # (d) ablation (c) with A3b's gene folds: the development test set, or the pooled set (Amendment 9)
-    dname = "pooled" if args.cohort == "pooled" else "development"
+    # (d) ablation (c) under the gene-disjoint protocol
+    dname = "pooled"
     d = coh[dname]
     feats = [f for f in FEATURES if f not in GENE_LEVEL + CLIN]
     genes = sorted(set(train.gene_id.dropna()) | set(d.gene_id.dropna()))
@@ -153,8 +150,8 @@ def main():
         idx = np.where(tef == f)[0]
         gd[idx] = predict(fit(train[trf != f], feats), d.iloc[idx], feats)
     if np.isnan(gd).any():
-        raise ValueError("a development variant has no gene-disjoint score")
-    log(f"\n  (d) ablation (c) with A3b's gene folds ({len(genes):,} genes, seed 42), {dname} test set")
+        raise ValueError("a test variant has no gene-disjoint score")
+    log(f"\n  (d) ablation (c), gene-disjoint ({len(genes):,} genes in 5 folds, seed 42), {dname} test set")
     for tag, mk in rows(d):
         y = d.label.values[mk]
         a, lo, hi = boot_ci(y, gd[mk])

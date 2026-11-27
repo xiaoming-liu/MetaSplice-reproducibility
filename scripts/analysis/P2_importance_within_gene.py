@@ -1,17 +1,15 @@
-"""P2 -- Feature-group importance and within-gene concordance (protocol Amendment 8; descriptive, no verdict).
+"""P2 -- Feature-group importance and within-gene concordance on the temporal test set.
 
-1. Importance: mean |SHAP| per feature (XGBoost pred_contribs), summed within S12's feature groups, on the training
-   out-of-fold set (each variant explained by its own fold model) and, with the full model, on the development test set
-   (April 2026 strict test set) and the September 2026 cohort; all variants and non-canonical variants. SHAP values are
-   model attributions, not mechanisms.
+1. Importance: mean |SHAP| per feature (XGBoost pred_contribs), summed within the feature groups of GROUPS, on the
+   training out-of-fold set (each variant explained by its own fold model) and, with the full model, on the temporal
+   test set (V12); all variants and non-canonical variants. SHAP values are model attributions, not mechanisms.
 2. Within-gene concordance (stratified Mann-Whitney): among all P/LP-B/LB pairs of non-canonical test variants in the
    same gene, the share in which the P/LP variant scores higher (ties count one half), pooled over genes. A gene-level-
    only predictor scores 0.5 by construction. MetaSplice, SpliceAI (precomputed masked) and CADD on the variants all
-   three score, in both cohorts; gene-clustered bootstrap CIs and paired differences (1,000 iterations, seed 42).
-Inputs and denominators are asserted first; --check-only stops there.
+   three score; gene-clustered bootstrap CIs and paired differences (1,000 iterations, seed 42).
+Inputs (md5) and denominators are checked first; --check-only stops there.
 
-Writes results/P2_importance_within_gene.txt and .tsv; with --cohort pooled (Amendment 9) the same analyses on the
-pooled temporal test set, written to results/P2_importance_within_gene_pooled.txt and .tsv.
+Writes results/P2_importance_within_gene_pooled.txt and .tsv.
 """
 import argparse, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -22,16 +20,23 @@ import pandas as pd
 import xgboost as xgb
 from common import CLINVAR_2025, FEATURES, MODEL_DIR, NONCANONICAL, OUT, Tee, load_train
 from paper_cohorts import check_denominators, test_cohorts, verify_locks
-from S12_mechanism import GROUPS
+
+GROUPS = {"conservation": ["phyloP100way_vertebrate", "phyloP470way_mammalian", "phastCons100way_vertebrate", "phastCons470way_mammalian"],
+          "DANN": ["DANN_score"], "GPN-MSA": ["gpn_msa_score"],
+          "gene-level": ["gnomAD_pLI", "gnomAD_LOEUF", "ClinGen_Haploinsufficiency_Score"],
+          "exon context": ["exon_length", "exon_length_mod3", "dist_to_boundary"],
+          "SpliceTransformer": [f for f in FEATURES if f.startswith("spt_")],
+          "Pangolin": ["pangolin_inc", "pangolin_dec", "pangolin_max"],
+          "region": [f for f in FEATURES if f.startswith("r_")]}
 
 LOCK_FILES = ["models/metasplice_v2_full.joblib", "models/metasplice_v2_features.joblib", "models/metasplice_v2_folds.json"] + \
              [f"models/metasplice_v2_fold{k}.joblib" for k in range(5)] + \
              ["data/v2_features_training.csv", "data/v2_oof.csv", "data/v2_features_test_candidates.csv",
               "data/v2_variants_test_candidates.csv", "data/v2_variants_training.csv", "data/v2_comparators.csv",
               "data/v2_features_fresh_20260928.csv",
-              CLINVAR_2025["GRCh38"], CLINVAR_2025["GRCh37"]]   # read by the development-cohort loader (added after review)
+              CLINVAR_2025["GRCh38"], CLINVAR_2025["GRCh37"], "data/v2_features_pooled_test.csv"]
 if sorted(sum(GROUPS.values(), [])) != sorted(FEATURES):
-    raise SystemExit("S12's feature groups do not partition the 38 features")
+    raise SystemExit("the feature groups do not partition the 38 features")
 
 
 def mean_abs_shap(booster, X):
@@ -60,17 +65,14 @@ def concordance_parts(y, s, genes):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check-only", action="store_true")
-    ap.add_argument("--cohort", choices=["separate", "pooled"], default="separate",
-                    help="pooled: the Amendment 9 pooled test set instead of the two releases")
     args = ap.parse_args()
-    stem = "P2_importance_within_gene" + ("_pooled" if args.cohort == "pooled" else "")
+    stem = "P2_importance_within_gene_pooled"
     log = Tee(os.devnull if args.check_only else f"{OUT}/results/{stem}.txt")
     log("=" * 100)
-    log("P2 -- FEATURE-GROUP IMPORTANCE AND WITHIN-GENE CONCORDANCE (Amendment 8; descriptive, no verdict)"
-        + ("  [check only]" if args.check_only else ""))
+    log("P2 -- FEATURE-GROUP IMPORTANCE AND WITHIN-GENE CONCORDANCE" + ("  [check only]" if args.check_only else ""))
     log("=" * 100)
-    verify_locks(log, LOCK_FILES + (["data/v2_features_pooled_test.csv"] if args.cohort == "pooled" else []))
-    coh = test_cohorts(with_scores=not args.check_only, kind=args.cohort)
+    verify_locks(log, LOCK_FILES)
+    coh = test_cohorts(with_scores=not args.check_only)
     check_denominators(log, coh)
     if args.check_only:
         return
@@ -80,7 +82,7 @@ def main():
     log(f"\n1. FEATURE-GROUP IMPORTANCE: mean |SHAP| per feature, summed within group (log-odds scale)")
     train = load_train()
     if (len(train), int(train.label.sum())) != (413199, 41032):
-        raise SystemExit("training denominators differ from Amendment 8")
+        raise SystemExit("training denominators differ from the recorded values (413,199; 41,032 P/LP)")
     X = train[FEATURES].astype(np.float32).values
     absshap = np.zeros_like(X)
     for k in range(5):

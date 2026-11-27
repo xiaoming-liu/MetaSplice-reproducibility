@@ -1,5 +1,5 @@
 ====================================================================================================
-P2 -- FEATURE-GROUP IMPORTANCE AND WITHIN-GENE CONCORDANCE (Amendment 8; descriptive, no verdict)
+P2 -- FEATURE-GROUP IMPORTANCE AND WITHIN-GENE CONCORDANCE
 ====================================================================================================
 
 Input lock (md5), before anything is computed
@@ -23,10 +23,10 @@ Input lock (md5), before anything is computed
   a1847d63dd5ab2e4021b1f20a01b22c8  data/v2_features_pooled_test.csv  ok
   every input equals its locked md5
 
-Denominator check against Amendment 9 (n, P/LP), before anything is computed
+Denominator check against the recorded values (n, P/LP), before anything is computed
   pooled       non-canonical                    n= 40,619 P/LP= 602   recorded (40619, 602)   ok
   pooled       non-canonical, SpliceAI-scored   n= 40,296 P/LP= 600   recorded (40296, 600)   ok
-  every denominator equals Amendment 9
+  every denominator equals its recorded value
 
 1. FEATURE-GROUP IMPORTANCE: mean |SHAP| per feature, summed within group (log-odds scale)
   training, out of fold        all            n=413,199  Pangolin 3.994  SpliceTransformer 2.189  exon context 1.647  gene-level 0.907  conservation 0.705  GPN-MSA 0.530  DANN 0.349  region 0.256

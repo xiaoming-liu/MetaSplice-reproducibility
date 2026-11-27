@@ -1,15 +1,15 @@
-"""V11 -- SpliceAI raw scores in the configuration ClinGen calibrated (protocol Amendment 7).
+"""V11 -- SpliceAI raw scores in the configuration ClinGen calibrated.
 
 Walker et al. (2023) calibrated the SpliceAI cut-offs 0.2 and 0.1 on the maximum raw delta score of SpliceAI v1.3.1 over
 a 10,000-nt window (+-4,999 nt). The precomputed files V08 reads are masked, with a +-50-nt window. This script scores
-X3's four cohorts with SpliceAI 1.3.1 itself (-A grch37 -D 4999 -M 0), using V08's GRCh37 coordinates and hg19 REF check
+the four calibration cohorts of cohorts() with SpliceAI 1.3.1 itself (-A grch37 -D 4999 -M 0), using V08's GRCh37 coordinates and hg19 REF check
 and V08's value rule (the maximum of DS_AG, DS_AL, DS_DG and DS_DL in the first SpliceAI record for the allele; the
 maximum over all records is kept beside it).
 
 Before the raw run, an installation check scores a seeded sample (seed 42; up to 100 variants per non-canonical region,
 among variants with a precomputed masked score) in the precomputed configuration (-D 50 -M 1). At least 99% must lie
-within 0.01 of V08's value, or the script stops before any raw score is computed. The variant list comes from X3's
-cohort loader, which loads labels with the cohorts; labels are not used to select SpliceAI settings or to calculate its
+within 0.01 of V08's value, or the script stops before any raw score is computed. The cohort loaders read labels
+with the variants; labels are not used to select SpliceAI settings or to calculate its
 predictions.
 
 Writes data/v2_spliceai_raw_d4999.csv and results/V11_spliceai_raw.txt.
@@ -21,11 +21,12 @@ import pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 V2 = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, os.path.join(HERE, "..", "analysis"))
-from common import NONCANONICAL
+from common import NONCANONICAL, load_fresh
+from calib import in_cohort, load_validation_cohort, one_star, pathogenic_genes
 
 ENV = "/home/xliu/miniconda3/envs/spliceai131"
 PKG = f"{ENV}/lib/python3.10/site-packages/spliceai"
-SPLICEAI_MD5 = {   # Amendment 7
+SPLICEAI_MD5 = {   # md5 of the SpliceAI 1.3.1 files used
     "annotations/grch37.txt": "cbe7341aaab1dd6678dc9504b0952165",
     "models/spliceai1.h5": "140fc5c24a418d1cac65a5a8d4c543cf",
     "models/spliceai2.h5": "9d5a30fac2a3f11751ef530f44fe2eb2",
@@ -36,6 +37,20 @@ SPLICEAI_MD5 = {   # Amendment 7
 KEY = ["chr", "pos", "ref", "alt"]
 K19 = ["chr19", "pos19", "ref19", "alt19"]
 TMP = "/mnt/Work0/Splice_altering_variant/tools/v2/spliceai_raw"
+
+
+def cohorts():
+    """The calibration cohorts whose variants are scored: the 2026-04-15 strict test set (calib.load_validation_cohort)
+    and the 2026-09-28 cohort (common.load_fresh) under the calibration-cohort filters, each with >= 1 review star and
+    with all review statuses; SpliceAI is the precomputed masked score."""
+    dev_all = load_validation_cohort("strict")
+    dev = dev_all[one_star(dev_all)].reset_index(drop=True)
+    f = load_fresh()
+    val_all = f[in_cohort(f, pathogenic_genes())].reset_index(drop=True)
+    val_all["SpliceAI"] = val_all.spliceai_max
+    val = val_all[one_star(val_all)].reset_index(drop=True)
+    return {"2026-04-15, >= 1 star": dev, "2026-09-28, >= 1 star": val, "2026-04-15, all statuses": dev_all,
+            "2026-09-28, all statuses": val_all}
 
 
 def load(name, path):
@@ -138,12 +153,11 @@ def main():
         log(f"  {got}  spliceai/{f}  {'ok' if got == want else 'DIFFERS from ' + want}")
         bad += [f] if got != want else []
     if bad:
-        raise SystemExit(f"SpliceAI files differ from Amendment 7: {bad}")
+        raise SystemExit(f"SpliceAI files differ from their recorded md5: {bad}")
     log(f"  {md5(HG19)}  {HG19}")
     fai = [(l.split("\t")[0], int(l.split("\t")[1])) for l in open(HG19 + ".fai")]
 
-    x3 = load("x3", os.path.join(HERE, "..", "analysis", "X3_supporting_rule.py"))
-    coh = x3.cohorts()
+    coh = cohorts()
     u = pd.concat([d[KEY + K19 + ["region", "SpliceAI"]] for d in coh.values()]).drop_duplicates(KEY).reset_index(drop=True)
     log(f"\nX3's four cohorts: {len(u):,} distinct variants; GRCh37 record {int(u.pos19.notna().sum()):,}")
     ok = v08.hg19_ref_ok(u.assign(pos19=u.pos19.astype("Int64")))

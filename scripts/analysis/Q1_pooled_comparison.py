@@ -1,21 +1,18 @@
-"""Q1 -- Discrimination on the pooled temporal test set (protocol Amendment 9; a pooled reassessment, descriptive, no
-verdict).
+"""Q1 -- Discrimination on the temporal test set.
 
-Pooled set (V12): in-scope SNVs classified P/LP or B/LB in ClinVar 2026-09-28, not in the training data and not classified
+Test set (V12): eligible SNVs classified P/LP or B/LB in ClinVar 2026-09-28, not in the training data and not classified
 P/LP or B/LB in the 2025-08-31 training release; labels from 2026-09-28.
   1. MetaSplice, SpliceAI (precomputed masked, V08) and CADD v1.7 PHRED: auPRC with a stratified bootstrap CI, AUROC and
      coverage, each tool on the variants it scores; MetaSplice minus each comparator on the variants both score, with the
-     paired stratified bootstrap (common.paired_boot_diff, 1,000 iterations, seed 42) and F1's gene-clustered bootstrap.
-     Rows: all non-exonic; canonical; non-canonical (main); each non-canonical region; Deep Intronic and the deep-intronic
-     sensitivity set. A non-canonical regional row with fewer than 20 P/LP carries counts only (Amendment 5's rule).
-  2. Gene-disjoint (A3b's design): five gene folds over the union of training and pooled genes (seed 42); each pooled
-     variant is scored by a model trained without its gene. The full model minus the gene-disjoint model, and the
-     gene-disjoint model minus SpliceAI and minus CADD.
-  3. Supplementary breakdown by origin: "April-origin variants, classified as of September 2026" and "September-origin
-     variants" (the April-origin component includes reclassified variants and 2026-09-28 labels and review statuses; it does
-     not reproduce the original April strict-set analysis).
-  4. Precision-recall curve points for the figure (non-canonical and all non-exonic).
-Inputs and denominators are asserted first; --check-only stops there.
+     paired stratified bootstrap (common.paired_boot_diff, 1,000 iterations, seed 42) and a gene-clustered bootstrap
+     (gene_ci, 1,000 iterations, seed 42). Rows: all non-exonic; canonical; non-canonical (main); each non-canonical
+     region; Deep Intronic and the deep-intronic sensitivity set. A non-canonical regional row with fewer than 20 P/LP
+     carries counts only.
+  2. Gene-disjoint: five gene folds over the union of training and test genes (seed 42); each test variant is scored by
+     a model trained without its gene. The full model minus the gene-disjoint model, and the gene-disjoint model minus
+     SpliceAI and minus CADD.
+  3. Precision-recall curve points for Figure 1 (non-canonical and all non-exonic).
+Inputs (md5) and denominators are checked first; --check-only stops there.
 
 Writes results/Q1_pooled_comparison.txt, .tsv and results/Q1_pooled_pr_curves.tsv.
 """
@@ -24,10 +21,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import numpy as np
 import pandas as pd
-from sklearn.metrics import precision_recall_curve, roc_auc_score
+from sklearn.metrics import average_precision_score, precision_recall_curve, roc_auc_score
 from common import CANONICAL, FEATURES, NONCANONICAL, OUT, Tee, boot_ci, deep_intronic_sensitivity, load_train, paired_boot_diff
 from paper_cohorts import pooled_cohort, verify_locks
-from F1_fresh_validation import gene_ci
 
 _spec = importlib.util.spec_from_file_location("v06", os.path.join(HERE, "..", "build", "V06_train.py"))
 v06 = importlib.util.module_from_spec(_spec)
@@ -35,7 +31,7 @@ _spec.loader.exec_module(v06)
 
 LOCK_FILES = ["models/metasplice_v2_full.joblib", "models/metasplice_v2_features.joblib", "data/v2_features_pooled_test.csv",
               "data/v2_features_training.csv", "data/v2_oof.csv", "data/v2_variants_training.csv"]
-EXPECTED = {   # Amendment 9: (n, P/LP), (SpliceAI-scored n, P/LP)
+EXPECTED = {   # recorded denominators: (n, P/LP), (SpliceAI-scored n, P/LP)
     "non-canonical": ((40619, 602), (40296, 600)), "Donor Region": ((3314, 283), (3278, 281)),
     "Acceptor Region": ((7021, 123), (6983, 123)), "PPT Region": ((12410, 61), (12310, 61)),
     "Branch Point Region": ((395, 9), (394, 9)), "Deep Intronic": ((17479, 126), (17331, 126)),
@@ -44,6 +40,20 @@ EXPECTED = {   # Amendment 9: (n, P/LP), (SpliceAI-scored n, P/LP)
 }
 MIN_P = 20
 COMPARATORS = [("SpliceAI", "SpliceAI"), ("CADD", "CADD")]
+
+
+def gene_ci(y, s0, s1, genes, n_boot=1000, seed=42):
+    """Gene-clustered bootstrap 95% CI of auPRC(s0) - auPRC(s1): genes resampled with replacement, each variant weighted by
+    the number of times its gene is drawn."""
+    codes, gidx = np.unique(genes, return_inverse=True)
+    rng = np.random.default_rng(seed)
+    diffs = []
+    for _ in range(n_boot):
+        w = np.bincount(rng.integers(0, len(codes), len(codes)), minlength=len(codes))[gidx].astype(float)
+        if (w * y).sum() < 1 or (w * (1 - y)).sum() < 1:
+            continue
+        diffs.append(average_precision_score(y, s0, sample_weight=w) - average_precision_score(y, s1, sample_weight=w))
+    return float(np.percentile(diffs, 2.5)), float(np.percentile(diffs, 97.5))
 
 
 def masks(d):
@@ -57,7 +67,7 @@ def masks(d):
 
 
 def check(log, d):
-    log("\nDenominator check against Amendment 9 (n, P/LP; SpliceAI-scored n, P/LP), before anything is computed")
+    log("\nDenominator check against the recorded values (n, P/LP; SpliceAI-scored n, P/LP), before anything is computed")
     mk = dict(masks(d))
     mk["Canonical Donor Site"] = (d.region == "Canonical Donor Site").values
     mk["Canonical Acceptor Site"] = (d.region == "Canonical Acceptor Site").values
@@ -70,8 +80,8 @@ def check(log, d):
         log(f"  {name:<32} {got[0]}  SpliceAI {got[1]}   recorded {w1} {w2}   {'ok' if ok else 'DIFFERS'}")
         bad += [name] if not ok else []
     if bad:
-        raise SystemExit(f"denominators differ from Amendment 9; nothing computed: {bad}")
-    log("  every denominator equals Amendment 9")
+        raise SystemExit(f"denominators differ from the recorded values; nothing computed: {bad}")
+    log("  every denominator equals its recorded value")
 
 
 def evaluate(log, d, title, tsv, extra=None, gene=True):
@@ -112,8 +122,7 @@ def main():
     args = ap.parse_args()
     log = Tee(os.devnull if args.check_only else f"{OUT}/results/Q1_pooled_comparison.txt")
     log("=" * 104)
-    log("Q1 -- DISCRIMINATION ON THE POOLED TEMPORAL TEST SET (Amendment 9; pooled reassessment, descriptive, no verdict)"
-        + ("  [check only]" if args.check_only else ""))
+    log("Q1 -- DISCRIMINATION ON THE TEMPORAL TEST SET" + ("  [check only]" if args.check_only else ""))
     log("=" * 104)
     verify_locks(log, LOCK_FILES)
     d = pooled_cohort(with_scores=not args.check_only)
@@ -154,11 +163,7 @@ def main():
         log(f"  {tag:<32} (P/LP {int(y.sum())}) " + "; ".join(parts))
         tsv.append(rec)
 
-    # 3. by origin (supplement)
-    for src, lab in [("2026-04-15", "April-origin variants, classified as of September 2026"), ("2026-09-28", "September-origin variants")]:
-        evaluate(log, d[d.source == src].reset_index(drop=True), f"3. SUPPLEMENT -- {lab}", tsv)
-
-    # 4. precision-recall curve points
+    # 3. precision-recall curve points
     pr = []
     for tag, m in masks(d)[:3]:
         if tag == "canonical":

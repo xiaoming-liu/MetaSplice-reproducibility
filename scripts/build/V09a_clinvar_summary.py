@@ -1,7 +1,6 @@
-"""V09a -- ClinVar VCF to the tab-separated summary V02 reads (docs/METASPLICE_V2_PLAN.md, Task 11 Step 8).
+"""V09a -- ClinVar VCF to the tab-separated summary V02 reads.
 
-The summaries used so far (clinvar_20250831, clinvar_20260415) were made by a step not kept in the repository. This
-writes the same layout from a ClinVar VCF: #chr, pos, clinvar_id (the VCF ID), ref, alt, then INFO fields CLNSIG,
+The 2025-08-31 and 2026-04-15 summaries were made by an earlier script; this one writes the same layout from a ClinVar VCF: #chr, pos, clinvar_id (the VCF ID), ref, alt, then INFO fields CLNSIG,
 CLNDN, CLNREVSTAT, CLNHGVS, CLNVI and CLNDISDB, with "." for an absent field.
 
 Validation (--check): the 2026-04-15 GRCh38 VCF (NCBI archive) must reproduce the existing 2026-04-15 summary

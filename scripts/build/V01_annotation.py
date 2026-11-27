@@ -1,12 +1,10 @@
-"""V01 -- GENCODE v50 MANE annotation for MetaSplice v2.0 and the tool databases built from it
-(docs/METASPLICE_V2_PLAN.md, Task 1).
+"""V01 -- GENCODE v50 MANE annotation for MetaSplice v2.0 and the tool databases built from it.
 
 MANE Select and MANE Plus Clinical transcripts, with their gene lines, are the one annotation of
 v2.0: regions, gene assignment, exon context, the exon-overlap filter, Pangolin's gene database and
 SpliceTransformer's strand lookup all read gencode.v50.mane.gtf.gz.
 
-Writes annotation_v2/ (outside git) and results/V01_annotation.txt. V01b_spt_annotation_check.py
-then verifies SpliceTransformer's database, strand and coverage (Task 1, Step 5).
+Writes annotation_v2/ (outside git) and results/V01_annotation.txt.
 
 Usage:  python V01_annotation.py
 """

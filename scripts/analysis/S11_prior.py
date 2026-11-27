@@ -1,5 +1,4 @@
-"""S11_prior -- Estimate and freeze the prior for rare non-canonical variants (docs/METASPLICE_V2_PLAN.md, Task 11,
-Steps 3-4; the method of docs/AJHG_ANALYSIS_PLAN.md Task 3.3, v2.0 only).
+"""S11_prior -- Mixture estimate of the prior for rare non-canonical variants.
 
 The prior is the mixing weight of the P/LP component in the population reference's score distribution, with
 the components fixed from labelled ClinVar scores (calib.estimate_prior: EM on logit-score bins). Out-of-fold
@@ -8,7 +7,7 @@ scores on both sides:
               MetaSplice v2.0 out-of-fold scores, split by label;
   reference   the uniform gnomAD v4.1 sample (primary), each variant scored by the fold model that excluded its
               gene (MetaSplice_fold, S11_reference_scores.py).
-The temporal validation cohort is not read here: no validation-cohort loader is imported or called.
+No test-set variant is read here.
 
 Rows, each with the estimate, a 95% CI (calib.prior_bootstrap: 1,000 iterations, components resampled) and the
 fit (calib.mixture_fit): the primary row (50 bins, pooled, all allele frequencies, uniform sample, all genes),
@@ -16,9 +15,10 @@ and one-factor-at-a-time variations around it -- 25 and 100 bins; reference AF <
 each region with >= 25 P/LP in the >= 1-star derivation cohort, with the deep-intronic sensitivity set beside
 Deep Intronic; the same regions in the stratified sample (secondary check); genes outside the fold map excluded.
 
-Promotion rule (fixed in the plan before this ran): the primary estimate becomes the prior only if its fit is
-<= 0.02, the 25- and 100-bin estimates are within a factor of 1.5 of it, and its CI excludes 0.0441. Otherwise
-0.0441 stays the prior and the estimate is reported as sensitivity.
+Acceptance criteria (pre-specified): the primary estimate is accepted only if its fit is <= 0.02, the 25- and
+100-bin estimates are within a factor of 1.5 of it, and its 95% CI excludes the missense prior 0.0441 (Pejaver et
+al. 2022). In S11_prior_frozen.json, "prior" is the estimate if accepted and otherwise 0.0441, and "promoted" says
+whether it was accepted.
 
 Writes results/S11_prior.txt, results/S11_prior.tsv, results/S11_prior_frozen.json and figures/S11_prior_fit.png.
 """
@@ -94,7 +94,7 @@ def figure(ref, s_p, s_b, pi, bins, path):
 def main():
     log = Tee(f"{ROOT}/results/S11_prior.txt")
     log("=" * 96)
-    log("S11_prior -- PRIOR FOR RARE NON-CANONICAL VARIANTS, MetaSplice v2.0 (Task 11, Steps 3-4)")
+    log("S11_prior -- MIXTURE ESTIMATE OF THE PRIOR FOR RARE NON-CANONICAL VARIANTS, MetaSplice v2.0")
     log("=" * 96)
     der = load_derivation_cohort(one_star_only=True)
     ref = pd.read_csv(f"{ROOT}/data/v2_gnomad_reference_scores.csv", low_memory=False)
@@ -130,13 +130,13 @@ def main():
               "95% CI excludes 0.0441": bool(not (p.lo <= PRIOR <= p.hi))}
     promoted = all(checks.values())
     failed = [k for k, v in checks.items() if not v]
-    reason = ("all three promotion conditions hold" if promoted else "not promoted; failed: " + "; ".join(failed))
+    reason = ("all three criteria hold" if promoted else "not accepted; failed: " + "; ".join(failed))
     prior = float(p.prior) if promoted else PRIOR
-    log("\nDecision (promotion rule fixed in the plan before this run):")
+    log("\nAcceptance criteria (pre-specified):")
     for k, v in checks.items():
         log(f"  {'PASS' if v else 'FAIL'}  {k}")
     log(f"  primary estimate {p.prior:.4f} [{p.lo:.4f}, {p.hi:.4f}], fit {p.fit:.4f}; 25 bins {b25:.4f}; 100 bins {b100:.4f}")
-    log(f"  -> prior for Stage 3: {prior:.4f} ({reason})")
+    log("  -> estimate accepted" if promoted else "  -> estimate not accepted; failed: " + "; ".join(failed))
     frozen = dict(prior=prior, promoted=promoted, reason=reason, estimate=float(p.prior), ci95=[float(p.lo), float(p.hi)],
                   fit=float(p.fit), estimate_25_bins=float(b25), estimate_100_bins=float(b100), primary_row=PRIMARY,
                   model="MetaSplice v2.0 (out-of-fold components; gene-matched fold scores of the reference)",

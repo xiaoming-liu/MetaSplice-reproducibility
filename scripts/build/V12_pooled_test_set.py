@@ -1,6 +1,6 @@
 """V12 -- The pooled temporal test set, labelled by ClinVar 2026-09-28 (counts only; labels used only to count).
 
-Definition (decided with the user on 2026-10-10, option b2): every in-scope SNV classified P/LP or B/LB in the 2026-09-28
+Definition: every in-scope SNV classified P/LP or B/LB in the 2026-09-28
 release that is not in the training data (by GRCh38 variant or ClinVar ID) and was not classified P/LP or B/LB in the
 2025-08-31 training release (by GRCh38 variant or ClinVar ID, either build) -- variants first classified after the
 training release. Built with V02's and V09b's functions. Label, CLNSIG and review status come from the 2026-09-28 release.

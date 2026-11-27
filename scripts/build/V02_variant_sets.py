@@ -1,23 +1,23 @@
-"""V02 -- Variant sets of MetaSplice v2.0 on GRCh38 (docs/METASPLICE_V2_PLAN.md, Task 3).
+"""V02 -- Variant sets of MetaSplice v2.0 on GRCh38.
 
 Every set is classified by the v2.0 scorer's own scope() (MetaSplice/score_v2.py), on the full
 GENCODE v50 GTF: the training rule on MANE Select + Plus Clinical transcripts; variants outside their
-gene's MANE transcripts out of scope (decision O1); Deep Intronic positions inside an exon of any
-GENCODE basic transcript out of scope (decision O5). Sets:
+gene's MANE transcripts out of scope; Deep Intronic positions inside an exon of any GENCODE basic
+transcript out of scope. Sets:
 
   training         ClinVar 2025-08-31 GRCh38: SNVs, P/LP (1) or B/LB (0), in scope
   test_candidates  ClinVar 2026-04-15 GRCh38, same filters, less every training variant (by variant
                    or ClinVar ID); subset "strict" (ClinVar ID not in the 2025-08-31 release) or
                    "reclassified" (in it, with a classification training does not use)
   vus              ClinVar 2026-04-15: uncertain or conflicting, in scope, less training variants
-  literature       the v1 literature set (GRCh37), lifted to GRCh38, in scope, less training variants
+  literature       the curated literature set (GRCh37), lifted to GRCh38, in scope, less training variants
   splicevardb      SpliceVarDB records (GRCh37), lifted to GRCh38, in scope, less training variants
   pathogenic_genes genes with >= 1 P/LP SNV of any region in the 2025-08-31 release, inside their MANE
-                   transcripts (v1's calib.pathogenic_genes: "P/LP of any type"); for cohort filters
+                   transcripts ("P/LP of any type"); for cohort filters
 
 Each row carries chr, pos, ref, alt (GRCh38), region, gene, gene_id, canonical_any_gencode and
 exonic_any_gencode (the position is a canonical splice site of, or inside an exon of, any GENCODE v50
-transcript; used only for the deep-intronic sensitivity result, O5) and chr19, pos19, ref19, alt19 (ClinVar sets: the GRCh37 release's record for the
+transcript; used only for the deep-intronic sensitivity result) and chr19, pos19, ref19, alt19 (ClinVar sets: the GRCh37 release's record for the
 same ClinVar ID; lifted sets: their original GRCh37 coordinates), used only for the SpliceAI lookup.
 Labels are counted in the log; they are not otherwise used here. Duplicate records of one variant are
 merged when their labels agree and dropped when they conflict.
@@ -70,7 +70,7 @@ def read_clinvar(path, keep):
 
 def classify(d):
     """region (in scope only), gene, gene_id, inside (a MANE transcript of the gene), in_scope and
-    out_of_scope_reason, from the scorer's scope() on the full GENCODE v50 GTF (rules O1 and O5)."""
+    out_of_scope_reason, from the scorer's scope() on the full GENCODE v50 GTF (the MANE-transcript and basic-exon rules)."""
     v = list(zip(d.chr, d.pos.astype(int), d.ref, d.alt))
     in_scope, genes, why = ms.scope(v, FULL)
     inside = ms.in_mane_transcript(v, genes, FULL)
@@ -169,7 +169,7 @@ def main():
     c25 = classify(read_clinvar(CV38["2025"], PATHOGENIC | BENIGN))
     log(f"  SNVs {len(c25):,}; in scope {int(c25.in_scope.sum()):,}; out of scope "
         f"{c25.out_of_scope_reason[~c25.in_scope].value_counts().to_dict()}")
-    # v1's "P/LP of any type": every region, exonic included, inside the gene's MANE transcripts
+    # "P/LP of any type": every region, exonic included, inside the gene's MANE transcripts
     pg = c25[(c25.label == 1) & c25.gene_id.notna() & c25.inside][["gene_id", "gene"]].drop_duplicates("gene_id")
     pg.to_csv(f"{V2}/data/v2_pathogenic_genes.csv", index=False)
     log(f"  pathogenic genes (>= 1 P/LP SNV of any region, inside the gene's MANE transcripts): {len(pg):,}")

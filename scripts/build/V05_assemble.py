@@ -1,9 +1,8 @@
-"""V05 -- Per-set feature tables and the missingness-parity check (docs/METASPLICE_V2_PLAN.md, Task 5).
+"""V05 -- Per-set feature tables and the missingness-parity check.
 
 Splits data/v2_features_union.tsv (V04, the v2.0 scorer) into one table per variant set, joined to the
 set's V02 columns (labels, ClinVar IDs, subsets, the sensitivity flags, GRCh37 coordinates). The
-scorer's region and gene must equal V02's for every variant. Then two checks (refined with the user,
-2026-10-01):
+scorer's region and gene must equal V02's for every variant. Then two checks:
   - check_gene_level_values: every represented gene has one set of pLI, LOEUF and ClinGen HI values
     across all tables, equal to the dbNSFP 5.4 gene file's for its Ensembl ID (read independently);
   - check_missingness_parity: every feature's missing rate, within each region of each set, within 5
@@ -12,7 +11,6 @@ scorer's region and gene must equal V02's for every variant. Then two checks (re
     gated as the rate at which genes are found. The one other difference, phyloP470way in the
     literature set's Donor Region, is accepted only after its positions are confirmed absent from the
     source wigFix file.
-These are the checks that would have caught v1's hg38 bridge defect and its gene-level lookup defect.
 
 Writes data/v2_features_{set}.csv, results/V05_missingness.tsv and results/V05_assemble.txt.
 """

@@ -1,4 +1,4 @@
-"""S11 (Step 1) -- MetaSplice v2.0 scores of the gnomAD population reference (docs/METASPLICE_V2_PLAN.md, Task 11).
+"""S11_reference_scores -- MetaSplice v2.0 scores of the gnomAD population reference samples.
 
 Both gnomAD v4.1 samples of V02b (uniform 100,000, primary; region-stratified 50,000, secondary), with
 the features V04/V05 built through the v2.0 scorer:
@@ -7,7 +7,7 @@ the features V04/V05 built through the v2.0 scorer:
                    gene (models/metasplice_v2_folds.json, by Ensembl gene ID), the same scheme as the
                    out-of-fold derivation scores the prior's components come from.
 Genes outside the fold map (in the pathogenic-gene list but with no in-scope training variant) are out of
-sample for every fold model. They get a fold by v1's S11b rule (a seeded shuffle of the sorted gene IDs,
+sample for every fold model. They get a fold by a fixed rule (a seeded shuffle of the sorted gene IDs,
 i % 5) and gene_in_training = False, so the prior can also be estimated without them.
 
 Writes data/v2_gnomad_reference_scores.csv and results/S11_reference_scores.txt.

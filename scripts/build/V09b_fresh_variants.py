@@ -1,11 +1,11 @@
-"""V09b -- The fresh temporal cohort of ClinVar 2026-09-28 (docs/METASPLICE_V2_PLAN.md, Task 11 Step 8). Counts only.
+"""V09b -- The fresh temporal cohort of ClinVar 2026-09-28. Counts only.
 
 Built with V02's own functions (read_clinvar, classify, dedupe, hg19_by_id, the GENCODE v50 flags, check_ref) from the
 2026-09-28 release (summaries written by V09a; NCBI md5s verified at download):
   candidates   in-scope SNVs classified P/LP or B/LB in the 2026-09-28 release (GRCh38), duplicates merged as in V02;
   excluded     (1) the v2.0 training data, by variant and by ClinVar ID;
-               (2) anything classified P/LP or B/LB in the 2026-04-15 release -- the examined strict test set, the
-                   reclassified subgroup and any other earlier-labelled record -- by GRCh38 variant or ClinVar ID
+               (2) anything classified P/LP or B/LB in the 2026-04-15 release (the strict and reclassified
+                   test candidates and any other earlier-labelled record) by GRCh38 variant or ClinVar ID
                    (either build);
                (3) the same for the 2025-08-31 release.
   so the cohort holds variants first classified P/LP or B/LB after 2026-04-15. Each exclusion step is counted.

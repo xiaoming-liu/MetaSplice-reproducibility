@@ -20,7 +20,7 @@ def test_clingen_lr_levels():
 def test_zero_benign_interval_has_finite_lower_bound():
     lr, lo, hi = calib.lr_ci(116, 799, 0, 48155)
     assert np.isinf(lr) and np.isinf(hi)
-    assert 1200 < lo < 1400            # 1,300 in v1's S5 run
+    assert 1200 < lo < 1400            # exact lower limit 1,300.4
 
 
 def test_verdicts_distinguish_point_and_ci():
